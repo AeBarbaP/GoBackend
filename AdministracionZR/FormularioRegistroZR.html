@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Cover Template · Bootstrap v5.1</title>
+    <title>Checkout example · Bootstrap v5.1</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
 
     
 
@@ -33,36 +33,125 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="form-validation.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
+  <body class="bg-light">
     
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
+  <div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="../Images/LogoGO.png" alt="" width="auto" height="57">
+      <h2>Registro de Zona Residencial</h2>
+      <p class="lead">Para poder comenzar a administrar la aplicación de GO Accesos deberás proporcionar los datos de tu Zona Residencial llenando los siguientes campos:</p>
     </div>
-  </header>
 
-  <main class="px-3">
-    <h1>Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-    </p>
+
+      <div class="col-md-12 col-lg-12">
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nombre de la Zona Residencial</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Nombre de la Zona Residencial" value="" required>
+              <div class="invalid-feedback">
+                El nombre de la Zona Residencial es obligatorio.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Número total de casas y lotes</label>
+              <input type="number" class="form-control" id="lastName" placeholder="Número total de casas y lotes" value="" required>
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Teléfono fijo</label>
+              <div class="input-group has-validation">
+                <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
+              <div class="invalid-feedback">
+                  Ingresa un teléfono válido.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+              <input type="email" class="form-control" id="email" placeholder="tu-correo@ejemplo.com">
+              <div class="invalid-feedback">
+                Por favor ingresa una dirección de correo válido.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Calle</label>
+              <input type="text" class="form-control" id="address" placeholder="Calle" required>
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Número <span class="text-muted"></span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Número">
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Estado</label>
+              <select class="form-select" id="country" required>
+                <option value="">Elige...</option>
+                <option>Zacatecas</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un Estado.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Ciudad</label>
+              <select class="form-select" id="state" required>
+                <option value="">Elige...</option>
+                <option>Zacatecas</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona una Ciudad.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Código Postal</label>
+              <input type="text" class="form-control" id="zip" placeholder="C.P." required>
+              <div class="invalid-feedback">
+                Código Postal requerido.
+              </div>
+            </div>
+          </div>
+
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Registrar</button>
+        </form>
+      </div>
+    </div>
   </main>
-
-  <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-  </footer>
+<!--
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017–2021 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer> -->
 </div>
 
 
-    
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="form-validation.js"></script>
   </body>
 </html>

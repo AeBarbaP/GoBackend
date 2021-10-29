@@ -6,10 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Checkout example · Bootstrap v5.1</title>
+    <title>Registro de Zona Residencial</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     
 
     <!-- Bootstrap core CSS -->
@@ -133,8 +134,57 @@
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Registrar</button>
-        </form>
+          <div class="d-grid gap-2">
+        
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #EB7C2A; color: white;">
+              <i class="bi bi-info-circle-fill"></i> Registrar
+            </button>
+          </div>
+  
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-person-circle"></i> </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Registro Exitoso</p>
+                    <p>Se envió un correo electrónico con el link de pre-registro de propietarios</p>
+                    <p><a href="https://www.gogestiondeaccesos.mx/pre-registro/gdjiaop#gji.htm"> Pre-Restro </a></p>
+                    <!-- <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+  
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+  
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Correo electrónico" aria-label="" aria-describedby="basic-addon2">
+                      <span class="input-group-text" id="basic-addon2">@example.com</span>
+                    </div>
+  
+                    <div class="input-group">
+                      <span class="input-group-text">Mensaje</span>
+                      <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div> -->
+  
+                  </div>
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cerrar</button> -->
+                    <button type="button" class="btn btn-primary"><i class="bi bi-envelope-open"></i> Aceptar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!--          <button class="w-100 btn btn-primary btn-lg" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalSheet">Registrar</button> -->
+          
+          </form>
       </div>
     </div>
   </main>

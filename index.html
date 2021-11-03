@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/modals/">
 
     
 
@@ -81,10 +82,43 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#ModalSignin">
+                <a href="#SignIn" class="nav-link text-white" data-bs-toggle="modal">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
                   Administración
                 </a>
+
+                <div class="modal fade" id="SignIn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header text-dark">
+                        <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-person-circle"></i> Información de contacto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body text-dark">
+      
+                        <form class="">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Correo Electrónico</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Contraseña</label>
+                          </div>
+                          <!-- <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Ingresar</button> -->
+                          <a href="AdministracionZR/Bienvenida.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Ingresar</a>
+                          <small class="text-muted">Al dar Click, aceptas los términos de uso de GO.</small>
+                          <hr class="my-4">
+                          <button class="w-100 py-2 mb-2 btn btn-warning btn-sm rounded-4" type="submit">
+                            <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
+                            Olvidé mi Contraseña
+                          </button>
+                        </form>
+      
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
               </li>
               <li>

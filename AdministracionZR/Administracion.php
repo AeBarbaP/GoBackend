@@ -148,10 +148,10 @@
                             <a class="nav-link" href="AdministracionIngresos.html">Ingresos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Egresos</a>
+                            <a class="nav-link" href="AdministracionEgresos.html">Egresos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Saldos</a>
+                            <a class="nav-link" href="AdministracionSaldos.html">Saldos</a>
                         </li>
                     </ul>
 
@@ -165,7 +165,48 @@
                             <h1 class="h4">Cuotas de Colonos</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
-                                    <i class="bi bi-gear h4"></i>
+
+                                    <a href="#ConfiguracionCuotas" class="nav-link" data-bs-toggle="modal">
+                                        <i class="bi bi-gear h4"></i>
+                                    </a>
+                                    <!-- Acommodar modal para configurar cuota mensual y fechas de pago -->
+                                    <div class="modal fade" id="ConfiguracionCuotas" tabindex="-1" aria-labelledby="ConfiguracionCuotas" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header text-dark">
+                                                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-gear"></i> Configuración de Cuotas Mensuales</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body text-dark">
+
+                                                    <form class="">
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="Monto">
+                                                            <label for="floatingInput">Monto de la Cuota Mensual</label>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="date" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                                                                    <label for="floatingPassword">Fecha Inicial</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="date" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                                                                    <label for="floatingPassword">Fecha Final</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="AdministracionZR/Bienvenida.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i class="bi bi-box-arrow-in-down"></i> Guardar</a>
+
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Configuración Global <img src="../Images/Config.png" width="auto" alt=""></button> -->
                                 </div>
                             </div>
@@ -227,6 +268,10 @@
                                                 <div class="modal-body">
                                                 <form>
                                                     <div class="row mb-3">
+                                                        <label for="NoFolio" class="col-sm-2 col-form-label">No. Folio</label>
+                                                        <div class="col-sm-3">
+                                                            <input type="text" class="form-control" id="NoFolio" >
+                                                        </div>
                                                         <label for="IDPropietario" class="col-sm-2 col-form-label">ID Propietario</label>
                                                         <div class="col-sm-3">
                                                             <input type="text" class="form-control" id="IDPropietario" >
@@ -311,16 +356,16 @@
                                                     <div class="row">
                                                         <div class="col"></div>
                                                             <div class="col">
-                                                                <p> <span> <strong>SUBTOTAL: </strong> $0.00 </span> </p>
-                                                                <p> <span> <strong>DESCUENTO: </strong> $0.00 </span> </p>
-                                                                <p> <span> <strong>TOTAL: </strong> $0.00 </span> </p>
+                                                                <p style="text-align: right"> <span> <strong>SUBTOTAL: </strong> $0.00 </span> </p>
+                                                                <p style="text-align: right"> <span> <strong>DESCUENTO: </strong> $0.00 </span> </p>
+                                                                <p style="text-align: right"> <span> <strong>TOTAL: </strong> $0.00 </span> </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cerrar</button>
-                                                    <button type="button" class="btn btn-primary"><i class="bi bi-envelope-open"></i> Enviar</button>
+                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
+                                                    <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Registrar</button>
                                                 </div>
                                             </div>
                                             </div>
@@ -372,56 +417,56 @@
                                                 <td>01-05-2021</td>
                                                 <td>Efectivo</td>
                                                 <td>-</td>
-                                                <td><button class="btn btn-success btn-sm">Pagado</button></td>
+                                                <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Pagado</button></td>
                                             </tr>
                                             <tr class="table-success">
                                                 <td>Junio</td>
                                                 <td>01-06-2021</td>
                                                 <td>PayPal</td>
                                                 <td>-</td>
-                                                <td><button class="btn btn-success btn-sm">Pagado</button></td>
+                                                <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Pagado</button></td>
                                             </tr>
                                             <tr class="table-success">
                                                 <td>Julio</td>
                                                 <td>01-07-2021</td>
                                                 <td>PayPal</td>
                                                 <td>-</td>
-                                                <td><button class="btn btn-success btn-sm">Pagado</button></td>
+                                                <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Pagado</button></td>
                                             </tr>
                                             <tr class="table-success">
                                                 <td>Agosto</td>
                                                 <td>01-08-2021</td>
                                                 <td>PayPal</td>
                                                 <td>-</td>
-                                                <td><button class="btn btn-success btn-sm">Pagado</button></td>
+                                                <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Pagado</button></td>
                                             </tr>
                                             <tr class="table-success">
                                                 <td>Septiembre</td>
                                                 <td>01-08-2021</td>
                                                 <td>PayPal</td>
                                                 <td>-</td>
-                                                <td><button class="btn btn-success btn-sm">Pagado</button></td>
+                                                <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Pagado</button></td>
                                             </tr>
                                             <tr class="table-success">
                                                 <td>Octubre</td>
                                                 <td>01-10-2021</td>
                                                 <td>PayPal</td>
                                                 <td>-</td>
-                                                <td><button class="btn btn-success btn-sm">Pagado</button></td>
+                                                <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Pagado</button></td>
                                             </tr>
                                             <tr class="table-warning">
                                                 <td>Noviembre</td>
                                                 <td>-</td>
                                                 <td>-</td>
                                                 <td>-</td>
-                                                <td><button class="btn btn-warning btn-sm">Pendiente</button></td>
+                                                <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Pendiente</button></td>
                                             </tr>
                                             <tr class="table-warning">
                                                 <td>Diciembre</td>
                                                 <td>-</td>
                                                 <td>-</td>
                                                 <td>-</td>
-                                                <td><button class="btn btn-warning btn-sm">Pendiente</button></td>
+                                                <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal"">Pendiente</button></td>
                                             </tr>
                                         </tbody>
                                     </table>';

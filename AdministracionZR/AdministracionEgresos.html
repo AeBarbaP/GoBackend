@@ -149,13 +149,13 @@
                             <a class="nav-link" href="Administracion.php">Cuotas de Colonos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="AdministracionIngresos.html">Ingresos</a>
+                            <a class="nav-link" href="AdministracionIngresos.html">Ingresos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AdministracionEgresos.html">Egresos</a>
+                            <a class="nav-link active" aria-current="page" href="AdministracionEgresos.html">Egresos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AdministracionSaldos.html">Saldos</a>
+                            <a class="nav-link" href="Ad">Saldos</a>
                         </li>
                     </ul>
 
@@ -165,132 +165,137 @@
 
                     <main>
                         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                        <h1 class="h4">Ingresos</h1>
+                        <h1 class="h4">Egresos</h1>
                                         <div class="btn-toolbar mb-2 mb-md-0">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Registrar Ingreso</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Registrar Egreso</button>
                                         </div>
                                         <!-- Modal -->
                                         <div class="modal fade" id="RegistrarPagoModal" tabindex="-1" aria-labelledby="RegistrarPagoModal" aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="RegistrarPagoModal"><i class="bi bi-wallet2"></i> Registrar Ingreso</h5>
+                                                    <h5 class="modal-title" id="RegistrarPagoModal"><i class="bi bi-wallet2"></i> Registrar Egreso</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form>
-                                                        <div class="row mb-3">
-                                                            <label for="NoFolio" class="col-sm-2 col-form-label">No. Folio</label>
-                                                            <div class="col-sm-3">
-                                                                <input type="text" class="form-control" id="NoFolio" >
-                                                            </div>
-                                                            <label for="IDPropietario" class="col-sm-2 col-form-label">ID Propietario</label>
-                                                            <div class="col-sm-3">
-                                                                <input type="text" class="form-control" id="IDPropietario" >
-                                                            </div>
+                                                <form>
+                                                    <div class="row mb-3">
+                                                        <label for="NoFolio" class="col-sm-2 col-form-label">No. Folio</label>
+                                                        <div class="col-sm-3">
+                                                            <input type="text" class="form-control" id="NoFolio" >
                                                         </div>
-                                                        <div class="row mb-3">
-                                                            <label for="Nombre" class="col-sm-2 col-form-label">Nombre</label>
-                                                            <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="Nombre">
-                                                            </div>
+                                                        <label for="NoFacturaR" class="col-sm-2 col-form-label">Factura/Recibo</label>
+                                                        <div class="col-sm-3">
+                                                            <input type="text" class="form-control" id="NoFacturaR" >
                                                         </div>
-                                                        <div class="row mb-3"> 
-                                                            <label for="FechaPago" class="col-sm-2 col-form-label">Fecha de Pago</label>
-                                                            <div class="col-sm-10">
-                                                            <input type="date" class="form-control" id="FechaPago">
-                                                            </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="NombreRS" class="col-sm-2 col-form-label">Nombre/Razón Social</label>
+                                                        <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="NombreRS">
                                                         </div>
-                                                        <fieldset class="row mb-3">
-                                                            <legend class="col-form-label col-sm-2 pt-0">Modo de Pago</legend>
-                                                            <div class="col-sm-10">
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="PEfectivo" value="1" checked>
-                                                                    <label class="form-check-label" for="PEfectivo">
-                                                                    Efectivo
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="PTransferencia" value="2">
-                                                                    <label class="form-check-label" for="PTransferencia">
-                                                                    Transferencia
-                                                                    </label>
-                                                                </div>                              
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="PTarjetaDC" value="3">
-                                                                    <label class="form-check-label" for="PTarjetaDC">
-                                                                    Tarjeta Débito/Crédito
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </fieldset>
-                                                        <!-- Select Modal -->
-                                                        <div class="row mb-3"> 
-                                                            <label for="Concepto" class="col-sm-2 col-form-label">Concepto</label>
-                                                            <div class="col-sm-10">
-                                                                <select class="form-select" aria-label="Default select example">
-                                                                    <option selected>Selecciona el Concepto</option>
-                                                                    <option value="1">Aportación</option>
-                                                                    <option value="2">Arrendamiento</option>
-                                                                    <option value="2">Abono a Deuda</option>
-                                                                </select>
-                                                            </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="RFC" class="col-sm-2 col-form-label">RFC</label>
+                                                        <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="RFC">
                                                         </div>
-                                                        <div class="row mb-3">
-                                                            <label for="Monto" class="col-sm-2 col-form-label">Monto</label>
-                                                            <div class="col-sm-5">
-                                                            <input type="text" class="form-control" id="Nombre">
-                                                            </div>
+                                                    </div>
+                                                    <div class="row mb-3"> 
+                                                        <label for="FechaPago" class="col-sm-2 col-form-label">Fecha de Pago</label>
+                                                        <div class="col-sm-10">
+                                                        <input type="date" class="form-control" id="FechaPago">
                                                         </div>
-                                                        <div class="row mb-3">
-                                                            <label for="Detalles" class="col-sm-2 col-form-label">Detalles</label>
-                                                            <div class="col-sm-10">
-                                                            <textarea type="text" class="form-control" id="Nombre"></textarea>
+                                                    </div>
+                                                    <fieldset class="row mb-3">
+                                                        <legend class="col-form-label col-sm-2 pt-0">Modo de Pago</legend>
+                                                        <div class="col-sm-10">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios" id="PEfectivo" value="1" checked>
+                                                                <label class="form-check-label" for="PEfectivo">
+                                                                Efectivo
+                                                                </label>
                                                             </div>
-                                                        </div>
-                                                        <div class="row mb-3 ml-3"> 
-                                                            <div class="form-check" style="margin-left: 18%">
-                                                                <input class="form-check-input" type="checkbox" id="Descuento">
-                                                                <label class="form-check-label" for="Descuento">
-                                                                Aplicar Descuento
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios" id="PTransferencia" value="2">
+                                                                <label class="form-check-label" for="PTransferencia">
+                                                                Transferencia
+                                                                </label>
+                                                            </div>                              
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios" id="PTarjetaDC" value="3">
+                                                                <label class="form-check-label" for="PTarjetaDC">
+                                                                Tarjeta Débito/Crédito
                                                                 </label>
                                                             </div>
                                                         </div>
-                                                        <fieldset class="row mb-3">
-                                                            <legend class="col-form-label col-sm-2 pt-0"></legend>
-                                                            <div class="col-sm-10">
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="DPorcentaje" value="1" checked>
-                                                                    <label class="form-check-label" for="PEfectivo">
-                                                                    Porcentaje
-                                                                    </label>
-                                                                    <input type="text" class="form-input w-25" style="margin-left: 5px;" id="Porcentaje">
-                                                                </div>
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="PTransferencia" value="2">
-                                                                    <label class="form-check-label" for="PTransferencia">
-                                                                    Monto
-                                                                    </label>
-                                                                    <input type="text" class="form-input w-25" style="margin-left: 26px;" id="Monto">
-                                                                </div>                              
+                                                    </fieldset>
+                                                    <div class="row mb-3"> 
+                                                        <label for="Concepto" class="col-sm-2 col-form-label">Concepto</label>
+                                                        <div class="col-sm-10">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Selecciona el Concepto</option>
+                                                                <option value="1">Servicio</option>
+                                                                <option value="2">Pago de Personal</option>
+                                                                <option value="2">Proveedor</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="Monto" class="col-sm-2 col-form-label">Monto</label>
+                                                        <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="Nombre">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="Detalles" class="col-sm-2 col-form-label">Detalles</label>
+                                                        <div class="col-sm-10">
+                                                        <textarea type="text" class="form-control" id="Nombre"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="row mb-3 ml-3"> 
+                                                        <div class="form-check" style="margin-left: 18%">
+                                                            <input class="form-check-input" type="checkbox" id="Descuento">
+                                                            <label class="form-check-label" for="Descuento">
+                                                            Aplicar Descuento
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <fieldset class="row mb-3">
+                                                        <legend class="col-form-label col-sm-2 pt-0"></legend>
+                                                        <div class="col-sm-10">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios" id="DPorcentaje" value="1" checked>
+                                                                <label class="form-check-label" for="PEfectivo">
+                                                                Porcentaje
+                                                                </label>
+                                                                <input type="text" class="form-input w-25" style="margin-left: 5px;" id="Porcentaje">
                                                             </div>
-                                                        </fieldset>
-                                                        <div class="container">
-                                                        <div class="row">
-                                                            <div class="col"></div>
-                                                                <div class="col">
-                                                                    <p style="text-align: right"> <span> <strong>SUBTOTAL: </strong> $0.00 </span> </p>
-                                                                    <p style="text-align: right"> <span> <strong>DESCUENTO: </strong> $0.00 </span> </p>
-                                                                    <p style="text-align: right"> <span> <strong>TOTAL: </strong> $0.00 </span> </p>
-                                                                </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios" id="PTransferencia" value="2">
+                                                                <label class="form-check-label" for="PTransferencia">
+                                                                Monto
+                                                                </label>
+                                                                <input type="text" class="form-input w-25" style="margin-left: 26px;" id="Monto">
+                                                            </div>                              
+                                                        </div>
+                                                    </fieldset> -->
+                                                    <div class="container">
+                                                    <div class="row">
+                                                        <div class="col"></div>
+                                                            <div class="col">
+                                                                <p style="text-align: right"> <span> <strong>SUBTOTAL: </strong> $0.00 </span> </p>
+                                                                <p style="text-align: right"> <span> <strong>DESCUENTO: </strong> $0.00 </span> </p>
+                                                                <p style="text-align: right"> <span> <strong>TOTAL: </strong> $0.00 </span> </p>
                                                             </div>
                                                         </div>
-                                                    </form>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
-                                                        <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Registrar</button>
                                                     </div>
+                                                </form>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
+                                                    <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Registrar</button>
                                                 </div>
+                                            </div>
                                             </div>
                                             </div>
                                         </div>
@@ -302,7 +307,8 @@
                                 <tr>
                                     <th scope="col">No. Folio</th>
                                     <th scope="col">Fecha de Pago</th>
-                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Nombre/Razón Social</th>
+                                    <th scope="col">No.Factura/Recibo</th>
                                     <th scope="col">Monto</th>
                                     <th scope="col">Concepto</th>
                                     <th scope="col">Forma de Pago</th>
@@ -312,43 +318,36 @@
                             </thead>
                             <tbody>
                                 <tr class="table-light">
-                                    <th scope="col">I-015</th>
-                                    <th scope="row">28/10/2021</th>
-                                    <td><a>Rodolfo Leaños Villegas</a></td>
-                                    <td>250.00</td>
-                                    <td>Aportación</td>
-                                    <td>PayPal</td>
-                                    <td>Aportación para reparar las cámaras de vigilancia en caseta</td>
-                                    <td><a href="#" class="nav-link"><i class="bi bi-file-earmark-plus"></i></a></td>
-                                </tr>
-                                <tr class="table-light">
-                                    <th scope="col">I-014</th>
-                                    <th scope="row">25/10/2021</th>
-                                    <td><a>Luis Fernando González Álvarez</a></td>
-                                    <td>250.00</td>
-                                    <td>Aportación</td>
-                                    <td>PayPal</td>
-                                    <td>Aportación para reparar las cámaras de vigilancia en caseta</td>
-                                    <td><a href="#" class="nav-link"><i class="bi bi-file-earmark-plus"></i></a></td>
-                                </tr>
-                                <tr class="table-light">
-                                    <th scope="col">I-013</th>
-                                    <th scope="row">25/10/2021</th>
-                                    <td><a>Mariana González Barba</a></td>
-                                    <td>250.00</td>
-                                    <td>Aportación</td>
+                                    <th scope="col">E-125</th>
+                                    <th scope="row">12/10/2021</th>
+                                    <td><a>JIAPAZ</a></td>
+                                    <td>2548931</td>
+                                    <td>750.00</td>
+                                    <td>Servicio</td>
                                     <td>Efectivo</td>
-                                    <td>Aportación para reparar las cámaras de vigilancia en caseta</td>
+                                    <td>Servicio de Agua Potable</td>
                                     <td><a href="#" class="nav-link"><i class="bi bi-file-earmark-plus"></i></a></td>
                                 </tr>
                                 <tr class="table-light">
-                                    <th scope="col">I-012</th>
-                                    <th scope="row">20/10/2021</th>
-                                    <td><a">Alejandra Salmón Trujillo</a></td>
-                                    <td>1500.00</td>
-                                    <td>Renta</td>
+                                    <th scope="col">E-124</th>
+                                    <th scope="row">02/10/2021</th>
+                                    <td><a>Juan Manuel Martínez Durán</a></td>
+                                    <td>-</td>
+                                    <td>350.00</td>
+                                    <td>Pago de Personal</td>
+                                    <td>Efectivo</td>
+                                    <td>Jardinero</td>
+                                    <td><a href="#" class="nav-link"><i class="bi bi-file-earmark-plus"></i></a></td>
+                                </tr>
+                                <tr class="table-light">
+                                    <th scope="col">E-123</th>
+                                    <th scope="row">02/10/2021</th>
+                                    <td><a>Seguridad CIO</a></td>
+                                    <td>A-1547</td>
+                                    <td>250.00</td>
+                                    <td>Proveedor</td>
                                     <td>Transferencia</td>
-                                    <td>Anticipo de Renta del Lobby del Club de Golf para evento</td>
+                                    <td>Servicio de vigilancia correspondiente a Septiembe 2021</td>
                                     <td><a href="#" class="nav-link"><i class="bi bi-file-earmark-plus"></i></a></td>
                                 </tr>
                             </tbody>

@@ -184,6 +184,7 @@
                                                             <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="Monto">
                                                             <label for="floatingInput">Monto de la Cuota Mensual</label>
                                                         </div>
+                                                        <p>Selecciona el rango de fechas para pago de cuotas</p>
                                                         <div class="row">
                                                             <div class="col">
                                                                 <div class="form-floating mb-3">
@@ -198,7 +199,21 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="AdministracionZR/Bienvenida.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i class="bi bi-box-arrow-in-down"></i> Guardar</a>
+                                                        <hr>
+                                                        <p>Ingresa los siguientes datos:</p>
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="No.Cta">
+                                                            <label for="floatingInput">Número de Cuenta</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="CLABE">
+                                                            <label for="floatingInput">CLABE Interbancaria</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="CtaPayPal">
+                                                            <label for="floatingInput">Cuenta de PayPal</label>
+                                                        </div>
+                                                        <a href="AdministracionZR/Administracion.php" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i class="bi bi-box-arrow-in-down"></i> Guardar</a>
 
                                                     </form>
 

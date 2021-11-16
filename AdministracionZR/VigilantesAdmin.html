@@ -137,7 +137,7 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Propietarios</h1>
+                    <h1 class="h2">Administración de Vigilantes</h1>
                 </div>
 
                 <!-- Custom styles for this template -->
@@ -148,39 +148,118 @@
 
                     <main>
                         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                        <h1 class="h4">Propietarios</h1>
+                        <h1 class="h4">Vigilantes</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <!-- Acomodar en misma línea -->
                             <div class="btn me-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Agregar +</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#AgregarVigilante">Agregar +</button>
                             </div>
                         </div>
                         <!-- Modal Agregar Vigilante -->
-                        <div class="modal fade" id="RegistrarDeudaPrevia" tabindex="-1" aria-labelledby="RegistrarDeudaPrevia" aria-hidden="true">
+                        <div class="modal fade" id="AgregarVigilante" tabindex="-1" aria-labelledby="AgregarVigilante" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="RegistrarDeudaPrevia"><i class="bi bi-wallet2"></i> Registrar Deuda Previa</h5>
+                                        <h5 class="modal-title" id="AgregarVigilante"><i class="bi bi-wallet2"></i> Registrar Vigilante</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                            <div class="row mb-3">
-                                                <label for="IDPropietario" class="col-sm-2 col-form-label">ID Propietario</label>
-                                                <div class="col-sm-3">
-                                                    <input type="text" class="form-control" id="IDPropietario" >
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label for="NombrePropietario" class="col-sm-2 col-form-label">Nombre del Propietario</label>
-                                                <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="NombrePropietario">
-                                                </div>
-                                                <label for="MontoDeuda" class="col-sm-2 col-form-label">Monto de la Deuda Previa</label>
-                                                <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="MontoDeuda">
-                                                </div>
-                                            </div>
+                                            <div class="col-md-12 col-lg-12">
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-12">
+              <label for="firstName" class="form-label">Nombre Completo</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Nombre completo del Contacto" value="" required>
+              <div class="invalid-feedback">
+                El nombre de contacto es oblitagorio.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="username" class="form-label">Teléfono Celular</label>
+              <div class="input-group has-validation">
+                <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
+              <div class="invalid-feedback">
+                  Ingresa un teléfono válido.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="username" class="form-label">Teléfono fijo</label>
+              <div class="input-group has-validation">
+                <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
+              <div class="invalid-feedback">
+                  Ingresa un teléfono válido.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+              <input type="email" class="form-control" id="email" placeholder="tu-correo@ejemplo.com">
+              <div class="invalid-feedback">
+                Por favor ingresa una dirección de correo válido.
+              </div>
+            </div>
+            <h1 class="h3">Domicilio de Contacto</h1>
+            <div class="col-12">
+              <label for="address" class="form-label">Calle</label>
+              <input type="text" class="form-control" id="address" placeholder="Calle" required>
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Número <span class="text-muted"></span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Número">
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="country" class="form-label">Estado</label>
+              <select class="form-select" id="country" required>
+                <option value="">Elige...</option>
+                <option>Zacatecas</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un Estado.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Municipio</label>
+              <select class="form-select" id="state" required>
+                <option value="">Elige...</option>
+                <option>Zacatecas</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona un Municipio.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Ciudad</label>
+              <select class="form-select" id="state" required>
+                <option value="">Elige...</option>
+                <option>Zacatecas</option>
+              </select>
+              <div class="invalid-feedback">
+                Selecciona una Ciudad.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Código Postal</label>
+              <input type="text" class="form-control" id="zip" placeholder="C.P." required>
+              <div class="invalid-feedback">
+                Código Postal requerido.
+              </div>
+            </div>
+          </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
                                                 <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Guardar</button>

@@ -163,103 +163,160 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
-                                            <div class="col-md-12 col-lg-12">
-        <form class="needs-validation" novalidate>
-          <div class="row g-3">
-            <div class="col-sm-12">
-              <label for="firstName" class="form-label">Nombre Completo</label>
-              <input type="text" class="form-control" id="firstName" placeholder="Nombre completo del Contacto" value="" required>
-              <div class="invalid-feedback">
-                El nombre de contacto es oblitagorio.
-              </div>
-            </div>
+                                            <form class="needs-validation" novalidate>
+                                                <h4>Datos Personales</h4>
+                                                <div class="row g-3">
+                                                    <div class="col-sm-12">
+                                                    <label for="firstName" class="form-label">Nombre Completo</label>
+                                                    <input type="text" class="form-control" id="firstName" placeholder="Nombre completo del Contacto" value="" required>
+                                                    <div class="invalid-feedback">
+                                                        El nombre de contacto es oblitagorio.
+                                                    </div>
+                                                </div>
 
-            <div class="col-sm-6">
-              <label for="username" class="form-label">Teléfono Celular</label>
-              <div class="input-group has-validation">
-                <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
-              <div class="invalid-feedback">
-                  Ingresa un teléfono válido.
-                </div>
-              </div>
-            </div>
+                                                <div class="col-sm-6">
+                                                    <label for="username" class="form-label">Teléfono Celular</label>
+                                                    <div class="input-group has-validation">
+                                                        <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
+                                                        <div class="invalid-feedback">
+                                                            Ingresa un teléfono válido.
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-            <div class="col-sm-6">
-              <label for="username" class="form-label">Teléfono fijo</label>
-              <div class="input-group has-validation">
-                <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
-              <div class="invalid-feedback">
-                  Ingresa un teléfono válido.
-                </div>
-              </div>
-            </div>
+                                                <div class="col-sm-6">
+                                                    <label for="username" class="form-label">Teléfono fijo</label>
+                                                    <div class="input-group has-validation">
+                                                        <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
+                                                        <div class="invalid-feedback">
+                                                            Ingresa un teléfono válido.
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-            <div class="col-12">
-              <label for="email" class="form-label">Email <span class="text-muted"></span></label>
-              <input type="email" class="form-control" id="email" placeholder="tu-correo@ejemplo.com">
-              <div class="invalid-feedback">
-                Por favor ingresa una dirección de correo válido.
-              </div>
-            </div>
-            <h1 class="h3">Domicilio de Contacto</h1>
-            <div class="col-12">
-              <label for="address" class="form-label">Calle</label>
-              <input type="text" class="form-control" id="address" placeholder="Calle" required>
-              <div class="invalid-feedback">
-                Campo obligatorio.
-              </div>
-            </div>
+                                                <div class="col-12">
+                                                    <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+                                                    <input type="email" class="form-control" id="email" placeholder="tu-correo@ejemplo.com">
+                                                    <div class="invalid-feedback">
+                                                        Por favor ingresa una dirección de correo válido.
+                                                    </div>
+                                                </div>
 
-            <div class="col-12">
-              <label for="address2" class="form-label">Número <span class="text-muted"></span></label>
-              <input type="text" class="form-control" id="address2" placeholder="Número">
-              <div class="invalid-feedback">
-                Campo obligatorio.
-              </div>
-            </div>
+                                                <h4>Domicilio</h4>
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Calle</label>
+                                                    <input type="text" class="form-control" id="address" placeholder="Calle" required>
+                                                    <div class="invalid-feedback">
+                                                        Campo obligatorio.
+                                                    </div>
+                                                </div>
 
-            <div class="col-md-4">
-              <label for="country" class="form-label">Estado</label>
-              <select class="form-select" id="country" required>
-                <option value="">Elige...</option>
-                <option>Zacatecas</option>
-              </select>
-              <div class="invalid-feedback">
-                Selecciona un Estado.
-              </div>
-            </div>
+                                                <div class="col-12">
+                                                    <label for="address2" class="form-label">Número <span class="text-muted"></span></label>
+                                                    <input type="text" class="form-control" id="address2" placeholder="Número">
+                                                    <div class="invalid-feedback">
+                                                        Campo obligatorio.
+                                                    </div>
+                                                </div>
 
-            <div class="col-md-4">
-              <label for="state" class="form-label">Municipio</label>
-              <select class="form-select" id="state" required>
-                <option value="">Elige...</option>
-                <option>Zacatecas</option>
-              </select>
-              <div class="invalid-feedback">
-                Selecciona un Municipio.
-              </div>
-            </div>
+                                                <div class="col-md-4">
+                                                    <label for="country" class="form-label">Estado</label>
+                                                    <select class="form-select" id="country" required>
+                                                        <option value="">Elige...</option>
+                                                        <option>Zacatecas</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        Selecciona un Estado.
+                                                    </div>
+                                                </div>
 
-            <div class="col-md-4">
-              <label for="state" class="form-label">Ciudad</label>
-              <select class="form-select" id="state" required>
-                <option value="">Elige...</option>
-                <option>Zacatecas</option>
-              </select>
-              <div class="invalid-feedback">
-                Selecciona una Ciudad.
-              </div>
-            </div>
+                                                <div class="col-md-4">
+                                                    <label for="state" class="form-label">Municipio</label>
+                                                    <select class="form-select" id="state" required>
+                                                        <option value="">Elige...</option>
+                                                        <option>Zacatecas</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        Selecciona un Municipio.
+                                                    </div>
+                                                </div>
 
-            <div class="col-md-3">
-              <label for="zip" class="form-label">Código Postal</label>
-              <input type="text" class="form-control" id="zip" placeholder="C.P." required>
-              <div class="invalid-feedback">
-                Código Postal requerido.
-              </div>
-            </div>
-          </div>
+                                                <div class="col-md-4">
+                                                    <label for="state" class="form-label">Ciudad</label>
+                                                    <select class="form-select" id="state" required>
+                                                        <option value="">Elige...</option>
+                                                        <option>Zacatecas</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        Selecciona una Ciudad.
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <label for="zip" class="form-label">Código Postal</label>
+                                                    <input type="text" class="form-control" id="zip" placeholder="C.P." required>
+                                                    <div class="invalid-feedback">
+                                                        Código Postal requerido.
+                                                    </div>
+                                                </div>
+
+                                                <h4>Referencias</h4>
+                                                <div class="col-12">
+                                                    <label for="referencia1" class="form-label">Referencia 1 <span class="text-muted"></span></label>
+                                                    <input type="referencia1" class="form-control" id="referencia1" placeholder="Nombre completo">
+                                                    <div class="invalid-feedback">
+                                                        Por favor ingresa el nombre de la primera referencia.
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label for="celref1" class="form-label">Teléfono Celular</label>
+                                                    <div class="input-group has-validation">
+                                                        <input type="celref1" class="form-control" id="celref1 placeholder="Teléfono Celular" required>
+                                                        <div class="invalid-feedback">
+                                                            Ingresa un teléfono válido.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label for="relacionref" class="form-label">Parentesco / Relación</label>
+                                                    <div class="input-group has-validation">
+                                                        <input type="relacionref" class="form-control" id="relacionref" placeholder="Parentesco o relación" required>
+                                                        <div class="invalid-feedback">
+                                                            Indica el parentesco o relación que tiene con su referencia 1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="referencia1" class="form-label">Referencia 2 <span class="text-muted"></span></label>
+                                                    <input type="referencia1" class="form-control" id="referencia1" placeholder="Nombre completo">
+                                                    <div class="invalid-feedback">
+                                                        Por favor ingresa el nombre de la primera referencia.
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label for="celref2" class="form-label">Teléfono Celular</label>
+                                                    <div class="input-group has-validation">
+                                                        <input type="celref2" class="form-control" id="celref2 placeholder="Teléfono Celular" required>
+                                                        <div class="invalid-feedback">
+                                                            Ingresa un teléfono válido.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label for="relacionref" class="form-label">Parentesco / Relación</label>
+                                                    <div class="input-group has-validation">
+                                                        <input type="relacionref" class="form-control" id="relacionref" placeholder="Parentesco o relación" required>
+                                                        <div class="invalid-feedback">
+                                                            Indica el parentesco o relación que tiene con su referencia 1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
                                                 <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Guardar</button>

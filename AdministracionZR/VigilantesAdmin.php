@@ -20,19 +20,19 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
 
@@ -147,184 +147,218 @@
                 <body>
 
                     <main>
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                        <h1 class="h4">Vigilantes</h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn me-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#AgregarVigilante">Agregar +</button>
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                            <h1 class="h4">Vigilantes</h1>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                <div class="btn me-2">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#AgregarVigilante">Agregar +</button>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Modal Agregar Vigilante -->
-                        <div class="modal fade" id="AgregarVigilante" tabindex="-1" aria-labelledby="AgregarVigilante" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="AgregarVigilante"><i class="bi bi-wallet2"></i> Registrar Vigilante</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
+                            <!-- Modal Agregar Vigilante -->
+                            <div class="modal fade" id="AgregarVigilante" tabindex="-1"
+                                aria-labelledby="AgregarVigilante" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="AgregarVigilante"><i class="bi bi-wallet2"></i>
+                                                Registrar Vigilante</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
                                             <form class="needs-validation" novalidate>
                                                 <h4>Datos Personales</h4>
                                                 <div class="row g-3">
                                                     <div class="col-sm-12">
-                                                    <label for="firstName" class="form-label">Nombre Completo</label>
-                                                    <input type="text" class="form-control" id="firstName" placeholder="Nombre completo del Contacto" value="" required>
-                                                    <div class="invalid-feedback">
-                                                        El nombre de contacto es oblitagorio.
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-sm-6">
-                                                    <label for="username" class="form-label">Teléfono Celular</label>
-                                                    <div class="input-group has-validation">
-                                                        <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
+                                                        <label for="firstName" class="form-label">Nombre
+                                                            Completo</label>
+                                                        <input type="text" class="form-control" id="firstName"
+                                                            placeholder="Nombre completo del Contacto" value=""
+                                                            required>
                                                         <div class="invalid-feedback">
-                                                            Ingresa un teléfono válido.
+                                                            El nombre de contacto es oblitagorio.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <label for="username" class="form-label">Teléfono
+                                                            Celular</label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="tel" class="form-control" id="username"
+                                                                placeholder="Teléfono fijo" required>
+                                                            <div class="invalid-feedback">
+                                                                Ingresa un teléfono válido.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <label for="username" class="form-label">Teléfono fijo</label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="tel" class="form-control" id="username"
+                                                                placeholder="Teléfono fijo" required>
+                                                            <div class="invalid-feedback">
+                                                                Ingresa un teléfono válido.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <label for="email" class="form-label">Email <span
+                                                                class="text-muted"></span></label>
+                                                        <input type="email" class="form-control" id="email"
+                                                            placeholder="tu-correo@ejemplo.com">
+                                                        <div class="invalid-feedback">
+                                                            Por favor ingresa una dirección de correo válido.
+                                                        </div>
+                                                    </div>
+
+                                                    <h4>Domicilio</h4>
+                                                    <div class="col-12">
+                                                        <label for="address" class="form-label">Calle</label>
+                                                        <input type="text" class="form-control" id="address"
+                                                            placeholder="Calle" required>
+                                                        <div class="invalid-feedback">
+                                                            Campo obligatorio.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <label for="address2" class="form-label">Número <span
+                                                                class="text-muted"></span></label>
+                                                        <input type="text" class="form-control" id="address2"
+                                                            placeholder="Número">
+                                                        <div class="invalid-feedback">
+                                                            Campo obligatorio.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <label for="country" class="form-label">Estado</label>
+                                                        <select class="form-select" id="country" required>
+                                                            <option value="">Elige...</option>
+                                                            <option>Zacatecas</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Selecciona un Estado.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <label for="state" class="form-label">Municipio</label>
+                                                        <select class="form-select" id="state" required>
+                                                            <option value="">Elige...</option>
+                                                            <option>Zacatecas</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Selecciona un Municipio.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <label for="state" class="form-label">Ciudad</label>
+                                                        <select class="form-select" id="state" required>
+                                                            <option value="">Elige...</option>
+                                                            <option>Zacatecas</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Selecciona una Ciudad.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="zip" class="form-label">Código Postal</label>
+                                                        <input type="text" class="form-control" id="zip"
+                                                            placeholder="C.P." required>
+                                                        <div class="invalid-feedback">
+                                                            Código Postal requerido.
+                                                        </div>
+                                                    </div>
+
+                                                    <h4>Referencias</h4>
+                                                    <div class="col-12">
+                                                        <label for="referencia1" class="form-label">Referencia 1 <span
+                                                                class="text-muted"></span></label>
+                                                        <input type="referencia1" class="form-control" id="referencia1"
+                                                            placeholder="Nombre completo">
+                                                        <div class="invalid-feedback">
+                                                            Por favor ingresa el nombre de la primera referencia.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <label for="celref1" class="form-label">Teléfono Celular</label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="celref1" class="form-control"
+                                                                id="celref1 placeholder=" Teléfono Celular" required>
+                                                            <div class="invalid-feedback">
+                                                                Ingresa un teléfono válido.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <label for="relacionref" class="form-label">Parentesco /
+                                                            Relación</label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="relacionref" class="form-control"
+                                                                id="relacionref" placeholder="Parentesco o relación"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Indica el parentesco o relación que tiene con su
+                                                                referencia 1
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <label for="referencia1" class="form-label">Referencia 2 <span
+                                                                class="text-muted"></span></label>
+                                                        <input type="referencia1" class="form-control" id="referencia1"
+                                                            placeholder="Nombre completo">
+                                                        <div class="invalid-feedback">
+                                                            Por favor ingresa el nombre de la primera referencia.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <label for="celref2" class="form-label">Teléfono Celular</label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="celref2" class="form-control"
+                                                                id="celref2 placeholder=" Teléfono Celular" required>
+                                                            <div class="invalid-feedback">
+                                                                Ingresa un teléfono válido.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <label for="relacionref" class="form-label">Parentesco /
+                                                            Relación</label>
+                                                        <div class="input-group has-validation">
+                                                            <input type="relacionref" class="form-control"
+                                                                id="relacionref" placeholder="Parentesco o relación"
+                                                                required>
+                                                            <div class="invalid-feedback">
+                                                                Indica el parentesco o relación que tiene con su
+                                                                referencia 1
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="col-sm-6">
-                                                    <label for="username" class="form-label">Teléfono fijo</label>
-                                                    <div class="input-group has-validation">
-                                                        <input type="tel" class="form-control" id="username" placeholder="Teléfono fijo" required>
-                                                        <div class="invalid-feedback">
-                                                            Ingresa un teléfono válido.
-                                                        </div>
-                                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary"><i
+                                                            class="bi bi-check2-circle"></i> Guardar</button>
                                                 </div>
-
-                                                <div class="col-12">
-                                                    <label for="email" class="form-label">Email <span class="text-muted"></span></label>
-                                                    <input type="email" class="form-control" id="email" placeholder="tu-correo@ejemplo.com">
-                                                    <div class="invalid-feedback">
-                                                        Por favor ingresa una dirección de correo válido.
-                                                    </div>
-                                                </div>
-
-                                                <h4>Domicilio</h4>
-                                                <div class="col-12">
-                                                    <label for="address" class="form-label">Calle</label>
-                                                    <input type="text" class="form-control" id="address" placeholder="Calle" required>
-                                                    <div class="invalid-feedback">
-                                                        Campo obligatorio.
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <label for="address2" class="form-label">Número <span class="text-muted"></span></label>
-                                                    <input type="text" class="form-control" id="address2" placeholder="Número">
-                                                    <div class="invalid-feedback">
-                                                        Campo obligatorio.
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-4">
-                                                    <label for="country" class="form-label">Estado</label>
-                                                    <select class="form-select" id="country" required>
-                                                        <option value="">Elige...</option>
-                                                        <option>Zacatecas</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">
-                                                        Selecciona un Estado.
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-4">
-                                                    <label for="state" class="form-label">Municipio</label>
-                                                    <select class="form-select" id="state" required>
-                                                        <option value="">Elige...</option>
-                                                        <option>Zacatecas</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">
-                                                        Selecciona un Municipio.
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-4">
-                                                    <label for="state" class="form-label">Ciudad</label>
-                                                    <select class="form-select" id="state" required>
-                                                        <option value="">Elige...</option>
-                                                        <option>Zacatecas</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">
-                                                        Selecciona una Ciudad.
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-3">
-                                                    <label for="zip" class="form-label">Código Postal</label>
-                                                    <input type="text" class="form-control" id="zip" placeholder="C.P." required>
-                                                    <div class="invalid-feedback">
-                                                        Código Postal requerido.
-                                                    </div>
-                                                </div>
-
-                                                <h4>Referencias</h4>
-                                                <div class="col-12">
-                                                    <label for="referencia1" class="form-label">Referencia 1 <span class="text-muted"></span></label>
-                                                    <input type="referencia1" class="form-control" id="referencia1" placeholder="Nombre completo">
-                                                    <div class="invalid-feedback">
-                                                        Por favor ingresa el nombre de la primera referencia.
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-sm-6">
-                                                    <label for="celref1" class="form-label">Teléfono Celular</label>
-                                                    <div class="input-group has-validation">
-                                                        <input type="celref1" class="form-control" id="celref1 placeholder="Teléfono Celular" required>
-                                                        <div class="invalid-feedback">
-                                                            Ingresa un teléfono válido.
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-sm-6">
-                                                    <label for="relacionref" class="form-label">Parentesco / Relación</label>
-                                                    <div class="input-group has-validation">
-                                                        <input type="relacionref" class="form-control" id="relacionref" placeholder="Parentesco o relación" required>
-                                                        <div class="invalid-feedback">
-                                                            Indica el parentesco o relación que tiene con su referencia 1
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label for="referencia1" class="form-label">Referencia 2 <span class="text-muted"></span></label>
-                                                    <input type="referencia1" class="form-control" id="referencia1" placeholder="Nombre completo">
-                                                    <div class="invalid-feedback">
-                                                        Por favor ingresa el nombre de la primera referencia.
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-sm-6">
-                                                    <label for="celref2" class="form-label">Teléfono Celular</label>
-                                                    <div class="input-group has-validation">
-                                                        <input type="celref2" class="form-control" id="celref2 placeholder="Teléfono Celular" required>
-                                                        <div class="invalid-feedback">
-                                                            Ingresa un teléfono válido.
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-sm-6">
-                                                    <label for="relacionref" class="form-label">Parentesco / Relación</label>
-                                                    <div class="input-group has-validation">
-                                                        <input type="relacionref" class="form-control" id="relacionref" placeholder="Parentesco o relación" required>
-                                                        <div class="invalid-feedback">
-                                                            Indica el parentesco o relación que tiene con su referencia 1
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
-                                                <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Guardar</button>
-                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
                         </div>
                         <!-- Poner filtro en los títuos de las columnas de la tabla para la búsqueda por cualquiera de las columnas -->
@@ -334,7 +368,7 @@
                                 <tr>
                                     <th scope="col">No. ID</th>
                                     <th scope="col">Nombre Completo</th>
-                                    <th scope="col">No. de Celular</th>                                    
+                                    <th scope="col">No. de Celular</th>
                                     <th scope="col">Asignación ZR</th>
                                     <th scope="col">Estatus</th>
                                     <th scope="col">Horario</th>
@@ -344,12 +378,15 @@
                             <tbody>
                                 <tr class="table-light">
                                     <th scope="col">V01-001</th>
-                                    <th scope="row"><a href="Administracion.php?id=1" id="click1">Armando Luna Martínez</a></th>
+                                    <th scope="row"><a href="VigilantesAdmin.php?id=1" id="click1">Armando Luna
+                                            Martínez</a></th>
                                     <td>492123456</td>
                                     <td>Coto Bizantino</td>
                                     <td>Activo</td>
                                     <td>Nocturno</td>
-                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" data-bs-toggle="modal" data-bs-target="#RegistrarDeudaPrevia" onchange="warning()"></td>
+                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
+                                            data-bs-toggle="modal" data-bs-target="#RegistrarDeudaPrevia"
+                                            onchange="warning()"></td>
                                 </tr>
                                 <tr class="table-light">
                                     <th scope="col">V01-002</th>
@@ -358,56 +395,68 @@
                                     <td>Coto Bizantino</td>
                                     <td>Activo</td>
                                     <td>Matutino</td>
-                                    <td><a href="#"><i class="bi bi-person-bounding-box"></i></a><a href="#"><i class="bi bi-file-earmark-plus"></i></a><a href="#"> <i class="bi bi-person-lines-fill"></i></a><a href="#"> <i class="bi bi-file-person"></i></a></td>
+                                    <td><a href="#"><i class="bi bi-person-bounding-box"></i></a><a href="#"><i
+                                                class="bi bi-file-earmark-plus"></i></a><a href="#"> <i
+                                                class="bi bi-person-lines-fill"></i></a><a href="#"> <i
+                                                class="bi bi-file-person"></i></a></td>
                                 </tr>
                             </tbody>
                             <!-- Modal Agregar Documentos -->
 
-                            <div class="modal fade" id="RegistrarDeudaPrevia" tabindex="-1" aria-labelledby="RegistrarDeudaPrevia" aria-hidden="true">
+                            <div class="modal fade" id="RegistrarDeudaPrevia" tabindex="-1"
+                                aria-labelledby="RegistrarDeudaPrevia" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="RegistrarDeudaPrevia"><i class="bi bi-wallet2"></i> Registrar Deuda Previa</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <form>
-                                        <div class="row mb-3">
-                                            <label for="IDPropietario" class="col-sm-2 col-form-label">ID Propietario</label>
-                                            <div class="col-sm-3">
-                                                <input type="text" class="form-control" id="IDPropietario" >
-                                            </div>
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="RegistrarDeudaPrevia"><i
+                                                    class="bi bi-wallet2"></i> Registrar Deuda Previa</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
                                         </div>
-                                        <div class="row mb-3">
-                                            <label for="NombrePropietario" class="col-sm-2 col-form-label">Nombre del Propietario</label>
-                                            <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="NombrePropietario">
-                                            </div>
-                                            <label for="MontoDeuda" class="col-sm-2 col-form-label">Monto de la Deuda Previa</label>
-                                            <div class="col-sm-5">
-                                            <input type="text" class="form-control" id="MontoDeuda">
-                                            </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="row mb-3">
+                                                    <label for="IDPropietario" class="col-sm-2 col-form-label">ID
+                                                        Propietario</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" class="form-control" id="IDPropietario">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <label for="NombrePropietario"
+                                                        class="col-sm-2 col-form-label">Nombre del Propietario</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="NombrePropietario">
+                                                    </div>
+                                                    <label for="MontoDeuda" class="col-sm-2 col-form-label">Monto de la
+                                                        Deuda Previa</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="MontoDeuda">
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary"><i
+                                                            class="bi bi-check2-circle"></i> Guardar</button>
+                                                </div>
                                         </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
-                                        <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Guardar</button>
                                     </div>
-                                </div>
-                                </div>
                                 </div>
                             </div>
 
 
-                        </table> 
+                        </table>
                         <hr class="mt-5 mb-5">
                         <div class="">
                             <?php
                             if (isset($_REQUEST['id'])) {
-                                echo '<!-- en la etiqueta aparece el nombre del propietario seleccionado en la tabla de arriba -->
-                                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                                        <h1 class="h4">Detalle de Pagos</h1>
+                                echo '
+                                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                                        <h1 class="h4">Detalle de Vigilante</h1>
                                         <div class="btn-toolbar mb-2 mb-md-0">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Agregar Pago</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Editar</button>
                                         </div>
                                         <!-- Modal -->
                                         <div class="modal fade" id="RegistrarPagoModal" tabindex="-1" aria-labelledby="RegistrarPagoModal" aria-hidden="true">
@@ -524,7 +573,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h5 style="margin-top: -20px">Luis Fernando González Álvarez</h5>
+                                    <h5 style="margin-top: -20px">Luis Fernando González Álvarez</h5>';
 
                             }
                             ?>
@@ -537,11 +586,11 @@
         <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-            crossorigin="anonymous"></script>
+            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-            crossorigin="anonymous"></script>
+            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+        </script>
         <script src="dashboard.js"></script>
 </body>
 

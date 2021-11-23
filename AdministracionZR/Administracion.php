@@ -19,19 +19,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
 
@@ -42,8 +42,11 @@
 <body>
 
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><img src="../Images/LogoGO.png" width="45px" style="margin-right: 7px;"> Administración de ZR</a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><img src="../Images/LogoGO.png" width="45px"
+                style="margin-right: 7px;"> Administración de ZR</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <input class="form-control form-control-dark w-100" type="text" placeholder="Buscar" aria-label="Buscar">
@@ -90,7 +93,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="VigilantesAdmin.html">
+                            <a class="nav-link" href="VigilantesAdmin.php">
                                 <span data-feather="users"></span>
                                 Vigilantes
                             </a>
@@ -131,7 +134,8 @@
             </nav>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Administración</h1>
                 </div>
 
@@ -142,7 +146,8 @@
                 <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Administracion.php">Cuotas de Colonos</a>
+                            <a class="nav-link active" aria-current="page" href="Administracion.php">Cuotas de
+                                Colonos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="AdministracionIngresos.html">Ingresos</a>
@@ -161,7 +166,8 @@
 
                     <main>
 
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h4">Cuotas de Colonos</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
@@ -170,31 +176,38 @@
                                         <i class="bi bi-gear h4"></i>
                                     </a>
                                     <!-- Acommodar modal para configurar cuota mensual y fechas de pago -->
-                                    <div class="modal fade" id="ConfiguracionCuotas" tabindex="-1" aria-labelledby="ConfiguracionCuotas" aria-hidden="true">
+                                    <div class="modal fade" id="ConfiguracionCuotas" tabindex="-1"
+                                        aria-labelledby="ConfiguracionCuotas" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header text-dark">
-                                                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-gear"></i> Configuración de Cuotas Mensuales</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    <h5 class="modal-title" id="exampleModalLabel"><i
+                                                            class="bi bi-gear"></i> Configuración de Cuotas Mensuales
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body text-dark">
 
                                                     <form class="">
                                                         <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="Monto">
+                                                            <input type="text" class="form-control rounded-4"
+                                                                id="floatingInput" placeholder="Monto">
                                                             <label for="floatingInput">Monto de la Cuota Mensual</label>
                                                         </div>
                                                         <p>Selecciona el rango de fechas para pago de cuotas</p>
                                                         <div class="row">
                                                             <div class="col">
                                                                 <div class="form-floating mb-3">
-                                                                    <input type="date" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                                                                    <input type="date" class="form-control rounded-4"
+                                                                        id="floatingPassword" placeholder="Password">
                                                                     <label for="floatingPassword">Fecha Inicial</label>
                                                                 </div>
                                                             </div>
                                                             <div class="col">
                                                                 <div class="form-floating mb-3">
-                                                                    <input type="date" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                                                                    <input type="date" class="form-control rounded-4"
+                                                                        id="floatingPassword" placeholder="Password">
                                                                     <label for="floatingPassword">Fecha Final</label>
                                                                 </div>
                                                             </div>
@@ -202,18 +215,24 @@
                                                         <hr>
                                                         <p>Ingresa los siguientes datos:</p>
                                                         <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="No.Cta">
+                                                            <input type="text" class="form-control rounded-4"
+                                                                id="floatingInput" placeholder="No.Cta">
                                                             <label for="floatingInput">Número de Cuenta</label>
                                                         </div>
                                                         <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="CLABE">
+                                                            <input type="text" class="form-control rounded-4"
+                                                                id="floatingInput" placeholder="CLABE">
                                                             <label for="floatingInput">CLABE Interbancaria</label>
                                                         </div>
                                                         <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="CtaPayPal">
+                                                            <input type="text" class="form-control rounded-4"
+                                                                id="floatingInput" placeholder="CtaPayPal">
                                                             <label for="floatingInput">Cuenta de PayPal</label>
                                                         </div>
-                                                        <a href="AdministracionZR/Administracion.php" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i class="bi bi-box-arrow-in-down"></i> Guardar</a>
+                                                        <a href="AdministracionZR/Administracion.php"
+                                                            class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"
+                                                            type="submit"><i class="bi bi-box-arrow-in-down"></i>
+                                                            Guardar</a>
 
                                                     </form>
 
@@ -241,7 +260,8 @@
                             <tbody>
                                 <tr class="table-success">
                                     <th scope="row">1</th>
-                                    <td><a href="Administracion.php?id=1" id="click1">Luis Fernando González Álvarez</a></td>
+                                    <td><a href="Administracion.php?id=1" id="click1">Luis Fernando González Álvarez</a>
+                                    </td>
                                     <td>81</td>
                                     <td>28/04/2021</td>
                                     <td>Pagado</td>
@@ -495,8 +515,12 @@
 
         <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+        </script>
         <script src="dashboard.js"></script>
 </body>
 

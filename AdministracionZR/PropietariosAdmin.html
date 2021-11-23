@@ -94,7 +94,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="VigilantesAdmin.html">
+                            <a class="nav-link" href="VigilantesAdmin.php">
                                 <span data-feather="users"></span>
                                 Vigilantes
                             </a>

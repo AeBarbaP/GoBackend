@@ -183,7 +183,7 @@
                                     <td>del Cobre</td>
                                     <td>25</td>
                                     <td>1</td>
-                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" data-bs-toggle="modal" data-bs-target="#RegistrarDeudaPrevia" onchange="warning()"></td>
+                                    <td><input class="form-check-input" type="checkbox" value="onclick=1" id="defaultCheck1" data-bs-toggle="modal" data-bs-target="#RegistrarDeudaPrevia" onclick="Warning()"></td>
                                 </tr>
                                 <tr class="table-light">
                                     <th scope="col">P-014</th>
@@ -271,13 +271,22 @@
 
 </html>
 
-<script id="warning">
-Swal.fire({
+<script>
+    function Warning(){
+
+       if(document.getElementById('defaultCheck1').checked) {
+}
+else{
+
+    
+    
+    Swal.fire({
     title: 'Do you want to save the changes?',
     showDenyButton: true,
     showCancelButton: true,
     confirmButtonText: 'Guardar',
     denyButtonText: `No Guardar`,
+    
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
@@ -286,4 +295,12 @@ Swal.fire({
       Swal.fire('Changes are not saved', '', 'info')
     }
   })
+  
+  ;
+
+$('#RegistrarDeudaPrevia').modal('hide');
+$('body').removeClass('modal-open');
+}
+
+}
 </script>

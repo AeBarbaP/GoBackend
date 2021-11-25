@@ -136,17 +136,20 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Administración</h1>
+                    <h1 class="h2">Eventos</h1>
+                    <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
+                        <i class="bi bi-gear h4"></i>
+                    </a>
                 </div>
 
                 <!-- Custom styles for this template -->
                 <link href="features.css" rel="stylesheet">
                 </head>
 
-                <nav>
+                <!-- <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link" href="Administracion.php">Cuotas de Colonos</a>
+                            <a class="nav-link" href="Administracion.php">Eventos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="AdministracionIngresos.html">Ingresos</a>
@@ -159,38 +162,34 @@
                         </li>
                     </ul>
 
-                </nav>
+                </nav> -->
 
                 <body>
 
                     <main>
 
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                            <h1 class="h4">Saldos</h1>
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 bord">
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
 
-                                    <a href="#ConfiguracionSaldos" class="nav-link" data-bs-toggle="modal">
-                                        <i class="bi bi-gear h4"></i>
-                                    </a>
-                                    <!-- Modal - acommodar modal para configurar saldos -->
-                                    <div class="modal fade" id="ConfiguracionSaldos" tabindex="-1" aria-labelledby="ConfiguracionSaldos" aria-hidden="true">
+                                    <!-- Modal --->
+                                    <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header text-dark">
-                                                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-currency-dollar"></i> Editar Saldos</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i>  Agregar Espacio para Eventos</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body text-dark">
 
                                                     <form class="">
                                                         <div class="form-floating mb-3">
-                                                            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="MontoBancos">
-                                                            <label for="floatingInput">Monto en Cuenta Bancaria</label>
+                                                            <input type="NombreEspacioEvento" class="form-control rounded-4" id="floatingInput" placeholder="Nombre del Espacio">
+                                                            <label for="floatingInput">Nombre del Espacio para Eventos</label>
                                                         </div>
                                                         <div class="form-floating mb-3">
-                                                            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="MontoEfe">
-                                                            <label for="floatingPassword">Monto en Efectivo</label>
+                                                            <input type="Capacidad" class="form-control rounded-4" id="floatingPassword" placeholder="Capacidad">
+                                                            <label for="floatingPassword">Capacidad</label>
                                                         </div>
                                                         <a href="/AdministracionSaldos.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i class="bi bi-box-arrow-in-down"></i> Guardar</a>
 
@@ -205,54 +204,23 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="p-5 mb-4 bg-light rounded-3">
-                                <div class="container-fluid py-5">
-                                    <p style="margin-bottom: 36px;">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected>Mes Actual</option>
-                                        <option value="2">Mes Anterior</option>
-                                    </select>
-                                    </p>
-                                    <p class="display-6 fw-bold">Cuenta Bancaria: $ 000.00</p>
-                                    <p class="display-6 fw-bold col-md-8 ">Efectivo: $  00.00</p>
+                        <div class="row align-items-md-stretch">
+                            <div class="col-md-6">
+                                <div class="h-100 p-5 text-dark bg-light border rounded-3">
+                                    <h2>Nombre del Espacio de Eventos</h2>
+                                    <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+                                    <button class="btn btn-outline-secondary" type="button">Example button</button>
                                 </div>
                             </div>
-                        
-                            <div class="row align-items-md-stretch">
-                                <div class="col-md-4">
-                                    <div class="h-100 p-4 bg-light border rounded-3">
-                                    <h2>Cuotas Mensuales</h2>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected>Mes Actual</option>
-                                        <option value="2">Mes Anterior</option>
-                                    </select>
-                                    <p></p>
-                                    <p class="display-6 fw-bold">$ 000.00</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="h-100 p-4 bg-light border rounded-3">
-                                    <h2>Aportaciones</h2>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected>Mes Actual</option>
-                                        <option value="2">Mes Anterior</option>
-                                    </select>
-                                    <p></p>
-                                    <p class="display-6 fw-bold">$ 000.00</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="h-100 p-4 bg-light border rounded-3">
-                                    <h2>Eventos</h2>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected>Mes Actual</option>
-                                        <option value="2">Mes Anterior</option>
-                                    </select>
-                                    <p></p>
-                                    <p class="display-6 fw-bold">$ 000.00</p>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="h-100 p-5 bg-light border rounded-3">
+                                    <h2>Nombre del </h2>
+                                    <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+                                    <button class="btn btn-outline-secondary" type="button">Example button</button>
                                 </div>
                             </div>
+                        </div>
+                        </div>
                     </main>
         </div>
 

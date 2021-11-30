@@ -37,32 +37,6 @@
         }
     </style>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calendario de Eventos</title>
-<link href="bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="../Calendar/datatables/datatables.min.css" rel="stylesheet">
-<link href="../Calendar/clockpicker/bootstrap-clockpicker.css" rel="stylesheet">
-<link href="../Calendar/fullcalendar-3.8.2/packages/core/main.css" rel="stylesheet">
-<link href="../Calendar/fullcalendar-3.8.2/packages/daygrid/main.css" rel="stylesheet">
-<link href="../Calendar/fullcalendar-3.8.2/packages/timegrid/main.css" rel="stylesheet">
-<link href="../Calendar/fullcalendar-3.8.2/packages/list/main.css" rel="stylesheet">
-<link href="../Calendar/fullcalendar-3.8.2/packages/bootstrap/main.css" rel="stylesheet">
-
-<script src="js/jquery-3.4.1.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="bootstrap-4.3.1/js/bootstrap.min.js"></script>
-<script src="datatables/datatables.min.js"></script>
-<script src="clockpicker/bootstrap-clockpicker.js"></script>
-<script src='js/moment-with-locales.js'></script>
-<script src='fullcalendar-4.3.1/packages/core/main.js'></script>
-<script src='fullcalendar-4.3.1/packages/daygrid/main.js'></script>
-<script src='fullcalendar-4.3.1/packages/timegrid/main.js'></script>
-<script src='fullcalendar-4.3.1/packages/interaction/main.js'></script>
-<script src='fullcalendar-4.3.1/packages/list/main.js'></script>
-<script src='fullcalendar-4.3.1/packages/core/locales/es.js'></script>
-<script src='fullcalendar-4.3.1/packages/bootstrap/main.js'></script>
-
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
 </head>
@@ -241,9 +215,8 @@
 
                         <!-- Modal Agregar EVENTO -->
 
-                        <div class="modal fade" id="RegistrarEvento" tabindex="-1"
-                        aria-labelledby="RegistrarEvento" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
+                        <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="AgregarEvento"><i class="bi bi-calendar-plus"></i></i> Registrar Evento</h5>
@@ -252,324 +225,356 @@
                                 <div class="modal-body">
                                     <form class="needs-validation" novalidate>
                                         <h4>Datos del Evento</h4>
-                                        
-                                        <!-- Inicia Calendario -->
-                                        <div class="container-fluid">
-                                            <section class="content-header">
-                                              <h1>
-                                                Calendario
-                                                <small>Panel de control</small>
-                                              </h1>
-                                            </section>
-                                        
-                                            <div class="row">
-                                        
-                                                <div class="col-10">
-                                                    <div id="Calendario1" style="border: 1px solid #000;padding:2px"></div>
-                                                </div>
-                                        
-                                                <div class="col-2">
-                                                    <div id='external-events' style="margin-bottom:1em; height: 350px; border: 1px solid #000; overflow: auto;padding:1em">
-                                                        <h4 class="text-center">Eventos predefinidos</h4>
-                                                        <div id='listaeventospredefinidos'>
-                                                
-                                                            <?php
-                                                            require("conexion.php");
-                                                            $conexion = retornarConexion();
-                                                            $datos = mysqli_query($conexion, "SELECT codigo,titulo,horainicio,horafin,colortexto,colorfondo FROM eventospredefinidos");
-                                                            $ep = mysqli_fetch_all($datos, MYSQLI_ASSOC);
-                                                            foreach ($ep as $fila)
-                                                            echo "<div class='fc-event' data-titulo='$fila[titulo]' data-horafin='$fila[horafin]' data-horainicio='$fila[horainicio]' 
-                                                                    data-colorfondo='$fila[colorfondo]' data-colortexto='$fila[colortexto]' data-codigo='$fila[codigo]'
-                                                                    style='border-color:$fila[colorfondo];color:$fila[colortexto];background-color:$fila[colorfondo];margin:10px'>
-                                                                    $fila[titulo]  [" . substr($fila['horainicio'], 0, 5) . " a " . substr($fila['horafin'], 0, 5) . "]</div>";
-                                                
-                                                            ?>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div style="text-align:center"><button type="button" id="BotonEventosPredefinidos" class="btn btn-success">Administrar eventos predefinidos</button>
-                                                    </div>
-                                                </div>
-                                        
-                                            </div>
-                                        </div>
-                                        <!-- Termina Calendario -->
 
-                                        <!-- FormularioEventos -->
-                                        <div class="modal fade" id="FormularioEventos" tabindex="-1" role="dialog">
-                                            <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">×</span>
-                                                </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                <input type="hidden" id="Codigo">
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-12">
-                                                    <label>Título del evento:</label>
-                                                    <input type="text" id="Titulo" class="form-control" placeholder="">
-                                                    </div>
-                                                </div>
+                                        <div class="container py-4">
 
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                    <label>Fecha de inicio:</label>
+<!-- inicia calendar -->
 
-                                                    <div class="input-group" data-autoclose="true">
-                                                        <input type="date" id="FechaInicio" value="" class="form-control" />
-                                                    </div>
-                                                    </div>
-                                                    <div class="form-group col-md-6" id="TituloHoraInicio">
-                                                    <label>Hora de inicio:</label>
+<?php
 
-                                                    <div class="input-group clockpicker" data-autoclose="true">
-                                                        <input type="text" id="HoraInicio" value="" class="form-control" autocomplete="off" />
-                                                    </div>
-                                                    </div>
-                                                </div>
+date_default_timezone_set('America/Mexico_City');
+                  setlocale(LC_TIME, 'es_MX.UTF-8');
+                  $fecha_sistema = strftime("%Y-%m-%d");
 
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                    <label>Fecha de fin:</label>
+// $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
 
-                                                    <div class="input-group" data-autoclose="true">
-                                                        <input type="date" id="FechaFin" value="" class="form-control" />
-                                                    </div>
-                                                    </div>
-                                                    <div class="form-group col-md-6" id="TituloHoraFin">
-                                                    <label>Hora de fin:</label>
+                // echo date( 't', strtotime( $fecha_sistema ) );
+                $dia=date( 't', strtotime( $fecha_sistema ) ); //número de días en el mes
+                
+                if(isset($_REQUEST['m'])){
+                  $m = $_REQUEST['m'];
+                  // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                  $mes= $_REQUEST['ma'];
+                  $mtotal = $mes + ($m);
+                }
+                else{
+                  $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                }
 
-                                                    <div class="input-group clockpicker" data-autoclose="true">
-                                                        <input type="text" id="HoraFin" value="" class="form-control" autocomplete="off" />
-                                                    </div>
-                                                    </div>
-                                                </div>
+                // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                // $mtotal = $mes + ($m);
+                // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
+                // $fecha_actual=strftime("%B");
+                echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
+                
+                if($mtotal==1){
+                  echo '<p>Enero</p>';
+                }
+                elseif($mtotal==2){
+                  echo 'Febrero';
+                }
+                elseif($mtotal==3){
+                  echo 'Marzo';
+                }
+                elseif($mtotal==4){
+                  echo 'Abril';
+                }
+                elseif($mtotal==5){
+                  echo 'Mayo';
+                }
+                elseif($mtotal==6){
+                  echo 'Junio';
+                }
+                elseif($mtotal==7){
+                  echo 'Julio';
+                }
+                elseif($mtotal==8){
+                  echo 'Agosto';
+                }
+                elseif($mtotal==9){
+                  echo 'Septiembre';
+                }
+                elseif($mtotal==10){
+                  echo 'Octubre';
+                }
+                elseif($mtotal==11){
+                  echo 'Noviembre';
+                }
+                elseif($mtotal==12){
+                  echo 'Diciembre';
+                }
+                echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
+                echo '<hr>';
+                
+                
+                // .$fecha_actual.'<hr>'; 
 
-                                                <div class="form-group">
-                                                    <label>Descripción:</label>
-                                                    <textarea id="Descripcion" rows="3" class="form-control"></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Color de fondo:</label>
-                                                    <input type="color" value="#3788D8" id="ColorFondo" class="form-control" style="height:36px;">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Color de texto:</label>
-                                                    <input type="color" value="#ffffff" id="ColorTexto" class="form-control" style="height:36px;">
-                                                </div>
+        
+          // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
+          // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
+          // $resultado_consulta2 = $conn->query($consulta2);
+          // $n=0;
+          // while ($dia = 30){
+                echo ' 
+            
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">1</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">2</h5>
+                  <hr>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">3</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">4</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">5</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">6</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">7</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">8</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">9</h5>
+                  <hr>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">10</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">11</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">12</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">13</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">14</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">15</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">16</h5>
+                  <hr>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">17</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">18</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">19</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">20</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">21</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">22</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">23</h5>
+                  <hr>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">24</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">25</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">26</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">27</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">28</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+            </div>
 
-                                                </div>
-                                                <div class="modal-footer">
+            <div class="card-group">
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">29</h5>
+                    <hr>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">30</h5>
+                    <hr>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">31</h5>
+                    <hr>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  </div>
+                </div>
+                <div class="card border-light">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <hr>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+                <div class="card border-light">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+                <div class="card border-light">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+                <div class="card border-light">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+            </div>
 
-                                                <button type="button" id="BotonAgregar" class="btn btn-success">Agregar</button>
-                                                <button type="button" id="BotonModificar" class="btn btn-success">Modificar</button>
-                                                <button type="button" id="BotonBorrar" class="btn btn-success">Borrar</button>
-                                                <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
 
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
+              ';
+          // }
 
-                                        <!-- Termina Formulario -->
+?>
 
-                                        <div class="row g-3">
-                                            <div class="col-sm-12">
-                                                <label for="Fecha" class="form-label">Fecha del Evento</label>
-                                                <input type="date" class="form-control" id="firstName"
-                                                    placeholder="Fecha del Evento" value="" required>
-                                                <div class="invalid-feedback">
-                                                    El nombre del evento es obligatorio.
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <label for="firstName" class="form-label">Nombre del Evento</label>
-                                                <input type="text" class="form-control" id="firstName"
-                                                    placeholder="Nombre del Evento" value=""
-                                                    required>
-                                                <div class="invalid-feedback">
-                                                    El nombre del evento es obligatorio.
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="Lugar" class="form-label">Lugar del Evento</label>
-                                                <select class="form-select" id="Lugar" required>
-                                                    <option value="">Elige...</option>
-                                                    <option>Club de Golf</option>
-                                                    <option>Lobby del Club de Golf</option>
-                                                    <option>Capilla</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Selecciona el Lugar del Evento.
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="Tipo" class="form-label">Tipo de Evento</label>
-                                                <select class="form-select" id="Tipo" required>
-                                                    <option value="">Elige...</option>
-                                                    <option>Público</option>
-                                                    <option>Privado</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Selecciona el Tipo de Evento.
-                                                </div>
-                                            </div>
-                                            
-<!--                                             <div class="col-sm-4">
-                                                <label for="NoPax" class="form-label">No. Personas</label>
-                                                <div class="input-group has-validation">
-                                                    <input type="number" class="form-control" id="NoPax"
-                                                        placeholder="Número de Personas" required>
-                                                    <div class="invalid-feedback">
-                                                        Ingresa el número de personas para el evento.
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                            <h4>Datos de Organizador</h4>
-                                            <div class="col-sm-12">
-                                                <label for="Name" class="form-label">Nombre</label>
-                                                <input type="text" class="form-control" id="Name"
-                                                    placeholder="Nombre del Organizador" value="" required>
-                                                <div class="invalid-feedback">
-                                                    El nombre del Organizador es obligatorio.
-                                                </div>
-                                            </div>
 
-                                            <h4>Domicilio</h4>
-                                            <div class="col-12">
-                                                <label for="address" class="form-label">Calle</label>
-                                                <input type="text" class="form-control" id="address"
-                                                    placeholder="Calle" required>
-                                                <div class="invalid-feedback">
-                                                    Campo obligatorio.
-                                                </div>
-                                            </div>
+<!-- termina calendar -->
 
-                                            <div class="col-12">
-                                                <label for="address2" class="form-label">Número <span
-                                                        class="text-muted"></span></label>
-                                                <input type="text" class="form-control" id="address2"
-                                                    placeholder="Número">
-                                                <div class="invalid-feedback">
-                                                    Campo obligatorio.
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <label for="country" class="form-label">Estado</label>
-                                                <select class="form-select" id="country" required>
-                                                    <option value="">Elige...</option>
-                                                    <option>Zacatecas</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Selecciona un Estado.
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <label for="state" class="form-label">Municipio</label>
-                                                <select class="form-select" id="state" required>
-                                                    <option value="">Elige...</option>
-                                                    <option>Zacatecas</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Selecciona un Municipio.
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <label for="state" class="form-label">Ciudad</label>
-                                                <select class="form-select" id="state" required>
-                                                    <option value="">Elige...</option>
-                                                    <option>Zacatecas</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Selecciona una Ciudad.
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <label for="zip" class="form-label">Código Postal</label>
-                                                <input type="text" class="form-control" id="zip"
-                                                    placeholder="C.P." required>
-                                                <div class="invalid-feedback">
-                                                    Código Postal requerido.
-                                                </div>
-                                            </div>
-
-                                            <h4>Referencias</h4>
-                                            <div class="col-12">
-                                                <label for="referencia1" class="form-label">Referencia 1 <span
-                                                        class="text-muted"></span></label>
-                                                <input type="referencia1" class="form-control" id="referencia1"
-                                                    placeholder="Nombre completo">
-                                                <div class="invalid-feedback">
-                                                    Por favor ingresa el nombre de la primera referencia.
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <label for="celref1" class="form-label">Teléfono Celular</label>
-                                                <div class="input-group has-validation">
-                                                    <input type="celref1" class="form-control"
-                                                        id="celref1 placeholder=" Teléfono Celular" required>
-                                                    <div class="invalid-feedback">
-                                                        Ingresa un teléfono válido.
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <label for="relacionref" class="form-label">Parentesco /
-                                                    Relación</label>
-                                                <div class="input-group has-validation">
-                                                    <input type="relacionref" class="form-control"
-                                                        id="relacionref" placeholder="Parentesco o relación"
-                                                        required>
-                                                    <div class="invalid-feedback">
-                                                        Indica el parentesco o relación que tiene con su
-                                                        referencia 1
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="referencia1" class="form-label">Referencia 2 <span
-                                                        class="text-muted"></span></label>
-                                                <input type="referencia1" class="form-control" id="referencia1"
-                                                    placeholder="Nombre completo">
-                                                <div class="invalid-feedback">
-                                                    Por favor ingresa el nombre de la primera referencia.
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <label for="celref2" class="form-label">Teléfono Celular</label>
-                                                <div class="input-group has-validation">
-                                                    <input type="celref2" class="form-control"
-                                                        id="celref2 placeholder=" Teléfono Celular" required>
-                                                    <div class="invalid-feedback">
-                                                        Ingresa un teléfono válido.
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <label for="relacionref" class="form-label">Parentesco /
-                                                    Relación</label>
-                                                <div class="input-group has-validation">
-                                                    <input type="relacionref" class="form-control"
-                                                        id="relacionref" placeholder="Parentesco o relación"
-                                                        required>
-                                                    <div class="invalid-feedback">
-                                                        Indica el parentesco o relación que tiene con su
-                                                        referencia 1
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+    </div>
 
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger"
@@ -578,6 +583,7 @@
                                             <button type="button" class="btn btn-primary"><i
                                                     class="bi bi-check2-circle"></i> Guardar</button>
                                         </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

@@ -40,7 +40,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calendario de Eventos</title>
-
 <link href="bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="../Calendar/datatables/datatables.min.css" rel="stylesheet">
 <link href="../Calendar/clockpicker/bootstrap-clockpicker.css" rel="stylesheet">
@@ -49,7 +48,6 @@
 <link href="../Calendar/fullcalendar-3.8.2/packages/timegrid/main.css" rel="stylesheet">
 <link href="../Calendar/fullcalendar-3.8.2/packages/list/main.css" rel="stylesheet">
 <link href="../Calendar/fullcalendar-3.8.2/packages/bootstrap/main.css" rel="stylesheet">
-
 
 <script src="js/jquery-3.4.1.js"></script>
 <script src="js/popper.min.js"></script>

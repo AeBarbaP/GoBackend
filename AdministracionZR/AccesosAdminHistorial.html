@@ -201,7 +201,7 @@
                                         <form class="needs-validation" novalidate>
                                             <div class="row g-3">
                                                 <div class="col-sm-3">
-                                                    <label for="firstName" class="form-label">ID</label>
+                                                    <label for="firstName" class="form-label">ID de Colono</label>
                                                     <input type="text" class="form-control" id="firstName" placeholder="ID" value="" required>
                                                     <div class="invalid-feedback">
                                                         El ID es oblitagorio.
@@ -209,7 +209,7 @@
                                                 </div>
                                             
                                                 <div class="col-sm-9">
-                                                    <label for="firstName" class="form-label">Nombre</label>
+                                                    <label for="firstName" class="form-label">Nombre del Colono</label>
                                                     <input type="text" class="form-control" id="firstName" placeholder="Nombre" value="" required>
                                                     <div class="invalid-feedback">
                                                         El nombre es oblitagorio.
@@ -232,8 +232,8 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-sm-6">
-                                                    <label for="username" class="form-label">Fecha</label>
+                                                <div class="col-sm-3">
+                                                    <label for="username" class="form-label">Fecha Inicial</label>
                                                     <div class="input-group has-validation">
                                                         <input type="date" class="form-control" id="username" placeholder="Fecha" required>
                                                         <div class="invalid-feedback">
@@ -241,6 +241,17 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- Fecha final no requerida, si se pone se muestra el rango, si no, no -->
+                                                <div class="col-sm-3">
+                                                    <label for="username" class="form-label">Fecha Final</label>
+                                                    <div class="input-group has-validation">
+                                                        <input type="date" class="form-control" id="username" placeholder="Fecha" required>
+                                                        <div class="invalid-feedback">
+                                                        Ingresa la fecha.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                     </div>
 
@@ -255,7 +266,52 @@
                             
                                 </div>
                             </div>
-                            
+
+                            <div class="col-md-12 col-lg-12">
+
+                                <table class="table table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID Colono</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Hora Check-In</th>
+                                            <th scope="col">Tipo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-light">
+                                            <th scope="col">P-015</th>
+                                            <th scope="row"><a>Rodolfo Leaños Villegas</a></th>
+                                            <td>14/11/2021</td>
+                                            <td>14:23:45</td>
+                                            <td>Individual</td>
+                                        </tr>
+                                        <tr class="table-light">
+                                            <th scope="col">P-014</th>
+                                            <th scope="row"><a>Luis Fernando González Álvarez</a></th>
+                                            <td>14/11/2021</td>
+                                            <td>14:22:23</td>
+                                            <td>Individual</td>
+                                        </tr>
+                                        <tr class="table-light">
+                                            <th scope="col">P-013</th>
+                                            <th scope="row"><a>Héctor Mario Mendoza Bañuelos</a></th>
+                                            <td>14/11/2021</td>
+                                            <td>14:21:52</td>
+                                            <td>Individual</td>
+                                        </tr>
+                                        <tr class="table-light">
+                                            <th scope="col">P-012</th>
+                                            <th scope="row"><a>José Miguel Abascal Rodríguez</a></th>
+                                            <td>14/11/2021</td>
+                                            <td>14:20:11</td>
+                                            <td>Individual</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
                             </div>
                         </div>
                     </main>

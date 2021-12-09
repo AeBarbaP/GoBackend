@@ -154,10 +154,9 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Generador de QR</h1>
-                    <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
-                        <i class="bi bi-gear h4"></i>
-                    </a>
+                    <h1 class="h2">Historial General de Accesos</h1>
+                    
+
                 </div>
 
                 <!-- Custom styles for this template -->
@@ -170,10 +169,10 @@
                             <a class="nav-link" href="AccesosAdmin.html">Accesos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="AccesosAdminQR.html">Códigos QR</a>
+                            <a class="nav-link" href="AccesosAdminQR.html">Códigos QR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdminHistorial.html">Historial</a>
+                            <a class="nav-link active" aria-current="page" href="AccesosAdminHistorial.html">Historial</a>
                         </li>
                     </ul>
                 </nav>
@@ -185,81 +184,79 @@
                         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
                             <h5>Accesos</h5>
                             <div class="btn-toolbar mb-2 mb-md-0">
-                            </div>
-                            <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">+ </button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Compartir</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Exportar</button>
                                 </div>
+                                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                    <span data-feather="calendar"></span>
+                                    Semanal
+                                </button>
                             </div>
                         </div>
                         <div class="row align-items-md-stretch">
                             <div class="col-md-12">
                                 <div class="h-100 p-5 text-dark bg-light border rounded-3">
+                                    <div class="col-md-12 col-lg-12">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="row g-3">
+                                                <div class="col-sm-3">
+                                                    <label for="firstName" class="form-label">ID</label>
+                                                    <input type="text" class="form-control" id="firstName" placeholder="ID" value="" required>
+                                                    <div class="invalid-feedback">
+                                                        El ID es oblitagorio.
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-sm-9">
+                                                    <label for="firstName" class="form-label">Nombre</label>
+                                                    <input type="text" class="form-control" id="firstName" placeholder="Nombre" value="" required>
+                                                    <div class="invalid-feedback">
+                                                        El nombre es oblitagorio.
+                                                    </div>
+                                                </div>
 
-                                    <div class="" style="min-height:500px;">
-                                        <div class="">     
-                                            <div class="row">
-                                                <h2>Generar códigos QR GO!</h2>
-                                            </div>
-                                            
-                                            <div class="input-group col-md-3">
-                                                <form class="form-horizontal" method="post" id="codeForm" onsubmit="return false">
-                            
-                                                <label for="basic-url" class="form-label">Datos para generar QR <strong><i class="bi bi-upc-scan"></i></strong></label>
-                                                    <div class="input-group mb-3 w-100">
-                                                        <span class="input-group-text" id="basic-addon3"><i class="bi bi-person-circle"></i></span>
-                                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Nombre">
+                                                <div class="col-sm-6">
+                                                    <label for="country" class="form-label">Tipo</label>
+                                                    <select class="form-select" id="country" required>
+                                                        <option value="">Elige...</option>
+                                                        <option>Individual</option>
+                                                        <option>Grupal</option>
+                                                        <option>Frecuente</option>
+                                                        <option>Programado</option>
+                                                        <option>Emergente</option>
+                                                        <option>Limitado</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        Selecciona el tipo de acceso.
                                                     </div>
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="basic-addon3"><i class="bi bi-phone"></i></span>
-                                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Celular">
-                                                    </div>
-                            
-                                                    <div class="input-group mb-3">
-                                                        <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-calendar-check-fill"></i></label>
-                                                        <select class="form-select" id="inputGroupSelect01">
-                                                            <option selected>Tiempo</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <label for="username" class="form-label">Fecha</label>
+                                                    <div class="input-group has-validation">
+                                                        <input type="date" class="form-control" id="username" placeholder="Fecha" required>
+                                                        <div class="invalid-feedback">
+                                                        Ingresa la fecha.
                                                         </div>
-                            
-                            <hr>
-                            
-                                                    <div class="input-group-text">
-                                                        <label class="control-label">Información : </label>
-                                                        <input class="form-control col-xs-1" id="content" type="text" required="required">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label">Nivel del código (ECC) : </label>
-                                                        <select class="form-control col-xs-10" id="ecc">
-                                                            <option value="H">H - Mejor</option>
-                                                            <option value="M">M</option>
-                                                            <option value="Q">Q</option>
-                                                            <option value="L">L - Peor</option>                         
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label">Tamaño : </label>
-                                                        <input type="number" min="1" max="10" step="1" class="form-control col-xs-10" id="size" value="5">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label"></label>
-                                                        <input type="submit" name="submit" id="submit" class="btn btn-success" value="Generar código QR">
-                                                    </div>
-                                                </form>
+                                                </div>
                                             </div>
-                                            
-                                            <div class="col-md-6">
-                                                <div class="showQRCode"></div>
-                                            </div>
+                                    </div>
+
+                                    <div class="row g-3">
+                                        <div></div>
+                                        <div class="col-sm-12">
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                <span data-feather="fa-search"></span> Buscar
+                                            </button>
                                         </div>
                                     </div>
-                                    </div>
+                            
+                                </div>
                             </div>
                             
-                        </div>
+                            </div>
                         </div>
                     </main>
         </div>

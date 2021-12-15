@@ -1,0 +1,12 @@
+Faltan
+
+-AdmTechafexSU
+-Noticias
+-Votaciones
+
+Incompletos
+
+-VigilantesAdmin.php
+-PropietariosAdmin.php
+-HabitantesAdmin.php
+-EventosAdmin.php

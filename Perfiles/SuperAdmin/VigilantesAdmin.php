@@ -72,8 +72,8 @@
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="AccesosAdmin.html">
-                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                                Accesos
+                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                            Accesos
                             </a>
                         </li>
                         <hr>
@@ -145,7 +145,7 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Administración de Propietarios</h1>
+                    <h1 class="h2">Administración de Vigilantes</h1>
                 </div>
 
                 <!-- Custom styles for this template -->
@@ -157,7 +157,7 @@
                     <main>
                         <div
                             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                            <h1 class="h4">Propietarios</h1>
+                            <h1 class="h4">Vigilantes</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn me-2">
                                     <button type="button" class="btn btn-sm btn-outline-secondary"

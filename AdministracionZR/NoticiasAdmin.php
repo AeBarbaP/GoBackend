@@ -146,7 +146,7 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Eventos</h1>
+                    <h1 class="h2">Noticias</h1>
                     <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
                         <i class="bi bi-gear h4"></i>
                     </a>
@@ -159,7 +159,7 @@
                         <div class="modal-content">
                             <div class="modal-header text-dark">
                                 <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i> Agregar
-                                    Espacio para Eventos</h5>
+                                    Noticia</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -168,13 +168,13 @@
                                 <form class="">
                                     <div class="form-floating mb-3">
                                         <input type="NombreEspacioEvento" class="form-control rounded-4"
-                                            id="floatingInput" placeholder="Nombre del Espacio">
-                                        <label for="floatingInput">Nombre del Espacio para Eventos</label>
+                                            id="floatingInput" placeholder="Título">
+                                        <label for="floatingInput">Título</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="Capacidad" class="form-control rounded-4" id="floatingPassword"
-                                            placeholder="Capacidad">
-                                        <label for="floatingPassword">Capacidad</label>
+                                        <input type="Texto" class="form-control rounded-4" id="floatingPassword"
+                                            placeholder="Texto">
+                                        <label for="floatingPassword">Texto</label>
                                     </div>
                                     <a href="/AdministracionSaldos.html"
                                         class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i
@@ -192,16 +192,16 @@
                 <link href="features.css" rel="stylesheet">
                 </head>
 
-                <!--                 <nav>
+                <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="EventosAdmin.html">Eventos Públicos</a>
+                            <a class="nav-link active" aria-current="page" href="EventosAdmin.html">Noticias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EventosPrivAdmin.html">Eventos Privados</a>
+                            <a class="nav-link" href="EventosPrivAdmin.html">Historial</a>
                         </li>
                     </ul>
-                </nav> -->
+                </nav>
 
                 <body>
 
@@ -209,17 +209,13 @@
 
                         <div
                             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                            <h5>Eventos</h5>
+                            <h5>Noticias</h5>
                             <div class="btn-toolbar mb-2 mb-md-0">
                             </div>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
                                     <button type="button" class="btn btn-sm btn-outline-secondary"
-                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento
-                                        Público</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"
-                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento
-                                        Privado</button>
+                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Noticia</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary"
                                         data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
                                 </div>

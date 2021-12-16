@@ -72,8 +72,8 @@
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="AccesosAdmin.html">
-                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                            Accesos
+                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                                Accesos
                             </a>
                         </li>
                         <hr>

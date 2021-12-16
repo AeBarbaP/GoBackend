@@ -22,19 +22,19 @@
 
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
     <!-- Custom styles for this template -->
@@ -72,10 +72,10 @@
                         </li>
                         <hr>
                         <li class="nav-item">
-                          <a class="nav-link" href="AccesosAdmin.html">
-                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                            Accesos
-                          </a>
+                            <a class="nav-link" href="AccesosAdmin.html">
+                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                                Accesos
+                            </a>
                         </li>
                         <hr>
                         <li class="nav-item">
@@ -153,25 +153,32 @@
                 </div>
 
                 <!-- Modal --->
-                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos" aria-hidden="true">
+                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
+                    aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header text-dark">
-                                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i>  Agregar Espacio para Eventos</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i> Agregar
+                                    Espacio para Eventos</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body text-dark">
 
                                 <form class="">
                                     <div class="form-floating mb-3">
-                                        <input type="NombreEspacioEvento" class="form-control rounded-4" id="floatingInput" placeholder="Nombre del Espacio">
+                                        <input type="NombreEspacioEvento" class="form-control rounded-4"
+                                            id="floatingInput" placeholder="Nombre del Espacio">
                                         <label for="floatingInput">Nombre del Espacio para Eventos</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="Capacidad" class="form-control rounded-4" id="floatingPassword" placeholder="Capacidad">
+                                        <input type="Capacidad" class="form-control rounded-4" id="floatingPassword"
+                                            placeholder="Capacidad">
                                         <label for="floatingPassword">Capacidad</label>
                                     </div>
-                                    <a href="/AdministracionSaldos.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i class="bi bi-box-arrow-in-down"></i> Guardar</a>
+                                    <a href="/AdministracionSaldos.html"
+                                        class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i
+                                            class="bi bi-box-arrow-in-down"></i> Guardar</a>
 
                                 </form>
 
@@ -185,7 +192,7 @@
                 <link href="features.css" rel="stylesheet">
                 </head>
 
-<!--                 <nav>
+                <!--                 <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="EventosAdmin.html">Eventos Públicos</a>
@@ -200,37 +207,46 @@
 
                     <main>
 
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
                             <h5>Eventos</h5>
                             <div class="btn-toolbar mb-2 mb-md-0">
                             </div>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento Público</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento Privado</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento
+                                        Público</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento
+                                        Privado</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Modal Agregar EVENTO -->
 
-                        <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="AgregarEvento"><i class="bi bi-calendar-plus"></i></i> Registrar Evento</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="needs-validation" novalidate>
-                                        <h4>Datos del Evento</h4>
+                        <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="AgregarEvento"><i
+                                                class="bi bi-calendar-plus"></i></i> Registrar Evento</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="needs-validation" novalidate>
+                                            <h4>Datos del Evento</h4>
 
-                                        <div class="container py-4">
+                                            <div class="container py-4">
 
-<!-- inicia calendar -->
+                                                <!-- inicia calendar -->
 
-<?php
+                                                <?php
 
 date_default_timezone_set('America/Mexico_City');
                   setlocale(LC_TIME, 'es_MX.UTF-8');
@@ -572,21 +588,21 @@ date_default_timezone_set('America/Mexico_City');
 ?>
 
 
-<!-- termina calendar -->
+                                                <!-- termina calendar -->
 
-    </div>
+                                            </div>
 
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger"
-                                                data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar
-                                            </button>
-                                            <button type="button" class="btn btn-primary"><i
-                                                    class="bi bi-check2-circle"></i> Guardar</button>
-                                        </div>
-                                    </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
+                                                        class="bi bi-x-circle"></i> Cancelar
+                                                </button>
+                                                <button type="button" class="btn btn-primary"><i
+                                                        class="bi bi-check2-circle"></i> Guardar</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
 
                         <!-- Termina Modal -->
@@ -629,239 +645,239 @@ date_default_timezone_set('America/Mexico_City');
                                 </div>
                             </div>
                         </div>
-                        </div>
-                    </main>
         </div>
+        </main>
+    </div>
 
-<!-- Inicia Script Calendario -->
-<script>
+    <!-- Inicia Script Calendario -->
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
 
-      $('.clockpicker').clockpicker();
+        $('.clockpicker').clockpicker();
 
-      let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'), {
-        plugins: ['dayGrid', 'timeGrid', 'interaction'],
-        height: 800,
-        droppable: true,
-        locale: 'es',
-        showNonCurrentDates: false,
-        header: {
-          left: 'today,prev,next',
-          center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        editable: true,
-        events: 'datoseventos.php?accion=listar',
-        dateClick: function(info) {
-          limpiarFormulario();
-          $('#BotonAgregar').show();
-          $('#BotonModificar').hide();
-          $('#BotonBorrar').hide();
-          if (info.allDay) {
-            $('#FechaInicio').val(info.dateStr);
-            $('#FechaFin').val(info.dateStr);
-          } else {
-            let fechaHora = info.dateStr.split("T");
-            $('#FechaInicio').val(fechaHora[0]);
-            $('#FechaFin').val(fechaHora[0]);
-            $('#HoraInicio').val(fechaHora[1].substring(0, 5));
-          }
-          $("#FormularioEventos").modal();
-        },
-        eventClick: function(info) {
-          $('#BotonModificar').show();
-          $('#BotonBorrar').show();
-          $('#BotonAgregar').hide();
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $("#FormularioEventos").modal();
-        },
-        eventResize: function(info) {
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          let registro = recuperarDatosFormulario();
-          modificarRegistro(registro);
-        },
-        eventDrop: function(info) {
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          let registro = recuperarDatosFormulario();
-          modificarRegistro(registro);
-        },
-        drop: function(info) {
-          limpiarFormulario();
-          $('#ColorFondo').val(info.draggedEl.dataset.colorfondo);
-          $('#ColorTexto').val(info.draggedEl.dataset.colortexto);
-          $('#Titulo').val(info.draggedEl.dataset.titulo);
-          let fechaHora = info.dateStr.split("T");
-          $('#FechaInicio').val(fechaHora[0]);
-          $('#FechaFin').val(fechaHora[0]);
-          if (info.allDay) { //verdadero si el calendario esta en vista de mes
-            $('#HoraInicio').val(info.draggedEl.dataset.horainicio);
-            $('#HoraFin').val(info.draggedEl.dataset.horafin);
-          } else {
-            $('#HoraInicio').val(fechaHora[1].substring(0, 5));
-            $('#HoraFin').val(moment(fechaHora[1].substring(0, 5)).add(1, 'hours'));
-          }
-          let registro = recuperarDatosFormulario();
-          agregarEventoPredefinido(registro);
+        let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'), {
+            plugins: ['dayGrid', 'timeGrid', 'interaction'],
+            height: 800,
+            droppable: true,
+            locale: 'es',
+            showNonCurrentDates: false,
+            header: {
+                left: 'today,prev,next',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            editable: true,
+            events: 'datoseventos.php?accion=listar',
+            dateClick: function(info) {
+                limpiarFormulario();
+                $('#BotonAgregar').show();
+                $('#BotonModificar').hide();
+                $('#BotonBorrar').hide();
+                if (info.allDay) {
+                    $('#FechaInicio').val(info.dateStr);
+                    $('#FechaFin').val(info.dateStr);
+                } else {
+                    let fechaHora = info.dateStr.split("T");
+                    $('#FechaInicio').val(fechaHora[0]);
+                    $('#FechaFin').val(fechaHora[0]);
+                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
+                }
+                $("#FormularioEventos").modal();
+            },
+            eventClick: function(info) {
+                $('#BotonModificar').show();
+                $('#BotonBorrar').show();
+                $('#BotonAgregar').hide();
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $("#FormularioEventos").modal();
+            },
+            eventResize: function(info) {
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                let registro = recuperarDatosFormulario();
+                modificarRegistro(registro);
+            },
+            eventDrop: function(info) {
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                let registro = recuperarDatosFormulario();
+                modificarRegistro(registro);
+            },
+            drop: function(info) {
+                limpiarFormulario();
+                $('#ColorFondo').val(info.draggedEl.dataset.colorfondo);
+                $('#ColorTexto').val(info.draggedEl.dataset.colortexto);
+                $('#Titulo').val(info.draggedEl.dataset.titulo);
+                let fechaHora = info.dateStr.split("T");
+                $('#FechaInicio').val(fechaHora[0]);
+                $('#FechaFin').val(fechaHora[0]);
+                if (info.allDay) { //verdadero si el calendario esta en vista de mes
+                    $('#HoraInicio').val(info.draggedEl.dataset.horainicio);
+                    $('#HoraFin').val(info.draggedEl.dataset.horafin);
+                } else {
+                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
+                    $('#HoraFin').val(moment(fechaHora[1].substring(0, 5)).add(1, 'hours'));
+                }
+                let registro = recuperarDatosFormulario();
+                agregarEventoPredefinido(registro);
+            }
+        });
+
+        calendario1.render();
+
+
+        new FullCalendarInteraction.Draggable(document.getElementById('listaeventospredefinidos'), {
+            itemSelector: '.fc-event',
+            eventData: function(eventEl) {
+                return {
+                    title: eventEl.innerText.trim()
+                }
+            }
+        });
+
+        //Eventos de botones de la aplicación
+        $('#BotonAgregar').click(function() {
+            let registro = recuperarDatosFormulario();
+            agregarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonModificar').click(function() {
+            let registro = recuperarDatosFormulario();
+            modificarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonBorrar').click(function() {
+            let registro = recuperarDatosFormulario();
+            borrarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonEventosPredefinidos').click(function() {
+            window.location = "eventospredefinidos.html";
+        });
+
+
+        // funciones para comunicarse con el servidor via ajax
+        function agregarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=agregar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
         }
-      });
 
-      calendario1.render();
-
-
-      new FullCalendarInteraction.Draggable(document.getElementById('listaeventospredefinidos'), {
-        itemSelector: '.fc-event',
-        eventData: function(eventEl) {
-          return {
-            title: eventEl.innerText.trim()
-          }
+        function modificarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=modificar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
         }
-      });
 
-      //Eventos de botones de la aplicación
-      $('#BotonAgregar').click(function() {
-        let registro = recuperarDatosFormulario();
-        agregarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        function borrarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=borrar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
 
-      $('#BotonModificar').click(function() {
-        let registro = recuperarDatosFormulario();
-        modificarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        function agregarEventoPredefinido(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=agregar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.removeAllEvents();
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
 
-      $('#BotonBorrar').click(function() {
-        let registro = recuperarDatosFormulario();
-        borrarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        // funciones que interactuan con el formulario de entrada de datos
+        function limpiarFormulario() {
+            $('#Codigo').val('');
+            $('#Titulo').val('');
+            $('#Descripcion').val('');
+            $('#FechaInicio').val('');
+            $('#FechaFin').val('');
+            $('#HoraInicio').val('');
+            $('#HoraFin').val('');
+            $('#ColorFondo').val('#3788D8');
+            $('#ColorTexto').val('#ffffff');
+        }
 
-      $('#BotonEventosPredefinidos').click(function() {
-        window.location = "eventospredefinidos.html";
-      });
-
-
-      // funciones para comunicarse con el servidor via ajax
-      function agregarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=agregar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function modificarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=modificar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function borrarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=borrar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function agregarEventoPredefinido(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=agregar',
-          data: registro,
-          success: function(msg) {
-            calendario1.removeAllEvents();
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      // funciones que interactuan con el formulario de entrada de datos
-      function limpiarFormulario() {
-        $('#Codigo').val('');
-        $('#Titulo').val('');
-        $('#Descripcion').val('');
-        $('#FechaInicio').val('');
-        $('#FechaFin').val('');
-        $('#HoraInicio').val('');
-        $('#HoraFin').val('');
-        $('#ColorFondo').val('#3788D8');
-        $('#ColorTexto').val('#ffffff');
-      }
-
-      function recuperarDatosFormulario() {
-        let registro = {
-          codigo: $('#Codigo').val(),
-          titulo: $('#Titulo').val(),
-          descripcion: $('#Descripcion').val(),
-          inicio: $('#FechaInicio').val() + ' ' + $('#HoraInicio').val(),
-          fin: $('#FechaFin').val() + ' ' + $('#HoraFin').val(),
-          colorfondo: $('#ColorFondo').val(),
-          colortexto: $('#ColorTexto').val()
-        };
-        return registro;
-      }
+        function recuperarDatosFormulario() {
+            let registro = {
+                codigo: $('#Codigo').val(),
+                titulo: $('#Titulo').val(),
+                descripcion: $('#Descripcion').val(),
+                inicio: $('#FechaInicio').val() + ' ' + $('#HoraInicio').val(),
+                fin: $('#FechaFin').val() + ' ' + $('#HoraFin').val(),
+                colorfondo: $('#ColorFondo').val(),
+                colortexto: $('#ColorTexto').val()
+            };
+            return registro;
+        }
 
     });
-  </script>
-<!-- Termina Script Calendario -->
+    </script>
+    <!-- Termina Script Calendario -->
 
-        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-            crossorigin="anonymous"></script>
-        <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+    </script>
+    <script src="dashboard.js"></script>
 </body>
 
 </html>

@@ -273,13 +273,11 @@
                         <div class="row align-items-md-stretch">
                             <div class="col-md-12">
                                 <div class="h-100 p-5 text-dark bg-light border rounded-3">
-                                    <h2>Abierto Invernal de Golf 2021</h2>
+                                    <h2>Título de Noticia</h2>
                                     <hr>
                                     <p>Fecha: 17 de Diciembre de 2021</p>
-                                    <p>Hora: 18:00hrs</p>
-                                    <p>Organizador: Epica</p>
-                                    <p>Lugar: Club de Golf</p>
-                                    <p>Tipo de Evento: Público</p>
+                                    <p>Creada por: Usuario que la creó</p>
+                                    <p>Cuerpo de la noticia</p>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>

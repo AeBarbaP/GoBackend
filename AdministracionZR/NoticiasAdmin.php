@@ -213,12 +213,24 @@
                             <div class="btn-toolbar mb-2 mb-md-0">
                             </div>
                             <div class="btn-toolbar mb-2 mb-md-0">
-                                <div class="btn-group me-2">
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Buscar noticia"
+                                        aria-label="Recipient's username with two button addons">
+                                    <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
+                                        data-bs-target="#RegistrarEvento">+ Noticia</button>
+                                </div>
+
+                                <!-- <div class="btn-group me-2">
                                     <button type="button" class="btn btn-sm btn-outline-secondary"
                                         data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Noticia</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary"
                                         data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
-                                </div>
+                                    <input class="form-control form-control-light" type="text" placeholder="Buscar"
+                                        aria-label="Buscar">
+                                </div> -->
                             </div>
                         </div>
 
@@ -260,7 +272,7 @@
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
                                                         class="bi bi-x-circle"></i> Cancelar </button>
                                                 <button type="button" class="btn btn-primary"><i
-                                                        class="bi bi-check2-circle"></i> Registrar</button>
+                                                        class="bi bi-check2-circle"></i> Guardar</button>
                                             </div>
                                         </form>
                                     </div>
@@ -281,27 +293,25 @@
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <p></p>
+                            <div class="col-md-12">
                                 <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>Cumpleaños Annely</h2>
+                                    <h2>Título de Noticia</h2>
                                     <hr>
-                                    <p>Fecha: 12 de Diciembre de 2021</p>
-                                    <p>Hora: 20:00hrs</p>
-                                    <p>Organizador: N/A</p>
-                                    <p>Lugar: Lobby Club de Golf</p>
-                                    <p>Tipo de Evento: Privado</p>
+                                    <p>Fecha: 17 de Diciembre de 2021</p>
+                                    <p>Creada por: Usuario que la creó</p>
+                                    <p>Cuerpo de la noticia</p>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <p></p>
+                            <div class="col-md-12">
                                 <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>El Cascanueces </h2>
+                                    <h2>Título de Noticia</h2>
                                     <hr>
-                                    <p>Fecha: 10 de Diciembre de 2021</p>
-                                    <p>Hora: 20:00hrs</p>
-                                    <p>Organizador: C&M</p>
-                                    <p>Lugar: Lobby Club de Golf</p>
-                                    <p>Tipo de Evento: Público</p>
+                                    <p>Fecha: 17 de Diciembre de 2021</p>
+                                    <p>Creada por: Usuario que la creó</p>
+                                    <p>Cuerpo de la noticia</p>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>

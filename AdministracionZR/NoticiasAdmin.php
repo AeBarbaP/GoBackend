@@ -244,7 +244,7 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <label for="FechaPago" class="col-sm-2 col-form-label">Fecha </label>
-                                                <!-- Automática -->
+                                                <!-- Automática del día -->
                                                 <div class="col-sm-10">
                                                     <input type="date" class="form-control" id="FechaPago">
                                                 </div>
@@ -256,6 +256,12 @@
                                                 </div>
                                             </div>
 
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
+                                                        class="bi bi-x-circle"></i> Cancelar </button>
+                                                <button type="button" class="btn btn-primary"><i
+                                                        class="bi bi-check2-circle"></i> Registrar</button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -265,7 +271,7 @@
                         <!-- Termina Modal -->
 
                         <div class="row align-items-md-stretch">
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <div class="h-100 p-5 text-dark bg-light border rounded-3">
                                     <h2>Abierto Invernal de Golf 2021</h2>
                                     <hr>

@@ -149,7 +149,6 @@
                             </a>
                         </li>
                     </ul>
-
                 </div>
             </nav>
 
@@ -186,83 +185,88 @@
                 </nav>
 
                 <body>
-
                     <main>
-
                         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
                         </div>
                         <div class="row align-items-md-stretch">
                             <div class="col-md-12">
                                 <div class="h-100 p-5 text-dark bg-light border rounded-3">
-
                                     <div class="" style="min-height:500px;">
                                         <div class="">     
                                             <div class="row">
-                                                <h2>Generar códigos QR GO!</h2>
+                                                <h2>Generar acceso Individual</h2>
                                             </div>
-                                            
-                                            <div class="input-group col-md-3">
-                                                <form class="form-horizontal" method="post" id="codeForm" onsubmit="return false">
-                            
-                                                <label for="basic-url" class="form-label">Datos para generar QR <strong><i class="bi bi-upc-scan"></i></strong></label>
-                                                    <div class="input-group mb-3 w-100">
-                                                        <span class="input-group-text" id="basic-addon3"><i class="bi bi-person-circle"></i></span>
-                                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Nombre">
-                                                    </div>
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="basic-addon3"><i class="bi bi-phone"></i></span>
-                                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Celular">
-                                                    </div>
-                            
-                                                    <div class="input-group mb-3">
-                                                        <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-calendar-check-fill"></i></label>
-                                                        <select class="form-select" id="inputGroupSelect01">
-                                                            <option selected>Tipo</option>
-                                                            <option value="1">Entrada</option>
-                                                            <option value="2">Entrada/Salida</option>
-                                                            <option value="3">Salida</option>
-                                                        </select>
-                                                        </div>
-                            
-                                                    <hr>
-                            
-                                                    <div class="input-group-text">
-                                                        <label class="control-label">Información : </label>
-                                                        <input class="form-control col-xs-1" id="content" type="text" required="required">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label">Nivel del código (ECC) : </label>
-                                                        <select class="form-control col-xs-10" id="ecc">
-                                                            <option value="H">H - Mejor</option>
-                                                            <option value="M">M</option>
-                                                            <option value="Q">Q</option>
-                                                            <option value="L">L - Peor</option>                         
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label">Tamaño : </label>
-                                                        <input type="number" min="1" max="10" step="1" class="form-control col-xs-10" id="size" value="5">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label"></label>
-                                                        <input type="submit" name="submit" id="submit" class="btn btn-success" value="Generar código QR">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            
-                                            <div class="col-md-6">
-                                                <div class="showQRCode"></div>
+                                            <br>
+                                            <form class="form-horizontal" method="post" id="codeForm" onsubmit="return false">
+                                                <label for="basic-url" class="form-label">Datos para generar QR <strong><i class="bi bi-qr-code bg-dark"></i></strong></label>
+                                                <div class="input-group mb-3 w-100">
+                                                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-person-circle"></i></span>
+                                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Nombre">
+                                                </div>
+                                                <div class="input-group mb-3 w-100">
+                                                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-phone"></i></span>
+                                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Celular">
+                                                </div>
+                                                <div class="input-group mb-3 w-100">
+                                                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-house-door"></i></span>
+                                                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Domicilio...">
+                                                    <datalist id="datalistOptions">
+                                                        <option value="San Francisco">
+                                                        <option value="New York">
+                                                        <option value="Seattle">
+                                                        <option value="Los Angeles">
+                                                        <option value="Chicago">
+                                                    </datalist>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-arrow-left-right"></i></label>
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>Tipo</option>
+                                                        <option value="1">Entrada</option>
+                                                        <option value="2">Entrada/Salida</option>
+                                                        <option value="3">Salida</option>
+                                                    </select>
+                                                </div>            
+                                                <hr>
+                                                <br>
+                                                <div class="input-group-text bg-light w-25">
+                                                    <label class="control-label me-2">No. de Placa : </label>
+                                                    <input class="form-control col-xs-1" id="content" type="text" required="required">
+                                                </div>
+                                                <br>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <label class="control-label">Nivel del código (ECC) : </label>
+                                                    <select class="form-control col-xs-10" id="ecc">
+                                                        <option value="H">H - Mejor</option>
+                                                        <option value="M">M</option>                                                            <option value="Q">Q</option>
+                                                        <option value="L">L - Peor</option>                         
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Tamaño : </label>
+                                                    <input type="number" min="1" max="10" step="1" class="form-control col-xs-10" id="size" value="5">
+                                                </div>
+                                                <br>
+                                                <div class="form-group">
+                                                    <label class="control-label"></label>
+                                                    <input type="submit" name="submit" id="submit" class="btn btn-secondary" value="Generar código QR">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="showQRCode"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                        </div>
                         </div>
                     </main>
+                </body>
+            </main>
         </div>
-
+    </div>
 
         <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 

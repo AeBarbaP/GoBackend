@@ -146,20 +146,20 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Eventos</h1>
-                    <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
+                    <h1 class="h2">Votaciones</h1>
+                    <!--                     <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
                         <i class="bi bi-gear h4"></i>
-                    </a>
+                    </a> -->
                 </div>
 
                 <!-- Modal --->
-                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
+                <!--                 <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header text-dark">
-                                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i> Agregar
-                                    Espacio para Eventos</h5>
+                                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i> Nueva
+                                    Votación/Encuesta</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -167,41 +167,40 @@
 
                                 <form class="">
                                     <div class="form-floating mb-3">
-                                        <input type="NombreEspacioEvento" class="form-control rounded-4"
-                                            id="floatingInput" placeholder="Nombre del Espacio">
-                                        <label for="floatingInput">Nombre del Espacio para Eventos</label>
+                                        <input type="text" class="form-control rounded-4" id="floatingInput"
+                                            placeholder="Nombre del Espacio">
+                                        <label for="floatingInput">Título</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="Capacidad" class="form-control rounded-4" id="floatingPassword"
+                                        <input type="text" class="form-control rounded-4" id="floatingPassword"
                                             placeholder="Capacidad">
                                         <label for="floatingPassword">Capacidad</label>
                                     </div>
                                     <a href="/AdministracionSaldos.html"
                                         class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i
                                             class="bi bi-box-arrow-in-down"></i> Guardar</a>
-
                                 </form>
 
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Termina Modal -->
 
                 <!-- Custom styles for this template -->
                 <link href="features.css" rel="stylesheet">
                 </head>
 
-                <!--                 <nav>
+                <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="EventosAdmin.html">Eventos Públicos</a>
+                            <a class="nav-link active" aria-current="page" href="EventosAdmin.html">Votaciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EventosPrivAdmin.html">Eventos Privados</a>
+                            <a class="nav-link" href="EventosPrivAdmin.html">Encuestas</a>
                         </li>
                     </ul>
-                </nav> -->
+                </nav>
 
                 <body>
 
@@ -209,7 +208,8 @@
 
                         <div
                             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                            <h5>Eventos</h5>
+                            <h5>Votaciones Activas</h5>
+                            <br>
                             <div class="btn-toolbar mb-2 mb-md-0">
                             </div>
                             <div class="btn-toolbar mb-2 mb-md-0">
@@ -217,11 +217,22 @@
                                     <button type="button" class="btn btn-sm btn-outline-secondary"
                                         data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento
                                         Público</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"
-                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento
-                                        Privado</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"
-                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon3"><i
+                                            class="bi bi-newspaper"></i></i></span>
+                                    <input class="form-control" list="datalistOptions" id="exampleDataList"
+                                        placeholder="Domicilio...">
+                                    <datalist id="datalistOptions">
+                                        <option value="San Francisco">
+                                        <option value="New York">
+                                        <option value="Seattle">
+                                        <option value="Los Angeles">
+                                        <option value="Chicago">
+                                    </datalist>
                                 </div>
                             </div>
                         </div>
@@ -248,81 +259,69 @@
 
                                                 <?php
 
-date_default_timezone_set('America/Mexico_City');
-                  setlocale(LC_TIME, 'es_MX.UTF-8');
-                  $fecha_sistema = strftime("%Y-%m-%d");
+                        date_default_timezone_set('America/Mexico_City');
+                        setlocale(LC_TIME, 'es_MX.UTF-8');
+                        $fecha_sistema = strftime("%Y-%m-%d");
 
-// $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
+                        // $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
 
-                // echo date( 't', strtotime( $fecha_sistema ) );
-                $dia=date( 't', strtotime( $fecha_sistema ) ); //número de días en el mes
-                
-                if(isset($_REQUEST['m'])){
-                  $m = $_REQUEST['m'];
-                  // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                  $mes= $_REQUEST['ma'];
-                  $mtotal = $mes + ($m);
-                }
-                else{
-                  $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                }
+                        // echo date( 't', strtotime( $fecha_sistema ) );
+                        $dia = date('t', strtotime($fecha_sistema)); //número de días en el mes
 
-                // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal = $mes + ($m);
-                // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
-                // $fecha_actual=strftime("%B");
-                echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
-                
-                if($mtotal==1){
-                  echo '<p>Enero</p>';
-                }
-                elseif($mtotal==2){
-                  echo 'Febrero';
-                }
-                elseif($mtotal==3){
-                  echo 'Marzo';
-                }
-                elseif($mtotal==4){
-                  echo 'Abril';
-                }
-                elseif($mtotal==5){
-                  echo 'Mayo';
-                }
-                elseif($mtotal==6){
-                  echo 'Junio';
-                }
-                elseif($mtotal==7){
-                  echo 'Julio';
-                }
-                elseif($mtotal==8){
-                  echo 'Agosto';
-                }
-                elseif($mtotal==9){
-                  echo 'Septiembre';
-                }
-                elseif($mtotal==10){
-                  echo 'Octubre';
-                }
-                elseif($mtotal==11){
-                  echo 'Noviembre';
-                }
-                elseif($mtotal==12){
-                  echo 'Diciembre';
-                }
-                echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
-                echo '<hr>';
-                
-                
-                // .$fecha_actual.'<hr>'; 
+                        if (isset($_REQUEST['m'])) {
+                          $m = $_REQUEST['m'];
+                          // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                          $mes = $_REQUEST['ma'];
+                          $mtotal = $mes + ($m);
+                        } else {
+                          $mtotal = date('m', strtotime($fecha_sistema)); //muestra el número de mes
+                        }
 
-        
-          // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
-          // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
-          // $resultado_consulta2 = $conn->query($consulta2);
-          // $n=0;
-          // while ($dia = 30){
-                echo ' 
+                        // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                        // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                        // $mtotal = $mes + ($m);
+                        // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
+                        // $fecha_actual=strftime("%B");
+                        echo '<a href="calendar.php?m=-1&ma=' . $mtotal . '"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
+
+                        if ($mtotal == 1) {
+                          echo '<p>Enero</p>';
+                        } elseif ($mtotal == 2) {
+                          echo 'Febrero';
+                        } elseif ($mtotal == 3) {
+                          echo 'Marzo';
+                        } elseif ($mtotal == 4) {
+                          echo 'Abril';
+                        } elseif ($mtotal == 5) {
+                          echo 'Mayo';
+                        } elseif ($mtotal == 6) {
+                          echo 'Junio';
+                        } elseif ($mtotal == 7) {
+                          echo 'Julio';
+                        } elseif ($mtotal == 8) {
+                          echo 'Agosto';
+                        } elseif ($mtotal == 9) {
+                          echo 'Septiembre';
+                        } elseif ($mtotal == 10) {
+                          echo 'Octubre';
+                        } elseif ($mtotal == 11) {
+                          echo 'Noviembre';
+                        } elseif ($mtotal == 12) {
+                          echo 'Diciembre';
+                        }
+                        echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
+                        echo '<hr>';
+
+
+                        // .$fecha_actual.'<hr>'; 
+
+
+                        // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
+                        // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
+                        // $resultado_consulta2 = $conn->query($consulta2);
+                        // $n=0;
+                        // while ($dia = 30){
+                        echo ' 
             
             <div class="card-group">
               <div class="card">
@@ -583,9 +582,9 @@ date_default_timezone_set('America/Mexico_City');
 
 
               ';
-          // }
+                        // }
 
-?>
+                        ?>
 
 
                                                 <!-- termina calendar -->

@@ -16,9 +16,7 @@
     <!-- Bootstrap core CSS -->
 
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' />
     <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
 
@@ -248,71 +246,10 @@
 
                                                 <!-- inicia calendar -->
 
-                                                <p class="h4 mt-5 bg-info text-light p-4 rounded">
-        <strong><i class="bi bi-list-columns-reverse"></i> Agenda</strong> 
-      </p>
-
-      
-
-      <p>
-        <!-- <div class="input-group mb-3 w-25">
-          <input type="date" class="form-control" placeholder="Recipient's username" aria-label="dd/mm/aaaa" aria-describedby="button-addon2">
-          <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i> Buscar</button> -->
-        </div>
-      </p>
-
-    </div>
-<main>
-<div class="container py-4">
-
-<div class="row">
-  <div class="col-4">
-    <form action="calendar.php" method="POST">
-    <select class="form-select" aria-label="Default select example" name="mes" required>
-      <option selected>Mes</option>
-      <option value="1">Enero</option>
-      <option value="2">Febrero</option>
-      <option value="3">Marzo</option>
-      <option value="4">Abril</option>
-      <option value="5">Mayo</option>
-      <option value="6">Junio</option>
-      <option value="7">Julio</option>
-      <option value="8">Agosto</option>
-      <option value="9">Septiempre</option>
-      <option value="10">Octubre</option>
-      <option value="11">Noviembre</option>
-      <option value="12">Diciembre</option>
-    </select>
-   
-  </div>
-  <div class="col-4">
-    <select class="form-select" aria-label="Default select example" name="annio" required>
-      <option selected required>Año</option>
-      <option value="2021">2021</option>
-      <option value="2022">2022</option>
-      <option value="2023">2023</option>
-      <option value="2024">2024</option>
-      <option value="2025">2025</option>
-      <option value="2026">2026</option>
-      <option value="2027">2027</option>
-      <option value="2028">2028</option>
-      <option value="2029">2029</option>
-    </select>
-  </div>
-  <div class="col-4">
-    <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> Buscar</button>
-    </form>
-  </div>
-</div>
-<hr>
-
-<!-- inicia calendar -->
-
-<?php
+                                                <?php
 
 date_default_timezone_set('America/Mexico_City');
                   setlocale(LC_TIME, 'es_MX.UTF-8');
-                  // setlocale(LC_TIME, 'es_ES');
                   $fecha_sistema = strftime("%Y-%m-%d");
 
 // $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
@@ -320,14 +257,14 @@ date_default_timezone_set('America/Mexico_City');
                 // echo date( 't', strtotime( $fecha_sistema ) );
                 $dia=date( 't', strtotime( $fecha_sistema ) ); //número de días en el mes
                 
-                if(isset($_REQUEST['mes'])&&isset($_REQUEST['annio'])){
-                  $mtotal = $_REQUEST['mes'];
-                  $annio = $_REQUEST['annio'];
-                  
+                if(isset($_REQUEST['m'])){
+                  $m = $_REQUEST['m'];
+                  // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                  $mes= $_REQUEST['ma'];
+                  $mtotal = $mes + ($m);
                 }
                 else{
                   $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                  $annio = date('Y', strtotime( $fecha_sistema ));
                 }
 
                 // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
@@ -335,11 +272,10 @@ date_default_timezone_set('America/Mexico_City');
                 // $mtotal = $mes + ($m);
                 // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
                 // $fecha_actual=strftime("%B");
-                // echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
-                echo '<strong>MES</strong>: ';
+                echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
                 
                 if($mtotal==1){
-                  echo 'Enero';
+                  echo '<p>Enero</p>';
                 }
                 elseif($mtotal==2){
                   echo 'Febrero';
@@ -374,422 +310,254 @@ date_default_timezone_set('America/Mexico_City');
                 elseif($mtotal==12){
                   echo 'Diciembre';
                 }
-                // echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
-                echo ' | <strong>Año: </strong>'.$annio;
+                echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
                 echo '<hr>';
-                
                 
                 
                 // .$fecha_actual.'<hr>'; 
 
-        // require('prcd/contar_calentario.php');
-
+        
           // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
           // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
           // $resultado_consulta2 = $conn->query($consulta2);
           // $n=0;
           // while ($dia = 30){
-
-            //echo para calcular la fecha correctamente    
-            echo $fecha_calcular1;
-            echo $row_cnt1;
-            
-              echo ' 
+                echo ' 
             
             <div class="card-group">
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 1</h5>
+                  <h5 class="card-title">1</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día: '.$dia1.'</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas: '.$row_cnt1.'</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas: '.$row_cnt1_si.'</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas: '.$row_cnt1_no.'</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 2</h5>
+                  <h5 class="card-title">2</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día: '.$dia2.'</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas: '.$row_cnt2.'</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas: '.$row_cnt2_si.'</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas: '.$row_cnt2_no.'</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 3</h5>
+                  <h5 class="card-title">3</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 4</h5>
+                  <h5 class="card-title">4</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 5</h5>
+                  <h5 class="card-title">5</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 6</h5>
+                  <h5 class="card-title">6</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 7</h5>
+                  <h5 class="card-title">7</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="card-group">
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 8</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 9</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 10</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 11</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 12</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 13</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 14</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              
-              
-            </div>
-            
-            <div class="card-group">
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 15</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 16</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 17</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 18</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 19</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 20</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
-                </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 21</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
             </div>
             
             <div class="card-group">
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 22</h5>
+                  <h5 class="card-title">8</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 23</h5>
+                  <h5 class="card-title">9</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 24</h5>
+                  <h5 class="card-title">10</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 25</h5>
+                  <h5 class="card-title">11</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 26</h5>
+                  <h5 class="card-title">12</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 27</h5>
+                  <h5 class="card-title">13</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
-              <div class="card border-info bg-dark text-light">
+              <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 28</h5>
+                  <h5 class="card-title">14</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                 </div>
               </div>
+            </div>
             
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">15</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">16</h5>
+                  <hr>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">17</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">18</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">19</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">20</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">21</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">22</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">23</h5>
+                  <hr>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">24</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">25</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">26</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">27</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">28</h5>
+                  <hr>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
             </div>
 
             <div class="card-group">
-              
-            <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 29</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">29</h5>
+                    <hr>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  </div>
                 </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 30</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">30</h5>
+                    <hr>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  </div>
                 </div>
-              </div>
-              <div class="card border-info bg-dark text-light">
-                <div class="card-body">
-                  <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 31</h5>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas:</p>
-                  <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas:</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas:</p>
-                  <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">31</h5>
+                    <hr>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  </div>
                 </div>
-              </div>
                 <div class="card border-light">
                   <div class="card-body">
                     <h5 class="card-title"></h5>
-                 
+                    <hr>
                     <p class="card-text"></p>
                   </div>
                 </div>
@@ -818,12 +586,6 @@ date_default_timezone_set('America/Mexico_City');
           // }
 
 ?>
-
-
-<!-- termina calendar -->
-
-    </div>
-    </main>
 
 
                                                 <!-- termina calendar -->

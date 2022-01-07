@@ -268,6 +268,42 @@
                                                 </div>
                                             </div>
 
+                                            <div class="row mb-3">
+                                                <label for="Seleccion" class="col-sm-2 col-form-label">Enviar a:</label>
+                                                <div class="col-sm-10">
+                                                    <div class="form-check form-switch">
+                                                        <!-- Acomodar la alineación de los switch -->
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDefault">Todos</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckChecked">Propietarios</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDisabled">Habitantes</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckCheckedDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckCheckedDisabled">Vigilantes</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckCheckedDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckCheckedDisabled">Otros</label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
                                                         class="bi bi-x-circle"></i> Cancelar </button>

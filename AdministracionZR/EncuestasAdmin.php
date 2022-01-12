@@ -390,7 +390,7 @@
                                             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                                     </div>
                                     <br>
-                                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                                    <canvas class="my-4 w-100" id="myChart1" width="900" height="380"></canvas>
                                     <br>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
@@ -409,7 +409,7 @@
                                             aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
                                     </div>
                                     <br>
-                                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                                    <canvas class="my-4 w-100" id="myChart2" width="900" height="380"></canvas>
                                     <br>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>

@@ -254,7 +254,7 @@
                                             </div>
                                             <div class="form-floating mb-3 w-50">
                                                 <!-- js -->
-                                                <input type="number" class="form-control rounded-4 solo-numero" id="floatingPassword"
+                                                <input type="number" class="form-control rounded-4 solo-numero" id="floatingPassword1"
                                                     placeholder="" onchange="myFunction(this.value)" pattern="[0-9]" max-lenght="2">
                                                 <label for="floatingPassword">Define el número de Opciones</label>
                                             </div>
@@ -635,7 +635,36 @@
         var x = val;
         for(let i=0; i<x; i++){
             var var_p = i + 1;
-            document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
+            // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
+            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-6"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"><label class="form-check-label" for="flexRadioDefault1"><input type="text" class="form-control w-100"   id="Q1" placeholder="Opción '+var_p+'" required></label></div><div class="col-6"><select class="form-select" aria-label="Default select example"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select></div></div></div>';
+        }
+    }
+    
+    
+
+</script>
+
+<script>
+    function myFunction2(val){
+        document.getElementById("demo2").innerHTML = "";
+        var y = 0;
+        var y = val2;
+        if (y=1){
+            document.getElement("demo2").innerHTML+='<select class="form-select" aria-label="Default select example">'+
+            +'<option selected>Open this select menu</option>'+
+            +'<option value="1">One</option>'+
+            +'<option value="2">Two</option>'+
+            +'<option value="3">Three</option>'+
+            +'</select>';
+        }
+        // elseif(y=2){
+
+        // }
+        // elseif(y=3){
+
         }
     }
 </script>
+
+<div class="container"></div>
+

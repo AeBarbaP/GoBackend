@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>GO - Administración de Zona Residencial</title>
-
+    <link rel="icon" type="image/png" href="../Images/LogoGO.png" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/features/">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
@@ -228,9 +228,287 @@
                             </div>
                         </div>
 
-                        <!-- Modal Agregar EVENTO -->
+ 
 
-                        <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento"
+                        <div class="row align-items-md-stretch">
+                            <div class="col-md-4">
+                                <div class="h-100 p-5 text-dark bg-light border rounded-3">
+                                    <h2>Abierto Invernal de Golf 2021</h2>
+                                    <hr>
+                                    <p>Fecha: 17 de Diciembre de 2021</p>
+                                    <p>Hora: 18:00hrs</p>
+                                    <p>Organizador: Epica</p>
+                                    <p>Lugar: Club de Golf</p>
+                                    <p>Tipo de Evento: Público</p>
+                                    <button class="btn btn-outline-secondary" type="button">Detalles</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="h-100 p-5 bg-light border rounded-3">
+                                    <h2>Cumpleaños Annely</h2>
+                                    <hr>
+                                    <p>Fecha: 12 de Diciembre de 2021</p>
+                                    <p>Hora: 20:00hrs</p>
+                                    <p>Organizador: N/A</p>
+                                    <p>Lugar: Lobby Club de Golf</p>
+                                    <p>Tipo de Evento: Privado</p>
+                                    <button class="btn btn-outline-secondary" type="button">Detalles</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="h-100 p-5 bg-light border rounded-3">
+                                    <h2>El Cascanueces </h2>
+                                    <hr>
+                                    <p>Fecha: 10 de Diciembre de 2021</p>
+                                    <p>Hora: 20:00hrs</p>
+                                    <p>Organizador: C&M</p>
+                                    <p>Lugar: Lobby Club de Golf</p>
+                                    <p>Tipo de Evento: Público</p>
+                                    <button class="btn btn-outline-secondary" type="button">Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+        </main>
+    </div>
+
+    <!-- Inicia Script Calendario -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        $('.clockpicker').clockpicker();
+
+        let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'), {
+            plugins: ['dayGrid', 'timeGrid', 'interaction'],
+            height: 800,
+            droppable: true,
+            locale: 'es',
+            showNonCurrentDates: false,
+            header: {
+                left: 'today,prev,next',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            editable: true,
+            events: 'datoseventos.php?accion=listar',
+            dateClick: function(info) {
+                limpiarFormulario();
+                $('#BotonAgregar').show();
+                $('#BotonModificar').hide();
+                $('#BotonBorrar').hide();
+                if (info.allDay) {
+                    $('#FechaInicio').val(info.dateStr);
+                    $('#FechaFin').val(info.dateStr);
+                } else {
+                    let fechaHora = info.dateStr.split("T");
+                    $('#FechaInicio').val(fechaHora[0]);
+                    $('#FechaFin').val(fechaHora[0]);
+                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
+                }
+                $("#FormularioEventos").modal();
+            },
+            eventClick: function(info) {
+                $('#BotonModificar').show();
+                $('#BotonBorrar').show();
+                $('#BotonAgregar').hide();
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $("#FormularioEventos").modal();
+            },
+            eventResize: function(info) {
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                let registro = recuperarDatosFormulario();
+                modificarRegistro(registro);
+            },
+            eventDrop: function(info) {
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                let registro = recuperarDatosFormulario();
+                modificarRegistro(registro);
+            },
+            drop: function(info) {
+                limpiarFormulario();
+                $('#ColorFondo').val(info.draggedEl.dataset.colorfondo);
+                $('#ColorTexto').val(info.draggedEl.dataset.colortexto);
+                $('#Titulo').val(info.draggedEl.dataset.titulo);
+                let fechaHora = info.dateStr.split("T");
+                $('#FechaInicio').val(fechaHora[0]);
+                $('#FechaFin').val(fechaHora[0]);
+                if (info.allDay) { //verdadero si el calendario esta en vista de mes
+                    $('#HoraInicio').val(info.draggedEl.dataset.horainicio);
+                    $('#HoraFin').val(info.draggedEl.dataset.horafin);
+                } else {
+                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
+                    $('#HoraFin').val(moment(fechaHora[1].substring(0, 5)).add(1, 'hours'));
+                }
+                let registro = recuperarDatosFormulario();
+                agregarEventoPredefinido(registro);
+            }
+        });
+
+        calendario1.render();
+
+
+        new FullCalendarInteraction.Draggable(document.getElementById('listaeventospredefinidos'), {
+            itemSelector: '.fc-event',
+            eventData: function(eventEl) {
+                return {
+                    title: eventEl.innerText.trim()
+                }
+            }
+        });
+
+        //Eventos de botones de la aplicación
+        $('#BotonAgregar').click(function() {
+            let registro = recuperarDatosFormulario();
+            agregarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonModificar').click(function() {
+            let registro = recuperarDatosFormulario();
+            modificarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonBorrar').click(function() {
+            let registro = recuperarDatosFormulario();
+            borrarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonEventosPredefinidos').click(function() {
+            window.location = "eventospredefinidos.html";
+        });
+
+
+        // funciones para comunicarse con el servidor via ajax
+        function agregarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=agregar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
+
+        function modificarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=modificar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
+
+        function borrarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=borrar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
+
+        function agregarEventoPredefinido(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=agregar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.removeAllEvents();
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
+
+        // funciones que interactuan con el formulario de entrada de datos
+        function limpiarFormulario() {
+            $('#Codigo').val('');
+            $('#Titulo').val('');
+            $('#Descripcion').val('');
+            $('#FechaInicio').val('');
+            $('#FechaFin').val('');
+            $('#HoraInicio').val('');
+            $('#HoraFin').val('');
+            $('#ColorFondo').val('#3788D8');
+            $('#ColorTexto').val('#ffffff');
+        }
+
+        function recuperarDatosFormulario() {
+            let registro = {
+                codigo: $('#Codigo').val(),
+                titulo: $('#Titulo').val(),
+                descripcion: $('#Descripcion').val(),
+                inicio: $('#FechaInicio').val() + ' ' + $('#HoraInicio').val(),
+                fin: $('#FechaFin').val() + ' ' + $('#HoraFin').val(),
+                colorfondo: $('#ColorFondo').val(),
+                colortexto: $('#ColorTexto').val()
+            };
+            return registro;
+        }
+
+    });
+    </script>
+    <!-- Termina Script Calendario -->
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+    </script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
+
+
+                       <!-- Modal Agregar EVENTO -->
+
+                       <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento"
                             aria-hidden="true">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
@@ -844,278 +1122,3 @@ date_default_timezone_set('America/Mexico_City');
                         </div>
 
                         <!-- Termina Modal -->
-
-                        <div class="row align-items-md-stretch">
-                            <div class="col-md-4">
-                                <div class="h-100 p-5 text-dark bg-light border rounded-3">
-                                    <h2>Abierto Invernal de Golf 2021</h2>
-                                    <hr>
-                                    <p>Fecha: 17 de Diciembre de 2021</p>
-                                    <p>Hora: 18:00hrs</p>
-                                    <p>Organizador: Epica</p>
-                                    <p>Lugar: Club de Golf</p>
-                                    <p>Tipo de Evento: Público</p>
-                                    <button class="btn btn-outline-secondary" type="button">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>Cumpleaños Annely</h2>
-                                    <hr>
-                                    <p>Fecha: 12 de Diciembre de 2021</p>
-                                    <p>Hora: 20:00hrs</p>
-                                    <p>Organizador: N/A</p>
-                                    <p>Lugar: Lobby Club de Golf</p>
-                                    <p>Tipo de Evento: Privado</p>
-                                    <button class="btn btn-outline-secondary" type="button">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>El Cascanueces </h2>
-                                    <hr>
-                                    <p>Fecha: 10 de Diciembre de 2021</p>
-                                    <p>Hora: 20:00hrs</p>
-                                    <p>Organizador: C&M</p>
-                                    <p>Lugar: Lobby Club de Golf</p>
-                                    <p>Tipo de Evento: Público</p>
-                                    <button class="btn btn-outline-secondary" type="button">Detalles</button>
-                                </div>
-                            </div>
-                        </div>
-        </div>
-        </main>
-    </div>
-
-    <!-- Inicia Script Calendario -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-
-        $('.clockpicker').clockpicker();
-
-        let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'), {
-            plugins: ['dayGrid', 'timeGrid', 'interaction'],
-            height: 800,
-            droppable: true,
-            locale: 'es',
-            showNonCurrentDates: false,
-            header: {
-                left: 'today,prev,next',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay'
-            },
-            editable: true,
-            events: 'datoseventos.php?accion=listar',
-            dateClick: function(info) {
-                limpiarFormulario();
-                $('#BotonAgregar').show();
-                $('#BotonModificar').hide();
-                $('#BotonBorrar').hide();
-                if (info.allDay) {
-                    $('#FechaInicio').val(info.dateStr);
-                    $('#FechaFin').val(info.dateStr);
-                } else {
-                    let fechaHora = info.dateStr.split("T");
-                    $('#FechaInicio').val(fechaHora[0]);
-                    $('#FechaFin').val(fechaHora[0]);
-                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
-                }
-                $("#FormularioEventos").modal();
-            },
-            eventClick: function(info) {
-                $('#BotonModificar').show();
-                $('#BotonBorrar').show();
-                $('#BotonAgregar').hide();
-                $('#Codigo').val(info.event.id);
-                $('#Titulo').val(info.event.title);
-                $('#Descripcion').val(info.event.extendedProps.descripcion);
-                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-                $('#ColorFondo').val(info.event.backgroundColor);
-                $('#ColorTexto').val(info.event.textColor);
-                $("#FormularioEventos").modal();
-            },
-            eventResize: function(info) {
-                $('#Codigo').val(info.event.id);
-                $('#Titulo').val(info.event.title);
-                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-                $('#ColorFondo').val(info.event.backgroundColor);
-                $('#ColorTexto').val(info.event.textColor);
-                $('#Descripcion').val(info.event.extendedProps.descripcion);
-                let registro = recuperarDatosFormulario();
-                modificarRegistro(registro);
-            },
-            eventDrop: function(info) {
-                $('#Codigo').val(info.event.id);
-                $('#Titulo').val(info.event.title);
-                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-                $('#ColorFondo').val(info.event.backgroundColor);
-                $('#ColorTexto').val(info.event.textColor);
-                $('#Descripcion').val(info.event.extendedProps.descripcion);
-                let registro = recuperarDatosFormulario();
-                modificarRegistro(registro);
-            },
-            drop: function(info) {
-                limpiarFormulario();
-                $('#ColorFondo').val(info.draggedEl.dataset.colorfondo);
-                $('#ColorTexto').val(info.draggedEl.dataset.colortexto);
-                $('#Titulo').val(info.draggedEl.dataset.titulo);
-                let fechaHora = info.dateStr.split("T");
-                $('#FechaInicio').val(fechaHora[0]);
-                $('#FechaFin').val(fechaHora[0]);
-                if (info.allDay) { //verdadero si el calendario esta en vista de mes
-                    $('#HoraInicio').val(info.draggedEl.dataset.horainicio);
-                    $('#HoraFin').val(info.draggedEl.dataset.horafin);
-                } else {
-                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
-                    $('#HoraFin').val(moment(fechaHora[1].substring(0, 5)).add(1, 'hours'));
-                }
-                let registro = recuperarDatosFormulario();
-                agregarEventoPredefinido(registro);
-            }
-        });
-
-        calendario1.render();
-
-
-        new FullCalendarInteraction.Draggable(document.getElementById('listaeventospredefinidos'), {
-            itemSelector: '.fc-event',
-            eventData: function(eventEl) {
-                return {
-                    title: eventEl.innerText.trim()
-                }
-            }
-        });
-
-        //Eventos de botones de la aplicación
-        $('#BotonAgregar').click(function() {
-            let registro = recuperarDatosFormulario();
-            agregarRegistro(registro);
-            $("#FormularioEventos").modal('hide');
-        });
-
-        $('#BotonModificar').click(function() {
-            let registro = recuperarDatosFormulario();
-            modificarRegistro(registro);
-            $("#FormularioEventos").modal('hide');
-        });
-
-        $('#BotonBorrar').click(function() {
-            let registro = recuperarDatosFormulario();
-            borrarRegistro(registro);
-            $("#FormularioEventos").modal('hide');
-        });
-
-        $('#BotonEventosPredefinidos').click(function() {
-            window.location = "eventospredefinidos.html";
-        });
-
-
-        // funciones para comunicarse con el servidor via ajax
-        function agregarRegistro(registro) {
-            $.ajax({
-                type: 'POST',
-                url: 'datoseventos.php?accion=agregar',
-                data: registro,
-                success: function(msg) {
-                    calendario1.refetchEvents();
-                },
-                error: function(error) {
-                    alert("Hay un problema:" + error);
-                }
-            });
-        }
-
-        function modificarRegistro(registro) {
-            $.ajax({
-                type: 'POST',
-                url: 'datoseventos.php?accion=modificar',
-                data: registro,
-                success: function(msg) {
-                    calendario1.refetchEvents();
-                },
-                error: function(error) {
-                    alert("Hay un problema:" + error);
-                }
-            });
-        }
-
-        function borrarRegistro(registro) {
-            $.ajax({
-                type: 'POST',
-                url: 'datoseventos.php?accion=borrar',
-                data: registro,
-                success: function(msg) {
-                    calendario1.refetchEvents();
-                },
-                error: function(error) {
-                    alert("Hay un problema:" + error);
-                }
-            });
-        }
-
-        function agregarEventoPredefinido(registro) {
-            $.ajax({
-                type: 'POST',
-                url: 'datoseventos.php?accion=agregar',
-                data: registro,
-                success: function(msg) {
-                    calendario1.removeAllEvents();
-                    calendario1.refetchEvents();
-                },
-                error: function(error) {
-                    alert("Hay un problema:" + error);
-                }
-            });
-        }
-
-        // funciones que interactuan con el formulario de entrada de datos
-        function limpiarFormulario() {
-            $('#Codigo').val('');
-            $('#Titulo').val('');
-            $('#Descripcion').val('');
-            $('#FechaInicio').val('');
-            $('#FechaFin').val('');
-            $('#HoraInicio').val('');
-            $('#HoraFin').val('');
-            $('#ColorFondo').val('#3788D8');
-            $('#ColorTexto').val('#ffffff');
-        }
-
-        function recuperarDatosFormulario() {
-            let registro = {
-                codigo: $('#Codigo').val(),
-                titulo: $('#Titulo').val(),
-                descripcion: $('#Descripcion').val(),
-                inicio: $('#FechaInicio').val() + ' ' + $('#HoraInicio').val(),
-                fin: $('#FechaFin').val() + ' ' + $('#HoraFin').val(),
-                colorfondo: $('#ColorFondo').val(),
-                colortexto: $('#ColorTexto').val()
-            };
-            return registro;
-        }
-
-    });
-    </script>
-    <!-- Termina Script Calendario -->
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
-    </script>
-    <script src="dashboard.js"></script>
-</body>
-
-</html>

@@ -147,13 +147,11 @@
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Encuestas</h1>
-                    <!--                     <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
-                        <i class="bi bi-gear h4"></i>
-                    </a> -->
+
                 </div>
 
                 <!-- Modal --->
-                <!--                 <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
+<!--                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -216,57 +214,139 @@
                             <div class="btn-toolbar mb-2 mb-md-0">
                             </div>
                             <div class="btn-toolbar mb-2 mb-md-0">
-                                <div class="btn-group me-2">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"
-                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento
-                                        Público</button>
-                                </div>
-                            </div>
-                            <br>
-                            <div>
                                 <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon3"><i
-                                            class="bi bi-newspaper"></i></i></span>
-                                    <input class="form-control" list="datalistOptions" id="exampleDataList"
-                                        placeholder="Domicilio...">
-                                    <datalist id="datalistOptions">
-                                        <option value="San Francisco">
-                                        <option value="New York">
-                                        <option value="Seattle">
-                                        <option value="Los Angeles">
-                                        <option value="Chicago">
-                                    </datalist>
+                                    <input type="text" class="form-control" placeholder="Buscar..."
+                                        aria-label="Recipient's username with two button addons">
+                                    <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
+                                        data-bs-target="#CrearEncuesta">+ Encuesta</button>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Modal Agregar Votación -->
 
-                        <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento"
+                        <div class="modal fade" id="CrearEncuesta" tabindex="-1" aria-labelledby="Crear Encuesta"
                             aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
+                            <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="AgregarEvento"><i
-                                                class="bi bi-calendar-plus"></i></i> Registrar Evento</h5>
+                                        <h5 class="modal-title" id="CrearEncuesta"><i
+                                                class="bi bi-calendar-plus"></i></i> Nueva Encuesta</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="needs-validation" novalidate>
-                                            <h4>Datos del Evento</h4>
-
-                                            <div class="container py-4">
-
-
+                                        <form class="">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-4" id="floatingInput"
+                                                    placeholder="">
+                                                <label for="floatingInput">Título de la Encuesta</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-4" id="floatingPassword"
+                                                    placeholder="">
+                                                <label for="floatingPassword">Descripción</label>
+                                            </div>
+                                            <div class="form-floating mb-3" style="width: 48%;">
+                                                    <input type="number" class="form-control rounded-4" id="floatingPassword"
+                                                        placeholder="">
+                                                    <label for="floatingPassword">Define el número de preguntas</label>
+                                                </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="date" class="form-control rounded-4" id="floatingPassword"
+                                                            placeholder="">
+                                                        <label for="floatingPassword">Fecha de Inicio</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="date" class="form-control rounded-4" id="floatingPassword"
+                                                            placeholder="">
+                                                        <label for="floatingPassword">Fecha Final</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="mb-3">
+                                                <label for="zip" class="form-label">Pregunta 1</label>
+                                                <input type="text" class="form-control" id="Q1" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    Ingrese una pregunta.
+                                                </div>
                                             </div>
 
+                                            <div class="form mb-3">
+                                                <label for="Qtipo" class="form-label">Tipo</label>
+                                                <select class="form-select" id="Qtipo" required>
+                                                    <option value="">Elige...</option>
+                                                    <option>Opción múltiple (Seleccionar una opción)</option>
+                                                    <option>Opción múltiple (Seleccionar varias opciones)</option>
+                                                    <option>Abierta (Área de texto)</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Selecciona el tipo.
+                                                </div>
+                                            </div>
+                                            <div class="form mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                    <input type="text" class="form-control" id="Q1" placeholder="Respuesta 1" required>
+                                                    </label>
+                                                </div> <!-- OJO! Cuando se empieza a escribir se habilita un siguiente campo para opción OnChange -->
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                    <input type="text" class="form-control" id="Q1" placeholder="" required>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row mb-3">
+                                                <label for="Seleccion" class="col-sm-2 col-form-label">Enviar a:</label>
+                                                <div class="col-sm-10">
+                                                    <div class="form-check form-switch">
+                                                        <!-- Acomodar la alineación de los switch -->
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDefault">Todos</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckChecked">Propietarios</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDisabled">Habitantes</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckCheckedDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckCheckedDisabled">Vigilantes</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckCheckedDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckCheckedDisabled">Otros</label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
-                                                        class="bi bi-x-circle"></i> Cancelar
-                                                </button>
-                                                <button type="button" class="btn btn-primary"><i
-                                                        class="bi bi-check2-circle"></i> Guardar</button>
+                                                        class="bi bi-x-circle"></i> Cancelar </button>
+                                                <button type="button" class="btn btn-primary"><i class="bi bi-box-arrow-in-down"></i> Solo Guardar</button>
+                                                <button type="button" class="btn btn-primary"><i class="bi bi-clipboard-check"></i> Guardar y Publicar</button>
                                             </div>
                                         </form>
                                     </div>
@@ -281,6 +361,7 @@
                                 <div class="h-100 p-5 text-dark bg-light border rounded-3">
                                     <h2>Proveedor de Vigilancia</h2>
                                     <hr>
+                                    <p>Estatus: Publicada</p>
                                     <p>Inicio: 17 de Diciembre de 2021</p>
                                     <p>Finaliza en: 18:00hrs</p>
                                     <br>
@@ -297,15 +378,16 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>Nueva Mesa Directiva</h2>
+                                    <h2>Instalación de Cámaras de Vigilancia</h2>
                                     <hr>
-                                    <p>Inicio: 1 de Enero de 2022</p>
-                                    <p>Finaliza en: 7 días 11:00hrs</p>
+                                    <p>Estatus: Guardada</p>
+                                    <p>Inicio: Sin definir</p>
+                                    <p>Finaliza en: Sin definir</p>
                                     <br>
                                     <p>Avance:</p>
                                     <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 68%;"
-                                            aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">68%</div>
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;"
+                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                                     </div>
                                     <br>
                                     <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
@@ -317,6 +399,7 @@
                                 <div class="h-100 p-5 bg-light border rounded-3">
                                     <h2>Cancelación de Acceso Vehicular </h2>
                                     <hr>
+                                    <p>Estátus: Publicada</p>
                                     <p>Inicio: 1 de Enero de 2022</p>
                                     <p>Finaliza en: 3 días 10:00hrs</p>
                                     <br>

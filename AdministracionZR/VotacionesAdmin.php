@@ -253,13 +253,14 @@
                                                 <label for="floatingPassword">Descripción</label>
                                             </div>
                                             <div class="form-floating mb-3 w-50">
+                                                <!-- js -->
                                                 <input type="number" class="form-control rounded-4" id="floatingPassword"
-                                                    placeholder="">
+                                                    placeholder="" onchange="myFunction(this.value)">
                                                 <label for="floatingPassword">Define el número de Opciones</label>
                                             </div>
                                             <hr>
                                             <div class="form mb-3">
-                                                <div class="form-check">
+                                                <!-- <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                                     <label class="form-check-label" for="flexRadioDefault1">
                                                     <input type="text" class="form-control" id="Q1" placeholder="Opción 1" required>
@@ -276,7 +277,8 @@
                                                     <label class="form-check-label" for="flexRadioDefault2">
                                                     <input type="text" class="form-control" id="Q1" placeholder="Opción 3" required>
                                                     </label>
-                                                </div>
+                                                </div> -->
+                                                <p id="demo"></p>
                                             </div>
                                             <hr>
                                             <div class="row mb-3">
@@ -625,3 +627,15 @@
 </body>
 
 </html>
+
+<script>
+    function myFunction(val) {
+        var x = val;
+        // var x = document.getElementById("floatingPassword").value;
+        // document.getElementById("demo").innerHTML = "You selected: " + x;
+
+        for(let i=0; i<x; i++){
+            document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción 1' required></label>";
+        }
+    }
+</script>

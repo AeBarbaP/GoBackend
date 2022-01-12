@@ -254,8 +254,8 @@
                                             </div>
                                             <div class="form-floating mb-3 w-50">
                                                 <!-- js -->
-                                                <input type="number" class="form-control rounded-4" id="floatingPassword"
-                                                    placeholder="" onchange="myFunction(this.value)">
+                                                <input type="number" class="form-control rounded-4 solo-numero" id="floatingPassword"
+                                                    placeholder="" onchange="myFunction(this.value)" pattern="[0-9]" max-lenght="2">
                                                 <label for="floatingPassword">Define el número de Opciones</label>
                                             </div>
                                             <hr>
@@ -630,12 +630,12 @@
 
 <script>
     function myFunction(val) {
+        document.getElementById("demo").innerHTML = "";
+        var x = 0;
         var x = val;
-        // var x = document.getElementById("floatingPassword").value;
-        // document.getElementById("demo").innerHTML = "You selected: " + x;
-
         for(let i=0; i<x; i++){
-            document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción 1' required></label>";
+            var var_p = i + 1;
+            document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
         }
     }
 </script>

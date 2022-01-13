@@ -636,26 +636,22 @@
         for(let i=0; i<x; i++){
             var var_p = i + 1;
             // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
-            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-6"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"><label class="form-check-label" for="flexRadioDefault1"><input type="text" class="form-control w-100"   id="Q1" placeholder="Opción '+var_p+'" required></label></div><div class="col-6"><select class="form-select" aria-label="Default select example"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select></div></div></div>';
+            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-6"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"><label class="form-check-label" for="flexRadioDefault1"><input type="text" class="form-control w-100" id="Q1" placeholder="Opción '+var_p+'" required></label></div><div class="col-6"><select class="form-select" aria-label="Default select example" id="select1" onchange="myFunction2()"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select></div></div></p></div><p id="demo2">';
         }
     }
-    
-    
-
 </script>
 
 <script>
-    function myFunction2(val){
+    function myFunction2(){
         document.getElementById("demo2").innerHTML = "";
         var y = 0;
-        var y = val2;
-        if (y=1){
-            document.getElement("demo2").innerHTML+='<select class="form-select" aria-label="Default select example">'+
-            +'<option selected>Open this select menu</option>'+
-            +'<option value="1">One</option>'+
-            +'<option value="2">Two</option>'+
-            +'<option value="3">Three</option>'+
-            +'</select>';
+        var y = document.getElementById("select1").value;
+        // var y = val;
+        if(y == 1){
+            document.getElementById("demo2").innerHTML+='<div class="col-12 mb-1"><div class="input-group mb-3"><span class="input-group-text" id="basic-addon1">Pregunta</span><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"></div></div>';
+        }
+        else{
+            document.getElementById("demo2").innerHTML = "";
         }
         // elseif(y=2){
 
@@ -663,8 +659,11 @@
         // elseif(y=3){
 
         }
-    }
 </script>
 
-<div class="container"></div>
-
+<script>
+    function myFunction21() {
+        var y = document.getElementById("select1").value;
+        document.getElementById("demo2").innerHTML = "You selected: " + y;
+}
+</script>

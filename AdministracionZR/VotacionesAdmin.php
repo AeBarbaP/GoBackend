@@ -636,35 +636,55 @@
         for(let i=0; i<x; i++){
             var var_p = i + 1;
             // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
-            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">'+var_p+'</span><select class="form-select" aria-label="Default select example" id="select1" onchange="myFunction2();bloquear();"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="flexRadioDefault" id="flexRadioDefault1"></div></div></div></div><p id="demo2" class="border-bottom mb-3 mt-2"></p>';
+            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">'+var_p+'</span><select class="form-select" aria-label="Default select example" id="select1" onchange="myFunction2();bloquear();desbloquear()"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="numeroreactivos" id="numeroreactivos" onchange="reactivos(this.value)" READONLY></div></div></div></div><p id="demo2" class="border-bottom mb-3 mt-2"></p>';
         }
     }
 </script>
 <script>
     function myFunction2(){
-        document.getElementById("demo2").innerHTML = "";
-        var y = 0;
-        var y = document.getElementById("select1").value;
-        // var y = val;
-        if(y == 1){
-            document.getElementById("demo2").innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div>';
-        }
-
-        else if(y == 2){
-            document.getElementById("demo2").innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p>';
-        }
-
-        else{
             document.getElementById("demo2").innerHTML = "";
-        }
-        // elseif(y=2){
+            var y = 0;
+            var y = document.getElementById("select1").value;
+            // var y = val;
+            if(y == 1){
+                document.getElementById("demo2").innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div>';
+            }
 
-        // }
-        // elseif(y=3){
+            else if(y == 2){
+                document.getElementById("demo2").innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react"></p>';
+            }
+            else if(y == 3){
+                document.getElementById("demo2").innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react"></p>';
+            }
+
+            else{
+                document.getElementById("demo2").innerHTML = "";
+            }
         }
     function bloquear(){
         document.getElementById('floatingPassword1').readOnly = true;
     }
+    function desbloquear(){
+        var des = document.getElementById("select1").value;
+        if(des != 1){
+        document.getElementById('numeroreactivos').readOnly = false;
+        }
+        else{
+        document.getElementById('numeroreactivos').readOnly = true;
+        }
+    }
+    function reactivos(val){
+        document.getElementById("react").innerHTML = "";
+        var x = 0;
+        var x = val;
+        for(let i=0; i<x; i++){
+            var var_react = i + 1;
+            // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
+            document.getElementById("react").innerHTML+= '<div class="container"><div class="row"><div class="col-12"> <div class="input-group input-group-sm mb-3"><span class="input-group-text" id="inputGroup-sizing-sm">'+var_react+'</span><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div> </div></div><p id="demo2" class="border-bottom mb-3 mt-2"></p>';
+        }
+    }
+       
+    // }
 </script>
 
 <script>

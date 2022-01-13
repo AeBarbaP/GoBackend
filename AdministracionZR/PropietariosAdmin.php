@@ -96,7 +96,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="PropietariosAdmin.html">
+                            <a class="nav-link" href="PropietariosAdmin.php">
                                 <i class="bi bi-people-fill" style="margin-right: 7px;"></i>
                                 Propietarios
                             </a>
@@ -186,7 +186,7 @@
                                 <tr class="table-light">
                                     <th scope="col">P-015</th>
                                     <th scope="row">28/07/2021</th>
-                                    <td><a>Rodolfo Leaños Villegas</a></td>
+                                    <td><a href="Administracion.php?id=1" id="click1">Rodolfo Leaños Villegas</a></td>
                                     <td>492123456</td>
                                     <td>del Cobre</td>
                                     <td>25</td>
@@ -196,7 +196,7 @@
                                 <tr class="table-light">
                                     <th scope="col">P-014</th>
                                     <th scope="row">02/05/2021</th>
-                                    <td><a>Luis Fernando González Álvarez</a></td>
+                                    <td><a href="Administracion.php?id=1" id="click1">Luis Fernando González Álvarez</a></td>
                                     <td>492234567</td>
                                     <td>del Oro</td>
                                     <td>15</td>
@@ -206,7 +206,7 @@
                                 <tr class="table-light">
                                     <th scope="col">P-013</th>
                                     <th scope="row">02/05/2021</th>
-                                    <td><a>Héctor Mario Mendoza Bañuelos</a></td>
+                                    <td><a href="Administracion.php?id=1" id="click1">Héctor Mario Mendoza Bañuelos</a></td>
                                     <td>492345678</td>
                                     <td>del Oro|</td>
                                     <td>19</td>
@@ -216,7 +216,7 @@
                                 <tr class="table-light">
                                     <th scope="col">P-012</th>
                                     <th scope="row">02/05/2021</th>
-                                    <td><a>José Miguel Abascal Rodríguez</a></td>
+                                    <td><a href="Administracion.php?id=1" id="click1">José Miguel Abascal Rodríguez</a></td>
                                     <td>492123456</td>
                                     <td>del Cobre</td>
                                     <td>14</td>

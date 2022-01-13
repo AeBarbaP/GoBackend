@@ -97,7 +97,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="PropietariosAdmin.html">
+                            <a class="nav-link" href="PropietariosAdmin.php">
                                 <i class="bi bi-people-fill" style="margin-right: 7px;"></i>
                                 Propietarios
                             </a>

@@ -636,7 +636,7 @@
         for(let i=0; i<x; i++){
             var var_p = i + 1;
             // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
-            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">'+var_p+'</span><select class="form-select" aria-label="Default select example" id="select1_'+var_p+'" onchange="myFunction2('+var_p+');bloquear();desbloquear()"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="numeroreactivos" id="numeroreactivos" onchange="reactivos(this.value)" READONLY></div></div></div></div><p id="demo2_'+var_p+'" class="border-bottom mb-3 mt-2"></p>';
+            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">'+var_p+'</span><select class="form-select" aria-label="Default select example" id="select1_'+var_p+'" onchange="myFunction2('+var_p+');bloquear();desbloquear(var_p)"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="numeroreactivos" id="numeroreactivos'+var_p+'" onchange="reactivos(this.value)" READONLY></div></div></div></div><p id="demo2_'+var_p+'" class="border-bottom mb-3 mt-2"></p>';
         }
     }
 </script>
@@ -666,13 +666,15 @@
     function bloquear(){
         document.getElementById('floatingPassword1').readOnly = true;
     }
-    function desbloquear(){
-        var des = document.getElementById("select1").value;
+    function desbloquear(var_p){
+        var var_des = var_p;
+        var des = document.getElementById("select1"+var_des).value;
         if(des != 1){
-        document.getElementById('numeroreactivos').readOnly = false;
+        document.getElementById('numeroreactivos'+var_des).readOnly = false;
+        // también agregar los indicadores de for a los reactivos
         }
         else{
-        document.getElementById('numeroreactivos').readOnly = true;
+        document.getElementById('numeroreactivos'+var_des).readOnly = true;
         }
     }
     function reactivos(val){

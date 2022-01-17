@@ -636,7 +636,7 @@
         for(let i=0; i<x; i++){
             var var_p = i + 1;
             // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
-            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">'+var_p+'</span><select class="form-select" aria-label="Default select example" id="select1_'+var_p+'" onchange="myFunction2('+var_p+');bloquear();desbloquear(var_p)"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="numeroreactivos" id="numeroreactivos'+var_p+'" onchange="reactivos(this.value)" READONLY></div></div></div></div><p id="demo2_'+var_p+'" class="border-bottom mb-3 mt-2"></p>';
+            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">'+var_p+'</span><select class="form-select" aria-label="Default select example" id="select1_'+var_p+'" onchange="myFunction2('+var_p+');bloquear();desbloquear('+var_p+');"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="numeroreactivos" id="numeroreactivos'+var_p+'" onchange="reactivos('+var_p+',this.value)" READONLY></div></div></div></div><p id="demo2_'+var_p+'" class="border-bottom mb-3 mt-2"></p>';
         }
     }
 </script>
@@ -645,7 +645,7 @@
             var elem = var_p;
             document.getElementById("demo2_"+elem).innerHTML = "";
             
-            console.log(elem);
+            // console.log(elem);
             var y = 0;
             var y = document.getElementById("select1_"+elem).value;
             // var y = val;
@@ -653,10 +653,10 @@
                 document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div>';
             }
             else if(y == 2){
-                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react"></p>';
+                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react'+elem+'"></p>';
             }
             else if(y == 3){
-                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react"></p>';
+                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react'+elem+'"></p>';
             }
 
             else{
@@ -667,8 +667,10 @@
         document.getElementById('floatingPassword1').readOnly = true;
     }
     function desbloquear(var_p){
+        // console.log(var_p);
         var var_des = var_p;
-        var des = document.getElementById("select1"+var_des).value;
+        var des = document.getElementById("select1_"+var_des).value;
+        // console.log(des);
         if(des != 1){
         document.getElementById('numeroreactivos'+var_des).readOnly = false;
         // también agregar los indicadores de for a los reactivos
@@ -677,14 +679,18 @@
         document.getElementById('numeroreactivos'+var_des).readOnly = true;
         }
     }
-    function reactivos(val){
-        document.getElementById("react").innerHTML = "";
-        var x = 0;
-        var x = val;
-        for(let i=0; i<x; i++){
+    function reactivos(var_p,val){
+        // console.log("el valor de varp "+var_p);
+        var x_react = 0;
+        var x_react = val; //le dice cuántos reactivos habrá
+        var x_position = var_p; //la posición del div
+        document.getElementById("react"+x_position).innerHTML = "";
+        
+        // console.log(x_react);
+        for(let i=0; i<x_react; i++){
             var var_react = i + 1;
             // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
-            document.getElementById("react").innerHTML+= '<div class="container"><div class="row"><div class="col-12"> <div class="input-group input-group-sm mb-3"><span class="input-group-text" id="inputGroup-sizing-sm">'+var_react+'</span><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div> </div></div><p id="demo2" class="border-bottom mb-3 mt-2"></p>';
+            document.getElementById("react"+x_position).innerHTML+= '<div class="container"><div class="row"><div class="col-12"> <div class="input-group input-group-sm mb-3"><span class="input-group-text" id="inputGroup-sizing-sm">'+var_react+'</span><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Reactivo #'+var_react+'"></div></div></div>';
         }
     }
        

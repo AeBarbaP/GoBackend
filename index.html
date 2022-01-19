@@ -97,20 +97,23 @@
                       </div>
                       <div class="modal-body text-dark">
       
-                        <form class="">
+                        <form class="" action="prcd/acceso.php" method="POST">
                           <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                            <input type="email" class="form-control rounded-4" id="floatingInput" name="usr" placeholder="name@example.com">
                             <label for="floatingInput">Correo Electrónico</label>
                           </div>
                           <div class="form-floating mb-3">
-                            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control rounded-4" id="floatingPassword" name="pwd" placeholder="Password">
                             <label for="floatingPassword">Contraseña</label>
                           </div>
                           <!-- <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Ingresar</button> -->
-                          <a href="AdministracionZR/Bienvenida.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Ingresar</a>
+                          <button class="w-100 py-2 mb-2 btn btn-primary btn-sm rounded-4" type="submit">
+                        
+                            Ingresar
+                          </button>
                           <small class="text-muted">Al dar Click, aceptas los términos de uso de GO.</small>
                           <hr class="my-4">
-                          <button class="w-100 py-2 mb-2 btn btn-warning btn-sm rounded-4" type="submit">
+                          <button class="w-100 py-2 mb-2 btn btn-warning btn-sm rounded-4" type="button">
                             <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
                             Olvidé mi Contraseña
                           </button>

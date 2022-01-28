@@ -59,14 +59,8 @@
             'Advertencia',
             'Contraseña no válida',
             'warning'
-          ).then(function(){window.location='../index.html';}
-        
-          
-        
+        ).then(function(){window.location='../index.html';}
         );</script>";
-          
-    
-        
     }
 
 ?>

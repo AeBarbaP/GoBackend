@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>GO - Administración de Zona Residencial</title>
-
+    <link rel="icon" type="image/png" href="../Images/LogoGO.png" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/features/">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
@@ -22,19 +22,19 @@
 
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
     <!-- Custom styles for this template -->
@@ -72,10 +72,10 @@
                         </li>
                         <hr>
                         <li class="nav-item">
-                          <a class="nav-link" href="AccesosAdmin.html">
-                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                            Accesos
-                          </a>
+                            <a class="nav-link" href="AccesosAdmin.html">
+                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                                Accesos
+                            </a>
                         </li>
                         <hr>
                         <li class="nav-item">
@@ -97,7 +97,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="PropietariosAdmin.html">
+                            <a class="nav-link" href="PropietariosAdmin.php">
                                 <i class="bi bi-people-fill" style="margin-right: 7px;"></i>
                                 Propietarios
                             </a>
@@ -121,19 +121,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="NoticiasAdmin.html">
+                            <a class="nav-link" href="NoticiasAdmin.php">
                                 <i class="bi bi-journals" style="margin-right: 7px;"></i>
                                 Noticias
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EventosAdmin.html">
+                            <a class="nav-link" href="EventosAdmin.php">
                                 <span data-feather="calendar"></span>
                                 Eventos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="VotacionesAdmin.html">
+                            <a class="nav-link" href="VotacionesAdmin.php">
                                 <span data-feather="layers"></span>
                                 Votaciones
                             </a>
@@ -146,722 +146,560 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Eventos</h1>
-                    <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
+                    <h1 class="h2">Votaciones</h1>
+                    <!--                     <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
                         <i class="bi bi-gear h4"></i>
-                    </a>
+                    </a> -->
                 </div>
 
                 <!-- Modal --->
-                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos" aria-hidden="true">
+                <!--                 <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
+                    aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header text-dark">
-                                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i>  Agregar Espacio para Eventos</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i> Nueva
+                                    Votación/Encuesta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body text-dark">
 
                                 <form class="">
                                     <div class="form-floating mb-3">
-                                        <input type="NombreEspacioEvento" class="form-control rounded-4" id="floatingInput" placeholder="Nombre del Espacio">
-                                        <label for="floatingInput">Nombre del Espacio para Eventos</label>
+                                        <input type="text" class="form-control rounded-4" id="floatingInput"
+                                            placeholder="Nombre del Espacio">
+                                        <label for="floatingInput">Título</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="Capacidad" class="form-control rounded-4" id="floatingPassword" placeholder="Capacidad">
+                                        <input type="text" class="form-control rounded-4" id="floatingPassword"
+                                            placeholder="Capacidad">
                                         <label for="floatingPassword">Capacidad</label>
                                     </div>
-                                    <a href="/AdministracionSaldos.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i class="bi bi-box-arrow-in-down"></i> Guardar</a>
-
+                                    <a href="/AdministracionSaldos.html"
+                                        class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i
+                                            class="bi bi-box-arrow-in-down"></i> Guardar</a>
                                 </form>
 
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Termina Modal -->
 
                 <!-- Custom styles for this template -->
                 <link href="features.css" rel="stylesheet">
                 </head>
 
-<!--                 <nav>
+                <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="EventosAdmin.html">Eventos Públicos</a>
+                            <a class="nav-link active" aria-current="page" href="./VotacionesAdmin.php">Votaciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EventosPrivAdmin.html">Eventos Privados</a>
+                            <a class="nav-link" href="./EncuestasAdmin.php">Encuestas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="HistorialVEAdmin.html">Historial</a>
                         </li>
                     </ul>
-                </nav> -->
+                </nav>
 
                 <body>
 
                     <main>
 
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                            <h5>Eventos</h5>
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                            <h5>Votaciones Activas</h5>
+                            <br>
                             <div class="btn-toolbar mb-2 mb-md-0">
                             </div>
                             <div class="btn-toolbar mb-2 mb-md-0">
-                                <div class="btn-group me-2">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento Público</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento Privado</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Buscar..."
+                                        aria-label="Recipient's username with two button addons">
+                                    <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
+                                        data-bs-target="#CrearVotacion">+ Votación</button>
                                 </div>
                             </div>
+                            
                         </div>
 
-                        <!-- Modal Agregar EVENTO -->
+                        <!-- Modal Agregar Votación -->
 
-                        <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="AgregarEvento"><i class="bi bi-calendar-plus"></i></i> Registrar Evento</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="needs-validation" novalidate>
-                                        <h4>Datos del Evento</h4>
+                        <div class="modal fade" id="CrearVotacion" tabindex="-1" aria-labelledby="CrearVotacion"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="CrearVotacion"><i
+                                                class="bi bi-calendar-plus"></i></i> Nueva Votación</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="needs-validation" novalidate>
+                                        <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-4" id="floatingInput"
+                                                    placeholder="">
+                                                <label for="floatingInput">Título de la Votación</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-4" id="floatingPassword"
+                                                    placeholder="">
+                                                <label for="floatingPassword">Descripción</label>
+                                            </div>
+                                            <div class="form-floating mb-3 w-50">
+                                                <!-- js -->
+                                                <input type="number" class="form-control rounded-4 solo-numero" id="floatingPassword1"
+                                                    placeholder="" onchange="myFunction(this.value)" pattern="[0-9]" max-lenght="2">
+                                                <label for="floatingPassword">Define el número de Opciones</label>
+                                            </div>
+                                            <hr>
+                                            <div class="form mb-3">
+                                                <!-- <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                    <input type="text" class="form-control" id="Q1" placeholder="Opción 1" required>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                    <input type="text" class="form-control" id="Q1" placeholder="Opción 2" required>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                    <input type="text" class="form-control" id="Q1" placeholder="Opción 3" required>
+                                                    </label>
+                                                </div> -->
+                                                <p id="demo"></p>
+                                            </div>
+                                            <hr>
+                                            <div class="row mb-3">
+                                                <label for="Seleccion" class="col-sm-2 col-form-label">Enviar a:</label>
+                                                <div class="col-sm-10">
+                                                    <div class="form-check form-switch">
+                                                        <!-- Acomodar la alineación de los switch -->
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDefault">Todos</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckChecked">Propietarios</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDisabled">Habitantes</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckCheckedDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckCheckedDisabled">Vigilantes</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckCheckedDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckCheckedDisabled">Otros</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
+                                                        class="bi bi-x-circle"></i> Cancelar </button>
+                                                <button type="button" class="btn btn-primary"><i class="bi bi-box-arrow-in-down"></i> Solo Guardar</button>
+                                                <button type="button" class="btn btn-primary"><i class="bi bi-clipboard-check"></i> Guardar y Publicar</button>
+                                            </div>
 
-                                        <div class="container py-4">
-
-<!-- inicia calendar -->
-
-<?php
-
-date_default_timezone_set('America/Mexico_City');
-                  setlocale(LC_TIME, 'es_MX.UTF-8');
-                  $fecha_sistema = strftime("%Y-%m-%d");
-
-// $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
-
-                // echo date( 't', strtotime( $fecha_sistema ) );
-                $dia=date( 't', strtotime( $fecha_sistema ) ); //número de días en el mes
-                
-                if(isset($_REQUEST['m'])){
-                  $m = $_REQUEST['m'];
-                  // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                  $mes= $_REQUEST['ma'];
-                  $mtotal = $mes + ($m);
-                }
-                else{
-                  $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                }
-
-                // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal = $mes + ($m);
-                // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
-                // $fecha_actual=strftime("%B");
-                echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
-                
-                if($mtotal==1){
-                  echo '<p>Enero</p>';
-                }
-                elseif($mtotal==2){
-                  echo 'Febrero';
-                }
-                elseif($mtotal==3){
-                  echo 'Marzo';
-                }
-                elseif($mtotal==4){
-                  echo 'Abril';
-                }
-                elseif($mtotal==5){
-                  echo 'Mayo';
-                }
-                elseif($mtotal==6){
-                  echo 'Junio';
-                }
-                elseif($mtotal==7){
-                  echo 'Julio';
-                }
-                elseif($mtotal==8){
-                  echo 'Agosto';
-                }
-                elseif($mtotal==9){
-                  echo 'Septiembre';
-                }
-                elseif($mtotal==10){
-                  echo 'Octubre';
-                }
-                elseif($mtotal==11){
-                  echo 'Noviembre';
-                }
-                elseif($mtotal==12){
-                  echo 'Diciembre';
-                }
-                echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
-                echo '<hr>';
-                
-                
-                // .$fecha_actual.'<hr>'; 
-
-        
-          // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
-          // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
-          // $resultado_consulta2 = $conn->query($consulta2);
-          // $n=0;
-          // while ($dia = 30){
-                echo ' 
-            
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">1</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">2</h5>
-                  <hr>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">3</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">4</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">5</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">6</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">7</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">8</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">9</h5>
-                  <hr>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">10</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">11</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">12</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">13</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">14</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">15</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">16</h5>
-                  <hr>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">17</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">18</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">19</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">20</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">21</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">22</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">23</h5>
-                  <hr>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">24</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">25</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">26</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">27</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">28</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-group">
-              <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">29</h5>
-                    <hr>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">30</h5>
-                    <hr>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">31</h5>
-                    <hr>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                </div>
-                <div class="card border-light">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <hr>
-                    <p class="card-text"></p>
-                  </div>
-                </div>
-                <div class="card border-light">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text"></p>
-                  </div>
-                </div>
-                <div class="card border-light">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text"></p>
-                  </div>
-                </div>
-                <div class="card border-light">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text"></p>
-                  </div>
-                </div>
-            </div>
-
-
-              ';
-          // }
-
-?>
-
-
-<!-- termina calendar -->
-
-    </div>
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger"
-                                                data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar
-                                            </button>
-                                            <button type="button" class="btn btn-primary"><i
-                                                    class="bi bi-check2-circle"></i> Guardar</button>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
 
                         <!-- Termina Modal -->
-
+                        <!-- Agregar gráfica de barras o circular con los resultados preeliminares y finales de las votaciones -->
                         <div class="row align-items-md-stretch">
                             <div class="col-md-4">
                                 <div class="h-100 p-5 text-dark bg-light border rounded-3">
-                                    <h2>Abierto Invernal de Golf 2021</h2>
+                                    <h2>Proveedor de Vigilancia</h2>
                                     <hr>
-                                    <p>Fecha: 17 de Diciembre de 2021</p>
-                                    <p>Hora: 18:00hrs</p>
-                                    <p>Organizador: Epica</p>
-                                    <p>Lugar: Club de Golf</p>
-                                    <p>Tipo de Evento: Público</p>
+                                    <p>Estatus: Publicada</p>
+                                    <p>Inicio: 17 de Diciembre de 2021</p>
+                                    <p>Finaliza en: 18:00hrs</p>
+                                    <br>
+                                    <p>Avance:</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%;"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                    <br>
+                                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                                    <br>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>Cumpleaños Annely</h2>
+                                    <h2>Nueva Mesa Directiva</h2>
                                     <hr>
-                                    <p>Fecha: 12 de Diciembre de 2021</p>
-                                    <p>Hora: 20:00hrs</p>
-                                    <p>Organizador: N/A</p>
-                                    <p>Lugar: Lobby Club de Golf</p>
-                                    <p>Tipo de Evento: Privado</p>
+                                    <p>Estatus: Publicada</p>
+                                    <p>Inicio: 1 de Enero de 2022</p>
+                                    <p>Finaliza en: 7 días 11:00hrs</p>
+                                    <br>
+                                    <p>Avance:</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 68%;"
+                                            aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">68%</div>
+                                    </div>
+                                    <br>
+                                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                                    <br>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>El Cascanueces </h2>
+                                    <h2>Cancelación de Acceso Vehicular </h2>
                                     <hr>
-                                    <p>Fecha: 10 de Diciembre de 2021</p>
-                                    <p>Hora: 20:00hrs</p>
-                                    <p>Organizador: C&M</p>
-                                    <p>Lugar: Lobby Club de Golf</p>
-                                    <p>Tipo de Evento: Público</p>
+                                    <p>Estatus: Guardada</p>
+                                    <p>Inicio: 1 de Enero de 2022</p>
+                                    <p>Finaliza en: 3 días 10:00hrs</p>
+                                    <br>
+                                    <p>Avance:</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 45%;"
+                                            aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                                    </div>
+                                    <br>
+                                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                                    <br>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>
                         </div>
-                        </div>
-                    </main>
         </div>
+        </main>
+    </div>
 
-<!-- Inicia Script Calendario -->
-<script>
+    <!-- Inicia Script Calendario -->
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
 
-      $('.clockpicker').clockpicker();
+        $('.clockpicker').clockpicker();
 
-      let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'), {
-        plugins: ['dayGrid', 'timeGrid', 'interaction'],
-        height: 800,
-        droppable: true,
-        locale: 'es',
-        showNonCurrentDates: false,
-        header: {
-          left: 'today,prev,next',
-          center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        editable: true,
-        events: 'datoseventos.php?accion=listar',
-        dateClick: function(info) {
-          limpiarFormulario();
-          $('#BotonAgregar').show();
-          $('#BotonModificar').hide();
-          $('#BotonBorrar').hide();
-          if (info.allDay) {
-            $('#FechaInicio').val(info.dateStr);
-            $('#FechaFin').val(info.dateStr);
-          } else {
-            let fechaHora = info.dateStr.split("T");
-            $('#FechaInicio').val(fechaHora[0]);
-            $('#FechaFin').val(fechaHora[0]);
-            $('#HoraInicio').val(fechaHora[1].substring(0, 5));
-          }
-          $("#FormularioEventos").modal();
-        },
-        eventClick: function(info) {
-          $('#BotonModificar').show();
-          $('#BotonBorrar').show();
-          $('#BotonAgregar').hide();
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $("#FormularioEventos").modal();
-        },
-        eventResize: function(info) {
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          let registro = recuperarDatosFormulario();
-          modificarRegistro(registro);
-        },
-        eventDrop: function(info) {
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          let registro = recuperarDatosFormulario();
-          modificarRegistro(registro);
-        },
-        drop: function(info) {
-          limpiarFormulario();
-          $('#ColorFondo').val(info.draggedEl.dataset.colorfondo);
-          $('#ColorTexto').val(info.draggedEl.dataset.colortexto);
-          $('#Titulo').val(info.draggedEl.dataset.titulo);
-          let fechaHora = info.dateStr.split("T");
-          $('#FechaInicio').val(fechaHora[0]);
-          $('#FechaFin').val(fechaHora[0]);
-          if (info.allDay) { //verdadero si el calendario esta en vista de mes
-            $('#HoraInicio').val(info.draggedEl.dataset.horainicio);
-            $('#HoraFin').val(info.draggedEl.dataset.horafin);
-          } else {
-            $('#HoraInicio').val(fechaHora[1].substring(0, 5));
-            $('#HoraFin').val(moment(fechaHora[1].substring(0, 5)).add(1, 'hours'));
-          }
-          let registro = recuperarDatosFormulario();
-          agregarEventoPredefinido(registro);
+        let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'), {
+            plugins: ['dayGrid', 'timeGrid', 'interaction'],
+            height: 800,
+            droppable: true,
+            locale: 'es',
+            showNonCurrentDates: false,
+            header: {
+                left: 'today,prev,next',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            editable: true,
+            events: 'datoseventos.php?accion=listar',
+            dateClick: function(info) {
+                limpiarFormulario();
+                $('#BotonAgregar').show();
+                $('#BotonModificar').hide();
+                $('#BotonBorrar').hide();
+                if (info.allDay) {
+                    $('#FechaInicio').val(info.dateStr);
+                    $('#FechaFin').val(info.dateStr);
+                } else {
+                    let fechaHora = info.dateStr.split("T");
+                    $('#FechaInicio').val(fechaHora[0]);
+                    $('#FechaFin').val(fechaHora[0]);
+                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
+                }
+                $("#FormularioEventos").modal();
+            },
+            eventClick: function(info) {
+                $('#BotonModificar').show();
+                $('#BotonBorrar').show();
+                $('#BotonAgregar').hide();
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $("#FormularioEventos").modal();
+            },
+            eventResize: function(info) {
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                let registro = recuperarDatosFormulario();
+                modificarRegistro(registro);
+            },
+            eventDrop: function(info) {
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                let registro = recuperarDatosFormulario();
+                modificarRegistro(registro);
+            },
+            drop: function(info) {
+                limpiarFormulario();
+                $('#ColorFondo').val(info.draggedEl.dataset.colorfondo);
+                $('#ColorTexto').val(info.draggedEl.dataset.colortexto);
+                $('#Titulo').val(info.draggedEl.dataset.titulo);
+                let fechaHora = info.dateStr.split("T");
+                $('#FechaInicio').val(fechaHora[0]);
+                $('#FechaFin').val(fechaHora[0]);
+                if (info.allDay) { //verdadero si el calendario esta en vista de mes
+                    $('#HoraInicio').val(info.draggedEl.dataset.horainicio);
+                    $('#HoraFin').val(info.draggedEl.dataset.horafin);
+                } else {
+                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
+                    $('#HoraFin').val(moment(fechaHora[1].substring(0, 5)).add(1, 'hours'));
+                }
+                let registro = recuperarDatosFormulario();
+                agregarEventoPredefinido(registro);
+            }
+        });
+
+        calendario1.render();
+
+
+        new FullCalendarInteraction.Draggable(document.getElementById('listaeventospredefinidos'), {
+            itemSelector: '.fc-event',
+            eventData: function(eventEl) {
+                return {
+                    title: eventEl.innerText.trim()
+                }
+            }
+        });
+
+        //Eventos de botones de la aplicación
+        $('#BotonAgregar').click(function() {
+            let registro = recuperarDatosFormulario();
+            agregarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonModificar').click(function() {
+            let registro = recuperarDatosFormulario();
+            modificarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonBorrar').click(function() {
+            let registro = recuperarDatosFormulario();
+            borrarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonEventosPredefinidos').click(function() {
+            window.location = "eventospredefinidos.html";
+        });
+
+
+        // funciones para comunicarse con el servidor via ajax
+        function agregarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=agregar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
         }
-      });
 
-      calendario1.render();
-
-
-      new FullCalendarInteraction.Draggable(document.getElementById('listaeventospredefinidos'), {
-        itemSelector: '.fc-event',
-        eventData: function(eventEl) {
-          return {
-            title: eventEl.innerText.trim()
-          }
+        function modificarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=modificar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
         }
-      });
 
-      //Eventos de botones de la aplicación
-      $('#BotonAgregar').click(function() {
-        let registro = recuperarDatosFormulario();
-        agregarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        function borrarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=borrar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
 
-      $('#BotonModificar').click(function() {
-        let registro = recuperarDatosFormulario();
-        modificarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        function agregarEventoPredefinido(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=agregar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.removeAllEvents();
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
 
-      $('#BotonBorrar').click(function() {
-        let registro = recuperarDatosFormulario();
-        borrarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        // funciones que interactuan con el formulario de entrada de datos
+        function limpiarFormulario() {
+            $('#Codigo').val('');
+            $('#Titulo').val('');
+            $('#Descripcion').val('');
+            $('#FechaInicio').val('');
+            $('#FechaFin').val('');
+            $('#HoraInicio').val('');
+            $('#HoraFin').val('');
+            $('#ColorFondo').val('#3788D8');
+            $('#ColorTexto').val('#ffffff');
+        }
 
-      $('#BotonEventosPredefinidos').click(function() {
-        window.location = "eventospredefinidos.html";
-      });
-
-
-      // funciones para comunicarse con el servidor via ajax
-      function agregarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=agregar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function modificarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=modificar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function borrarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=borrar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function agregarEventoPredefinido(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=agregar',
-          data: registro,
-          success: function(msg) {
-            calendario1.removeAllEvents();
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      // funciones que interactuan con el formulario de entrada de datos
-      function limpiarFormulario() {
-        $('#Codigo').val('');
-        $('#Titulo').val('');
-        $('#Descripcion').val('');
-        $('#FechaInicio').val('');
-        $('#FechaFin').val('');
-        $('#HoraInicio').val('');
-        $('#HoraFin').val('');
-        $('#ColorFondo').val('#3788D8');
-        $('#ColorTexto').val('#ffffff');
-      }
-
-      function recuperarDatosFormulario() {
-        let registro = {
-          codigo: $('#Codigo').val(),
-          titulo: $('#Titulo').val(),
-          descripcion: $('#Descripcion').val(),
-          inicio: $('#FechaInicio').val() + ' ' + $('#HoraInicio').val(),
-          fin: $('#FechaFin').val() + ' ' + $('#HoraFin').val(),
-          colorfondo: $('#ColorFondo').val(),
-          colortexto: $('#ColorTexto').val()
-        };
-        return registro;
-      }
+        function recuperarDatosFormulario() {
+            let registro = {
+                codigo: $('#Codigo').val(),
+                titulo: $('#Titulo').val(),
+                descripcion: $('#Descripcion').val(),
+                inicio: $('#FechaInicio').val() + ' ' + $('#HoraInicio').val(),
+                fin: $('#FechaFin').val() + ' ' + $('#HoraFin').val(),
+                colorfondo: $('#ColorFondo').val(),
+                colortexto: $('#ColorTexto').val()
+            };
+            return registro;
+        }
 
     });
-  </script>
-<!-- Termina Script Calendario -->
+    </script>
+    <!-- Termina Script Calendario -->
 
-        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-            crossorigin="anonymous"></script>
-        <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+    </script>
+    <script src="dashboard.js"></script>
 </body>
 
 </html>
+
+<script>
+    function myFunction(val) {
+        document.getElementById("demo").innerHTML = "";
+        var x = 0;
+        var x = val;
+        for(let i=0; i<x; i++){
+            var var_p = i + 1;
+            // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
+            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">'+var_p+'</span><select class="form-select" aria-label="Default select example" id="select1_'+var_p+'" onchange="myFunction2('+var_p+');bloquear();desbloquear('+var_p+');"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="numeroreactivos" id="numeroreactivos'+var_p+'" onchange="reactivos('+var_p+',this.value)" READONLY></div></div></div></div><p id="demo2_'+var_p+'" class="border-bottom mb-3 mt-2"></p>';
+        }
+    }
+</script>
+<script>
+    function myFunction2(var_p){
+            var elem = var_p;
+            document.getElementById("demo2_"+elem).innerHTML = "";
+            
+            // console.log(elem);
+            var y = 0;
+            var y = document.getElementById("select1_"+elem).value;
+            // var y = val;
+            if(y == 1){
+                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div>';
+            }
+            else if(y == 2){
+                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react'+elem+'"></p>';
+            }
+            else if(y == 3){
+                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react'+elem+'"></p>';
+            }
+
+            else{
+                document.getElementById("demo2_"+elem).innerHTML = "";
+            }
+        }
+    function bloquear(){
+        document.getElementById('floatingPassword1').readOnly = true;
+    }
+    function desbloquear(var_p){
+        // console.log(var_p);
+        var var_des = var_p;
+        var des = document.getElementById("select1_"+var_des).value;
+        // console.log(des);
+        if(des != 1){
+        document.getElementById('numeroreactivos'+var_des).readOnly = false;
+        // también agregar los indicadores de for a los reactivos
+        }
+        else{
+        document.getElementById('numeroreactivos'+var_des).readOnly = true;
+        }
+    }
+    function reactivos(var_p,val){
+        // console.log("el valor de varp "+var_p);
+        var x_react = 0;
+        var x_react = val; //le dice cuántos reactivos habrá
+        var x_position = var_p; //la posición del div
+        document.getElementById("react"+x_position).innerHTML = "";
+        
+        // console.log(x_react);
+        for(let i=0; i<x_react; i++){
+            var var_react = i + 1;
+            // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
+            document.getElementById("react"+x_position).innerHTML+= '<div class="container"><div class="row"><div class="col-12"> <div class="input-group input-group-sm mb-3"><span class="input-group-text" id="inputGroup-sizing-sm">'+var_react+'</span><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Reactivo #'+var_react+'"></div></div></div>';
+        }
+    }
+       
+    // }
+</script>
+
+<script>
+    function myFunction21() {
+        var y = document.getElementById("select1").value;
+        document.getElementById("demo2").innerHTML = "You selected: " + y;
+}
+</script>

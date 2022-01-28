@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>GO - Administración de Zona Residencial</title>
-
+    <link rel="icon" type="image/png" href="../Images/LogoGO.png" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/features/">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
@@ -71,8 +71,8 @@
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="AccesosAdmin.html">
-                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                            Accesos
+                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                                Accesos
                             </a>
                         </li>
                         <hr>
@@ -95,7 +95,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="PropietariosAdmin.html">
+                            <a class="nav-link" href="PropietariosAdmin.php">
                                 <i class="bi bi-people-fill" style="margin-right: 7px;"></i>
                                 Propietarios
                             </a>
@@ -119,19 +119,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="NoticiasAdmin.html">
+                            <a class="nav-link" href="NoticiasAdmin.php">
                                 <i class="bi bi-journals" style="margin-right: 7px;"></i>
                                 Noticias
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EventosAdmin.html">
+                            <a class="nav-link" href="EventosAdmin.php">
                                 <span data-feather="calendar"></span>
                                 Eventos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="VotacionesAdmin.html">
+                            <a class="nav-link" href="VotacionesAdmin.php">
                                 <span data-feather="layers"></span>
                                 Votaciones
                             </a>

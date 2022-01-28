@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>GO - Administración de Zona Residencial</title>
-
+    <link rel="icon" type="image/png" href="../Images/LogoGO.png" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/features/">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
@@ -22,19 +22,19 @@
 
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
     <!-- Custom styles for this template -->
@@ -72,10 +72,10 @@
                         </li>
                         <hr>
                         <li class="nav-item">
-                          <a class="nav-link" href="AccesosAdmin.html">
-                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                            Accesos
-                          </a>
+                            <a class="nav-link" href="AccesosAdmin.html">
+                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                                Accesos
+                            </a>
                         </li>
                         <hr>
                         <li class="nav-item">
@@ -97,7 +97,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="PropietariosAdmin.html">
+                            <a class="nav-link" href="PropietariosAdmin.php">
                                 <i class="bi bi-people-fill" style="margin-right: 7px;"></i>
                                 Propietarios
                             </a>
@@ -121,19 +121,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="NoticiasAdmin.html">
+                            <a class="nav-link" href="NoticiasAdmin.php">
                                 <i class="bi bi-journals" style="margin-right: 7px;"></i>
                                 Noticias
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EventosAdmin.html">
+                            <a class="nav-link" href="EventosAdmin.php">
                                 <span data-feather="calendar"></span>
                                 Eventos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="VotacionesAdmin.html">
+                            <a class="nav-link" href="VotacionesAdmin.php">
                                 <span data-feather="layers"></span>
                                 Votaciones
                             </a>
@@ -146,32 +146,39 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Eventos</h1>
+                    <h1 class="h2">Noticias</h1>
                     <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
                         <i class="bi bi-gear h4"></i>
                     </a>
                 </div>
 
                 <!-- Modal --->
-                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos" aria-hidden="true">
+                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
+                    aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header text-dark">
-                                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i>  Agregar Espacio para Eventos</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i> Agregar
+                                    Noticia</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body text-dark">
 
                                 <form class="">
                                     <div class="form-floating mb-3">
-                                        <input type="NombreEspacioEvento" class="form-control rounded-4" id="floatingInput" placeholder="Nombre del Espacio">
-                                        <label for="floatingInput">Nombre del Espacio para Eventos</label>
+                                        <input type="NombreEspacioEvento" class="form-control rounded-4"
+                                            id="floatingInput" placeholder="Título">
+                                        <label for="floatingInput">Título</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="Capacidad" class="form-control rounded-4" id="floatingPassword" placeholder="Capacidad">
-                                        <label for="floatingPassword">Capacidad</label>
+                                        <input type="Texto" class="form-control rounded-4" id="floatingPassword"
+                                            placeholder="Texto">
+                                        <label for="floatingPassword">Texto</label>
                                     </div>
-                                    <a href="/AdministracionSaldos.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i class="bi bi-box-arrow-in-down"></i> Guardar</a>
+                                    <a href="/AdministracionSaldos.html"
+                                        class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i
+                                            class="bi bi-box-arrow-in-down"></i> Guardar</a>
 
                                 </form>
 
@@ -185,683 +192,399 @@
                 <link href="features.css" rel="stylesheet">
                 </head>
 
-<!--                 <nav>
+                <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="EventosAdmin.html">Eventos Públicos</a>
+                            <a class="nav-link active" aria-current="page" href="EventosAdmin.html">Noticias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EventosPrivAdmin.html">Eventos Privados</a>
+                            <a class="nav-link" href="EventosPrivAdmin.html">Historial</a>
                         </li>
                     </ul>
-                </nav> -->
+                </nav>
 
                 <body>
 
                     <main>
 
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                            <h5>Eventos</h5>
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                            <h5>Noticias</h5>
                             <div class="btn-toolbar mb-2 mb-md-0">
                             </div>
                             <div class="btn-toolbar mb-2 mb-md-0">
-                                <div class="btn-group me-2">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento Público</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Evento Privado</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Buscar noticia"
+                                        aria-label="Recipient's username with two button addons">
+                                    <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
+                                        data-bs-target="#RegistrarEvento">+ Noticia</button>
                                 </div>
+
+                                <!-- <div class="btn-group me-2">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Noticia</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
+                                    <input class="form-control form-control-light" type="text" placeholder="Buscar"
+                                        aria-label="Buscar">
+                                </div> -->
                             </div>
                         </div>
 
-                        <!-- Modal Agregar EVENTO -->
+                        <!-- Modal Agregar NOTICIA -->
 
-                        <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="AgregarEvento"><i class="bi bi-calendar-plus"></i></i> Registrar Evento</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="needs-validation" novalidate>
-                                        <h4>Datos del Evento</h4>
+                        <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="AgregarEvento"><i
+                                                class="bi bi-calendar-plus"></i></i> Registrar Noticia</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row mb-3">
+                                                <label for="Nombre" class="col-sm-2 col-form-label">Título</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="Nombre">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="FechaPago" class="col-sm-2 col-form-label">Fecha </label>
+                                                <!-- Automática del día -->
+                                                <div class="col-sm-10">
+                                                    <input type="date" class="form-control" id="FechaPago">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="Detalles" class="col-sm-2 col-form-label">Detalles</label>
+                                                <div class="col-sm-10">
+                                                    <textarea type="text" class="form-control" id="Nombre"></textarea>
+                                                </div>
+                                            </div>
 
-                                        <div class="container py-4">
-
-<!-- inicia calendar -->
-
-<?php
-
-date_default_timezone_set('America/Mexico_City');
-                  setlocale(LC_TIME, 'es_MX.UTF-8');
-                  $fecha_sistema = strftime("%Y-%m-%d");
-
-// $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
-
-                // echo date( 't', strtotime( $fecha_sistema ) );
-                $dia=date( 't', strtotime( $fecha_sistema ) ); //número de días en el mes
-                
-                if(isset($_REQUEST['m'])){
-                  $m = $_REQUEST['m'];
-                  // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                  $mes= $_REQUEST['ma'];
-                  $mtotal = $mes + ($m);
-                }
-                else{
-                  $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                }
-
-                // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal = $mes + ($m);
-                // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
-                // $fecha_actual=strftime("%B");
-                echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
-                
-                if($mtotal==1){
-                  echo '<p>Enero</p>';
-                }
-                elseif($mtotal==2){
-                  echo 'Febrero';
-                }
-                elseif($mtotal==3){
-                  echo 'Marzo';
-                }
-                elseif($mtotal==4){
-                  echo 'Abril';
-                }
-                elseif($mtotal==5){
-                  echo 'Mayo';
-                }
-                elseif($mtotal==6){
-                  echo 'Junio';
-                }
-                elseif($mtotal==7){
-                  echo 'Julio';
-                }
-                elseif($mtotal==8){
-                  echo 'Agosto';
-                }
-                elseif($mtotal==9){
-                  echo 'Septiembre';
-                }
-                elseif($mtotal==10){
-                  echo 'Octubre';
-                }
-                elseif($mtotal==11){
-                  echo 'Noviembre';
-                }
-                elseif($mtotal==12){
-                  echo 'Diciembre';
-                }
-                echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
-                echo '<hr>';
-                
-                
-                // .$fecha_actual.'<hr>'; 
-
-        
-          // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
-          // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
-          // $resultado_consulta2 = $conn->query($consulta2);
-          // $n=0;
-          // while ($dia = 30){
-                echo ' 
-            
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">1</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">2</h5>
-                  <hr>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">3</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">4</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">5</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">6</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">7</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">8</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">9</h5>
-                  <hr>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">10</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">11</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">12</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">13</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">14</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">15</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">16</h5>
-                  <hr>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">17</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">18</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">19</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">20</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">21</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">22</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">23</h5>
-                  <hr>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">24</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">25</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">26</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">27</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">28</h5>
-                  <hr>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-group">
-              <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">29</h5>
-                    <hr>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">30</h5>
-                    <hr>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">31</h5>
-                    <hr>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  </div>
-                </div>
-                <div class="card border-light">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <hr>
-                    <p class="card-text"></p>
-                  </div>
-                </div>
-                <div class="card border-light">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text"></p>
-                  </div>
-                </div>
-                <div class="card border-light">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text"></p>
-                  </div>
-                </div>
-                <div class="card border-light">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text"></p>
-                  </div>
-                </div>
-            </div>
-
-
-              ';
-          // }
-
-?>
-
-
-<!-- termina calendar -->
-
-    </div>
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger"
-                                                data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar
-                                            </button>
-                                            <button type="button" class="btn btn-primary"><i
-                                                    class="bi bi-check2-circle"></i> Guardar</button>
-                                        </div>
-                                    </form>
+                                            <div class="row mb-3">
+                                                <label for="Seleccion" class="col-sm-2 col-form-label">Enviar a:</label>
+                                                <div class="col-sm-10">
+                                                    <div class="form-check form-switch">
+                                                        <!-- Acomodar la alineación de los switch -->
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDefault">Todos</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckChecked">Propietarios</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDisabled">Habitantes</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckCheckedDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckCheckedDisabled">Vigilantes</label>
+                                                    </div>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckCheckedDisabled">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckCheckedDisabled">Otros</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
+                                                        class="bi bi-x-circle"></i> Cancelar </button>
+                                                <button type="button" class="btn btn-primary"><i
+                                                        class="bi bi-check2-circle"></i> Guardar</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
 
                         <!-- Termina Modal -->
 
                         <div class="row align-items-md-stretch">
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <div class="h-100 p-5 text-dark bg-light border rounded-3">
-                                    <h2>Abierto Invernal de Golf 2021</h2>
+                                    <h2>Título de Noticia</h2>
                                     <hr>
                                     <p>Fecha: 17 de Diciembre de 2021</p>
-                                    <p>Hora: 18:00hrs</p>
-                                    <p>Organizador: Epica</p>
-                                    <p>Lugar: Club de Golf</p>
-                                    <p>Tipo de Evento: Público</p>
+                                    <p>Creada por: Usuario que la creó</p>
+                                    <p>Cuerpo de la noticia</p>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <p></p>
+                            <div class="col-md-12">
                                 <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>Cumpleaños Annely</h2>
+                                    <h2>Título de Noticia</h2>
                                     <hr>
-                                    <p>Fecha: 12 de Diciembre de 2021</p>
-                                    <p>Hora: 20:00hrs</p>
-                                    <p>Organizador: N/A</p>
-                                    <p>Lugar: Lobby Club de Golf</p>
-                                    <p>Tipo de Evento: Privado</p>
+                                    <p>Fecha: 17 de Diciembre de 2021</p>
+                                    <p>Creada por: Usuario que la creó</p>
+                                    <p>Cuerpo de la noticia</p>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <p></p>
+                            <div class="col-md-12">
                                 <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>El Cascanueces </h2>
+                                    <h2>Título de Noticia</h2>
                                     <hr>
-                                    <p>Fecha: 10 de Diciembre de 2021</p>
-                                    <p>Hora: 20:00hrs</p>
-                                    <p>Organizador: C&M</p>
-                                    <p>Lugar: Lobby Club de Golf</p>
-                                    <p>Tipo de Evento: Público</p>
+                                    <p>Fecha: 17 de Diciembre de 2021</p>
+                                    <p>Creada por: Usuario que la creó</p>
+                                    <p>Cuerpo de la noticia</p>
                                     <button class="btn btn-outline-secondary" type="button">Detalles</button>
                                 </div>
                             </div>
                         </div>
-                        </div>
-                    </main>
         </div>
+        </main>
+    </div>
 
-<!-- Inicia Script Calendario -->
-<script>
+    <!-- Inicia Script Calendario -->
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
 
-      $('.clockpicker').clockpicker();
+        $('.clockpicker').clockpicker();
 
-      let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'), {
-        plugins: ['dayGrid', 'timeGrid', 'interaction'],
-        height: 800,
-        droppable: true,
-        locale: 'es',
-        showNonCurrentDates: false,
-        header: {
-          left: 'today,prev,next',
-          center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        editable: true,
-        events: 'datoseventos.php?accion=listar',
-        dateClick: function(info) {
-          limpiarFormulario();
-          $('#BotonAgregar').show();
-          $('#BotonModificar').hide();
-          $('#BotonBorrar').hide();
-          if (info.allDay) {
-            $('#FechaInicio').val(info.dateStr);
-            $('#FechaFin').val(info.dateStr);
-          } else {
-            let fechaHora = info.dateStr.split("T");
-            $('#FechaInicio').val(fechaHora[0]);
-            $('#FechaFin').val(fechaHora[0]);
-            $('#HoraInicio').val(fechaHora[1].substring(0, 5));
-          }
-          $("#FormularioEventos").modal();
-        },
-        eventClick: function(info) {
-          $('#BotonModificar').show();
-          $('#BotonBorrar').show();
-          $('#BotonAgregar').hide();
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $("#FormularioEventos").modal();
-        },
-        eventResize: function(info) {
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          let registro = recuperarDatosFormulario();
-          modificarRegistro(registro);
-        },
-        eventDrop: function(info) {
-          $('#Codigo').val(info.event.id);
-          $('#Titulo').val(info.event.title);
-          $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
-          $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
-          $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
-          $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
-          $('#ColorFondo').val(info.event.backgroundColor);
-          $('#ColorTexto').val(info.event.textColor);
-          $('#Descripcion').val(info.event.extendedProps.descripcion);
-          let registro = recuperarDatosFormulario();
-          modificarRegistro(registro);
-        },
-        drop: function(info) {
-          limpiarFormulario();
-          $('#ColorFondo').val(info.draggedEl.dataset.colorfondo);
-          $('#ColorTexto').val(info.draggedEl.dataset.colortexto);
-          $('#Titulo').val(info.draggedEl.dataset.titulo);
-          let fechaHora = info.dateStr.split("T");
-          $('#FechaInicio').val(fechaHora[0]);
-          $('#FechaFin').val(fechaHora[0]);
-          if (info.allDay) { //verdadero si el calendario esta en vista de mes
-            $('#HoraInicio').val(info.draggedEl.dataset.horainicio);
-            $('#HoraFin').val(info.draggedEl.dataset.horafin);
-          } else {
-            $('#HoraInicio').val(fechaHora[1].substring(0, 5));
-            $('#HoraFin').val(moment(fechaHora[1].substring(0, 5)).add(1, 'hours'));
-          }
-          let registro = recuperarDatosFormulario();
-          agregarEventoPredefinido(registro);
+        let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'), {
+            plugins: ['dayGrid', 'timeGrid', 'interaction'],
+            height: 800,
+            droppable: true,
+            locale: 'es',
+            showNonCurrentDates: false,
+            header: {
+                left: 'today,prev,next',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            editable: true,
+            events: 'datoseventos.php?accion=listar',
+            dateClick: function(info) {
+                limpiarFormulario();
+                $('#BotonAgregar').show();
+                $('#BotonModificar').hide();
+                $('#BotonBorrar').hide();
+                if (info.allDay) {
+                    $('#FechaInicio').val(info.dateStr);
+                    $('#FechaFin').val(info.dateStr);
+                } else {
+                    let fechaHora = info.dateStr.split("T");
+                    $('#FechaInicio').val(fechaHora[0]);
+                    $('#FechaFin').val(fechaHora[0]);
+                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
+                }
+                $("#FormularioEventos").modal();
+            },
+            eventClick: function(info) {
+                $('#BotonModificar').show();
+                $('#BotonBorrar').show();
+                $('#BotonAgregar').hide();
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $("#FormularioEventos").modal();
+            },
+            eventResize: function(info) {
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                let registro = recuperarDatosFormulario();
+                modificarRegistro(registro);
+            },
+            eventDrop: function(info) {
+                $('#Codigo').val(info.event.id);
+                $('#Titulo').val(info.event.title);
+                $('#FechaInicio').val(moment(info.event.start).format("YYYY-MM-DD"));
+                $('#FechaFin').val(moment(info.event.end).format("YYYY-MM-DD"));
+                $('#HoraInicio').val(moment(info.event.start).format("HH:mm"));
+                $('#HoraFin').val(moment(info.event.end).format("HH:mm"));
+                $('#ColorFondo').val(info.event.backgroundColor);
+                $('#ColorTexto').val(info.event.textColor);
+                $('#Descripcion').val(info.event.extendedProps.descripcion);
+                let registro = recuperarDatosFormulario();
+                modificarRegistro(registro);
+            },
+            drop: function(info) {
+                limpiarFormulario();
+                $('#ColorFondo').val(info.draggedEl.dataset.colorfondo);
+                $('#ColorTexto').val(info.draggedEl.dataset.colortexto);
+                $('#Titulo').val(info.draggedEl.dataset.titulo);
+                let fechaHora = info.dateStr.split("T");
+                $('#FechaInicio').val(fechaHora[0]);
+                $('#FechaFin').val(fechaHora[0]);
+                if (info.allDay) { //verdadero si el calendario esta en vista de mes
+                    $('#HoraInicio').val(info.draggedEl.dataset.horainicio);
+                    $('#HoraFin').val(info.draggedEl.dataset.horafin);
+                } else {
+                    $('#HoraInicio').val(fechaHora[1].substring(0, 5));
+                    $('#HoraFin').val(moment(fechaHora[1].substring(0, 5)).add(1, 'hours'));
+                }
+                let registro = recuperarDatosFormulario();
+                agregarEventoPredefinido(registro);
+            }
+        });
+
+        calendario1.render();
+
+
+        new FullCalendarInteraction.Draggable(document.getElementById('listaeventospredefinidos'), {
+            itemSelector: '.fc-event',
+            eventData: function(eventEl) {
+                return {
+                    title: eventEl.innerText.trim()
+                }
+            }
+        });
+
+        //Eventos de botones de la aplicación
+        $('#BotonAgregar').click(function() {
+            let registro = recuperarDatosFormulario();
+            agregarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonModificar').click(function() {
+            let registro = recuperarDatosFormulario();
+            modificarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonBorrar').click(function() {
+            let registro = recuperarDatosFormulario();
+            borrarRegistro(registro);
+            $("#FormularioEventos").modal('hide');
+        });
+
+        $('#BotonEventosPredefinidos').click(function() {
+            window.location = "eventospredefinidos.html";
+        });
+
+
+        // funciones para comunicarse con el servidor via ajax
+        function agregarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=agregar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
         }
-      });
 
-      calendario1.render();
-
-
-      new FullCalendarInteraction.Draggable(document.getElementById('listaeventospredefinidos'), {
-        itemSelector: '.fc-event',
-        eventData: function(eventEl) {
-          return {
-            title: eventEl.innerText.trim()
-          }
+        function modificarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=modificar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
         }
-      });
 
-      //Eventos de botones de la aplicación
-      $('#BotonAgregar').click(function() {
-        let registro = recuperarDatosFormulario();
-        agregarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        function borrarRegistro(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=borrar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
 
-      $('#BotonModificar').click(function() {
-        let registro = recuperarDatosFormulario();
-        modificarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        function agregarEventoPredefinido(registro) {
+            $.ajax({
+                type: 'POST',
+                url: 'datoseventos.php?accion=agregar',
+                data: registro,
+                success: function(msg) {
+                    calendario1.removeAllEvents();
+                    calendario1.refetchEvents();
+                },
+                error: function(error) {
+                    alert("Hay un problema:" + error);
+                }
+            });
+        }
 
-      $('#BotonBorrar').click(function() {
-        let registro = recuperarDatosFormulario();
-        borrarRegistro(registro);
-        $("#FormularioEventos").modal('hide');
-      });
+        // funciones que interactuan con el formulario de entrada de datos
+        function limpiarFormulario() {
+            $('#Codigo').val('');
+            $('#Titulo').val('');
+            $('#Descripcion').val('');
+            $('#FechaInicio').val('');
+            $('#FechaFin').val('');
+            $('#HoraInicio').val('');
+            $('#HoraFin').val('');
+            $('#ColorFondo').val('#3788D8');
+            $('#ColorTexto').val('#ffffff');
+        }
 
-      $('#BotonEventosPredefinidos').click(function() {
-        window.location = "eventospredefinidos.html";
-      });
-
-
-      // funciones para comunicarse con el servidor via ajax
-      function agregarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=agregar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function modificarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=modificar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function borrarRegistro(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=borrar',
-          data: registro,
-          success: function(msg) {
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      function agregarEventoPredefinido(registro) {
-        $.ajax({
-          type: 'POST',
-          url: 'datoseventos.php?accion=agregar',
-          data: registro,
-          success: function(msg) {
-            calendario1.removeAllEvents();
-            calendario1.refetchEvents();
-          },
-          error: function(error) {
-            alert("Hay un problema:" + error);
-          }
-        });
-      }
-
-      // funciones que interactuan con el formulario de entrada de datos
-      function limpiarFormulario() {
-        $('#Codigo').val('');
-        $('#Titulo').val('');
-        $('#Descripcion').val('');
-        $('#FechaInicio').val('');
-        $('#FechaFin').val('');
-        $('#HoraInicio').val('');
-        $('#HoraFin').val('');
-        $('#ColorFondo').val('#3788D8');
-        $('#ColorTexto').val('#ffffff');
-      }
-
-      function recuperarDatosFormulario() {
-        let registro = {
-          codigo: $('#Codigo').val(),
-          titulo: $('#Titulo').val(),
-          descripcion: $('#Descripcion').val(),
-          inicio: $('#FechaInicio').val() + ' ' + $('#HoraInicio').val(),
-          fin: $('#FechaFin').val() + ' ' + $('#HoraFin').val(),
-          colorfondo: $('#ColorFondo').val(),
-          colortexto: $('#ColorTexto').val()
-        };
-        return registro;
-      }
+        function recuperarDatosFormulario() {
+            let registro = {
+                codigo: $('#Codigo').val(),
+                titulo: $('#Titulo').val(),
+                descripcion: $('#Descripcion').val(),
+                inicio: $('#FechaInicio').val() + ' ' + $('#HoraInicio').val(),
+                fin: $('#FechaFin').val() + ' ' + $('#HoraFin').val(),
+                colorfondo: $('#ColorFondo').val(),
+                colortexto: $('#ColorTexto').val()
+            };
+            return registro;
+        }
 
     });
-  </script>
-<!-- Termina Script Calendario -->
+    </script>
+    <!-- Termina Script Calendario -->
 
-        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-            crossorigin="anonymous"></script>
-        <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+    </script>
+    <script src="dashboard.js"></script>
 </body>
 
 </html>

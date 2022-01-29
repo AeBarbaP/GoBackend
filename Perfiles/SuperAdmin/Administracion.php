@@ -8,14 +8,14 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>GO - Administración de Zona Residencial</title>
-    <link rel="icon" type="image/png" href="../Images/LogoGO.png" />
+    <link rel="icon" type="image/png" href="../../Images/LogoGO.png" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/features/">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 
     <!-- Bootstrap core CSS -->
 
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
     <style>

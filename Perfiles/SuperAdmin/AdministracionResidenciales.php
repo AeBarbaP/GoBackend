@@ -579,12 +579,12 @@
         </script>
 
         <script src="dashboard.js"></script>
-        <script>
+        <!-- <script>
         function tabla() {
             document.getElementById("MostrarTabla" + element) + innerHTML + =
                 '"<table class=" table table - responsive " <thead> <tr> <th scope = "col" > Mes </th> <th scope = "col" > Fecha de Pago </th> <th scope = "col" > Modo de Pago </th> <th scope = "col" > Detalles </th> <th scope = "col" > Estatus de Pago </th> </tr > </thead> </table >';
         }
-        </script>
+        </script> -->
 </body>
 
 </html>

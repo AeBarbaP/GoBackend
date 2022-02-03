@@ -81,15 +81,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="InfoZR.html">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
-                                Información de Zona Residencial
+                                Zonas Residenciales
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!--                         <li class="nav-item">
                             <a class="nav-link" href="DatosContacto.html">
                                 <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
                                 Datos de Contacto
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="Administracion.php">
                                 <i class="bi bi-clipboard-data" style="margin-right: 7px;"></i>
@@ -248,81 +248,69 @@
 
                                                 <?php
 
-date_default_timezone_set('America/Mexico_City');
-                  setlocale(LC_TIME, 'es_MX.UTF-8');
-                  $fecha_sistema = strftime("%Y-%m-%d");
+                        date_default_timezone_set('America/Mexico_City');
+                        setlocale(LC_TIME, 'es_MX.UTF-8');
+                        $fecha_sistema = strftime("%Y-%m-%d");
 
-// $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
+                        // $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
 
-                // echo date( 't', strtotime( $fecha_sistema ) );
-                $dia=date( 't', strtotime( $fecha_sistema ) ); //número de días en el mes
-                
-                if(isset($_REQUEST['m'])){
-                  $m = $_REQUEST['m'];
-                  // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                  $mes= $_REQUEST['ma'];
-                  $mtotal = $mes + ($m);
-                }
-                else{
-                  $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                }
+                        // echo date( 't', strtotime( $fecha_sistema ) );
+                        $dia = date('t', strtotime($fecha_sistema)); //número de días en el mes
 
-                // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal = $mes + ($m);
-                // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
-                // $fecha_actual=strftime("%B");
-                echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
-                
-                if($mtotal==1){
-                  echo '<p>Enero</p>';
-                }
-                elseif($mtotal==2){
-                  echo 'Febrero';
-                }
-                elseif($mtotal==3){
-                  echo 'Marzo';
-                }
-                elseif($mtotal==4){
-                  echo 'Abril';
-                }
-                elseif($mtotal==5){
-                  echo 'Mayo';
-                }
-                elseif($mtotal==6){
-                  echo 'Junio';
-                }
-                elseif($mtotal==7){
-                  echo 'Julio';
-                }
-                elseif($mtotal==8){
-                  echo 'Agosto';
-                }
-                elseif($mtotal==9){
-                  echo 'Septiembre';
-                }
-                elseif($mtotal==10){
-                  echo 'Octubre';
-                }
-                elseif($mtotal==11){
-                  echo 'Noviembre';
-                }
-                elseif($mtotal==12){
-                  echo 'Diciembre';
-                }
-                echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
-                echo '<hr>';
-                
-                
-                // .$fecha_actual.'<hr>'; 
+                        if (isset($_REQUEST['m'])) {
+                          $m = $_REQUEST['m'];
+                          // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                          $mes = $_REQUEST['ma'];
+                          $mtotal = $mes + ($m);
+                        } else {
+                          $mtotal = date('m', strtotime($fecha_sistema)); //muestra el número de mes
+                        }
 
-        
-          // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
-          // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
-          // $resultado_consulta2 = $conn->query($consulta2);
-          // $n=0;
-          // while ($dia = 30){
-                echo ' 
+                        // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                        // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+                        // $mtotal = $mes + ($m);
+                        // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
+                        // $fecha_actual=strftime("%B");
+                        echo '<a href="calendar.php?m=-1&ma=' . $mtotal . '"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
+
+                        if ($mtotal == 1) {
+                          echo '<p>Enero</p>';
+                        } elseif ($mtotal == 2) {
+                          echo 'Febrero';
+                        } elseif ($mtotal == 3) {
+                          echo 'Marzo';
+                        } elseif ($mtotal == 4) {
+                          echo 'Abril';
+                        } elseif ($mtotal == 5) {
+                          echo 'Mayo';
+                        } elseif ($mtotal == 6) {
+                          echo 'Junio';
+                        } elseif ($mtotal == 7) {
+                          echo 'Julio';
+                        } elseif ($mtotal == 8) {
+                          echo 'Agosto';
+                        } elseif ($mtotal == 9) {
+                          echo 'Septiembre';
+                        } elseif ($mtotal == 10) {
+                          echo 'Octubre';
+                        } elseif ($mtotal == 11) {
+                          echo 'Noviembre';
+                        } elseif ($mtotal == 12) {
+                          echo 'Diciembre';
+                        }
+                        echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
+                        echo '<hr>';
+
+
+                        // .$fecha_actual.'<hr>'; 
+
+
+                        // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
+                        // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
+                        // $resultado_consulta2 = $conn->query($consulta2);
+                        // $n=0;
+                        // while ($dia = 30){
+                        echo ' 
             
             <div class="card-group">
               <div class="card">
@@ -583,9 +571,9 @@ date_default_timezone_set('America/Mexico_City');
 
 
               ';
-          // }
+                        // }
 
-?>
+                        ?>
 
 
                                                 <!-- termina calendar -->

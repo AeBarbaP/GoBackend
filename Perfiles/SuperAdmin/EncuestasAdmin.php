@@ -81,15 +81,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="InfoZR.html">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
-                                Información de Zona Residencial
+                                Zonas Residenciales
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!--                         <li class="nav-item">
                             <a class="nav-link" href="DatosContacto.html">
                                 <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
                                 Datos de Contacto
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="Administracion.php">
                                 <i class="bi bi-clipboard-data" style="margin-right: 7px;"></i>
@@ -151,7 +151,7 @@
                 </div>
 
                 <!-- Modal --->
-<!--                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
+                <!--                <div class="modal fade" id="ConfiguracionEventos" tabindex="-1" aria-labelledby="ConfiguracionEventos"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -250,22 +250,22 @@
                                                 <label for="floatingPassword">Descripción</label>
                                             </div>
                                             <div class="form-floating mb-3" style="width: 48%;">
-                                                    <input type="number" class="form-control rounded-4" id="floatingPassword"
-                                                        placeholder="">
-                                                    <label for="floatingPassword">Define el número de preguntas</label>
-                                                </div>
+                                                <input type="number" class="form-control rounded-4"
+                                                    id="floatingPassword" placeholder="">
+                                                <label for="floatingPassword">Define el número de preguntas</label>
+                                            </div>
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-floating mb-3">
-                                                        <input type="date" class="form-control rounded-4" id="floatingPassword"
-                                                            placeholder="">
+                                                        <input type="date" class="form-control rounded-4"
+                                                            id="floatingPassword" placeholder="">
                                                         <label for="floatingPassword">Fecha de Inicio</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-floating mb-3">
-                                                        <input type="date" class="form-control rounded-4" id="floatingPassword"
-                                                            placeholder="">
+                                                        <input type="date" class="form-control rounded-4"
+                                                            id="floatingPassword" placeholder="">
                                                         <label for="floatingPassword">Fecha Final</label>
                                                     </div>
                                                 </div>
@@ -293,15 +293,20 @@
                                             </div>
                                             <div class="form mb-3">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1">
                                                     <label class="form-check-label" for="flexRadioDefault1">
-                                                    <input type="text" class="form-control" id="Q1" placeholder="Respuesta 1" required>
+                                                        <input type="text" class="form-control" id="Q1"
+                                                            placeholder="Respuesta 1" required>
                                                     </label>
-                                                </div> <!-- OJO! Cuando se empieza a escribir se habilita un siguiente campo para opción OnChange -->
+                                                </div>
+                                                <!-- OJO! Cuando se empieza a escribir se habilita un siguiente campo para opción OnChange -->
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2">
                                                     <label class="form-check-label" for="flexRadioDefault2">
-                                                    <input type="text" class="form-control" id="Q1" placeholder="" required>
+                                                        <input type="text" class="form-control" id="Q1" placeholder=""
+                                                            required>
                                                     </label>
                                                 </div>
                                             </div>
@@ -345,8 +350,10 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
                                                         class="bi bi-x-circle"></i> Cancelar </button>
-                                                <button type="button" class="btn btn-primary"><i class="bi bi-box-arrow-in-down"></i> Solo Guardar</button>
-                                                <button type="button" class="btn btn-primary"><i class="bi bi-clipboard-check"></i> Guardar y Publicar</button>
+                                                <button type="button" class="btn btn-primary"><i
+                                                        class="bi bi-box-arrow-in-down"></i> Solo Guardar</button>
+                                                <button type="button" class="btn btn-primary"><i
+                                                        class="bi bi-clipboard-check"></i> Guardar y Publicar</button>
                                             </div>
                                         </form>
                                     </div>

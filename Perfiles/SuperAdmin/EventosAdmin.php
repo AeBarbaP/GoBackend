@@ -83,15 +83,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="InfoZR.html">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
-                                Información de Zona Residencial
+                                Zonas Residenciales
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!--                         <li class="nav-item">
                             <a class="nav-link" href="DatosContacto.html">
                                 <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
                                 Datos de Contacto
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="Administracion.php">
                                 <i class="bi bi-clipboard-data" style="margin-right: 7px;"></i>
@@ -228,7 +228,7 @@
                             </div>
                         </div>
 
- 
+
 
                         <div class="row align-items-md-stretch">
                             <div class="col-md-4">
@@ -506,161 +506,145 @@
 </html>
 
 
-                       <!-- Modal Agregar EVENTO -->
+<!-- Modal Agregar EVENTO -->
 
-                       <div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="AgregarEvento"><i
-                                                class="bi bi-calendar-plus"></i></i> Registrar Evento</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="needs-validation" novalidate>
-                                            <h4>Datos del Evento</h4>
+<div class="modal fade" id="RegistrarEvento" tabindex="-1" aria-labelledby="RegistrarEvento" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="AgregarEvento"><i class="bi bi-calendar-plus"></i></i> Registrar Evento</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" novalidate>
+                    <h4>Datos del Evento</h4>
 
-                                            <div class="container py-4">
+                    <div class="container py-4">
 
-                                                <!-- inicia calendar -->
+                        <!-- inicia calendar -->
 
-                                                <p class="h4 mt-5 bg-info text-light p-4 rounded">
-        <strong><i class="bi bi-list-columns-reverse"></i> Agenda</strong> 
-      </p>
+                        <p class="h4 mt-5 bg-info text-light p-4 rounded">
+                            <strong><i class="bi bi-list-columns-reverse"></i> Agenda</strong>
+                        </p>
 
-      
 
-      <p>
-        <!-- <div class="input-group mb-3 w-25">
+
+                        <p>
+                            <!-- <div class="input-group mb-3 w-25">
           <input type="date" class="form-control" placeholder="Recipient's username" aria-label="dd/mm/aaaa" aria-describedby="button-addon2">
           <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i> Buscar</button> -->
-        </div>
-      </p>
+                    </div>
+                    </p>
 
-    </div>
-<main>
-<div class="container py-4">
+            </div>
+            <main>
+                <div class="container py-4">
 
-<div class="row">
-  <div class="col-4">
-    <form action="calendar.php" method="POST">
-    <select class="form-select" aria-label="Default select example" name="mes" required>
-      <option selected>Mes</option>
-      <option value="1">Enero</option>
-      <option value="2">Febrero</option>
-      <option value="3">Marzo</option>
-      <option value="4">Abril</option>
-      <option value="5">Mayo</option>
-      <option value="6">Junio</option>
-      <option value="7">Julio</option>
-      <option value="8">Agosto</option>
-      <option value="9">Septiempre</option>
-      <option value="10">Octubre</option>
-      <option value="11">Noviembre</option>
-      <option value="12">Diciembre</option>
-    </select>
-   
-  </div>
-  <div class="col-4">
-    <select class="form-select" aria-label="Default select example" name="annio" required>
-      <option selected required>Año</option>
-      <option value="2021">2021</option>
-      <option value="2022">2022</option>
-      <option value="2023">2023</option>
-      <option value="2024">2024</option>
-      <option value="2025">2025</option>
-      <option value="2026">2026</option>
-      <option value="2027">2027</option>
-      <option value="2028">2028</option>
-      <option value="2029">2029</option>
-    </select>
-  </div>
-  <div class="col-4">
-    <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> Buscar</button>
-    </form>
-  </div>
-</div>
-<hr>
+                    <div class="row">
+                        <div class="col-4">
+                            <form action="calendar.php" method="POST">
+                                <select class="form-select" aria-label="Default select example" name="mes" required>
+                                    <option selected>Mes</option>
+                                    <option value="1">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                    <option value="5">Mayo</option>
+                                    <option value="6">Junio</option>
+                                    <option value="7">Julio</option>
+                                    <option value="8">Agosto</option>
+                                    <option value="9">Septiempre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                </select>
 
-<!-- inicia calendar -->
+                        </div>
+                        <div class="col-4">
+                            <select class="form-select" aria-label="Default select example" name="annio" required>
+                                <option selected required>Año</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
 
-<?php
+                    <!-- inicia calendar -->
 
-date_default_timezone_set('America/Mexico_City');
-                  setlocale(LC_TIME, 'es_MX.UTF-8');
-                  // setlocale(LC_TIME, 'es_ES');
-                  $fecha_sistema = strftime("%Y-%m-%d");
+                    <?php
 
-// $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
+          date_default_timezone_set('America/Mexico_City');
+          setlocale(LC_TIME, 'es_MX.UTF-8');
+          // setlocale(LC_TIME, 'es_ES');
+          $fecha_sistema = strftime("%Y-%m-%d");
 
-                // echo date( 't', strtotime( $fecha_sistema ) );
-                $dia=date( 't', strtotime( $fecha_sistema ) ); //número de días en el mes
-                
-                if(isset($_REQUEST['mes'])&&isset($_REQUEST['annio'])){
-                  $mtotal = $_REQUEST['mes'];
-                  $annio = $_REQUEST['annio'];
-                  
-                }
-                else{
-                  $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                  $annio = date('Y', strtotime( $fecha_sistema ));
-                }
+          // $fecha = '2017-04-26'; //Fecha de la que queramos saber el número de días que tiene el mes.
 
-                // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
-                // $mtotal = $mes + ($m);
-                // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
-                // $fecha_actual=strftime("%B");
-                // echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
-                echo '<strong>MES</strong>: ';
-                
-                if($mtotal==1){
-                  echo 'Enero';
-                }
-                elseif($mtotal==2){
-                  echo 'Febrero';
-                }
-                elseif($mtotal==3){
-                  echo 'Marzo';
-                }
-                elseif($mtotal==4){
-                  echo 'Abril';
-                }
-                elseif($mtotal==5){
-                  echo 'Mayo';
-                }
-                elseif($mtotal==6){
-                  echo 'Junio';
-                }
-                elseif($mtotal==7){
-                  echo 'Julio';
-                }
-                elseif($mtotal==8){
-                  echo 'Agosto';
-                }
-                elseif($mtotal==9){
-                  echo 'Septiembre';
-                }
-                elseif($mtotal==10){
-                  echo 'Octubre';
-                }
-                elseif($mtotal==11){
-                  echo 'Noviembre';
-                }
-                elseif($mtotal==12){
-                  echo 'Diciembre';
-                }
-                // echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
-                echo ' | <strong>Año: </strong>'.$annio;
-                echo '<hr>';
-                
-                
-                
-                // .$fecha_actual.'<hr>'; 
+          // echo date( 't', strtotime( $fecha_sistema ) );
+          $dia = date('t', strtotime($fecha_sistema)); //número de días en el mes
 
-        // require('prcd/contar_calentario.php');
+          if (isset($_REQUEST['mes']) && isset($_REQUEST['annio'])) {
+            $mtotal = $_REQUEST['mes'];
+            $annio = $_REQUEST['annio'];
+          } else {
+            $mtotal = date('m', strtotime($fecha_sistema)); //muestra el número de mes
+            $annio = date('Y', strtotime($fecha_sistema));
+          }
+
+          // $mes=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+          // $mtotal=date( 'm', strtotime( $fecha_sistema ) ); //muestra el número de mes
+          // $mtotal = $mes + ($m);
+          // $mes=date('F', strftime($fecha_sistema)); //muestra el mes actual
+          // $fecha_actual=strftime("%B");
+          // echo '<a href="calendar.php?m=-1&ma='.$mtotal.'"><span class="badge rounded-pill bg-secondary text-light"> << </span></a> <strong>MES</strong>: ';
+          echo '<strong>MES</strong>: ';
+
+          if ($mtotal == 1) {
+            echo 'Enero';
+          } elseif ($mtotal == 2) {
+            echo 'Febrero';
+          } elseif ($mtotal == 3) {
+            echo 'Marzo';
+          } elseif ($mtotal == 4) {
+            echo 'Abril';
+          } elseif ($mtotal == 5) {
+            echo 'Mayo';
+          } elseif ($mtotal == 6) {
+            echo 'Junio';
+          } elseif ($mtotal == 7) {
+            echo 'Julio';
+          } elseif ($mtotal == 8) {
+            echo 'Agosto';
+          } elseif ($mtotal == 9) {
+            echo 'Septiembre';
+          } elseif ($mtotal == 10) {
+            echo 'Octubre';
+          } elseif ($mtotal == 11) {
+            echo 'Noviembre';
+          } elseif ($mtotal == 12) {
+            echo 'Diciembre';
+          }
+          // echo ' <a href="calendar.php?m=1"><span class="badge rounded-pill bg-secondary text-light"> >> </span></a>';
+          echo ' | <strong>Año: </strong>' . $annio;
+          echo '<hr>';
+
+
+
+          // .$fecha_actual.'<hr>'; 
+
+          // require('prcd/contar_calentario.php');
 
           // $consulta2 ="SELECT * FROM citas WHERE fecha = '$fecha_sistema' ORDER BY fecha DESC, hora DESC LIMIT 10";
           // $consulta2 ="SELECT * FROM citas ORDER BY fecha DESC, hora DESC LIMIT 10";
@@ -668,22 +652,22 @@ date_default_timezone_set('America/Mexico_City');
           // $n=0;
           // while ($dia = 30){
 
-            //echo para calcular la fecha correctamente    
-            echo $fecha_calcular1;
-            echo $row_cnt1;
-            
-              echo ' 
+          //echo para calcular la fecha correctamente    
+          echo $fecha_calcular1;
+          echo $row_cnt1;
+
+          echo ' 
             
             <div class="card-group">
               <div class="card border-info bg-dark text-light">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 1</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día: '.$dia1.'</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas: '.$row_cnt1.'</p>
+                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día: ' . $dia1 . '</p>
+                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas: ' . $row_cnt1 . '</p>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas: '.$row_cnt1_si.'</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas: '.$row_cnt1_no.'</p>
+                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas: ' . $row_cnt1_si . '</p>
+                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas: ' . $row_cnt1_no . '</p>
                   <p class="card-text small"><a href="" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-circle"></i> Agregar</a>
                 </div>
               </div>
@@ -691,11 +675,11 @@ date_default_timezone_set('America/Mexico_City');
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-circle-fill text-info"></i> 2</h5>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día: '.$dia2.'</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas: '.$row_cnt2.'</p>
+                  <p class="card-text small"><i class="bi bi-calendar-day-fill"></i> Día: ' . $dia2 . '</p>
+                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-journal-bookmark-fill"></i> Citas: ' . $row_cnt2 . '</p>
                   <hr>
-                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas: '.$row_cnt2_si.'</p>
-                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas: '.$row_cnt2_no.'</p>
+                  <p class="card-text small"><i class="bi bi-circle-fill text-primary"></i> Concretadas: ' . $row_cnt2_si . '</p>
+                  <p class="card-text small" style="margin-top:-18px"><i class="bi bi-circle-fill text-danger"></i> No Concretadas: ' . $row_cnt2_no . '</p>
                   <p class="card-text small"><a href="" style="text-decoration: none"><i class="bi bi-plus-circle"></i> Agregar</a>
                 </div>
               </div>
@@ -1095,30 +1079,28 @@ date_default_timezone_set('America/Mexico_City');
               ';
           // }
 
-?>
+          ?>
 
 
-<!-- termina calendar -->
+                    <!-- termina calendar -->
 
+                </div>
+            </main>
+
+
+            <!-- termina calendar -->
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar
+            </button>
+            <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Guardar</button>
+        </div>
+        </form>
     </div>
-    </main>
+</div>
+</div>
+</div>
 
-
-                                                <!-- termina calendar -->
-
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
-                                                        class="bi bi-x-circle"></i> Cancelar
-                                                </button>
-                                                <button type="button" class="btn btn-primary"><i
-                                                        class="bi bi-check2-circle"></i> Guardar</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Termina Modal -->
+<!-- Termina Modal -->

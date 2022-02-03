@@ -81,15 +81,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="InfoZR.html">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
-                                Información de Zona Residencial
+                                Zonas Residenciales
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!--                         <li class="nav-item">
                             <a class="nav-link" href="DatosContacto.html">
                                 <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
                                 Datos de Contacto
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="Administracion.php">
                                 <i class="bi bi-clipboard-data" style="margin-right: 7px;"></i>

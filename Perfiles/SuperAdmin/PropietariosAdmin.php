@@ -20,19 +20,19 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
 
@@ -72,23 +72,23 @@
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="AccesosAdmin.html">
-                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                            Accesos
+                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                                Accesos
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="InfoZR.html">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
-                                Información de Zona Residencial
+                                Zonas Residenciales
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!--                         <li class="nav-item">
                             <a class="nav-link" href="DatosContacto.html">
                                 <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
                                 Datos de Contacto
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="Administracion.php">
                                 <i class="bi bi-clipboard-data" style="margin-right: 7px;"></i>
@@ -155,17 +155,18 @@
                 <body>
 
                     <main>
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                        <h1 class="h4">Propietarios</h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <!-- Acomodar en misma línea -->
-                            <div class="btn-group me-2">
-                                <p>Link de Pre-Registro</p>
-                                <a href="#" class="nav-link">
-                                    <i class="bi bi-clipboard h4"></i>
-                                </a>
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                            <h1 class="h4">Propietarios</h1>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                <!-- Acomodar en misma línea -->
+                                <div class="btn-group me-2">
+                                    <p>Link de Pre-Registro</p>
+                                    <a href="#" class="nav-link">
+                                        <i class="bi bi-clipboard h4"></i>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
                         </div>
                         <!-- Poner filtro en los títuos de las columnas de la tabla para la búsqueda por cualquiera de las columnas -->
 
@@ -191,40 +192,48 @@
                                     <td>del Cobre</td>
                                     <td>25</td>
                                     <td>1</td>
-                                    <td><input class="form-check-input" type="checkbox" value="onclick=1" id="defaultCheck1" data-bs-toggle="modal" data-bs-target="#RegistrarDeudaPrevia" onclick="Warning()"></td>
+                                    <td><input class="form-check-input" type="checkbox" value="onclick=1"
+                                            id="defaultCheck1" data-bs-toggle="modal"
+                                            data-bs-target="#RegistrarDeudaPrevia" onclick="Warning()"></td>
                                 </tr>
                                 <tr class="table-light">
                                     <th scope="col">P-014</th>
                                     <th scope="row">02/05/2021</th>
-                                    <td><a href="Administracion.php?id=1" id="click1">Luis Fernando González Álvarez</a></td>
+                                    <td><a href="Administracion.php?id=1" id="click1">Luis Fernando González Álvarez</a>
+                                    </td>
                                     <td>492234567</td>
                                     <td>del Oro</td>
                                     <td>15</td>
                                     <td>2</td>
-                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td>
+                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    </td>
                                 </tr>
                                 <tr class="table-light">
                                     <th scope="col">P-013</th>
                                     <th scope="row">02/05/2021</th>
-                                    <td><a href="Administracion.php?id=1" id="click1">Héctor Mario Mendoza Bañuelos</a></td>
+                                    <td><a href="Administracion.php?id=1" id="click1">Héctor Mario Mendoza Bañuelos</a>
+                                    </td>
                                     <td>492345678</td>
                                     <td>del Oro|</td>
                                     <td>19</td>
                                     <td>3</td>
-                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td>
+                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    </td>
                                 </tr>
                                 <tr class="table-light">
                                     <th scope="col">P-012</th>
                                     <th scope="row">02/05/2021</th>
-                                    <td><a href="Administracion.php?id=1" id="click1">José Miguel Abascal Rodríguez</a></td>
+                                    <td><a href="Administracion.php?id=1" id="click1">José Miguel Abascal Rodríguez</a>
+                                    </td>
                                     <td>492123456</td>
                                     <td>del Cobre</td>
                                     <td>14</td>
                                     <td>3</td>
-                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td>
+                                    <td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    </td>
                                 </tr>
                             </tbody>
-                            
+
                             <hr class="mt-5 mb-5">
                             <div class="">
                                 <?php
@@ -453,34 +462,43 @@
                             </div>
 
                             <!-- Modal DeudaPrevia -->
-                            <div class="modal fade" id="RegistrarDeudaPrevia" tabindex="-1" aria-labelledby="RegistrarDeudaPrevia" aria-hidden="true">
+                            <div class="modal fade" id="RegistrarDeudaPrevia" tabindex="-1"
+                                aria-labelledby="RegistrarDeudaPrevia" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="RegistrarDeudaPrevia"><i class="bi bi-wallet2"></i> Registrar Deuda Previa</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <h5 class="modal-title" id="RegistrarDeudaPrevia"><i
+                                                    class="bi bi-wallet2"></i> Registrar Deuda Previa</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <form>
                                                 <div class="row mb-3">
-                                                    <label for="IDPropietario" class="col-sm-2 col-form-label">ID Propietario</label>
+                                                    <label for="IDPropietario" class="col-sm-2 col-form-label">ID
+                                                        Propietario</label>
                                                     <div class="col-sm-3">
-                                                        <input type="text" class="form-control" id="IDPropietario" >
+                                                        <input type="text" class="form-control" id="IDPropietario">
                                                     </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                    <label for="NombrePropietario" class="col-sm-2 col-form-label">Nombre del Propietario</label>
+                                                    <label for="NombrePropietario"
+                                                        class="col-sm-2 col-form-label">Nombre del Propietario</label>
                                                     <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="NombrePropietario">
+                                                        <input type="text" class="form-control" id="NombrePropietario">
                                                     </div>
-                                                    <label for="MontoDeuda" class="col-sm-2 col-form-label">Monto de la Deuda Previa</label>
+                                                    <label for="MontoDeuda" class="col-sm-2 col-form-label">Monto de la
+                                                        Deuda Previa</label>
                                                     <div class="col-sm-5">
-                                                    <input type="text" class="form-control" id="MontoDeuda">
+                                                        <input type="text" class="form-control" id="MontoDeuda">
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
-                                                    <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Guardar</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary"><i
+                                                            class="bi bi-check2-circle"></i> Guardar</button>
                                                 </div>
                                         </div>
                                     </div>
@@ -488,7 +506,7 @@
                             </div>
 
 
-                        </table>                       
+                        </table>
 
                     </main>
         </div>
@@ -497,46 +515,44 @@
         <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-            crossorigin="anonymous"></script>
+            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-            crossorigin="anonymous"></script>
+            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+        </script>
         <script src="dashboard.js"></script>
 </body>
 
 </html>
 
 <script>
-    function Warning(){
+function Warning() {
 
-       if(document.getElementById('defaultCheck1').checked) {
-}
-else{
+    if (document.getElementById('defaultCheck1').checked) {} else {
 
-    
-    
-    Swal.fire({
-    title: 'Do you want to save the changes?',
-    showDenyButton: true,
-    showCancelButton: true,
-    confirmButtonText: 'Guardar',
-    denyButtonText: `No Guardar`,
-    
-  }).then((result) => {
-    /* Read more about isConfirmed, isDenied below */
-    if (result.isConfirmed) {
-      Swal.fire('Saved!', '', 'success')
-    } else if (result.isDenied) {
-      Swal.fire('Changes are not saved', '', 'info')
+
+
+        Swal.fire({
+            title: 'Do you want to save the changes?',
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Guardar',
+            denyButtonText: `No Guardar`,
+
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                Swal.fire('Saved!', '', 'success')
+            } else if (result.isDenied) {
+                Swal.fire('Changes are not saved', '', 'info')
+            }
+        })
+
+        ;
+
+        $('#RegistrarDeudaPrevia').modal('hide');
+        $('body').removeClass('modal-open');
     }
-  })
-  
-  ;
-
-$('#RegistrarDeudaPrevia').modal('hide');
-$('body').removeClass('modal-open');
-}
 
 }
 </script>

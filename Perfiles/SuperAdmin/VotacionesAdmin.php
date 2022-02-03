@@ -81,15 +81,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="InfoZR.html">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
-                                Información de Zona Residencial
+                                Zonas Residenciales
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!--                         <li class="nav-item">
                             <a class="nav-link" href="DatosContacto.html">
                                 <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
                                 Datos de Contacto
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="Administracion.php">
                                 <i class="bi bi-clipboard-data" style="margin-right: 7px;"></i>
@@ -225,7 +225,7 @@
                                         data-bs-target="#CrearVotacion">+ Votación</button>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                         <!-- Modal Agregar Votación -->
@@ -242,7 +242,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <form class="needs-validation" novalidate>
-                                        <div class="form-floating mb-3">
+                                            <div class="form-floating mb-3">
                                                 <input type="text" class="form-control rounded-4" id="floatingInput"
                                                     placeholder="">
                                                 <label for="floatingInput">Título de la Votación</label>
@@ -254,8 +254,9 @@
                                             </div>
                                             <div class="form-floating mb-3 w-50">
                                                 <!-- js -->
-                                                <input type="number" class="form-control rounded-4 solo-numero" id="floatingPassword1"
-                                                    placeholder="" onchange="myFunction(this.value)" pattern="[0-9]" max-lenght="2">
+                                                <input type="number" class="form-control rounded-4 solo-numero"
+                                                    id="floatingPassword1" placeholder=""
+                                                    onchange="myFunction(this.value)" pattern="[0-9]" max-lenght="2">
                                                 <label for="floatingPassword">Define el número de Opciones</label>
                                             </div>
                                             <hr>
@@ -320,8 +321,10 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
                                                         class="bi bi-x-circle"></i> Cancelar </button>
-                                                <button type="button" class="btn btn-primary"><i class="bi bi-box-arrow-in-down"></i> Solo Guardar</button>
-                                                <button type="button" class="btn btn-primary"><i class="bi bi-clipboard-check"></i> Guardar y Publicar</button>
+                                                <button type="button" class="btn btn-primary"><i
+                                                        class="bi bi-box-arrow-in-down"></i> Solo Guardar</button>
+                                                <button type="button" class="btn btn-primary"><i
+                                                        class="bi bi-clipboard-check"></i> Guardar y Publicar</button>
                                             </div>
 
                                         </form>
@@ -629,77 +632,90 @@
 </html>
 
 <script>
-    function myFunction(val) {
-        document.getElementById("demo").innerHTML = "";
-        var x = 0;
-        var x = val;
-        for(let i=0; i<x; i++){
-            var var_p = i + 1;
-            // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
-            document.getElementById("demo").innerHTML+= '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">'+var_p+'</span><select class="form-select" aria-label="Default select example" id="select1_'+var_p+'" onchange="myFunction2('+var_p+');bloquear();desbloquear('+var_p+');"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="numeroreactivos" id="numeroreactivos'+var_p+'" onchange="reactivos('+var_p+',this.value)" READONLY></div></div></div></div><p id="demo2_'+var_p+'" class="border-bottom mb-3 mt-2"></p>';
-        }
+function myFunction(val) {
+    document.getElementById("demo").innerHTML = "";
+    var x = 0;
+    var x = val;
+    for (let i = 0; i < x; i++) {
+        var var_p = i + 1;
+        // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
+        document.getElementById("demo").innerHTML +=
+            '<div class="container"><div class="row"><div class="col-12"><div class="input-group"><span class="input-group-text" id="basic-addon1">' +
+            var_p + '</span><select class="form-select" aria-label="Default select example" id="select1_' + var_p +
+            '" onchange="myFunction2(' + var_p + ');bloquear();desbloquear(' + var_p +
+            ');"><option selected >Selecciona el tipo pregunta</option><option value="1">Pregunta abierta</option><option value="2">Opción múltiple</option><option value="3">Opción única</option></select><div class="col-2"><input class="form-control rounded-4" type="number" name="numeroreactivos" id="numeroreactivos' +
+            var_p + '" onchange="reactivos(' + var_p + ',this.value)" READONLY></div></div></div></div><p id="demo2_' +
+            var_p + '" class="border-bottom mb-3 mt-2"></p>';
     }
+}
 </script>
 <script>
-    function myFunction2(var_p){
-            var elem = var_p;
-            document.getElementById("demo2_"+elem).innerHTML = "";
-            
-            // console.log(elem);
-            var y = 0;
-            var y = document.getElementById("select1_"+elem).value;
-            // var y = val;
-            if(y == 1){
-                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div>';
-            }
-            else if(y == 2){
-                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react'+elem+'"></p>';
-            }
-            else if(y == 3){
-                document.getElementById("demo2_"+elem).innerHTML+='<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react'+elem+'"></p>';
-            }
+function myFunction2(var_p) {
+    var elem = var_p;
+    document.getElementById("demo2_" + elem).innerHTML = "";
 
-            else{
-                document.getElementById("demo2_"+elem).innerHTML = "";
-            }
-        }
-    function bloquear(){
-        document.getElementById('floatingPassword1').readOnly = true;
+    // console.log(elem);
+    var y = 0;
+    var y = document.getElementById("select1_" + elem).value;
+    // var y = val;
+    if (y == 1) {
+        document.getElementById("demo2_" + elem).innerHTML +=
+            '<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div>';
+    } else if (y == 2) {
+        document.getElementById("demo2_" + elem).innerHTML +=
+            '<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react' +
+            elem + '"></p>';
+    } else if (y == 3) {
+        document.getElementById("demo2_" + elem).innerHTML +=
+            '<div class="row"><div class="col-12 mt-2 mb-3"><div class="input-group"><input type="text" class="form-control" placeholder="Redacta la pregunta" aria-label="Username" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle-fill"></i></span></div></div></div><p id="react' +
+            elem + '"></p>';
+    } else {
+        document.getElementById("demo2_" + elem).innerHTML = "";
     }
-    function desbloquear(var_p){
-        // console.log(var_p);
-        var var_des = var_p;
-        var des = document.getElementById("select1_"+var_des).value;
-        // console.log(des);
-        if(des != 1){
-        document.getElementById('numeroreactivos'+var_des).readOnly = false;
+}
+
+function bloquear() {
+    document.getElementById('floatingPassword1').readOnly = true;
+}
+
+function desbloquear(var_p) {
+    // console.log(var_p);
+    var var_des = var_p;
+    var des = document.getElementById("select1_" + var_des).value;
+    // console.log(des);
+    if (des != 1) {
+        document.getElementById('numeroreactivos' + var_des).readOnly = false;
         // también agregar los indicadores de for a los reactivos
-        }
-        else{
-        document.getElementById('numeroreactivos'+var_des).readOnly = true;
-        }
+    } else {
+        document.getElementById('numeroreactivos' + var_des).readOnly = true;
     }
-    function reactivos(var_p,val){
-        // console.log("el valor de varp "+var_p);
-        var x_react = 0;
-        var x_react = val; //le dice cuántos reactivos habrá
-        var x_position = var_p; //la posición del div
-        document.getElementById("react"+x_position).innerHTML = "";
-        
-        // console.log(x_react);
-        for(let i=0; i<x_react; i++){
-            var var_react = i + 1;
-            // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
-            document.getElementById("react"+x_position).innerHTML+= '<div class="container"><div class="row"><div class="col-12"> <div class="input-group input-group-sm mb-3"><span class="input-group-text" id="inputGroup-sizing-sm">'+var_react+'</span><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Reactivo #'+var_react+'"></div></div></div>';
-        }
+}
+
+function reactivos(var_p, val) {
+    // console.log("el valor de varp "+var_p);
+    var x_react = 0;
+    var x_react = val; //le dice cuántos reactivos habrá
+    var x_position = var_p; //la posición del div
+    document.getElementById("react" + x_position).innerHTML = "";
+
+    // console.log(x_react);
+    for (let i = 0; i < x_react; i++) {
+        var var_react = i + 1;
+        // document.getElementById("demo").innerHTML+= "<div class='form-check'><input class='form-check-input' type='radio'name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'><input type='text' class='form-control'id='Q1' placeholder='Opción "+var_p+"' required></label>";
+        document.getElementById("react" + x_position).innerHTML +=
+            '<div class="container"><div class="row"><div class="col-12"> <div class="input-group input-group-sm mb-3"><span class="input-group-text" id="inputGroup-sizing-sm">' +
+            var_react +
+            '</span><input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Reactivo #' +
+            var_react + '"></div></div></div>';
     }
-       
-    // }
+}
+
+// }
 </script>
 
 <script>
-    function myFunction21() {
-        var y = document.getElementById("select1").value;
-        document.getElementById("demo2").innerHTML = "You selected: " + y;
+function myFunction21() {
+    var y = document.getElementById("select1").value;
+    document.getElementById("demo2").innerHTML = "You selected: " + y;
 }
 </script>

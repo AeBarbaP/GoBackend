@@ -222,15 +222,6 @@
                                         class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
                                         data-bs-target="#RegistrarEvento">+ Noticia</button>
                                 </div>
-
-                                <!-- <div class="btn-group me-2">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"
-                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">+ Noticia</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"
-                                        data-bs-toggle="modal" data-bs-target="#RegistrarEvento">Buscar</button>
-                                    <input class="form-control form-control-light" type="text" placeholder="Buscar"
-                                        aria-label="Buscar">
-                                </div> -->
                             </div>
                         </div>
 

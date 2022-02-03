@@ -43,7 +43,7 @@
 
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><img src="../Images/LogoGO.png" width="45px"
-                style="margin-right: 7px;"> Gestión de Zonas Residenciales</a>
+                style="margin-right: 7px;"> Gestión ZR</a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -175,126 +175,177 @@
                     <main>
 
                         <div
-                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                            <h1 class="h4">Cuotas de Colonos</h1>
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                            <!--                             <h5>Accesos</h5>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                            </div>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">+ </button>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row align-items-md-stretch">
+                            <div class="col-md-12">
+                                <div class="h-100 p-3 text-dark bg-light border rounded-3">
+                                    <form>
+                                        <div class="input-group mb-2 w-50">
+                                            <span class="input-group-text" id="basic-addon3"><i
+                                                    class="bi bi-house-door"></i></span>
+                                            <input class="form-control" list="datalistOptions" id="exampleDataList"
+                                                onchange="tabla()" placeholder="Domicilio...">
+                                            <datalist id="datalistOptions">
+                                                <option value="San Francisco">
+                                                <option value="New York">
+                                                <option value="Seattle">
+                                                <option value="Los Angeles">
+                                                <option value="Chicago">
+                                            </datalist>
+                                        </div>
 
-                                    <a href="#ConfiguracionCuotas" class="nav-link" data-bs-toggle="modal">
-                                        <i class="bi bi-gear h4"></i>
-                                    </a>
-                                    <!-- Acommodar modal para configurar cuota mensual y fechas de pago -->
-                                    <div class="modal fade" id="ConfiguracionCuotas" tabindex="-1"
-                                        aria-labelledby="ConfiguracionCuotas" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header text-dark">
-                                                    <h5 class="modal-title" id="exampleModalLabel"><i
-                                                            class="bi bi-gear"></i> Configuración de Cuotas Mensuales
-                                                    </h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body text-dark">
+                                        <div class="row mt-3">
+                                            <p class="text-end"><button class="btn btn-sm btn-outline-secondary"
+                                                    type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#ConfiguracionCuotas"><i class="bi bi-building"
+                                                        style="font-size: 21px;"></i> Agregar
+                                                    ZR</button></p>
+                                        </div>
+                                </div>
+                            </div>
 
-                                                    <form class="">
-                                                        <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control rounded-4"
-                                                                id="floatingInput" placeholder="Monto">
-                                                            <label for="floatingInput">Monto de la Cuota Mensual</label>
-                                                        </div>
-                                                        <p>Selecciona el rango de fechas para pago de cuotas</p>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="form-floating mb-3">
-                                                                    <input type="date" class="form-control rounded-4"
-                                                                        id="floatingPassword" placeholder="Password">
-                                                                    <label for="floatingPassword">Fecha Inicial</label>
+                            <div
+                                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                                <h1 class="h4">Cuotas de Colonos</h1>
+                                <div class="btn-toolbar mb-2 mb-md-0">
+                                    <div class="btn-group me-2">
+
+                                        <a href="#ConfiguracionCuotas" class="nav-link" data-bs-toggle="modal">
+                                            <i class="bi bi-gear h4"></i>
+                                        </a>
+                                        <!-- Acommodar modal para configurar agregar zona residencial -->
+                                        <div class="modal fade" id="ConfiguracionCuotas" tabindex="-1"
+                                            aria-labelledby="ConfiguracionCuotas" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header text-dark">
+                                                        <h5 class="modal-title" id="exampleModalLabel"><i
+                                                                class="bi bi-gear"></i> Configuración de Cuotas
+                                                            Mensuales
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body text-dark">
+
+                                                        <form class="">
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text" class="form-control rounded-4"
+                                                                    id="floatingInput" placeholder="Monto">
+                                                                <label for="floatingInput">Monto de la Cuota
+                                                                    Mensual</label>
+                                                            </div>
+                                                            <p>Selecciona el rango de fechas para pago de cuotas</p>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="date"
+                                                                            class="form-control rounded-4"
+                                                                            id="floatingPassword"
+                                                                            placeholder="Password">
+                                                                        <label for="floatingPassword">Fecha
+                                                                            Inicial</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="date"
+                                                                            class="form-control rounded-4"
+                                                                            id="floatingPassword"
+                                                                            placeholder="Password">
+                                                                        <label for="floatingPassword">Fecha
+                                                                            Final</label>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col">
-                                                                <div class="form-floating mb-3">
-                                                                    <input type="date" class="form-control rounded-4"
-                                                                        id="floatingPassword" placeholder="Password">
-                                                                    <label for="floatingPassword">Fecha Final</label>
-                                                                </div>
+                                                            <hr>
+                                                            <p>Ingresa los siguientes datos:</p>
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text" class="form-control rounded-4"
+                                                                    id="floatingInput" placeholder="No.Cta">
+                                                                <label for="floatingInput">Número de Cuenta</label>
                                                             </div>
-                                                        </div>
-                                                        <hr>
-                                                        <p>Ingresa los siguientes datos:</p>
-                                                        <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control rounded-4"
-                                                                id="floatingInput" placeholder="No.Cta">
-                                                            <label for="floatingInput">Número de Cuenta</label>
-                                                        </div>
-                                                        <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control rounded-4"
-                                                                id="floatingInput" placeholder="CLABE">
-                                                            <label for="floatingInput">CLABE Interbancaria</label>
-                                                        </div>
-                                                        <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control rounded-4"
-                                                                id="floatingInput" placeholder="CtaPayPal">
-                                                            <label for="floatingInput">Cuenta de PayPal</label>
-                                                        </div>
-                                                        <a href="AdministracionZR/Administracion.php"
-                                                            class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"
-                                                            type="submit"><i class="bi bi-box-arrow-in-down"></i>
-                                                            Guardar</a>
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text" class="form-control rounded-4"
+                                                                    id="floatingInput" placeholder="CLABE">
+                                                                <label for="floatingInput">CLABE
+                                                                    Interbancaria</label>
+                                                            </div>
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text" class="form-control rounded-4"
+                                                                    id="floatingInput" placeholder="CtaPayPal">
+                                                                <label for="floatingInput">Cuenta de PayPal</label>
+                                                            </div>
+                                                            <a href="AdministracionZR/Administracion.php"
+                                                                class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"
+                                                                type="submit"><i class="bi bi-box-arrow-in-down"></i>
+                                                                Guardar</a>
 
-                                                    </form>
+                                                        </form>
 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Configuración Global <img src="../Images/Config.png" width="auto" alt=""></button> -->
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Configuración Global <img src="../Images/Config.png" width="auto" alt=""></button> -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Poner filtro en los títuos de las columnas de la tabla para la búsqueda por cualquiera de las columnas -->
+                            <!-- Poner filtro en los títuos de las columnas de la tabla para la búsqueda por cualquiera de las columnas -->
 
-                        <table class="table table-responsive">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre del Propietario</th>
-                                    <th scope="col">No. Casa / Lote</th>
-                                    <th scope="col">Fecha de Ingreso</th>
-                                    <th scope="col">Estatus de Cuota Mensual</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-success">
-                                    <th scope="row">1</th>
-                                    <td><a href="Administracion.php?id=1" id="click1">Luis Fernando González Álvarez</a>
-                                    </td>
-                                    <td>81</td>
-                                    <td>28/04/2021</td>
-                                    <td>Pagado</td>
-                                </tr>
-                                <tr class="table-warning">
-                                    <th scope="row">2</th>
-                                    <td> <a href="#">Mariana González Barba</a></td>
-                                    <td>114</td>
-                                    <td>15/02/2021</td>
-                                    <td>Pendiente</td>
-                                </tr>
-                                <tr class="table-danger">
-                                    <th scope="row">3</th>
-                                    <td> <a href="#">Héctor Mario Mendoza Bañuelos</a></td>
-                                    <td>83</td>
-                                    <td>12/09/2020</td>
-                                    <td>Vencido</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <hr class="mt-5 mb-5">
-                        <div class="">
-                            <?php
-                            if (isset($_REQUEST['id'])) {
-                                echo '<!-- en la etiqueta aparece el nombre del propietario seleccionado en la tabla de arriba -->
+                            <p id="MostrarTabla"></p>
+
+                            <!-- <table class="table table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre del Propietario</th>
+                                        <th scope="col">No. Casa / Lote</th>
+                                        <th scope="col">Fecha de Ingreso</th>
+                                        <th scope="col">Estatus de Cuota Mensual</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <th scope="row">1</th>
+                                        <td><a href="Administracion.php?id=1" id="click1">Luis Fernando González
+                                                Álvarez</a>
+                                        </td>
+                                        <td>81</td>
+                                        <td>28/04/2021</td>
+                                        <td>Pagado</td>
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <th scope="row">2</th>
+                                        <td> <a href="#">Mariana González Barba</a></td>
+                                        <td>114</td>
+                                        <td>15/02/2021</td>
+                                        <td>Pendiente</td>
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <th scope="row">3</th>
+                                        <td> <a href="#">Héctor Mario Mendoza Bañuelos</a></td>
+                                        <td>83</td>
+                                        <td>12/09/2020</td>
+                                        <td>Vencido</td>
+                                    </tr>
+                                </tbody>
+                            </table> -->
+                            <hr class="mt-5 mb-5">
+                            <div class="">
+                                <?php
+                                if (isset($_REQUEST['id'])) {
+                                    echo '<!-- en la etiqueta aparece el nombre del propietario seleccionado en la tabla de arriba -->
                                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
                                         <h1 class="h4">Detalle de Pagos</h1>
                                         <div class="btn-toolbar mb-2 mb-md-0">
@@ -513,9 +564,9 @@
                                             </tr>
                                         </tbody>
                                     </table>';
-                            }
-                            ?>
-                        </div>
+                                }
+                                ?>
+                            </div>
 
                     </main>
         </div>
@@ -526,10 +577,14 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
             integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
-        </script>
+
         <script src="dashboard.js"></script>
+        <script>
+        function tabla() {
+            document.getElementById("MostrarTabla" + element) + innerHTML + =
+                '"<table class=" table table - responsive " <thead> <tr> <th scope = "col" > Mes </th> <th scope = "col" > Fecha de Pago </th> <th scope = "col" > Modo de Pago </th> <th scope = "col" > Detalles </th> <th scope = "col" > Estatus de Pago </th> </tr > </thead> </table >';
+        }
+        </script>
 </body>
 
 </html>

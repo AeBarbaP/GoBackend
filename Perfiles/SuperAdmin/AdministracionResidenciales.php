@@ -193,7 +193,7 @@
                                             <span class="input-group-text" id="basic-addon3"><i
                                                     class="bi bi-house-door"></i></span>
                                             <input class="form-control" list="datalistOptions" id="exampleDataList"
-                                                onchange="tabla()" placeholder="Domicilio...">
+                                                onchange="tablaCambiar(this.value);" placeholder="Domicilio...">
                                             <datalist id="datalistOptions">
                                                 <option value="San Francisco">
                                                 <option value="New York">
@@ -303,7 +303,7 @@
                             </div>
                             <!-- Poner filtro en los títuos de las columnas de la tabla para la búsqueda por cualquiera de las columnas -->
 
-                            <p id="MostrarTabla"></p>
+                            <p id="mostrarTabla"></p>
 
                             <!-- <table class="table table-responsive">
                                 <thead>
@@ -579,12 +579,14 @@
         </script>
 
         <script src="dashboard.js"></script>
-        <!-- <script>
-        function tabla() {
-            document.getElementById("MostrarTabla" + element) + innerHTML + =
-                '"<table class=" table table - responsive " <thead> <tr> <th scope = "col" > Mes </th> <th scope = "col" > Fecha de Pago </th> <th scope = "col" > Modo de Pago </th> <th scope = "col" > Detalles </th> <th scope = "col" > Estatus de Pago </th> </tr > </thead> </table >';
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+        function tablaCambiar(value) {
+            
+            document.getElementById('mostrarTabla').innerHTML+='<table class=" table table - responsive " <thead> <tr> <th scope = "col" > Mes </th> <th scope = "col" > Fecha de Pago </th> <th scope = "col" > Modo de Pago </th> <th scope = "col" > Detalles </th> <th scope = "col" > Estatus de Pago </th> </tr > </thead> </table >';
         }
-        </script> -->
+        // }
+        </script>
 </body>
 
 </html>

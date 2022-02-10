@@ -1,8 +1,18 @@
 Faltan
 
 -AdmTechafexSU
--Noticias
--Votaciones
+
+- Accesos -> Programados y Frecuentes
+	Código para los switch
+	Arreglar Modal para Editar AXs Activos
+	Agregar botón para generar código de acceso a otros usuarios para el Historial de AXs
+	
+- Información de ZR y Datos de contacto
+	Quitar botón de Registrar
+	Botón de Guardar Cuambios cuando se edite la información
+
+- Propietarios
+	Cambiar link en tabla para información de propietarios
 
 Incompletos
 

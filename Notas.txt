@@ -1,10 +1,10 @@
-Faltan
+﻿Faltan
 
 -AdmTechafexSU
 
 - Accesos -> Programados y Frecuentes
-	Código para los switch
-	Arreglar Modal para Editar AXs Activos
+	Código para los switch 
+	Arreglar Modal para Editar AXs Activos (Check)
 	Agregar botón para generar código de acceso a otros usuarios para el Historial de AXs
 	
 - Información de ZR y Datos de contacto

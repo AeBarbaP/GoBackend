@@ -356,16 +356,20 @@
                                                 if (document.getElementById('flexSwitchCheckP1').checked){
                                                     document.getElementById('flexSwitchCheckF1').disabled = true;
                                                     document.getElementById('inlineCheckbox2').disabled = true;
+                                                    document.querySelectorAll('input[id="Semanacompleta2"]').forEach(element => element.disabled = true);
+
                                                 }
                                                 else {
                                                     document.getElementById('flexSwitchCheckP1').disabled = false;
                                                     document.getElementById('flexSwitchCheckF1').disabled = false;
                                                     document.getElementById('inlineCheckbox2').disabled = false;
                                                     document.getElementById('Semanacompleta2').disabled = false;
+                                                    document.querySelectorAll('input[id="Semanacompleta2"]').forEach(element => element.disabled = false);
+
                                                 }
                                             }
                                             function deshabilita3(){
-                                                document.querySelectorAll('input').forEach(element => element.disabled = true);
+                                                // document.querySelectorAll('input[id="Semanacompleta2"]').forEach(element => element.disabled = true);
                                                 /* var radioButTrat = document.getElementsById("Semanacompleta2");
                                                 for (var i=0; i<radioButTrat.length; i++){
                                                         radioButTrat[i].disabled = true;

@@ -256,22 +256,22 @@
                                     </div>
                                     <!-- OJO! Cuando se habilita uno se deshabilita el otro -->
                                     <div class="row mt-2">
-
+                                    
                                         <div class="col-1">
                                             <div class="form-check">
                                                 <div class="form-check form-switch" style="vertical-align: middle;">
-                                                    <input class="form-check-input" type="checkbox" role="switch"
-                                                        id="flexSwitchCheckDefault">
+                                                    <input class="form-check-input" type="checkbox" role="switch" onchange="deshabilita()"
+                                                        id="flexSwitchCheckF1">
                                                     <label class="form-check-label"
-                                                        for="flexSwitchCheckDefault"><strong>Frecuente</strong></label>
+                                                        for="flexSwitchCheckF1"><strong>Frecuente</strong></label>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-11" style="vertical-align: middle;">
                                             <script>
-                                                function toggle(source) {
-                                                    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                                                function toggle2(source) {
+                                                    var checkboxes = document.querySelectorAll('input[id="Semanacompleta2"]');
                                                     for (var i = 0; i < checkboxes.length; i++) {
                                                         if (checkboxes[i] != source)
                                                             checkboxes[i].checked = source.checked;
@@ -279,45 +279,45 @@
                                                 }
                                             </script>
                                             <div class="form-check form-check-inline ms-5">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                                    value="option1" onclick="toggle(this);">
-                                                <label class="form-check-label" for="inlineCheckbox1">Seleccionar
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                    value="option1" onclick="toggle2(this);">
+                                                <label class="form-check-label" for="inlineCheckbox2">Seleccionar
                                                     todos</label>
                                             </div>
                                             <div class="form-check form-check-inline ms-5">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                                <input class="form-check-input" type="checkbox" id="Semanacompleta2"
                                                     value="option1">
-                                                <label class="form-check-label" for="inlineCheckbox1">Lunes</label>
+                                                <label class="form-check-label" for="Semanacompleta2">Lunes</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                <input class="form-check-input" type="checkbox" id="Semanacompleta2"
                                                     value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">Mártes</label>
+                                                <label class="form-check-label" for="Semanacompleta2">Mártes</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                                <input class="form-check-input" type="checkbox" id="Semanacompleta2"
                                                     value="option3">
-                                                <label class="form-check-label" for="inlineCheckbox3">Miércoles</label>
+                                                <label class="form-check-label" for="Semanacompleta2">Miércoles</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">Jueves</label>
+                                                <input class="form-check-input" type="checkbox" id="Semanacompleta2"
+                                                    value="option4">
+                                                <label class="form-check-label" for="Semanacompleta2">Jueves</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">Viernes</label>
+                                                <input class="form-check-input" type="checkbox" id="Semanacompleta2"
+                                                    value="option5">
+                                                <label class="form-check-label" for="Semanacompleta2">Viernes</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">Sábado</label>
+                                                <input class="form-check-input" type="checkbox" id="Semanacompleta2"
+                                                    value="option6">
+                                                <label class="form-check-label" for="Semanacompleta2">Sábado</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">Domingo</label>
+                                                <input class="form-check-input" type="checkbox" id="Semanacompleta2"
+                                                    value="option7">
+                                                <label class="form-check-label" for="Semanacompleta2">Domingo</label>
                                             </div>
                                         </div>
                                     </div>
@@ -325,16 +325,54 @@
                                         <div class="col-1">
                                             <div class="form-check">
                                                 <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" role="switch"
-                                                        id="flexSwitchCheckChecked" checked>
+                                                    <input class="form-check-input" type="checkbox" role="switch" onchange="deshabilita2(); deshabilita3()"
+                                                        id="flexSwitchCheckP1" checked>
                                                     <label class="form-check-label"
-                                                        for="flexSwitchCheckChecked"><strong>Programado</strong></label>
+                                                        for="flexSwitchCheckP1"><strong>Programado</strong></label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-11">
                                         </div>
+                                        <!-- SCRIPT para deshabilitar switches -->
+                                        <script>
+                                            function deshabilita(){
+                                                if (document.getElementById('flexSwitchCheckF1').checked){
+                                                    document.getElementById('flexSwitchCheckP1').disabled = true;
+                                                    document.getElementById('HoraEntrada').readOnly = true;
+                                                    document.getElementById('HoraSalida').readOnly = true;
+                                                }
+                                                else {
+                                                    document.getElementById('flexSwitchCheckF1').disabled = false;
+                                                    document.getElementById('flexSwitchCheckP1').disabled = false;
+                                                    document.getElementById('HoraEntrada').readOnly = false;
+                                                    document.getElementById('HoraSalida').readOnly = false;
+                                                    document.getElementById('Semanacompleta2').disabled = true;
+                                                }
+                                            }
+                                            function deshabilita2(){
+                                                
 
+                                                if (document.getElementById('flexSwitchCheckP1').checked){
+                                                    document.getElementById('flexSwitchCheckF1').disabled = true;
+                                                    document.getElementById('inlineCheckbox2').disabled = true;
+                                                }
+                                                else {
+                                                    document.getElementById('flexSwitchCheckP1').disabled = false;
+                                                    document.getElementById('flexSwitchCheckF1').disabled = false;
+                                                    document.getElementById('inlineCheckbox2').disabled = false;
+                                                    document.getElementById('Semanacompleta2').disabled = false;
+                                                }
+                                            }
+                                            function deshabilita3(){
+                                                document.querySelectorAll('input').forEach(element => element.disabled = true);
+                                                /* var radioButTrat = document.getElementsById("Semanacompleta2");
+                                                for (var i=0; i<radioButTrat.length; i++){
+                                                        radioButTrat[i].disabled = true;
+                                                    } */
+                                            }
+                                        </script>
+                                        <!-- End SCRIPT -->
                                     </div>
 
                                     <div class="row mt-3">
@@ -347,16 +385,16 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="form-floating mb-3">
-                                                <input type="time" class="form-control rounded-4" id="floatingPassword"
-                                                    placeholder="Teléfono">
-                                                <label for="floatingPassword">Hora de entrada</label>
+                                                <input type="time" class="form-control rounded-4" id="HoraEntrada"
+                                                    placeholder="Hora Salida">
+                                                <label for="HoraEntrada">Hora de entrada</label>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-floating mb-3">
-                                                <input type="time" class="form-control rounded-4" id="floatingPassword"
-                                                    placeholder="Teléfono">
-                                                <label for="floatingPassword">Hora de salida</label>
+                                                <input type="time" class="form-control rounded-4" id="HoraSalida"
+                                                    placeholder="Hora Salida">
+                                                <label for="HoraSalida">Hora de salida</label>
                                             </div>
                                         </div>
                                     </div>
@@ -453,9 +491,9 @@
                                                                         <div class="form-check form-switch"
                                                                             style="vertical-align: middle;">
                                                                             <input class="form-check-input" type="checkbox"
-                                                                                role="switch" id="flexSwitchCheckDefault">
+                                                                                role="switch" id="flexSwitchCheckF">
                                                                             <label class="form-check-label"
-                                                                                for="flexSwitchCheckDefault"><strong>Frecuente</strong></label>
+                                                                                for="flexSwitchCheckF"><strong>Frecuente</strong></label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -463,7 +501,7 @@
                                                                 <div class="col-11" style="vertical-align: middle;">
                                                                     <script>
                                                                         function toggle(source) {
-                                                                            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                                                                            var checkboxes = document.querySelectorAll('input[id="Semanacompleta"]');
                                                                             for (var i = 0; i < checkboxes.length; i++) {
                                                                                 if (checkboxes[i] != source)
                                                                                     checkboxes[i].checked = source.checked;
@@ -471,54 +509,52 @@
                                                                         }
                                                                     </script>
                                                                     <div class="form-check form-check-inline ms-5">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox1" value="option1"
-                                                                            onclick="toggle(this);">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" onclick="toggle(this);">
                                                                         <label class="form-check-label"
                                                                             for="inlineCheckbox1">Seleccionar
                                                                             todos</label>
                                                                     </div>
                                                                     <div class="form-check form-check-inline ms-5">
                                                                         <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox1" value="option1">
+                                                                            id="Semanacompleta" value="option1">
                                                                         <label class="form-check-label"
-                                                                            for="inlineCheckbox1">Lunes</label>
+                                                                            for="Semanacompleta">Lunes</label>
                                                                     </div>
                                                                     <div class="form-check form-check-inline">
                                                                         <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox2" value="option2">
+                                                                            id="Semanacompleta" value="option2">
                                                                         <label class="form-check-label"
-                                                                            for="inlineCheckbox2">Mártes</label>
+                                                                            for="Semanacompleta">Mártes</label>
                                                                     </div>
                                                                     <div class="form-check form-check-inline">
                                                                         <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox3" value="option3">
+                                                                            id="Semanacompleta" value="option3">
                                                                         <label class="form-check-label"
-                                                                            for="inlineCheckbox3">Miércoles</label>
+                                                                            for="Semanacompleta">Miércoles</label>
                                                                     </div>
                                                                     <div class="form-check form-check-inline">
                                                                         <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox2" value="option2">
+                                                                            id="Semanacompleta" value="option2">
                                                                         <label class="form-check-label"
-                                                                            for="inlineCheckbox2">Jueves</label>
+                                                                            for="Semanacompleta">Jueves</label>
                                                                     </div>
                                                                     <div class="form-check form-check-inline">
                                                                         <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox2" value="option2">
+                                                                            id="Semanacompleta" value="option2">
                                                                         <label class="form-check-label"
-                                                                            for="inlineCheckbox2">Viernes</label>
+                                                                            for="Semanacompleta">Viernes</label>
                                                                     </div>
                                                                     <div class="form-check form-check-inline">
                                                                         <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox2" value="option2">
+                                                                            id="Semanacompleta" value="option2">
                                                                         <label class="form-check-label"
-                                                                            for="inlineCheckbox2">Sábado</label>
+                                                                            for="Semanacompleta">Sábado</label>
                                                                     </div>
                                                                     <div class="form-check form-check-inline">
                                                                         <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox2" value="option2">
+                                                                            id="Semanacompleta" value="option2">
                                                                         <label class="form-check-label"
-                                                                            for="inlineCheckbox2">Domingo</label>
+                                                                            for="Semanacompleta">Domingo</label>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -528,42 +564,47 @@
                                                             <div class="row mt-2">
                                                                 <div class="col-1">
                                                                     <div class="form-check">
-                                                                        <div class="form-check form-switch">
-                                                                            <input class="form-check-input" type="checkbox"
-                                                                                role="switch" id="flexSwitchCheckChecked" checked>
-                                                                            <label class="form-check-label"
-                                                                                for="flexSwitchCheckChecked"><strong>Programado</strong></label>
+                                                                        <div class="form-check form-switch"> 
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckP" checked>
+                                                                            <label class="form-check-label" for="flexSwitchCheckP"><strong>Programado</strong></label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                         <li class="list-group-item">
-                                                            <div class="container">
-                                                                <div class="row g-0">
-                                                                    <div class="col-auto justify-content-end">
-                                                                        <label class=""><strong>Desactivar</strong></label>
-                                                                    </div>
-                                                                    <div class="col-1">
-                                                                        <div class="form-check">
-                                                                            <div class="form-check form-switch align-items-center">
-                                                                                <input class="form-check-input text-secondary" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                                                            </div>
+                                                            <div class="row mt-2">
+                                                                <div class="col-auto">
+                                                                    <div class="form-check">
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input text-secondary" type="checkbox" role="switch" id="flexSwitchCheck" onchange="EstatusLabel(this.value)">
+                                                                            <label class="form-check-label" for="flexSwitchCheck"><strong><span id="Estatus">Estatus BD</span></strong></label>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-auto justify-content-start">
-                                                                        <label class=""><strong>Activar</strong></label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                     </ul>
                                                 </div>
+                                                <!-- SCRIPT Etiqueta dinámica de estatus -->
+                                                <script>
+                                                    function EstatusLabel(value){
+                                                        var id = document.getElementById("flexSwitchCheck").value;
+                                                        if (document.getElementById('flexSwitchCheck').checked){
+                                                            document.getElementById('Estatus').innerHTML= "";
+                                                            document.getElementById('Estatus').innerHTML+='Activado';
+                                                        }
+                                                        else {
+                                                            document.getElementById('Estatus').innerHTML= "";
+                                                            document.getElementById('Estatus').innerHTML+='Desactivado';
+                                                        }
+                                                    }
+                                                </script>
+                                                <!-- Termina SCRIPT de Etiqueta dinámica -->
                                                 <div class="row mt-3">
                                                     <div class="col-12">
                                                         <div class="form-floating mb-3 ">
-                                                            <input type="date" class="form-control rounded-4"
-                                                                id="floatingPassword" placeholder="Nombre">
+                                                            <input type="date" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre">
                                                             <label for="floatingPassword">Fecha</label>
                                                         </div>
                                                     </div>

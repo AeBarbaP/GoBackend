@@ -256,12 +256,12 @@
                                     </div>
                                     <!-- OJO! Cuando se habilita uno se deshabilita el otro -->
                                     <div class="row mt-2">
-
+                                    
                                         <div class="col-1">
                                             <div class="form-check">
                                                 <div class="form-check form-switch" style="vertical-align: middle;">
-                                                    <input class="form-check-input" type="checkbox" role="switch"
-                                                        onchange="deshabilita()" id="flexSwitchCheckF1">
+                                                    <input class="form-check-input" type="checkbox" role="switch" onchange="deshabilita()"
+                                                        id="flexSwitchCheckF1">
                                                     <label class="form-check-label"
                                                         for="flexSwitchCheckF1"><strong>Frecuente</strong></label>
                                                 </div>
@@ -325,8 +325,8 @@
                                         <div class="col-1">
                                             <div class="form-check">
                                                 <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" role="switch"
-                                                        onchange="deshabilita2()" id="flexSwitchCheckP1" checked>
+                                                    <input class="form-check-input" type="checkbox" role="switch" onchange="deshabilita2()"
+                                                        id="flexSwitchCheckP1" checked>
                                                     <label class="form-check-label"
                                                         for="flexSwitchCheckP1"><strong>Programado</strong></label>
                                                 </div>
@@ -336,8 +336,8 @@
                                         </div>
                                         <!-- SCRIPT para deshabilitar switches -->
                                         <script>
-                                            function deshabilita() {
-                                                if (document.getElementById('flexSwitchCheckF1').checked) {
+                                            function deshabilita(){
+                                                if (document.getElementById('flexSwitchCheckF1').checked){
                                                     document.getElementById('flexSwitchCheckP1').disabled = true;
                                                     document.getElementById('HoraEntrada').readOnly = true;
                                                     document.getElementById('HoraSalida').readOnly = true;
@@ -350,8 +350,8 @@
                                                     document.getElementById('Semanacompleta2').disabled = true;
                                                 }
                                             }
-                                            function deshabilita2() {
-                                                if (document.getElementById('flexSwitchCheckP1').checked) {
+                                            function deshabilita2(){
+                                                if (document.getElementById('flexSwitchCheckP1').checked){
                                                     document.getElementById('flexSwitchCheckF1').disabled = true;
                                                     document.getElementById('inlineCheckbox2').disabled = true;
                                                     document.querySelectorAll('input[id="Semanacompleta2"]').forEach(element => element.disabled = true);
@@ -393,7 +393,7 @@
                                     </div>
 
                                     <p class="text-end"><button class="btn btn-outline-secondary mt-3"
-                                            onclick="AbrirCuteSwalAXs()" type="button">Crear</button></p>
+                                            type="button">Crear</button></p>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -414,13 +414,9 @@
                                             <tr class="table-light">
                                                 <th scope="col">Roberto González</th>
                                                 <th class="text-center" scope="row">P</th>
-                                                <td class="text-center"><i class="bi bi-lightbulb"
-                                                        style="color: green;"></i></td>
-                                                <td class="text-center"><a href="#EditarAx" class="nav-link"
-                                                        data-bs-toggle="modal"><i class="bi bi-pencil-square"></i></a>
-                                                </td>
-                                                <td class="text-center"><a href="#" onclick="AbrirCuteSwal()"><i
-                                                            class="bi bi-trash"></i></a></td>
+                                                <td class="text-center"><i class="bi bi-lightbulb" style="color: green;"></i></td>
+                                                <td class="text-center"><a href="#EditarAx" class="nav-link" data-bs-toggle="modal"><i class="bi bi-pencil-square"></i></a></td>
+                                                <td class="text-center"><a href="#" onclick="AbrirCuteSwal()"><i class="bi bi-trash"></i></a></td>
 
                                             </tr>
                                             <tr class="table-light">
@@ -431,19 +427,15 @@
                                                 <td class="text-center"><a href="#EditarAx" class="nav-link"
                                                         data-bs-toggle="modal"><i class="bi bi-pencil-square"></i></a>
                                                 </td>
-                                                <td class="text-center"><a href="#" onclick="AbrirCuteSwal()"><i
-                                                            class="bi bi-trash"></i></a></td>
+                                                <td class="text-center"><a href="#" onclick="AbrirCuteSwal()"><i class="bi bi-trash"></i></a></td>
                                             </tr>
                                             <tr class="table-light">
                                                 <th scope="col">Rosa María Juárez</th>
                                                 <th scope="row" class="text-center">F</th>
-                                                <td class="text-center"><i class="bi bi-lightbulb"
-                                                        style="color: green;"></i></td>
-                                                <td class="text-center"><a href="#EditarAx" class="nav-link"
-                                                        data-bs-toggle="modal"><i class="bi bi-pencil-square"></i></a>
+                                                <td class="text-center"><i class="bi bi-lightbulb" style="color: green;"></i></td>
+                                                <td class="text-center"><a href="#EditarAx" class="nav-link" data-bs-toggle="modal"><i class="bi bi-pencil-square"></i></a>
                                                 </td>
-                                                <td class="text-center"><a href="#" onclick="AbrirCuteSwal()"><i
-                                                            class="bi bi-trash"></i></a></td>
+                                                <td class="text-center"><a href="#" onclick="AbrirCuteSwal()"><i class="bi bi-trash"></i></a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -491,10 +483,8 @@
                                                                     <div class="form-check">
                                                                         <div class="form-check form-switch"
                                                                             style="vertical-align: middle;">
-                                                                            <input class="form-check-input"
-                                                                                type="checkbox" role="switch"
-                                                                                onchange="deshabilita3()"
-                                                                                id="flexSwitchCheckF">
+                                                                            <input class="form-check-input" type="checkbox"
+                                                                                role="switch" id="flexSwitchCheckF">
                                                                             <label class="form-check-label"
                                                                                 for="flexSwitchCheckF"><strong>Frecuente</strong></label>
                                                                         </div>
@@ -512,9 +502,7 @@
                                                                         }
                                                                     </script>
                                                                     <div class="form-check form-check-inline ms-5">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            id="inlineCheckbox1" value="option1"
-                                                                            onclick="toggle(this);">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" onclick="toggle(this);">
                                                                         <label class="form-check-label"
                                                                             for="inlineCheckbox1">Seleccionar
                                                                             todos</label>
@@ -569,13 +557,9 @@
                                                             <div class="row mt-2">
                                                                 <div class="col-1">
                                                                     <div class="form-check">
-                                                                        <div class="form-check form-switch">
-                                                                            <input class="form-check-input"
-                                                                                type="checkbox" role="switch"
-                                                                                onchange="deshabilita4()"
-                                                                                id="flexSwitchCheckP" checked>
-                                                                            <label class="form-check-label"
-                                                                                for="flexSwitchCheckP"><strong>Programado</strong></label>
+                                                                        <div class="form-check form-switch"> 
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckP" checked>
+                                                                            <label class="form-check-label" for="flexSwitchCheckP"><strong>Programado</strong></label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -586,15 +570,8 @@
                                                                 <div class="col-auto">
                                                                     <div class="form-check">
                                                                         <div class="form-check form-switch">
-                                                                            <input
-                                                                                class="form-check-input text-secondary"
-                                                                                type="checkbox" role="switch"
-                                                                                id="flexSwitchCheck"
-                                                                                onchange="EstatusLabel(this.value)">
-                                                                            <label class="form-check-label"
-                                                                                for="flexSwitchCheck"><strong><span
-                                                                                        id="Estatus">Estatus
-                                                                                        BD</span></strong></label>
+                                                                            <input class="form-check-input text-secondary" type="checkbox" role="switch" id="flexSwitchCheck" onchange="EstatusLabel(this.value)">
+                                                                            <label class="form-check-label" for="flexSwitchCheck"><strong><span id="Estatus">Estatus BD</span></strong></label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -604,72 +581,38 @@
                                                 </div>
                                                 <!-- SCRIPT Etiqueta dinámica de estatus -->
                                                 <script>
-                                                    function EstatusLabel(value) {
+                                                    function EstatusLabel(value){
                                                         var id = document.getElementById("flexSwitchCheck").value;
-                                                        if (document.getElementById('flexSwitchCheck').checked) {
-                                                            document.getElementById('Estatus').innerHTML = "";
-                                                            document.getElementById('Estatus').innerHTML += 'Activado';
+                                                        if (document.getElementById('flexSwitchCheck').checked){
+                                                            document.getElementById('Estatus').innerHTML= "";
+                                                            document.getElementById('Estatus').innerHTML+='Activado';
                                                         }
                                                         else {
-                                                            document.getElementById('Estatus').innerHTML = "";
-                                                            document.getElementById('Estatus').innerHTML += 'Desactivado';
+                                                            document.getElementById('Estatus').innerHTML= "";
+                                                            document.getElementById('Estatus').innerHTML+='Desactivado';
                                                         }
                                                     }
                                                 </script>
                                                 <!-- Termina SCRIPT de Etiqueta dinámica -->
-                                                <!-- SCRIPT para deshabilitar switches en Modal -->
-                                                <script>
-                                                    function deshabilita3() {
-                                                        if (document.getElementById('flexSwitchCheckF').checked) {
-                                                            document.getElementById('flexSwitchCheckP').disabled = true;
-                                                            document.getElementById('Hentrada').readOnly = true;
-                                                            document.getElementById('Hsalida').readOnly = true;
-                                                        }
-                                                        else {
-                                                            document.getElementById('flexSwitchCheckF').disabled = false;
-                                                            document.getElementById('flexSwitchCheckP').disabled = false;
-                                                            document.getElementById('Hentrada').readOnly = false;
-                                                            document.getElementById('Hsalida').readOnly = false;
-                                                            document.getElementById('Semanacompleta').disabled = true;
-                                                        }
-                                                    }
-                                                    function deshabilita4() {
-                                                        if (document.getElementById('flexSwitchCheckP').checked) {
-                                                            document.getElementById('flexSwitchCheckF').disabled = true;
-                                                            document.getElementById('inlineCheckbox1').disabled = true;
-                                                            document.querySelectorAll('input[id="Semanacompleta"]').forEach(element => element.disabled = true);
-                                                        }
-                                                        else {
-                                                            document.getElementById('flexSwitchCheckP').disabled = false;
-                                                            document.getElementById('flexSwitchCheckF').disabled = false;
-                                                            document.getElementById('inlineCheckbox1').disabled = false;
-                                                            document.getElementById('Semanacompleta').disabled = false;
-                                                            document.querySelectorAll('input[id="Semanacompleta"]').forEach(element => element.disabled = false);
-                                                        }
-                                                    }
-                                                </script>
-                                                <!-- End SCRIPT -->
-
                                                 <div class="row mt-3">
                                                     <div class="col-12">
                                                         <div class="form-floating mb-3 ">
-                                                            <input type="date" class="form-control rounded-4"
-                                                                id="floatingPassword" placeholder="Nombre">
+                                                            <input type="date" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre">
                                                             <label for="floatingPassword">Fecha</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="form-floating mb-3">
                                                             <input type="time" class="form-control rounded-4"
-                                                                id="Hentrada" placeholder="Hora de Entrada">
-                                                            <label for="Hentrada">Hora de entrada</label>
+                                                                id="floatingPassword" placeholder="Teléfono">
+                                                            <label for="floatingPassword">Hora de entrada</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="form-floating mb-3">
                                                             <input type="time" class="form-control rounded-4"
-                                                                id="Hsalida" placeholder="Hora de Salida">
-                                                            <label for="Hsalida">Hora de salida</label>
+                                                                id="floatingPassword" placeholder="Teléfono">
+                                                            <label for="floatingPassword">Hora de salida</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -689,27 +632,18 @@
                             <script>
                                 function AbrirCuteSwal() {
                                     Swal.fire({
-                                        title: 'Deseas Eliminar definitivamente el Acceso?',
+                                        title: 'Do you want to save the changes?',
                                         showDenyButton: true,
                                         showCancelButton: false,
-                                        confirmButtonText: 'Aceptar',
-                                        denyButtonText: `Cancelar`,
+                                        confirmButtonText: 'Save',
+                                        denyButtonText: `Don't save`,
                                     }).then((result) => {
                                         /* Read more about isConfirmed, isDenied below */
                                         if (result.isConfirmed) {
-                                            Swal.fire('Acceso eliminado con éxito!', '', 'success')
+                                            Swal.fire('Saved!', '', 'success')
                                         } else if (result.isDenied) {
-                                            Swal.fire('No se guardaron los cambios', '', 'info')
+                                            Swal.fire('Changes are not saved', '', 'info')
                                         }
-                                    })
-                                }
-                                function AbrirCuteSwalAXs() {
-                                    Swal.fire({
-                                        title: 'Acceso creado con éxito!',
-                                        showDenyButton: false,
-                                        showCancelButton: false,
-                                        confirmButtonText: 'Aceptar',
-                                        denyButtonText: `Cancelar`,
                                     })
                                 }
                             </script>

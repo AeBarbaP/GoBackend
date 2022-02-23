@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 19-01-2022 a las 20:58:32
--- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.4.10
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 23-02-2022 a las 22:21:53
+-- Versión del servidor: 10.4.19-MariaDB
+-- Versión de PHP: 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,39 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `go`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `menu`
+--
+
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL,
+  `nombre_menu` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `perfil` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `menu`
+--
+
+INSERT INTO `menu` (`id`, `nombre_menu`, `perfil`) VALUES
+(1, 'Inicio', 1),
+(2, 'Zonas Residenciales', 1),
+(3, 'Accesos', 1),
+(4, 'Administración', 1),
+(5, 'Inicio', 3),
+(6, 'Accesos', 3),
+(7, 'Información de Zona Residencial', 3),
+(8, 'Datos de Contacto', 3),
+(9, 'Administración', 3),
+(10, 'Propietarios', 3),
+(11, 'Vigilantes', 3),
+(12, 'Proveedores', 3),
+(13, 'Noticias', 3),
+(14, 'Eventos', 3),
+(15, 'Votaciones', 3);
 
 -- --------------------------------------------------------
 
@@ -51,6 +84,12 @@ INSERT INTO `usr` (`id`, `usr`, `pwd`, `perfil`) VALUES
 --
 
 --
+-- Indices de la tabla `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usr`
 --
 ALTER TABLE `usr`
@@ -59,6 +98,12 @@ ALTER TABLE `usr`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `usr`

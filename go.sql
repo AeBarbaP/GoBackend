@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-02-2022 a las 19:10:54
+-- Tiempo de generación: 25-02-2022 a las 20:47:46
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.7
 
@@ -56,7 +56,9 @@ INSERT INTO `menu` (`id`, `nombre_menu`, `perfil`) VALUES
 (16, 'Inicio', 2),
 (17, 'Zonas Residenciales', 2),
 (18, 'Administración', 2),
-(19, 'Eventos', 2);
+(19, 'Eventos', 2),
+(20, 'Noticias', 2),
+(21, 'Proveedores', 2);
 
 -- --------------------------------------------------------
 
@@ -107,7 +109,7 @@ ALTER TABLE `usr`
 -- AUTO_INCREMENT de la tabla `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `usr`

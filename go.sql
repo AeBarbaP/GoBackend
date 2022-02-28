@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-02-2022 a las 20:47:46
+-- Tiempo de generación: 28-02-2022 a las 22:19:38
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.7
 
@@ -58,7 +58,35 @@ INSERT INTO `menu` (`id`, `nombre_menu`, `perfil`) VALUES
 (18, 'Administración', 2),
 (19, 'Eventos', 2),
 (20, 'Noticias', 2),
-(21, 'Proveedores', 2);
+(21, 'Proveedores', 2),
+(22, 'Inicio', 4),
+(23, 'Información de Zona Residencial', 4),
+(24, 'Accesos', 4),
+(25, 'Datos de Contacto', 4),
+(26, 'Administración', 4),
+(27, 'Eventos', 4),
+(28, 'Votaciones', 4),
+(29, 'Vigilantes', 4),
+(30, 'Propietarios', 4),
+(31, 'Proveedores', 4),
+(32, 'Noticias', 4),
+(33, 'Inicio', 5),
+(34, 'Datos de Contacto', 5),
+(35, 'Información de Zona Residencial', 5),
+(36, 'Accesos', 5),
+(37, 'Noticias', 5),
+(38, 'Propietarios', 5),
+(39, 'Votaciones', 5),
+(40, 'Inicio', 6),
+(41, 'Información de Zona Residencial', 6),
+(42, 'Accesos', 6),
+(43, 'Datos de Contacto', 6),
+(44, 'Noticias', 6),
+(45, 'Inicio', 7),
+(46, 'Accesos', 7),
+(47, 'Eventos', 7),
+(48, 'Noticias', 7),
+(49, 'Proveedores', 7);
 
 -- --------------------------------------------------------
 
@@ -109,7 +137,7 @@ ALTER TABLE `usr`
 -- AUTO_INCREMENT de la tabla `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT de la tabla `usr`

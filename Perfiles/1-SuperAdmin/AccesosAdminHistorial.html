@@ -245,24 +245,22 @@
 
                                                     <div class="form-floating mb-3">
                                                         <input type="text" class="form-control rounded-4" value="ABCz"
-                                                            onfocus="CopyPass(this.value)" readonly id="CopyInput"
+                                                            onclick="CopyPass()" readonly id="CopyInput"
                                                             placeholder="TipoUsuario">
                                                         <label for="floatingInput"></label>
                                                     </div>
                                                     <script>
-                                                        const answer = document.getElementById("copyResult");
-                                                        const copy = document.getElementById("CopyInput");
-                                                        const selection = window.getSelection();
-                                                        const range = document.createRange();
-                                                        const textToCopy = document.getElementById("textToCopy")
-                                                        function CopyPass(value) {
-                                                            var TextoCopiado = value;
-                                                            range.selectNodeContents(TextoCopiado);
-                                                            selection.removeAllRanges();
-                                                            selection.addRange(range);
-                                                            const successful = document.execCommand('copy');
-                                                            window.getSelection().removeAllRanges()
+                                                    
+                                                        function CopyPass() {
+
+                                                            var content = document.getElementById('CopyInput');
+
+                                                            content.select();
+                                                            document.execCommand('copy');
+
+                                                            alert("Copied!");
                                                         }
+
                                                     </script>
                                                     <a href="AccesosAdminHistorial.html"
                                                         class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"

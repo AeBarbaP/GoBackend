@@ -219,7 +219,7 @@
 
                                                     <div class="input-group mb-2">
                                                         <span class="input-group-text" id="basic-addon3"><i
-                                                                class="bi bi-house-door"></i></span>
+                                                                class="bi bi-person-rolodex"></i></span>
                                                         <input class="form-control" list="datalistOptions"
                                                             id="exampleDataList" onchange="tablaCambiar(this.value);"
                                                             placeholder="Tipo de Usuario...">
@@ -231,7 +231,7 @@
                                                     </div>
                                                     <div class="input-group mb-2">
                                                         <span class="input-group-text" id="basic-addon3"><i
-                                                                class="bi bi-house-door"></i></span>
+                                                                class="bi bi-person-check-fill"></i></span>
                                                         <input class="form-control" list="datalistOptions"
                                                             id="exampleDataList" onchange="tablaCambiar(this.value);"
                                                             placeholder="Nombre de Usuario...">
@@ -244,28 +244,57 @@
                                                     </div>
 
                                                     <div class="form-floating mb-3">
-                                                        <input type="text" class="form-control rounded-4" value="ABCz"
+                                                        <input type="text" class="form-control rounded-4" value=""
                                                             onclick="CopyPass()" readonly id="CopyInput"
-                                                            placeholder="TipoUsuario">
-                                                        <label for="floatingInput"></label>
+                                                            placeholder="Clave Temporal">
+                                                        <label for="floatingInput">Clave Temporal</label>
                                                     </div>
                                                     <script>
-                                                    
                                                         function CopyPass() {
-
                                                             var content = document.getElementById('CopyInput');
-
                                                             content.select();
                                                             document.execCommand('copy');
-
-                                                            alert("Copied!");
+                                                            alert("Copiado!");
                                                         }
+                                                    </script>
+                                                    <a class="w-100 mb-2 btn btn-lg rounded-4 btn-secondary"
+                                                        type="submit" id="KeyGenHistoryBtn"
+                                                        onclick="gfg_Run();DeshabilitaBtn()"><i
+                                                            class="bi bi-clock-history"></i>
+                                                        Generar Clave</a>
+                                                    <a class="w-100 mb-2 btn btn-lg rounded-4 btn-success" type="submit"
+                                                        id="SaveBtn" onclick="" style="display: none;"><i
+                                                            class="bi bi-share-fill"></i>
+                                                        Compartir</a>
+                                                    <hr>
+                                                    <script>
+                                                        document.getElementById("CopyInput").innerHTML = "";
+                                                        var el_down = document.getElementById("CopyInput");
+                                                        /* Function to generate combination of password */
+                                                        function generateP() {
+                                                            var pass = '';
+                                                            var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+                                                                'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+                                                            for (i = 1; i <= 8; i++) {
+                                                                var char = Math.floor(Math.random()
+                                                                    * str.length + 1);
+                                                                pass += str.charAt(char)
+                                                            }
+                                                            return pass;
 
+                                                        }
+                                                        function gfg_Run() {
+                                                            el_down.value = generateP();
+                                                        }
+                                                        function DeshabilitaBtn() {
+                                                            document.getElementById("KeyGenHistoryBtn").style.display = 'none';
+                                                            document.getElementById("SaveBtn").style.display = 'block';
+                                                        }
                                                     </script>
                                                     <a href="AccesosAdminHistorial.html"
                                                         class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"
-                                                        type="submit"><i class="bi bi-box-arrow-in-down"></i>
-                                                        Generar Clave</a>
+                                                        type="submit"><i class="bi bi-x-lg"></i>
+                                                        Cerrar</a>
                                                 </form>
                                             </div>
                                         </div>

@@ -249,12 +249,18 @@
                                                             placeholder="Clave Temporal">
                                                         <label for="floatingInput">Clave Temporal</label>
                                                     </div>
+                                                    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                                                     <script>
                                                         function CopyPass() {
                                                             var content = document.getElementById('CopyInput');
                                                             content.select();
                                                             document.execCommand('copy');
-                                                            alert("Copiado!");
+                                                            Swal.fire(
+                                                                'Copiado!',
+                                                                'Copiaste la Clave Temporal!',
+                                                                'success'
+                                                            );
+                                                            /* alert("Copiado!"); */
                                                         }
                                                     </script>
                                                     <a class="w-100 mb-2 btn btn-lg rounded-4 btn-secondary"

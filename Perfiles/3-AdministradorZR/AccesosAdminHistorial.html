@@ -196,11 +196,118 @@
                             <h5></h5>
                             <div class="row g-0">
                                 <div class="col-6">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary"><span><i
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#ClaveTemporal"><span><i
                                                 class="bi bi-lock"></i></span>
                                         Crear Clave Temporal
                                     </button>
                                 </div>
+                                <!-- Comienza Modal para Creación de Clave Temporal -->
+
+                                <div class="modal fade" id="ClaveTemporal" tabindex="-1"
+                                    aria-labelledby="Crear Clave Temporal" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header text-dark">
+                                                <h5 class="modal-title" id="exampleModalLabel"><i
+                                                        class="bi bi-shield-lock"></i> Generar Clave Temporal</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body text-dark">
+                                                <form class="">
+
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text" id="basic-addon3"><i
+                                                                class="bi bi-person-rolodex"></i></span>
+                                                        <input class="form-control" list="datalistOptions"
+                                                            id="exampleDataList" onchange="tablaCambiar(this.value);"
+                                                            placeholder="Tipo de Usuario...">
+                                                        <datalist id="datalistOptions">
+                                                            <option value="Propiearios">
+                                                            <option value="Vigilantes">
+                                                            <option value="Otro">
+                                                        </datalist>
+                                                    </div>
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text" id="basic-addon3"><i
+                                                                class="bi bi-person-check-fill"></i></span>
+                                                        <input class="form-control" list="datalistOptions"
+                                                            id="exampleDataList" onchange="tablaCambiar(this.value);"
+                                                            placeholder="Nombre de Usuario...">
+                                                        <datalist id="datalistOptions">
+                                                            <!-- Aquí se muestran los nombres de la tabla de usuarios que selecciona en el tipo de usuario -->
+                                                            <option value="Francisco Guzmán">
+                                                            <option value="Roberto Cabral">
+                                                            <option value="Iván Rodríguez">
+                                                        </datalist>
+                                                    </div>
+
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control rounded-4" value=""
+                                                            onclick="CopyPass()" readonly id="CopyInput"
+                                                            placeholder="Clave Temporal">
+                                                        <label for="floatingInput">Clave Temporal</label>
+                                                    </div>
+                                                    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                                                    <script>
+                                                        function CopyPass() {
+                                                            var content = document.getElementById('CopyInput');
+                                                            content.select();
+                                                            document.execCommand('copy');
+                                                            Swal.fire(
+                                                                'Copiado!',
+                                                                'Copiaste la Clave Temporal!',
+                                                                'success'
+                                                            );
+                                                            /* alert("Copiado!"); */
+                                                        }
+                                                    </script>
+                                                    <a class="w-100 mb-2 btn btn-lg rounded-4 btn-secondary"
+                                                        type="submit" id="KeyGenHistoryBtn"
+                                                        onclick="gfg_Run();DeshabilitaBtn()"><i
+                                                            class="bi bi-clock-history"></i>
+                                                        Generar Clave</a>
+                                                    <a class="w-100 mb-2 btn btn-lg rounded-4 btn-success" type="submit"
+                                                        id="SaveBtn" onclick="" style="display: none;"><i
+                                                            class="bi bi-share-fill"></i>
+                                                        Compartir</a>
+                                                    <hr>
+                                                    <script>
+                                                        document.getElementById("CopyInput").innerHTML = "";
+                                                        var el_down = document.getElementById("CopyInput");
+                                                        /* Function to generate combination of password */
+                                                        function generateP() {
+                                                            var pass = '';
+                                                            var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+                                                                'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+                                                            for (i = 1; i <= 8; i++) {
+                                                                var char = Math.floor(Math.random()
+                                                                    * str.length + 1);
+                                                                pass += str.charAt(char)
+                                                            }
+                                                            return pass;
+
+                                                        }
+                                                        function gfg_Run() {
+                                                            el_down.value = generateP();
+                                                        }
+                                                        function DeshabilitaBtn() {
+                                                            document.getElementById("KeyGenHistoryBtn").style.display = 'none';
+                                                            document.getElementById("SaveBtn").style.display = 'block';
+                                                        }
+                                                    </script>
+                                                    <a href="AccesosAdminHistorial.html"
+                                                        class="w-100 mb-2 btn btn-lg rounded-4 btn-primary"
+                                                        type="submit"><i class="bi bi-x-lg"></i>
+                                                        Cerrar</a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Termina Modal para Creación de Clave Temporal -->
                                 <div class="col-6 justify-content-end">
 
                                     <div class="btn-toolbar justify-content-end me-2">
@@ -217,7 +324,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="row align-items-md-stretch">
                             <div class="col-md-12">

@@ -63,14 +63,14 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Home_AdminZR.html">
+                            <a class="nav-link active" aria-current="page" href="Index.php">
                                 <span data-feather="home"></span>
                                 Inicio
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdmin.html">
+                            <a class="nav-link" href="AccesosAdmin.php">
                                 <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
                                 Accesos
                             </a>
@@ -83,11 +83,11 @@
                             </a>
                         </li>
                         <!--                         <li class="nav-item">
-                            <a class="nav-link" href="DatosContacto.html">
-                                <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
-                                Datos de Contacto
-                            </a>
-                        </li> -->
+                <a class="nav-link" href="DatosContacto.html">
+                    <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
+                    Datos de Contacto
+                </a>
+            </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="Administracion.php">
                                 <i class="bi bi-clipboard-data" style="margin-right: 7px;"></i>
@@ -113,7 +113,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdmin.html">
+                            <a class="nav-link" href="AccesosAdmin.php">
                                 <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
                                 Accesos
                             </a>
@@ -137,7 +137,6 @@
                             </a>
                         </li>
                     </ul>
-
                 </div>
             </nav>
 
@@ -582,8 +581,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
         function tablaCambiar(value) {
-            
-            document.getElementById('mostrarTabla').innerHTML+='<table class=" table table - responsive " <thead> <tr> <th scope = "col" > Mes </th> <th scope = "col" > Fecha de Pago </th> <th scope = "col" > Modo de Pago </th> <th scope = "col" > Detalles </th> <th scope = "col" > Estatus de Pago </th> </tr > </thead> </table >';
+
+            document.getElementById('mostrarTabla').innerHTML +=
+                '<table class=" table table - responsive " <thead> <tr> <th scope = "col" > Mes </th> <th scope = "col" > Fecha de Pago </th> <th scope = "col" > Modo de Pago </th> <th scope = "col" > Detalles </th> <th scope = "col" > Estatus de Pago </th> </tr > </thead> </table >';
         }
         // }
         </script>

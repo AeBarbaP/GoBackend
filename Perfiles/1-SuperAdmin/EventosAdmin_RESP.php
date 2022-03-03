@@ -65,31 +65,31 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Home_AdminZR.html">
+                            <a class="nav-link active" aria-current="page" href="Index.php">
                                 <span data-feather="home"></span>
                                 Inicio
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdmin.html">
+                            <a class="nav-link" href="AccesosAdmin.php">
                                 <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
                                 Accesos
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="nav-link" href="InfoZR.html">
+                            <a class="nav-link" href="AdministracionResidenciales.php">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
                                 Zonas Residenciales
                             </a>
                         </li>
                         <!--                         <li class="nav-item">
-                            <a class="nav-link" href="DatosContacto.html">
-                                <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
-                                Datos de Contacto
-                            </a>
-                        </li> -->
+                <a class="nav-link" href="DatosContacto.html">
+                    <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
+                    Datos de Contacto
+                </a>
+            </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="Administracion.php">
                                 <i class="bi bi-clipboard-data" style="margin-right: 7px;"></i>
@@ -115,7 +115,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdmin.html">
+                            <a class="nav-link" href="AccesosAdmin.php">
                                 <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
                                 Accesos
                             </a>
@@ -139,7 +139,6 @@
                             </a>
                         </li>
                     </ul>
-
                 </div>
             </nav>
 

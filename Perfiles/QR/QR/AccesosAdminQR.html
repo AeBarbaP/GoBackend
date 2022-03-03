@@ -9,11 +9,14 @@
     <meta name="generator" content="Hugo 0.88.1">
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-        <!-- <script src="../QR/QR/ajax_generate_code.js"></script> -->
-<!--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <!-- <script src="../QR/QR/ajax_generate_code.js"></script> -->
+    <!--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
 
     <title>GO - Administración de Zona Residencial</title>
 
@@ -75,7 +78,8 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../../AdministracionZR/Home_AdminZR.html">
+                            <a class="nav-link active" aria-current="page"
+                                href="../../AdministracionZR/Home_AdminZR.html">
                                 <span data-feather="home"></span>
                                 Inicio
                             </a>
@@ -83,8 +87,8 @@
                         <hr>
                         <li class="nav-item">
                             <a class="nav-link" href="../../AdministracionZR/AccesosAdmin.html">
-                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                            Accesos
+                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                                Accesos
                             </a>
                         </li>
                         <hr>
@@ -153,7 +157,8 @@
             </nav>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Accesos</h1>
                     <a href="#ConfiguracionEventos" class="nav-link" data-bs-toggle="modal">
                         <i class="bi bi-gear h4"></i>
@@ -167,7 +172,8 @@
                 <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../AdministracionZR/AccesosAdmin.html">Programados y Frecuentes</a>
+                            <a class="nav-link" href="../../AdministracionZR/AccesosAdmin.html">Programados y
+                                Frecuentes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="AccesosAdminQR.html">Individuales</a>
@@ -179,37 +185,147 @@
                             <a class="nav-link" href="AccesosLimitados.html">Limitados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../AdministracionZR/AccesosAdminHistorial.html">Historial</a>
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#LoginClaveTemporal"
+                                href="../../AdministracionZR/AccesosAdminHistorial.html">Historial</a>
                         </li>
                     </ul>
                 </nav>
 
                 <body>
                     <main>
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
                         </div>
+                        <!-- Comienza Modal para Login con Clave Temporal -->
+                        <div class="modal fade" id="LoginClaveTemporal" tabindex="-1"
+                            aria-labelledby="Ingresa tu Clave Temporal" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header text-dark">
+                                        <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-shield-lock"></i>
+                                            Generar Clave Temporal</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-dark">
+                                        <form class="">
+
+                                            <!-- <div class="input-group mb-2">
+                                                <span class="input-group-text" id="basic-addon3"><i
+                                                        class="bi bi-person-rolodex"></i></span>
+                                                <input class="form-control" list="datalistOptions" id="exampleDataList"
+                                                    onchange="tablaCambiar(this.value);"
+                                                    placeholder="Tipo de Usuario...">
+                                                <datalist id="datalistOptions">
+                                                    <option value="Propiearios">
+                                                    <option value="Vigilantes">
+                                                    <option value="Otro">
+                                                </datalist>
+                                            </div>
+                                            <div class="input-group mb-2">
+                                                <span class="input-group-text" id="basic-addon3"><i
+                                                        class="bi bi-person-check-fill"></i></span>
+                                                <input class="form-control" list="datalistOptions" id="exampleDataList"
+                                                    onchange="tablaCambiar(this.value);"
+                                                    placeholder="Nombre de Usuario...">
+                                                <datalist id="datalistOptions">
+                                                    Aquí se muestran los nombres de la tabla de usuarios que selecciona en el tipo de usuario
+                                                    <option value="Francisco Guzmán">
+                                                    <option value="Roberto Cabral">
+                                                    <option value="Iván Rodríguez">
+                                                </datalist>
+                                            </div> -->
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control rounded-4" value=""
+                                                    id="ClaveTemporalInput" placeholder="Clave Temporal">
+                                                <label for="floatingInput">Clave Temporal</label>
+                                            </div>
+                                            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                                            <script>
+                                                function AccesoIncorrecto() {
+                                                    Swal.fire({
+                                                        icon: 'error',
+                                                        title: 'Oops...',
+                                                        text: 'Clave Temporal Inválida!',
+                                                        footer: '<a href="../../AdministracionZR/AccesosAdminHistorial.html">Ingresar sin Clave</a>' /* quitar este link, solo es para desarrollo */
+                                                    });
+                                                    /* alert("Copiado!"); */
+                                                }
+                                            </script>
+                                            <a class="w-100 mb-2 btn btn-lg rounded-4 btn-secondary" type="submit"
+                                                id="LoginCVETEMP" onclick="AccesoIncorrecto()"><i
+                                                    class="bi bi-clock-history"></i>
+                                                Ingresar</a>
+                                            <a class="w-100 mb-2 btn btn-lg rounded-4 btn-success" type="submit"
+                                                id="SaveBtn" onclick="" style="display: none;"><i
+                                                    class="bi bi-share-fill"></i>
+                                                Compartir</a>
+                                            <hr>
+                                            <script>
+                                                document.getElementById("CopyInput").innerHTML = "";
+                                                var el_down = document.getElementById("CopyInput");
+                                                /* Function to generate combination of password */
+                                                function generateP() {
+                                                    var pass = '';
+                                                    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+                                                        'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+                                                    for (i = 1; i <= 8; i++) {
+                                                        var char = Math.floor(Math.random()
+                                                            * str.length + 1);
+                                                        pass += str.charAt(char)
+                                                    }
+                                                    return pass;
+                                                }
+                                                function gfg_Run() {
+                                                    el_down.value = generateP();
+                                                }
+                                                function DeshabilitaBtn() {
+                                                    document.getElementById("KeyGenHistoryBtn").style.display = 'none';
+                                                    document.getElementById("SaveBtn").style.display = 'block';
+                                                }
+                                            </script>
+                                            <a href="AccesosAdminHistorial.html"
+                                                class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i
+                                                    class="bi bi-x-lg"></i>
+                                                Cerrar</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Termina Modal para Creación de Clave Temporal -->
                         <div class="row align-items-md-stretch">
                             <div class="col-md-12">
                                 <div class="h-100 p-5 text-dark bg-light border rounded-3">
                                     <div class="" style="min-height:500px;">
-                                        <div class="">     
+                                        <div class="">
                                             <div class="row">
                                                 <h2>Generar acceso Individual</h2>
                                             </div>
                                             <br>
-                                            <form class="form-horizontal" method="post" id="codeForm" onsubmit="return false">
-                                                <label for="basic-url" class="form-label">Datos para generar QR <strong><i class="bi bi-qr-code"></i></strong></label> <!-- No se muestra el ícono de QR -->
+                                            <form class="form-horizontal" method="post" id="codeForm"
+                                                onsubmit="return false">
+                                                <label for="basic-url" class="form-label">Datos para generar QR
+                                                    <strong><i class="bi bi-qr-code"></i></strong></label>
+                                                <!-- No se muestra el ícono de QR -->
                                                 <div class="input-group mb-3 w-100">
-                                                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-person-circle"></i></span>
-                                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Nombre">
+                                                    <span class="input-group-text" id="basic-addon3"><i
+                                                            class="bi bi-person-circle"></i></span>
+                                                    <input type="text" class="form-control" id="basic-url"
+                                                        aria-describedby="basic-addon3" placeholder="Nombre">
                                                 </div>
                                                 <div class="input-group mb-3 w-100">
-                                                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-phone"></i></span>
-                                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Celular">
+                                                    <span class="input-group-text" id="basic-addon3"><i
+                                                            class="bi bi-phone"></i></span>
+                                                    <input type="text" class="form-control" id="basic-url"
+                                                        aria-describedby="basic-addon3" placeholder="Celular">
                                                 </div>
                                                 <div class="input-group mb-3 w-100">
-                                                    <span class="input-group-text" id="basic-addon3"><i class="bi bi-house-door"></i></span>
-                                                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Domicilio...">
+                                                    <span class="input-group-text" id="basic-addon3"><i
+                                                            class="bi bi-house-door"></i></span>
+                                                    <input class="form-control" list="datalistOptions"
+                                                        id="exampleDataList" placeholder="Domicilio...">
                                                     <datalist id="datalistOptions">
                                                         <option value="San Francisco">
                                                         <option value="New York">
@@ -219,19 +335,21 @@
                                                     </datalist>
                                                 </div>
                                                 <div class="input-group mb-3">
-                                                    <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-arrow-left-right"></i></label>
+                                                    <label class="input-group-text" for="inputGroupSelect01"><i
+                                                            class="bi bi-arrow-left-right"></i></label>
                                                     <select class="form-select" id="inputGroupSelect01">
                                                         <option selected>Tipo</option>
                                                         <option value="1">Entrada</option>
                                                         <option value="2">Entrada/Salida</option>
                                                         <option value="3">Salida</option>
                                                     </select>
-                                                </div>            
+                                                </div>
                                                 <hr>
                                                 <br>
                                                 <div class="input-group-text bg-light w-25">
                                                     <label class="control-label me-2">No. de Placa : </label>
-                                                    <input class="form-control col-xs-1" id="content" type="text" required="required">
+                                                    <input class="form-control col-xs-1" id="content" type="text"
+                                                        required="required">
                                                 </div>
                                                 <br>
                                                 <hr>
@@ -239,44 +357,47 @@
                                                     <label class="control-label">Nivel del código (ECC) : </label>
                                                     <select class="form-control col-xs-10" id="ecc">
                                                         <option value="H">H - Mejor</option>
-                                                        <option value="M">M</option>                                                            <option value="Q">Q</option>
-                                                        <option value="L">L - Peor</option>                         
+                                                        <option value="M">M</option>
+                                                        <option value="Q">Q</option>
+                                                        <option value="L">L - Peor</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Tamaño : </label>
-                                                    <input type="number" min="1" max="10" step="1" class="form-control col-xs-10" id="size" value="5">
+                                                    <input type="number" min="1" max="10" step="1"
+                                                        class="form-control col-xs-10" id="size" value="5">
                                                 </div>
                                                 <br>
                                                 <div class="form-group">
                                                     <label class="control-label"></label>
-                                                    <input type="submit" name="submit" id="submit" class="btn btn-secondary" value="Generar código QR">
+                                                    <input type="submit" name="submit" id="submit"
+                                                        class="btn btn-secondary" value="Generar código QR">
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="showQRCode"></div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </main>
-                </body>
-            </main>
         </div>
-    </div>
+        </main>
+</body>
+</main>
+</div>
+</div>
 
-        <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-            crossorigin="anonymous"></script>
-        <script src="../../AdministracionZR/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+    integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+    crossorigin="anonymous"></script>
+<script src="../../AdministracionZR/dashboard.js"></script>
 </body>
 
 </html>

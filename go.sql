@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-02-2022 a las 22:19:38
+-- Tiempo de generación: 08-03-2022 a las 22:10:05
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.7
 
@@ -30,63 +30,64 @@ SET time_zone = "+00:00";
 CREATE TABLE `menu` (
   `id` int(11) NOT NULL,
   `nombre_menu` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `perfil` int(11) NOT NULL
+  `perfil` int(11) NOT NULL,
+  `link` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `menu`
 --
 
-INSERT INTO `menu` (`id`, `nombre_menu`, `perfil`) VALUES
-(1, 'Inicio', 1),
-(2, 'Zonas Residenciales', 1),
-(3, 'Accesos', 1),
-(4, 'Administración', 1),
-(5, 'Inicio', 3),
-(6, 'Accesos', 3),
-(7, 'Información de Zona Residencial', 3),
-(8, 'Datos de Contacto', 3),
-(9, 'Administración', 3),
-(10, 'Propietarios', 3),
-(11, 'Vigilantes', 3),
-(12, 'Proveedores', 3),
-(13, 'Noticias', 3),
-(14, 'Eventos', 3),
-(15, 'Votaciones', 3),
-(16, 'Inicio', 2),
-(17, 'Zonas Residenciales', 2),
-(18, 'Administración', 2),
-(19, 'Eventos', 2),
-(20, 'Noticias', 2),
-(21, 'Proveedores', 2),
-(22, 'Inicio', 4),
-(23, 'Información de Zona Residencial', 4),
-(24, 'Accesos', 4),
-(25, 'Datos de Contacto', 4),
-(26, 'Administración', 4),
-(27, 'Eventos', 4),
-(28, 'Votaciones', 4),
-(29, 'Vigilantes', 4),
-(30, 'Propietarios', 4),
-(31, 'Proveedores', 4),
-(32, 'Noticias', 4),
-(33, 'Inicio', 5),
-(34, 'Datos de Contacto', 5),
-(35, 'Información de Zona Residencial', 5),
-(36, 'Accesos', 5),
-(37, 'Noticias', 5),
-(38, 'Propietarios', 5),
-(39, 'Votaciones', 5),
-(40, 'Inicio', 6),
-(41, 'Información de Zona Residencial', 6),
-(42, 'Accesos', 6),
-(43, 'Datos de Contacto', 6),
-(44, 'Noticias', 6),
-(45, 'Inicio', 7),
-(46, 'Accesos', 7),
-(47, 'Eventos', 7),
-(48, 'Noticias', 7),
-(49, 'Proveedores', 7);
+INSERT INTO `menu` (`id`, `nombre_menu`, `perfil`, `link`) VALUES
+(1, 'Inicio', 1, 'index.php'),
+(2, 'Zonas Residenciales', 1, 'AdministracionResidenciales.php'),
+(3, 'Accesos', 1, 'AccesosAdmin.php'),
+(4, 'Administración', 1, 'Administracion.php'),
+(5, 'Inicio', 3, 'index.php'),
+(6, 'Accesos', 3, 'AccesosAdmin.php'),
+(7, 'Información de Zona Residencial', 3, 'InfoZR.php'),
+(8, 'Datos de Contacto', 3, ''),
+(9, 'Administración', 3, ''),
+(10, 'Propietarios', 3, ''),
+(11, 'Vigilantes', 3, ''),
+(12, 'Proveedores', 3, ''),
+(13, 'Noticias', 3, ''),
+(14, 'Eventos', 3, ''),
+(15, 'Votaciones', 3, ''),
+(16, 'Inicio', 2, ''),
+(17, 'Zonas Residenciales', 2, ''),
+(18, 'Administración', 2, ''),
+(19, 'Eventos', 2, ''),
+(20, 'Noticias', 2, ''),
+(21, 'Proveedores', 2, ''),
+(22, 'Inicio', 4, ''),
+(23, 'Información de Zona Residencial', 4, ''),
+(24, 'Accesos', 4, ''),
+(25, 'Datos de Contacto', 4, ''),
+(26, 'Administración', 4, ''),
+(27, 'Eventos', 4, ''),
+(28, 'Votaciones', 4, ''),
+(29, 'Vigilantes', 4, ''),
+(30, 'Propietarios', 4, ''),
+(31, 'Proveedores', 4, ''),
+(32, 'Noticias', 4, ''),
+(33, 'Inicio', 5, ''),
+(34, 'Datos de Contacto', 5, ''),
+(35, 'Información de Zona Residencial', 5, ''),
+(36, 'Accesos', 5, ''),
+(37, 'Noticias', 5, ''),
+(38, 'Propietarios', 5, ''),
+(39, 'Votaciones', 5, ''),
+(40, 'Inicio', 6, ''),
+(41, 'Información de Zona Residencial', 6, ''),
+(42, 'Accesos', 6, ''),
+(43, 'Datos de Contacto', 6, ''),
+(44, 'Noticias', 6, ''),
+(45, 'Inicio', 7, ''),
+(46, 'Accesos', 7, ''),
+(47, 'Eventos', 7, ''),
+(48, 'Noticias', 7, ''),
+(49, 'Proveedores', 7, '');
 
 -- --------------------------------------------------------
 

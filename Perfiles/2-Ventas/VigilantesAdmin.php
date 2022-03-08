@@ -64,27 +64,27 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Home_AdminZR.html">
+                            <a class="nav-link active" aria-current="page" href="Index.php">
                                 <span data-feather="home"></span>
                                 Inicio
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdmin.html">
+                            <a class="nav-link" href="AccesosAdmin.php">
                                 <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
                                 Accesos
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="nav-link" href="InfoZR.html">
+                            <a class="nav-link" href="InfoZR.php">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
-                                Información de Zona Residencial
+                                Zonas Residenciales
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="DatosContacto.html">
+                            <a class="nav-link" href="DatosContacto.php">
                                 <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
                                 Datos de Contacto
                             </a>
@@ -114,7 +114,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdmin.html">
+                            <a class="nav-link" href="AccesosAdmin.php">
                                 <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
                                 Accesos
                             </a>
@@ -582,7 +582,6 @@
                                         </div>
                                     </div>
                                     <h5 style="margin-top: -20px">Luis Fernando González Álvarez</h5>';
-
                             }
                             ?>
                         </div>

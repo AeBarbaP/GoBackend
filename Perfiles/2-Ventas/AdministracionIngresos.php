@@ -19,19 +19,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
 
@@ -63,27 +63,27 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Home_AdminZR.html">
+                            <a class="nav-link active" aria-current="page" href="Index.php">
                                 <span data-feather="home"></span>
                                 Inicio
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdmin.html">
-                            <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
-                            Accesos
+                            <a class="nav-link" href="AccesosAdmin.php">
+                                <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
+                                Accesos
                             </a>
                         </li>
                         <hr>
                         <li class="nav-item">
-                            <a class="nav-link" href="InfoZR.html">
+                            <a class="nav-link" href="InfoZR.php">
                                 <i class="bi bi-card-list" style="margin-right: 7px;"></i>
-                                Información de Zona Residencial
+                                Zonas Residenciales
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="DatosContacto.html">
+                            <a class="nav-link" href="DatosContacto.php">
                                 <i class="bi bi-person-rolodex" style="margin-right: 7px;"></i>
                                 Datos de Contacto
                             </a>
@@ -113,7 +113,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdmin.html">
+                            <a class="nav-link" href="AccesosAdmin.php">
                                 <i class="bi bi-upc-scan" style="margin-right: 7px;"></i>
                                 Accesos
                             </a>
@@ -157,7 +157,8 @@
                             <a class="nav-link" href="Administracion.php">Cuotas de Colonos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="AdministracionIngresos.html">Ingresos</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="AdministracionIngresos.html">Ingresos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="AdministracionEgresos.html">Egresos</a>
@@ -172,137 +173,160 @@
                 <body>
 
                     <main>
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-                        <h1 class="h4">Ingresos</h1>
-                                        <div class="btn-toolbar mb-2 mb-md-0">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#RegistrarPagoModal">Registrar Ingreso</button>
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+                            <h1 class="h4">Ingresos</h1>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#RegistrarPagoModal">Registrar Ingreso</button>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="RegistrarPagoModal" tabindex="-1"
+                                aria-labelledby="RegistrarPagoModal" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="RegistrarPagoModal"><i
+                                                    class="bi bi-wallet2"></i> Registrar Ingreso</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
                                         </div>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="RegistrarPagoModal" tabindex="-1" aria-labelledby="RegistrarPagoModal" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="RegistrarPagoModal"><i class="bi bi-wallet2"></i> Registrar Ingreso</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form>
-                                                        <div class="row mb-3">
-                                                            <label for="NoFolio" class="col-sm-2 col-form-label">No. Folio</label>
-                                                            <div class="col-sm-3">
-                                                                <input type="text" class="form-control" id="NoFolio" >
-                                                            </div>
-                                                            <label for="IDPropietario" class="col-sm-2 col-form-label">ID Propietario</label>
-                                                            <div class="col-sm-3">
-                                                                <input type="text" class="form-control" id="IDPropietario" >
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <label for="Nombre" class="col-sm-2 col-form-label">Nombre</label>
-                                                            <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="Nombre">
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3"> 
-                                                            <label for="FechaPago" class="col-sm-2 col-form-label">Fecha de Pago</label>
-                                                            <div class="col-sm-10">
-                                                            <input type="date" class="form-control" id="FechaPago">
-                                                            </div>
-                                                        </div>
-                                                        <fieldset class="row mb-3">
-                                                            <legend class="col-form-label col-sm-2 pt-0">Modo de Pago</legend>
-                                                            <div class="col-sm-10">
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="PEfectivo" value="1" checked>
-                                                                    <label class="form-check-label" for="PEfectivo">
-                                                                    Efectivo
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="PTransferencia" value="2">
-                                                                    <label class="form-check-label" for="PTransferencia">
-                                                                    Transferencia
-                                                                    </label>
-                                                                </div>                              
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="PTarjetaDC" value="3">
-                                                                    <label class="form-check-label" for="PTarjetaDC">
-                                                                    Tarjeta Débito/Crédito
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </fieldset>
-                                                        <!-- Select Modal -->
-                                                        <div class="row mb-3"> 
-                                                            <label for="Concepto" class="col-sm-2 col-form-label">Concepto</label>
-                                                            <div class="col-sm-10">
-                                                                <select class="form-select" aria-label="Default select example">
-                                                                    <option selected>Selecciona el Concepto</option>
-                                                                    <option value="1">Aportación</option>
-                                                                    <option value="2">Arrendamiento</option>
-                                                                    <option value="2">Abono a Deuda</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <label for="Monto" class="col-sm-2 col-form-label">Monto</label>
-                                                            <div class="col-sm-5">
-                                                            <input type="text" class="form-control" id="Nombre">
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <label for="Detalles" class="col-sm-2 col-form-label">Detalles</label>
-                                                            <div class="col-sm-10">
-                                                            <textarea type="text" class="form-control" id="Nombre"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3 ml-3"> 
-                                                            <div class="form-check" style="margin-left: 18%">
-                                                                <input class="form-check-input" type="checkbox" id="Descuento">
-                                                                <label class="form-check-label" for="Descuento">
-                                                                Aplicar Descuento
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <fieldset class="row mb-3">
-                                                            <legend class="col-form-label col-sm-2 pt-0"></legend>
-                                                            <div class="col-sm-10">
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="DPorcentaje" value="1" checked>
-                                                                    <label class="form-check-label" for="PEfectivo">
-                                                                    Porcentaje
-                                                                    </label>
-                                                                    <input type="text" class="form-input w-25" style="margin-left: 5px;" id="Porcentaje">
-                                                                </div>
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="gridRadios" id="PTransferencia" value="2">
-                                                                    <label class="form-check-label" for="PTransferencia">
-                                                                    Monto
-                                                                    </label>
-                                                                    <input type="text" class="form-input w-25" style="margin-left: 26px;" id="Monto">
-                                                                </div>                              
-                                                            </div>
-                                                        </fieldset>
-                                                        <div class="container">
-                                                        <div class="row">
-                                                            <div class="col"></div>
-                                                                <div class="col">
-                                                                    <p style="text-align: right"> <span> <strong>SUBTOTAL: </strong> $0.00 </span> </p>
-                                                                    <p style="text-align: right"> <span> <strong>DESCUENTO: </strong> $0.00 </span> </p>
-                                                                    <p style="text-align: right"> <span> <strong>TOTAL: </strong> $0.00 </span> </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar </button>
-                                                        <button type="button" class="btn btn-primary"><i class="bi bi-check2-circle"></i> Registrar</button>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="row mb-3">
+                                                    <label for="NoFolio" class="col-sm-2 col-form-label">No.
+                                                        Folio</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" class="form-control" id="NoFolio">
+                                                    </div>
+                                                    <label for="IDPropietario" class="col-sm-2 col-form-label">ID
+                                                        Propietario</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="text" class="form-control" id="IDPropietario">
                                                     </div>
                                                 </div>
-                                            </div>
+                                                <div class="row mb-3">
+                                                    <label for="Nombre" class="col-sm-2 col-form-label">Nombre</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="Nombre">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <label for="FechaPago" class="col-sm-2 col-form-label">Fecha de
+                                                        Pago</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="date" class="form-control" id="FechaPago">
+                                                    </div>
+                                                </div>
+                                                <fieldset class="row mb-3">
+                                                    <legend class="col-form-label col-sm-2 pt-0">Modo de Pago</legend>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="PEfectivo" value="1" checked>
+                                                            <label class="form-check-label" for="PEfectivo">
+                                                                Efectivo
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="PTransferencia" value="2">
+                                                            <label class="form-check-label" for="PTransferencia">
+                                                                Transferencia
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="PTarjetaDC" value="3">
+                                                            <label class="form-check-label" for="PTarjetaDC">
+                                                                Tarjeta Débito/Crédito
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <!-- Select Modal -->
+                                                <div class="row mb-3">
+                                                    <label for="Concepto"
+                                                        class="col-sm-2 col-form-label">Concepto</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>Selecciona el Concepto</option>
+                                                            <option value="1">Aportación</option>
+                                                            <option value="2">Arrendamiento</option>
+                                                            <option value="2">Abono a Deuda</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <label for="Monto" class="col-sm-2 col-form-label">Monto</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="Nombre">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <label for="Detalles"
+                                                        class="col-sm-2 col-form-label">Detalles</label>
+                                                    <div class="col-sm-10">
+                                                        <textarea type="text" class="form-control"
+                                                            id="Nombre"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3 ml-3">
+                                                    <div class="form-check" style="margin-left: 18%">
+                                                        <input class="form-check-input" type="checkbox" id="Descuento">
+                                                        <label class="form-check-label" for="Descuento">
+                                                            Aplicar Descuento
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <fieldset class="row mb-3">
+                                                    <legend class="col-form-label col-sm-2 pt-0"></legend>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="DPorcentaje" value="1" checked>
+                                                            <label class="form-check-label" for="PEfectivo">
+                                                                Porcentaje
+                                                            </label>
+                                                            <input type="text" class="form-input w-25"
+                                                                style="margin-left: 5px;" id="Porcentaje">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="PTransferencia" value="2">
+                                                            <label class="form-check-label" for="PTransferencia">
+                                                                Monto
+                                                            </label>
+                                                            <input type="text" class="form-input w-25"
+                                                                style="margin-left: 26px;" id="Monto">
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col"></div>
+                                                        <div class="col">
+                                                            <p style="text-align: right"> <span> <strong>SUBTOTAL:
+                                                                    </strong> $0.00 </span> </p>
+                                                            <p style="text-align: right"> <span> <strong>DESCUENTO:
+                                                                    </strong> $0.00 </span> </p>
+                                                            <p style="text-align: right"> <span> <strong>TOTAL:
+                                                                    </strong> $0.00 </span> </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i
+                                                        class="bi bi-x-circle"></i> Cancelar </button>
+                                                <button type="button" class="btn btn-primary"><i
+                                                        class="bi bi-check2-circle"></i> Registrar</button>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Poner filtro en los títuos de las columnas de la tabla para la búsqueda por cualquiera de las columnas -->
 
                         <table class="table table-responsive">
@@ -352,7 +376,9 @@
                                 <tr class="table-light">
                                     <th scope="col">I-012</th>
                                     <th scope="row">20/10/2021</th>
-                                    <td><a">Alejandra Salmón Trujillo</a></td>
+                                    <td>
+                                        <a">Alejandra Salmón Trujillo</a>
+                                    </td>
                                     <td>1500.00</td>
                                     <td>Renta</td>
                                     <td>Transferencia</td>
@@ -360,7 +386,7 @@
                                     <td><a href="#" class="nav-link"><i class="bi bi-file-earmark-plus"></i></a></td>
                                 </tr>
                             </tbody>
-                        </table>                       
+                        </table>
                         <!-- <hr class="mt-5 mb-5">
                         <div class="">
                             <p> <strong>Luis Fernando González Álvarez</strong></p>
@@ -471,11 +497,11 @@
         <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-            crossorigin="anonymous"></script>
+            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-            crossorigin="anonymous"></script>
+            integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+        </script>
         <script src="dashboard.js"></script>
 </body>
 

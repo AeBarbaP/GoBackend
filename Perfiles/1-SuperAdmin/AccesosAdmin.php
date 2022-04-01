@@ -194,20 +194,20 @@
                 <nav>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="AccesosAdmin.html">Programados y
+                            <a class="nav-link active" aria-current="page" href="AccesosAdmin.php">Programados y
                                 Frecuentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../1-SuperAdmin/QR/QR/AccesosAdminQR.html">Individuales</a>
+                            <a class="nav-link" href="../1-SuperAdmin/QR/QR/AccesosAdminQR.php">Individuales</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../1-SuperAdmin/QR/QR/AccesosEmergentes.html">Emergentes</a>
+                            <a class="nav-link" href="../1-SuperAdmin/QR/QR/AccesosEmergentes.php">Emergentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../1-SuperAdmin/QR/QR/AccesosLimitados.html">Limitados</a>
+                            <a class="nav-link" href="../1-SuperAdmin/QR/QR/AccesosLimitados.php">Limitados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdminHistorial.html">Historial</a>
+                            <a class="nav-link" href="AccesosAdminHistorial.php">Historial</a>
                         </li>
                     </ul>
                 </nav>

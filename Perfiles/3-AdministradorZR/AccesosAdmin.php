@@ -21,19 +21,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
     </style>
 
 
@@ -199,16 +199,16 @@
                                 Frecuentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../QR/QR/AccesosAdminQR.html">Individuales</a>
+                            <a class="nav-link" href="../QR/QR/AccesosAdminQR.php">Individuales</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../QR/QR/AccesosEmergentes.html">Emergentes</a>
+                            <a class="nav-link" href="../QR/QR/AccesosEmergentes.php">Emergentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../QR/QR/AccesosLimitados.html">Limitados</a>
+                            <a class="nav-link" href="../QR/QR/AccesosLimitados.php">Limitados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AccesosAdminHistorial.html">Historial</a>
+                            <a class="nav-link" href="AccesosAdminHistorial.php">Historial</a>
                         </li>
                     </ul>
                 </nav>
@@ -270,13 +270,14 @@
 
                                         <div class="col-11" style="vertical-align: middle;">
                                             <script>
-                                                function toggle2(source) {
-                                                    var checkboxes = document.querySelectorAll('input[id="Semanacompleta2"]');
-                                                    for (var i = 0; i < checkboxes.length; i++) {
-                                                        if (checkboxes[i] != source)
-                                                            checkboxes[i].checked = source.checked;
-                                                    }
+                                            function toggle2(source) {
+                                                var checkboxes = document.querySelectorAll(
+                                                    'input[id="Semanacompleta2"]');
+                                                for (var i = 0; i < checkboxes.length; i++) {
+                                                    if (checkboxes[i] != source)
+                                                        checkboxes[i].checked = source.checked;
                                                 }
+                                            }
                                             </script>
                                             <div class="form-check form-check-inline ms-5">
                                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
@@ -336,34 +337,35 @@
                                         </div>
                                         <!-- SCRIPT para deshabilitar switches -->
                                         <script>
-                                            function deshabilita() {
-                                                if (document.getElementById('flexSwitchCheckF1').checked) {
-                                                    document.getElementById('flexSwitchCheckP1').disabled = true;
-                                                    document.getElementById('HoraEntrada').readOnly = true;
-                                                    document.getElementById('HoraSalida').readOnly = true;
-                                                }
-                                                else {
-                                                    document.getElementById('flexSwitchCheckF1').disabled = false;
-                                                    document.getElementById('flexSwitchCheckP1').disabled = false;
-                                                    document.getElementById('HoraEntrada').readOnly = false;
-                                                    document.getElementById('HoraSalida').readOnly = false;
-                                                    document.getElementById('Semanacompleta2').disabled = true;
-                                                }
+                                        function deshabilita() {
+                                            if (document.getElementById('flexSwitchCheckF1').checked) {
+                                                document.getElementById('flexSwitchCheckP1').disabled = true;
+                                                document.getElementById('HoraEntrada').readOnly = true;
+                                                document.getElementById('HoraSalida').readOnly = true;
+                                            } else {
+                                                document.getElementById('flexSwitchCheckF1').disabled = false;
+                                                document.getElementById('flexSwitchCheckP1').disabled = false;
+                                                document.getElementById('HoraEntrada').readOnly = false;
+                                                document.getElementById('HoraSalida').readOnly = false;
+                                                document.getElementById('Semanacompleta2').disabled = true;
                                             }
-                                            function deshabilita2() {
-                                                if (document.getElementById('flexSwitchCheckP1').checked) {
-                                                    document.getElementById('flexSwitchCheckF1').disabled = true;
-                                                    document.getElementById('inlineCheckbox2').disabled = true;
-                                                    document.querySelectorAll('input[id="Semanacompleta2"]').forEach(element => element.disabled = true);
-                                                }
-                                                else {
-                                                    document.getElementById('flexSwitchCheckP1').disabled = false;
-                                                    document.getElementById('flexSwitchCheckF1').disabled = false;
-                                                    document.getElementById('inlineCheckbox2').disabled = false;
-                                                    document.getElementById('Semanacompleta2').disabled = false;
-                                                    document.querySelectorAll('input[id="Semanacompleta2"]').forEach(element => element.disabled = false);
-                                                }
+                                        }
+
+                                        function deshabilita2() {
+                                            if (document.getElementById('flexSwitchCheckP1').checked) {
+                                                document.getElementById('flexSwitchCheckF1').disabled = true;
+                                                document.getElementById('inlineCheckbox2').disabled = true;
+                                                document.querySelectorAll('input[id="Semanacompleta2"]').forEach(
+                                                    element => element.disabled = true);
+                                            } else {
+                                                document.getElementById('flexSwitchCheckP1').disabled = false;
+                                                document.getElementById('flexSwitchCheckF1').disabled = false;
+                                                document.getElementById('inlineCheckbox2').disabled = false;
+                                                document.getElementById('Semanacompleta2').disabled = false;
+                                                document.querySelectorAll('input[id="Semanacompleta2"]').forEach(
+                                                    element => element.disabled = false);
                                             }
+                                        }
                                         </script>
                                         <!-- End SCRIPT -->
                                     </div>
@@ -503,13 +505,14 @@
 
                                                                 <div class="col-11" style="vertical-align: middle;">
                                                                     <script>
-                                                                        function toggle(source) {
-                                                                            var checkboxes = document.querySelectorAll('input[id="Semanacompleta"]');
-                                                                            for (var i = 0; i < checkboxes.length; i++) {
-                                                                                if (checkboxes[i] != source)
-                                                                                    checkboxes[i].checked = source.checked;
-                                                                            }
+                                                                    function toggle(source) {
+                                                                        var checkboxes = document.querySelectorAll(
+                                                                            'input[id="Semanacompleta"]');
+                                                                        for (var i = 0; i < checkboxes.length; i++) {
+                                                                            if (checkboxes[i] != source)
+                                                                                checkboxes[i].checked = source.checked;
                                                                         }
+                                                                    }
                                                                     </script>
                                                                     <div class="form-check form-check-inline ms-5">
                                                                         <input class="form-check-input" type="checkbox"
@@ -604,49 +607,49 @@
                                                 </div>
                                                 <!-- SCRIPT Etiqueta dinámica de estatus -->
                                                 <script>
-                                                    function EstatusLabel(value) {
-                                                        var id = document.getElementById("flexSwitchCheck").value;
-                                                        if (document.getElementById('flexSwitchCheck').checked) {
-                                                            document.getElementById('Estatus').innerHTML = "";
-                                                            document.getElementById('Estatus').innerHTML += 'Activado';
-                                                        }
-                                                        else {
-                                                            document.getElementById('Estatus').innerHTML = "";
-                                                            document.getElementById('Estatus').innerHTML += 'Desactivado';
-                                                        }
+                                                function EstatusLabel(value) {
+                                                    var id = document.getElementById("flexSwitchCheck").value;
+                                                    if (document.getElementById('flexSwitchCheck').checked) {
+                                                        document.getElementById('Estatus').innerHTML = "";
+                                                        document.getElementById('Estatus').innerHTML += 'Activado';
+                                                    } else {
+                                                        document.getElementById('Estatus').innerHTML = "";
+                                                        document.getElementById('Estatus').innerHTML += 'Desactivado';
                                                     }
+                                                }
                                                 </script>
                                                 <!-- Termina SCRIPT de Etiqueta dinámica -->
                                                 <!-- SCRIPT para deshabilitar switches en Modal -->
                                                 <script>
-                                                    function deshabilita3() {
-                                                        if (document.getElementById('flexSwitchCheckF').checked) {
-                                                            document.getElementById('flexSwitchCheckP').disabled = true;
-                                                            document.getElementById('Hentrada').readOnly = true;
-                                                            document.getElementById('Hsalida').readOnly = true;
-                                                        }
-                                                        else {
-                                                            document.getElementById('flexSwitchCheckF').disabled = false;
-                                                            document.getElementById('flexSwitchCheckP').disabled = false;
-                                                            document.getElementById('Hentrada').readOnly = false;
-                                                            document.getElementById('Hsalida').readOnly = false;
-                                                            document.getElementById('Semanacompleta').disabled = true;
-                                                        }
+                                                function deshabilita3() {
+                                                    if (document.getElementById('flexSwitchCheckF').checked) {
+                                                        document.getElementById('flexSwitchCheckP').disabled = true;
+                                                        document.getElementById('Hentrada').readOnly = true;
+                                                        document.getElementById('Hsalida').readOnly = true;
+                                                    } else {
+                                                        document.getElementById('flexSwitchCheckF').disabled = false;
+                                                        document.getElementById('flexSwitchCheckP').disabled = false;
+                                                        document.getElementById('Hentrada').readOnly = false;
+                                                        document.getElementById('Hsalida').readOnly = false;
+                                                        document.getElementById('Semanacompleta').disabled = true;
                                                     }
-                                                    function deshabilita4() {
-                                                        if (document.getElementById('flexSwitchCheckP').checked) {
-                                                            document.getElementById('flexSwitchCheckF').disabled = true;
-                                                            document.getElementById('inlineCheckbox1').disabled = true;
-                                                            document.querySelectorAll('input[id="Semanacompleta"]').forEach(element => element.disabled = true);
-                                                        }
-                                                        else {
-                                                            document.getElementById('flexSwitchCheckP').disabled = false;
-                                                            document.getElementById('flexSwitchCheckF').disabled = false;
-                                                            document.getElementById('inlineCheckbox1').disabled = false;
-                                                            document.getElementById('Semanacompleta').disabled = false;
-                                                            document.querySelectorAll('input[id="Semanacompleta"]').forEach(element => element.disabled = false);
-                                                        }
+                                                }
+
+                                                function deshabilita4() {
+                                                    if (document.getElementById('flexSwitchCheckP').checked) {
+                                                        document.getElementById('flexSwitchCheckF').disabled = true;
+                                                        document.getElementById('inlineCheckbox1').disabled = true;
+                                                        document.querySelectorAll('input[id="Semanacompleta"]').forEach(
+                                                            element => element.disabled = true);
+                                                    } else {
+                                                        document.getElementById('flexSwitchCheckP').disabled = false;
+                                                        document.getElementById('flexSwitchCheckF').disabled = false;
+                                                        document.getElementById('inlineCheckbox1').disabled = false;
+                                                        document.getElementById('Semanacompleta').disabled = false;
+                                                        document.querySelectorAll('input[id="Semanacompleta"]').forEach(
+                                                            element => element.disabled = false);
                                                     }
+                                                }
                                                 </script>
                                                 <!-- End SCRIPT -->
 
@@ -687,31 +690,32 @@
                             <!-- Inicia CuteAlert (SWAL) -->
                             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                             <script>
-                                function AbrirCuteSwal() {
-                                    Swal.fire({
-                                        title: 'Deseas Eliminar definitivamente el Acceso?',
-                                        showDenyButton: true,
-                                        showCancelButton: false,
-                                        confirmButtonText: 'Aceptar',
-                                        denyButtonText: `Cancelar`,
-                                    }).then((result) => {
-                                        /* Read more about isConfirmed, isDenied below */
-                                        if (result.isConfirmed) {
-                                            Swal.fire('Acceso eliminado con éxito!', '', 'success')
-                                        } else if (result.isDenied) {
-                                            Swal.fire('No se guardaron los cambios', '', 'info')
-                                        }
-                                    })
-                                }
-                                function AbrirCuteSwalAXs() {
-                                    Swal.fire({
-                                        title: 'Acceso creado con éxito!',
-                                        showDenyButton: false,
-                                        showCancelButton: false,
-                                        confirmButtonText: 'Aceptar',
-                                        denyButtonText: `Cancelar`,
-                                    })
-                                }
+                            function AbrirCuteSwal() {
+                                Swal.fire({
+                                    title: 'Deseas Eliminar definitivamente el Acceso?',
+                                    showDenyButton: true,
+                                    showCancelButton: false,
+                                    confirmButtonText: 'Aceptar',
+                                    denyButtonText: `Cancelar`,
+                                }).then((result) => {
+                                    /* Read more about isConfirmed, isDenied below */
+                                    if (result.isConfirmed) {
+                                        Swal.fire('Acceso eliminado con éxito!', '', 'success')
+                                    } else if (result.isDenied) {
+                                        Swal.fire('No se guardaron los cambios', '', 'info')
+                                    }
+                                })
+                            }
+
+                            function AbrirCuteSwalAXs() {
+                                Swal.fire({
+                                    title: 'Acceso creado con éxito!',
+                                    showDenyButton: false,
+                                    showCancelButton: false,
+                                    confirmButtonText: 'Aceptar',
+                                    denyButtonText: `Cancelar`,
+                                })
+                            }
                             </script>
                             <!-- Termina CuteAlert -->
                         </div>
@@ -723,11 +727,11 @@
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-        crossorigin="anonymous"></script>
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-        crossorigin="anonymous"></script>
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+    </script>
     <script src="dashboard.js"></script>
 </body>
 

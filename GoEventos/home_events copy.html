@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <table class="table table-striped table-hover">
+      <table class="table table-striped table-hover mt-3">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -173,183 +173,47 @@
               <form class="">
                 <i class="far fa-address-card h2"></i>
                 <div class="row">
-                  <div class="col-8">
+                  <div class="col-4">
                     <div class="form-floating mb-3 ">
-                      <input type="Nombre" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre">
-                      <label for="floatingPassword">Nombre</label>
+                      <input type="text" class="form-control rounded-4" id="floatingPassword"
+                        placeholder="Apellido Paterno">
+                      <label for="floatingPassword">Apellido Paterno</label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating mb-3 ">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword"
+                        placeholder="Apellido Materno">
+                      <label for="floatingPassword">Apellido Materno</label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating mb-3 ">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre(s)">
+                      <label for="floatingPassword">Nombre (s)</label>
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Correo-e">
+                      <label for="floatingPassword">Correo-e</label>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-floating mb-3">
-                      <input type="Tel" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono">
                       <label for="floatingPassword">Teléfono</label>
                     </div>
                   </div>
-                </div>
-
-                <div class="card">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                      <!-- OJO! Cuando se habilita uno se deshabilita el otro -->
-                      <div class="row mt-2">
-                        <div class="col-1">
-                          <div class="form-check">
-                            <div class="form-check form-switch" style="vertical-align: middle;">
-                              <input class="form-check-input" type="checkbox" role="switch" onchange="deshabilita3()"
-                                id="flexSwitchCheckF">
-                              <label class="form-check-label" for="flexSwitchCheckF"><strong>Frecuente</strong></label>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-11" style="vertical-align: middle;">
-                          <script>
-                            function toggle(source) {
-                              var checkboxes = document.querySelectorAll(
-                                'input[id="Semanacompleta"]');
-                              for (var i = 0; i < checkboxes.length; i++) {
-                                if (checkboxes[i] != source)
-                                  checkboxes[i].checked = source.checked;
-                              }
-                            }
-                          </script>
-                          <div class="form-check form-check-inline ms-5">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
-                              onclick="toggle(this);">
-                            <label class="form-check-label" for="inlineCheckbox1">Seleccionar
-                              todos</label>
-                          </div>
-                          <div class="form-check form-check-inline ms-5">
-                            <input class="form-check-input" type="checkbox" id="Semanacompleta" value="option1">
-                            <label class="form-check-label" for="Semanacompleta">Lunes</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="Semanacompleta" value="option2">
-                            <label class="form-check-label" for="Semanacompleta">Mártes</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="Semanacompleta" value="option3">
-                            <label class="form-check-label" for="Semanacompleta">Miércoles</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="Semanacompleta" value="option2">
-                            <label class="form-check-label" for="Semanacompleta">Jueves</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="Semanacompleta" value="option2">
-                            <label class="form-check-label" for="Semanacompleta">Viernes</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="Semanacompleta" value="option2">
-                            <label class="form-check-label" for="Semanacompleta">Sábado</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="Semanacompleta" value="option2">
-                            <label class="form-check-label" for="Semanacompleta">Domingo</label>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li class="list-group-item">
-                      <div class="row mt-2">
-                        <div class="col-1">
-                          <div class="form-check">
-                            <div class="form-check form-switch">
-                              <input class="form-check-input" type="checkbox" role="switch" onchange="deshabilita4()"
-                                id="flexSwitchCheckP" checked>
-                              <label class="form-check-label" for="flexSwitchCheckP"><strong>Programado</strong></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row mt-2">
-                        <div class="col-auto">
-                          <div class="form-check">
-                            <div class="form-check form-switch">
-                              <input class="form-check-input text-secondary" type="checkbox" role="switch"
-                                id="flexSwitchCheck" onchange="EstatusLabel(this.value)">
-                              <label class="form-check-label" for="flexSwitchCheck"><strong><span id="Estatus">Estatus
-                                    BD</span></strong></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <!-- SCRIPT Etiqueta dinámica de estatus -->
-                <script>
-                  function EstatusLabel(value) {
-                    var id = document.getElementById("flexSwitchCheck").value;
-                    if (document.getElementById('flexSwitchCheck').checked) {
-                      document.getElementById('Estatus').innerHTML = "";
-                      document.getElementById('Estatus').innerHTML += 'Activado';
-                    } else {
-                      document.getElementById('Estatus').innerHTML = "";
-                      document.getElementById('Estatus').innerHTML += 'Desactivado';
-                    }
-                  }
-                </script>
-                <!-- Termina SCRIPT de Etiqueta dinámica -->
-                <!-- SCRIPT para deshabilitar switches en Modal -->
-                <script>
-                  function deshabilita3() {
-                    if (document.getElementById('flexSwitchCheckF').checked) {
-                      document.getElementById('flexSwitchCheckP').disabled = true;
-                      document.getElementById('Hentrada').readOnly = true;
-                      document.getElementById('Hsalida').readOnly = true;
-                    } else {
-                      document.getElementById('flexSwitchCheckF').disabled = false;
-                      document.getElementById('flexSwitchCheckP').disabled = false;
-                      document.getElementById('Hentrada').readOnly = false;
-                      document.getElementById('Hsalida').readOnly = false;
-                      document.getElementById('Semanacompleta').disabled = true;
-                    }
-                  }
-
-                  function deshabilita4() {
-                    if (document.getElementById('flexSwitchCheckP').checked) {
-                      document.getElementById('flexSwitchCheckF').disabled = true;
-                      document.getElementById('inlineCheckbox1').disabled = true;
-                      document.querySelectorAll('input[id="Semanacompleta"]').forEach(
-                        element => element.disabled = true);
-                    } else {
-                      document.getElementById('flexSwitchCheckP').disabled = false;
-                      document.getElementById('flexSwitchCheckF').disabled = false;
-                      document.getElementById('inlineCheckbox1').disabled = false;
-                      document.getElementById('Semanacompleta').disabled = false;
-                      document.querySelectorAll('input[id="Semanacompleta"]').forEach(
-                        element => element.disabled = false);
-                    }
-                  }
-                </script>
-                <!-- End SCRIPT -->
-                <div class="row mt-3">
-                  <div class="col-12">
-                    <div class="form-floating mb-3 ">
-                      <input type="date" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre">
-                      <label for="floatingPassword">Fecha</label>
-                    </div>
-                  </div>
-                  <div class="col-6">
+                  <div class="col-4">
                     <div class="form-floating mb-3">
-                      <input type="time" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono">
-                      <label for="floatingPassword">Hora de entrada</label>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="form-floating mb-3">
-                      <input type="time" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono">
-                      <label for="floatingPassword">Hora de salida</label>
+                      <input type="number" class="form-control rounded-4" id="floatingPassword"
+                        placeholder="Número de acompañantes">
+                      <label for="floatingPassword">Número de acompañantes:</label>
                     </div>
                   </div>
                 </div>
-                <a href="AccesosAdmin.html" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit"><i
-                    class="bi bi-box-arrow-in-down"></i> Guardar</a>
-
+                <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="button">Crear</button></p>
               </form>
 
             </div>

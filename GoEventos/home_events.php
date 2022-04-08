@@ -114,15 +114,24 @@
         </div>
         </form>
       </div>
+    
+    <div class="container mt-3">
+    <hr>
+        <div class="row">
+          <div class="col">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" placeholder="Buscar..." aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+          </div>
 
-    <div class="container">
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          <div class="col">
+          </div>
+
       </div>
     </div>
 
-    <div class="container border mt-3 bg-light" style="width: 94%;">
+    <div class="container border mt-3 bg-light" style="width: 98%;">
       <table class="table table-striped table-hover mt-5">
         <thead>
           <tr>
@@ -153,7 +162,7 @@
             <td>'.$row_sqlQuery['nombre'].'</td>
             <td>'.$row_sqlQuery['celular'].'</td>
             <td>'.$row_sqlQuery['email'].'</td>
-            <td>'.$row_sqlQuery['invitados'].'</td>
+            <td>'.$row_sqlQuery['no_invitados'].'</td>
             <td><span class="badge bg-light text-dark" data-bs-toggle="modal"
             data-bs-target="#AgregarInv"><i class="bi bi-person-plus"></i></span></td>
             <td>'.$row_sqlQuery['apellido_p'].'</td>

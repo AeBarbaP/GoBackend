@@ -8,6 +8,7 @@
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.88.1">
   <title>Smart-Event · by GO Ax's</title>
+  <link rel="icon" type="image/png" href="img/eventos.ico">
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -121,7 +122,7 @@
           <div class="col">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-                <input type="text" class="form-control" placeholder="Buscar..." aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Buscar..." aria-label="Username" aria-describedby="basic-addon1" id="myInput">
               </div>
           </div>
 
@@ -131,10 +132,14 @@
       </div>
     </div>
 
-    <div class="container border mt-3 bg-light" style="width: 98%;">
-      <table class="table table-striped table-hover mt-5">
-        <thead>
-          <tr>
+    <div class="container border rounded-3 mt-3 bg-light" style="width: 98%;">
+      <div class="row mt-3 border-bottom">
+        <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de invitados</strong></p>
+      </div>
+      <div class="table-responsive">
+      <table class="table table-hover table-bordered mt-4">
+        <thead style="background-color:#f7c6bf; color: #7B8DAB;">
+          <tr class="text-center">
             <th scope="col">#</th>
             <th scope="col">Apellido Paterno</th>
             <th scope="col">Apellido Materno</th>
@@ -147,7 +152,7 @@
             <th scope="col">Editar</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="myTable">
         <? include ('prcd/query_invitados.php');?>
         
         <? 
@@ -155,7 +160,7 @@
         while($row_sqlQuery = $resultadosqlQuery->fetch_assoc()){
           $x++;
           echo '
-          <tr>
+          <tr class="text-center">
             <td>'.$x.'</td>
             <td>'.$row_sqlQuery['apellido_p'].'</td>
             <td>'.$row_sqlQuery['apellido_m'].'</td>
@@ -163,30 +168,23 @@
             <td>'.$row_sqlQuery['celular'].'</td>
             <td>'.$row_sqlQuery['email'].'</td>
             <td>'.$row_sqlQuery['no_invitados'].'</td>
-            <td><span class="badge bg-light text-dark" data-bs-toggle="modal"
-            data-bs-target="#AgregarInv"><i class="bi bi-person-plus"></i></span></td>
-            <td>'.$row_sqlQuery['apellido_p'].'</td>
-            <td>'.$row_sqlQuery['apellido_p'].'</td>
-            <td><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i></span></td>
+            <td><a href="#" data-bs-toggle="modal"
+            data-bs-target="#AgregarInv'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i> Agregar invitado</span></a></td>
+            <td>'.$row_sqlQuery['mesa'].'</td>
+            <td><a href="#" data-bs-toggle="modal"
+            data-bs-target="#editarInv'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i> Editar invitado</span></a></td>
 
           </tr>';
 
-        }
-
-        ?>
-          
-        </tbody>
-      </table>
-    </div>
-
-      <!-- Inicia Modal -->
-      <div class="modal fade" id="AgregarInv" tabindex="-1" aria-labelledby="Agregar Invitado" aria-hidden="true">
+          echo '
+          <!-- Inicia Modal -->
+      <div class="modal fade" id="AgregarInv'.$row_sqlQuery['id'].'" tabindex="-1" aria-labelledby="Agregar Invitado secundario" aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header text-dark">
               <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i>
-                Agregar Invitado</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                Agregar invitado secundario</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body text-dark">
 
@@ -250,6 +248,70 @@
         </div>
       </div>
       <!-- Termina modal para Editar AXs programados y frecuentes -->
+          ';
+
+      echo '
+      <!-- Modal edición invitado eje -->
+      <div class="modal fade" id="editarInv'.$row_sqlQuery['id'].'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Editar invitado eje</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form action="prcd/query_editar_invitado_eje.php" method="post">
+            <input value="'.$row_sqlQuery['id'].'" name="id" hidden>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Apellido Paterno</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_p" value="'.$row_sqlQuery['apellido_p'].'">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Apellido Materno</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_m" value="'.$row_sqlQuery['apellido_m'].'">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="nombre" value="'.$row_sqlQuery['nombre'].'">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">No. Celular</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="'.$row_sqlQuery['celular'].'">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Correo electrónico</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="'.$row_sqlQuery['email'].'">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">No. invitados</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="invitados" value="'.$row_sqlQuery['no_invitados'].'">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Mesa asignada</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="mesa" value="'.$row_sqlQuery['mesa'].'">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      ';
+
+        }
+
+        ?>
+          
+        </tbody>
+      </table>
+      </div><!-- table responsive -->
+    </div>
+
+      
 
   </main>
 
@@ -266,3 +328,15 @@
 </body>
 
 </html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+  </script>

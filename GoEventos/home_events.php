@@ -71,49 +71,56 @@
 
     <div class="row align-items-md-stretch">
       <div class="col-md-12">
-        <div class="h-100 p-5 text-dark bg-light border rounded-3">
-          <i class="fas fa-search h2 mb-3"></i>
-          <div class="form-floating mb-3">
-            <input type="Buscar" class="form-control rounded-4" id="floatingInput" placeholder="Buscar">
-            <label for="floatingInput">Buscar</label>
+        <div class="h-100 p-4 text-dark bg-light border rounded-3">
+          <i class="fas fa-search h2 mb-2"></i>
+          <div class="row mb-3">
+            <p class="h5"><strong><i class="bi bi-person-plus h5"></i> Agregar invitado eje</strong></p>
           </div>
-          <br>
+          <hr>
           <div class="row">
             <div class="col-4">
+            <form action="prcd/query_agregar_invitados.php" method="post">
               <div class="form-floating mb-3 ">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Apellido Paterno">
+                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Apellido Paterno" name="apellido_p" required>
                 <label for="floatingPassword">Apellido Paterno</label>
               </div>
             </div>
             <div class="col-4">
               <div class="form-floating mb-3 ">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Apellido Materno">
+                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Apellido Materno" name="apellido_m" required>
                 <label for="floatingPassword">Apellido Materno</label>
               </div>
             </div>
             <div class="col-4">
               <div class="form-floating mb-3 ">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre(s)">
+                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre(s)" name="nombre" required>
                 <label for="floatingPassword">Nombre (s)</label>
               </div>
             </div>
             <div class="col-8">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Correo-e">
+                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Correo-e" name="email" required>
                 <label for="floatingPassword">Correo-e</label>
               </div>
             </div>
             <div class="col-4">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono">
+                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono" name="celular" required>
                 <label for="floatingPassword">Teléfono</label>
               </div>
             </div>
           </div>
-          <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
-              data-bs-target="#AgregarInv">Guardar</button></p>
+          <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i class="bi bi-person-plus"></i> Guardar</button></p>
         </div>
+        </form>
       </div>
+
+    <div class="container">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    </div>
 
     <div class="container border mt-3 bg-light" style="width: 94%;">
       <table class="table table-striped table-hover mt-5">
@@ -132,38 +139,33 @@
           </tr>
         </thead>
         <tbody>
+        <? include ('prcd/query_invitados.php');?>
+        
+        <? 
+        $x = 0;
+        while($row_sqlQuery = $resultadosqlQuery->fetch_assoc()){
+          $x++;
+          echo '
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><a href="#"><i class="bi bi-node-plus"></i></a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><a href="#"><i class="bi bi-node-plus"></i></a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><a href="#"><i class="bi bi-node-plus"></i></a></td>
-            <td></td>
-          </tr>
+            <td>'.$x.'</td>
+            <td>'.$row_sqlQuery['apellido_p'].'</td>
+            <td>'.$row_sqlQuery['apellido_m'].'</td>
+            <td>'.$row_sqlQuery['nombre'].'</td>
+            <td>'.$row_sqlQuery['celular'].'</td>
+            <td>'.$row_sqlQuery['email'].'</td>
+            <td>'.$row_sqlQuery['invitados'].'</td>
+            <td><span class="badge bg-light text-dark" data-bs-toggle="modal"
+            data-bs-target="#AgregarInv"><i class="bi bi-person-plus"></i></span></td>
+            <td>'.$row_sqlQuery['apellido_p'].'</td>
+            <td>'.$row_sqlQuery['apellido_p'].'</td>
+            <td><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i></span></td>
+
+          </tr>';
+
+        }
+
+        ?>
+          
         </tbody>
       </table>
     </div>

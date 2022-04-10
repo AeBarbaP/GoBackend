@@ -137,7 +137,7 @@
         <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de invitados</strong></p>
       </div>
       <div class="table-responsive">
-      <table class="table table-hover table-bordered mt-4">
+      <table class="table table-hover table-bordered align-middle mt-4">
         <thead style="background-color:#f7c6bf; color: #7B8DAB;">
           <tr class="text-center">
             <th scope="col">#</th>

@@ -169,16 +169,16 @@
             <td>'.$row_sqlQuery['email'].'</td>
             <td>'.$row_sqlQuery['no_invitados'].'</td>
             <td><a href="#" data-bs-toggle="modal"
-            data-bs-target="#AgregarInv'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i> Agregar invitado</span></a></td>
+            data-bs-target="#AgregarAcomp'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i> Agregar Acompañante</span></a></td>
             <td>'.$row_sqlQuery['mesa'].'</td>
             <td><a href="#" data-bs-toggle="modal"
-            data-bs-target="#editarInv'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i> Editar invitado</span></a></td>
+            data-bs-target="#editarInv'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i> Editar Invitado</span></a></td>
 
           </tr>';
 
           echo '
           <!-- Inicia Modal -->
-      <div class="modal fade" id="AgregarInv'.$row_sqlQuery['id'].'" tabindex="-1" aria-labelledby="Agregar Invitado secundario" aria-hidden="true">
+      <div class="modal fade" id="AgregarAcomp'.$row_sqlQuery['id'].'" tabindex="-1" aria-labelledby="Agregar Invitado secundario" aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header text-dark">
@@ -187,42 +187,48 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body text-dark">
-
+            
               <form class="">
-                <i class="far fa-address-card h2"></i>
-                <div class="row">
+              <fieldset disabled>    
+              <div class="row">
+                  
                   <div class="col-4">
                     <div class="form-floating mb-3 ">
                       <input type="text" class="form-control rounded-4" id="floatingPassword"
-                        placeholder="Apellido Paterno">
+                        placeholder="username" aria label="Username" aria-describedby="basic-addon1" name="apellido_p" value="'.$row_sqlQuery['apellido_p'].'">
                       <label for="floatingPassword">Apellido Paterno</label>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-floating mb-3 ">
                       <input type="text" class="form-control rounded-4" id="floatingPassword"
-                        placeholder="Apellido Materno">
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_m" value="'.$row_sqlQuery['apellido_m'].'" dis>
                       <label for="floatingPassword">Apellido Materno</label>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-floating mb-3 ">
-                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre(s)">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" 
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="nombre" value="'.$row_sqlQuery['nombre'].'">
                       <label for="floatingPassword">Nombre (s)</label>
                     </div>
                   </div>
                   <div class="col-8">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Correo-e">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" 
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="'.$row_sqlQuery['email'].'">
                       <label for="floatingPassword">Correo-e</label>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono">
-                      <label for="floatingPassword">Teléfono</label>
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" 
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="'.$row_sqlQuery['celular'].'">
+                      <label for="floatingPassword">Celular</label>
                     </div>
                   </div>
+                  </fieldset>
+                  <div class="row">
                   <div class="col-4">
                     <div class="form-floating mb-3">
                       <input type="number" class="form-control rounded-4" id="floatingPassword"
@@ -237,10 +243,11 @@
                       <label for="floatingPassword">Etiqueta para Invitación</label>
                     </div>
                   </div>
-                </div>
-                <p class="text-end">
-                  <button class="btn btn-outline-secondary mt-3" type="button"><i class="bi bi-person-plus"></i> Agregar invitado</button>
-                </p>
+                  <p class="text-end">
+                  <button class="btn btn-outline-secondary mt-3" type="button"><i class="bi bi-person-plus"></i> Agregar</button>
+                  </p>
+                  </div>
+                  </div>
               </form>
 
             </div>
@@ -263,33 +270,47 @@
             <form action="prcd/query_editar_invitado_eje.php" method="post">
             <input value="'.$row_sqlQuery['id'].'" name="id" hidden>
             <div class="modal-body">
+              <div class="row">
+              <div class="col-6">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Apellido Paterno</span>
                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_p" value="'.$row_sqlQuery['apellido_p'].'">
               </div>
+              </div>
+              <div class="col-6">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Apellido Materno</span>
                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_m" value="'.$row_sqlQuery['apellido_m'].'">
               </div>
+              </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                <span class="input-group-text" id="basic-addon1">Nombre (s)</span>
                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="nombre" value="'.$row_sqlQuery['nombre'].'">
               </div>
+              <div class="col-6">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">No. Celular</span>
                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="'.$row_sqlQuery['celular'].'">
               </div>
+              </div>
+              <div class="col-6">
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Correo electrónico</span>
+                <span class="input-group-text" id="basic-addon1">Correo-e</span>
                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="'.$row_sqlQuery['email'].'">
               </div>
+              </div>
+              <div class="col-6">
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">No. invitados</span>
+                <span class="input-group-text" id="basic-addon1">No. Acompañantes</span>
                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="invitados" value="'.$row_sqlQuery['no_invitados'].'">
               </div>
+              </div>
+              <div class="col-6">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Mesa asignada</span>
                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="mesa" value="'.$row_sqlQuery['mesa'].'">
+              </div>
+              </div>
               </div>
             </div>
             <div class="modal-footer">

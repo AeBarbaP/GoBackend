@@ -75,7 +75,7 @@
         <div class="h-100 p-4 text-dark bg-light border rounded-3">
           <i class="fas fa-search h2 mb-2"></i>
           <div class="row mb-3">
-            <p class="h5"><strong><i class="bi bi-person-plus h5"></i> Agregar invitado eje</strong></p>
+            <p class="h5"><strong><i class="bi bi-person-plus h5"></i> Agregar Invitado</strong></p>
           </div>
           <hr>
           <div class="row">
@@ -178,7 +178,7 @@
 
           echo '
           <!-- Inicia Modal -->
-      <div class="modal fade" id="AgregarAcomp'.$row_sqlQuery['id'].'" tabindex="-1" aria-labelledby="Agregar Invitado secundario" aria-hidden="true">
+      <div class="modal fade" id="AgregarAcomp'.$row_sqlQuery['id'].'" tabindex="-1" aria-labelledby="Agregar Acompañante" aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header text-dark">

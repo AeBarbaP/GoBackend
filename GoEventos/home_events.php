@@ -196,35 +196,35 @@
                   <div class="col-4">
                     <div class="form-floating mb-3 ">
                       <input type="text" class="form-control rounded-4" id="floatingPassword"
-                        placeholder="username" aria label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['apellido_p'].'">
+                        placeholder="username" aria label="Username" aria-describedby="basic-addon1" value="'.$row_sqlQuery['apellido_p'].'">
                       <label for="floatingPassword">Apellido Paterno</label>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-floating mb-3 ">
                       <input type="text" class="form-control rounded-4" id="floatingPassword"
-                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['apellido_m'].'" dis>
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="'.$row_sqlQuery['apellido_m'].'" dis>
                       <label for="floatingPassword">Apellido Materno</label>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-floating mb-3 ">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" 
-                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['nombre'].'">
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="'.$row_sqlQuery['nombre'].'">
                       <label for="floatingPassword">Nombre (s)</label>
                     </div>
                   </div>
                   <div class="col-8">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" 
-                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['email'].'">
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="'.$row_sqlQuery['email'].'">
                       <label for="floatingPassword">Correo-e</label>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" 
-                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['celular'].'">
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="'.$row_sqlQuery['celular'].'">
                       <label for="floatingPassword">Celular</label>
                     </div>
                   </div>

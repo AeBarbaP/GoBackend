@@ -70,6 +70,84 @@
                 <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de
                         Invitados</strong></a>
             </div>
+<<<<<<< HEAD
+=======
+            <div class="modal-body text-dark">
+            
+              <form class="" action="prcd/query_agregar_invitados_secundarios.php" method="post">
+              <input value="'.$row_sqlQuery['id'].'" name="id[]" hidden>
+              <fieldset disabled>    
+              <div class="row">
+                  
+                  <div class="col-4">
+                    <div class="form-floating mb-3 ">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword"
+                        placeholder="username" aria label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['apellido_p'].'">
+                      <label for="floatingPassword">Apellido Paterno</label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating mb-3 ">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword"
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['apellido_m'].'" dis>
+                      <label for="floatingPassword">Apellido Materno</label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating mb-3 ">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" 
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['nombre'].'">
+                      <label for="floatingPassword">Nombre (s)</label>
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" 
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="'.$row_sqlQuery['email'].'">
+                      <label for="floatingPassword">Correo-e</label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword" 
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="'.$row_sqlQuery['celular'].'">
+                      <label for="floatingPassword">Celular</label>
+                    </div>
+                  </div>
+                  </fieldset>
+                  <div class="row">
+                  <div class="col-4">
+                    <div class="form-floating mb-3">
+                      <input type="number" class="form-control rounded-4" id="cambioCeldasInput'.$row_sqlQuery['id'].'"
+                        placeholder="Número de acompañantes" onchange="cambioCeldas('.$row_sqlQuery['id'].')" onblur="bloquear('.$row_sqlQuery['id'].')" pattern="[0-9]" max-lenght="2" onkeypress="ValidaSoloNumeros()" >
+                      <label for="floatingPassword">Número de acompañantes</label>
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control rounded-4" id="floatingPassword"
+                        placeholder="Etiqueta para Invitación">
+                      <label for="floatingPassword">Etiqueta para Invitación</label>
+                    </div>
+                  </div>
+                  
+                  <hr>
+                  <p class="mt-3 mb-2"><span class="h5">Listado de invitados secundarios</span>'.$row_sqlQuery['id'].'</p>
+
+                  <p id="listadoInvitados'.$row_sqlQuery['id'].'" class="mt-3 mb-2"></p>
+
+                  <p class="text-end">
+                  <button class="btn btn-primary mt-3" type="button"><i class="bi bi-person-plus"></i> Agregar</button>
+                  </p>
+
+                  </div>
+                  </div>
+
+              </form>
+
+            </div>
+          </div>
+>>>>>>> ae68399f5622759c320961427421232148cf27af
         </div>
 
         <div class="row align-items-md-stretch">
@@ -277,6 +355,7 @@
                 </div>
       </div>
       </div>
+      
       ';
 
             ?>
@@ -422,8 +501,24 @@ $(document).ready(function() {
 });
 </script>
 
+<<<<<<< HEAD
 <script>
 function cambioCeldas(valor) {
+=======
+  <script>
+    
+    function cambioCeldas(valor){
+      
+      var id = 0;
+      var id = valor;
+      document.getElementById("listadoInvitados"+id).innerHTML = "";
+      var x = document.getElementById("cambioCeldasInput"+id).value;
+      // alert(x);
+      for(let i=0; i<x; i++){
+            
+            document.getElementById("listadoInvitados"+id).innerHTML+= '<div class="input-group mb-1 mt-1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre[]"><input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="basic-addon1" name="apellido[]"><input type="text" class="form-control" placeholder="Parentesco" aria-label="Parentesco" aria-describedby="basic-addon1" name="parentesco[]"></div>';
+        }
+>>>>>>> ae68399f5622759c320961427421232148cf27af
 
     var id = 0;
     var id = valor;
@@ -436,6 +531,7 @@ function cambioCeldas(valor) {
             '<div class="input-group mb-1 mt-1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Parentesco" aria-label="Parentesco" aria-describedby="basic-addon1"></div>';
     }
 
+<<<<<<< HEAD
 }
 
 function bloquear(val) {
@@ -445,3 +541,10 @@ function bloquear(val) {
 
 // document.getElementById("listadoInvitados"+id).innerHTML = ;
 </script>
+=======
+    function ValidaSoloNumeros() {
+      if ((event.keyCode < 48) || (event.keyCode > 57)) 
+        event.returnValue = false;
+    }
+  </script>
+>>>>>>> ae68399f5622759c320961427421232148cf27af

@@ -188,8 +188,8 @@
             </div>
             <div class="modal-body text-dark">
             
-              <form class="" action="prcd/query_agregar_invitados_secundarios.php" method="post">
-              <input value="'.$row_sqlQuery['id'].'" name="id[]" hidden>
+              <form action="prcd/query_agregar_invitados_secundarios.php" method="POST">
+              <input value="'.$row_sqlQuery['id'].'" name="id" hidden>
               <fieldset disabled>    
               <div class="row">
                   
@@ -217,14 +217,14 @@
                   <div class="col-8">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" 
-                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="'.$row_sqlQuery['email'].'">
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['email'].'">
                       <label for="floatingPassword">Correo-e</label>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" 
-                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="'.$row_sqlQuery['celular'].'">
+                      placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="" value="'.$row_sqlQuery['celular'].'">
                       <label for="floatingPassword">Celular</label>
                     </div>
                   </div>
@@ -240,7 +240,7 @@
                   <div class="col-8">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control rounded-4" id="floatingPassword"
-                        placeholder="Etiqueta para Invitación">
+                        placeholder="Etiqueta para Invitación" readonly>
                       <label for="floatingPassword">Etiqueta para Invitación</label>
                     </div>
                   </div>
@@ -251,7 +251,7 @@
                   <p id="listadoInvitados'.$row_sqlQuery['id'].'" class="mt-3 mb-2"></p>
 
                   <p class="text-end">
-                  <button class="btn btn-primary mt-3" type="button"><i class="bi bi-person-plus"></i> Agregar</button>
+                  <button class="btn btn-primary mt-3" type="submit"><i class="bi bi-person-plus"></i> Agregar</button>
                   </p>
 
                   </div>
@@ -330,7 +330,7 @@
           </div>
         </div>
       </div>
-      
+
       ';
 
         }
@@ -383,7 +383,7 @@
       // alert(x);
       for(let i=0; i<x; i++){
             
-            document.getElementById("listadoInvitados"+id).innerHTML+= '<div class="input-group mb-1 mt-1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre[]"><input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="basic-addon1" name="apellido[]"><input type="text" class="form-control" placeholder="Parentesco" aria-label="Parentesco" aria-describedby="basic-addon1" name="parentesco[]"></div>';
+            document.getElementById("listadoInvitados"+id).innerHTML+= '<div class="input-group mb-1 mt-1 w-50"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input name="nombreinvitados[]" id="nombre" type="text" class="form-control" placeholder="Nombre completo" aria-label="" aria-describedby="basic-addon1"></div>';
         }
 
       }

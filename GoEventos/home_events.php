@@ -189,6 +189,7 @@
             <div class="modal-body text-dark">
             
               <form class="" action="prcd/query_agregar_invitados_secundarios.php" method="post">
+              <input value="'.$row_sqlQuery['id'].'" name="id[]" hidden>
               <fieldset disabled>    
               <div class="row">
                   

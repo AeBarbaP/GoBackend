@@ -7,15 +7,24 @@
 <?php
     include('qconn/qc.php');
 
-    $apellido_p = $_POST['apellido_p'];
-    $apellido_m = $_POST['apellido_m'];
+    $id = $_POST['id'];
+    $apellido = $_POST['apellido'];
     $nombre = $_POST['nombre'];
-    $celular = $_POST['celular'];
-    $email = $_POST['email'];
+    $parentesco = $_POST['parentesco'];
 
+    foreach ($id as $id_secundario,$apellido as $apellido_secundario) {
+        // echo $arreglo;
+    
+        // $sql = "INSERT INTO venta_individual(producto,fecha_venta,venta_gral) VALUES('$arreglo','$fecha_sistema','$codigo')";
+        // $resultado= $conn->query($sql);
 
-    $sqlInsert ="INSERT INTO invitados (apellido_p,apellido_m,nombre,celular,email) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email')";
-    $resultadosqlInsert = $conn->query($sqlInsert);
+        $sqlInsertSecundarios ="INSERT INTO invitados_secundarios (apellido_p,apellido_m,nombre,celular,email) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email')";
+        $resultadosqlInsertSecundarios = $conn->query($sqlInsertSecundarios);
+    
+    } 
+
+    // $sqlInsert ="INSERT INTO invitados_secundarios (apellido_p,apellido_m,nombre,celular,email) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email')";
+    // $resultadosqlInsert = $conn->query($sqlInsert);
 
     if($resultadosqlInsert){
         echo "<script type=\"text/javascript\">

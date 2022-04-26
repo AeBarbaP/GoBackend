@@ -182,7 +182,7 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header text-dark">
-              <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i>
+              <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-person-plus-fill"></i>
                 Agregar invitado secundario</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
@@ -231,8 +231,8 @@
                   <div class="row">
                   <div class="col-4">
                     <div class="form-floating mb-3">
-                      <input type="number" class="form-control rounded-4" id="floatingPassword"
-                        placeholder="Número de acompañantes">
+                      <input type="number" class="form-control rounded-4" id="cambioCeldasInput'.$row_sqlQuery['id'].'"
+                        placeholder="Número de acompañantes" onchange="cambioCeldas('.$row_sqlQuery['id'].')" onblur="bloquear('.$row_sqlQuery['id'].')" pattern="[0-9]" max-lenght="2" >
                       <label for="floatingPassword">Número de acompañantes</label>
                     </div>
                   </div>
@@ -243,11 +243,21 @@
                       <label for="floatingPassword">Etiqueta para Invitación</label>
                     </div>
                   </div>
+                  
+                  <hr>
+                  <p class="mt-3 mb-2"><span class="h5">Listado de invitados secundarios</span>'.$row_sqlQuery['id'].'</p>
+
+                  
+
+                  <p id="listadoInvitados'.$row_sqlQuery['id'].'" class="mt-3 mb-2"></p>
+
                   <p class="text-end">
-                  <button class="btn btn-outline-secondary mt-3" type="button"><i class="bi bi-person-plus"></i> Agregar</button>
+                  <button class="btn btn-primary mt-3" type="button"><i class="bi bi-person-plus"></i> Agregar</button>
                   </p>
+
                   </div>
                   </div>
+
               </form>
 
             </div>
@@ -360,4 +370,27 @@
             });
         });
     });
+  </script>
+
+  <script>
+    
+    function cambioCeldas(valor){
+      
+      var id = 0;
+      var id = valor;
+      document.getElementById("listadoInvitados"+id).innerHTML = "";
+      var x = document.getElementById("cambioCeldasInput"+id).value;
+      // alert(x);
+      for(let i=0; i<x; i++){
+            
+            document.getElementById("listadoInvitados"+id).innerHTML+= '<div class="input-group mb-1 mt-1"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Parentesco" aria-label="Parentesco" aria-describedby="basic-addon1"></div>';
+        }
+
+      }
+      function bloquear(val){
+        var id = val;
+        document.getElementById('cambioCeldasInput'+id).readOnly = true;
+    }
+
+      // document.getElementById("listadoInvitados"+id).innerHTML = ;
   </script>

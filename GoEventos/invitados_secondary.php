@@ -71,52 +71,10 @@
     </div>
 
     <div class="row align-items-md-stretch">
-      <div class="col-md-12">
-        <div class="h-100 p-4 text-dark bg-light border rounded-3">
-          <i class="fas fa-search h2 mb-2"></i>
-          <div class="row mb-3">
-            <p class="h5"><strong><i class="bi bi-person-plus h5"></i> Agregar Invitado</strong></p>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col-4">
-            <form action="prcd/query_agregar_invitados.php" method="post">
-              <div class="form-floating mb-3 ">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Apellido Paterno" name="apellido_p" required>
-                <label for="floatingPassword">Apellido Paterno</label>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="form-floating mb-3 ">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Apellido Materno" name="apellido_m" required>
-                <label for="floatingPassword">Apellido Materno</label>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="form-floating mb-3 ">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre(s)" name="nombre" required>
-                <label for="floatingPassword">Nombre (s)</label>
-              </div>
-            </div>
-            <div class="col-8">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Correo-e" name="email" required>
-                <label for="floatingPassword">Correo-e</label>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono" name="celular" required>
-                <label for="floatingPassword">Teléfono</label>
-              </div>
-            </div>
-          </div>
-          <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i class="bi bi-person-plus"></i> Guardar</button></p>
-        </div>
-        </form>
-      </div>
+      
     
     <div class="container mt-3">
+    <p class="h3">Nombre del invitado principal</p>
     <hr>
         <div class="row">
           <div class="col">
@@ -134,7 +92,7 @@
 
     <div class="container border rounded-3 mt-3 bg-light" style="width: 98%;">
       <div class="row mt-3 border-bottom">
-        <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de invitados</strong></p>
+        <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de invitados secundarios</strong></p>
       </div>
       <div class="table-responsive">
       <table class="table table-hover table-bordered align-middle mt-4">
@@ -153,7 +111,9 @@
           </tr>
         </thead>
         <tbody id="myTable">
-        <? include ('prcd/query_invitados.php');?>
+        <?
+        $id = $_REQUEST['id']; 
+        include ('prcd/query_invitado_secundario.php');?>
         
         <? 
         $x = 0;
@@ -162,12 +122,11 @@
           echo '
           <tr class="text-center">
             <td>'.$x.'</td>
-            <td>'.$row_sqlQuery['apellido_p'].'</td>
-            <td>'.$row_sqlQuery['apellido_m'].'</td>
+            
             <td>'.$row_sqlQuery['nombre'].'</td>
             <td>'.$row_sqlQuery['celular'].'</td>
             <td>'.$row_sqlQuery['email'].'</td>
-            <td><a href="invitados_secondary.php?id='.$row_sqlQuery['id'].'"><span class="badge bg-warning text-dark">'.$row_sqlQuery['no_invitados'].'</span></a></td>
+            <td><a href=""><span class="badge bg-warning text-dark">'.$row_sqlQuery['no_invitados'].'</span></a></td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#AgregarAcomp'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i> Agregar Acompañante</span></a></td>
             <td><span class="badge bg-warning text-dark">'.$row_sqlQuery['mesa'].'</span></td>

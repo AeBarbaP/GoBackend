@@ -335,10 +335,6 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of ae68399... for each2
       ';
 
         }

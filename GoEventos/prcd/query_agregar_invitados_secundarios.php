@@ -5,27 +5,31 @@
 <body>
 
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
     include('qconn/qc.php');
 
     $id = $_POST['id'];
-    $nombre = $_POST['nombreinvitados'];
+    // $nombre = $_POST['nombreinvitados'];
     
 echo $id;
-    foreach ($nombre as $nsecundario) {
-        // echo $arreglo;
-    
+// echo $nombre;
+
+    foreach ($_POST['nombreinvitados'] as $invitado) {
+        echo $invitado;
+        
         // $sql = "INSERT INTO venta_individual(producto,fecha_venta,venta_gral) VALUES('$arreglo','$fecha_sistema','$codigo')";
         // $resultado= $conn->query($sql);
 
-        $sqlInsertSecundarios ="INSERT INTO invitados_secundarios(nombre,clave_ext) VALUES('$nsecundario','$id')";
-        $resultadosqlInsertSecundarios = $conn->query($sqlInsertSecundarios);
+        // $sql = "INSERT INTO invitados_secundarios(nombre,clave_ext) VALUES('$invitado','$id')";
+        // $resultadosql = $conn->query($sql);
     
     } 
 
     // $sqlInsert ="INSERT INTO invitados_secundarios (apellido_p,apellido_m,nombre,celular,email) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email')";
     // $resultadosqlInsert = $conn->query($sqlInsert);
 
-    if($resultadosqlInsertSecundarios){
+    if($resultadosql){
         echo "<script type=\"text/javascript\">
         Swal.fire({
             icon: 'success',

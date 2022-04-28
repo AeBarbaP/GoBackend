@@ -50,8 +50,8 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
+ 
+    <nav class="navscroll navbar navbar-expand-md fixed-top" style="background-color: ;">
         <div class="container-fluid justify-content-center">
             <a class="navbar-brand" style="color: #f3a79c; font-size:3rem; font-family: 'Josefin Sans', sans-serif;"
                 href="#">
@@ -67,7 +67,7 @@
         <div class="container mb-3">
           <ul class="nav nav-tabs">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-check-circle-fill"></i> Eventos activos</a>
+            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-check-circle-fill"></i> Eventos ctivos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="bi bi-x-circle-fill"></i> Eventos inactivos</a>
@@ -81,19 +81,179 @@
             </div>
            
             <div class="container rounded-3 p-3 mt-2" style="background-color:#7B8DAB;">
+            
               <div class="mt-1"><!-- inicia caja -->
                 <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
-                  <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
-                  <p class="ms-3 pt-0 pb-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fin caja -->
+
+              <div class="mt-1"><!-- inicia caja -->
+                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fin caja -->
+
+              <div class="mt-1"><!-- inicia caja -->
+                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fin caja -->
+
+              <div class="mt-1"><!-- inicia caja -->
+                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fin caja -->
+
+              <div class="mt-1"><!-- inicia caja -->
+                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fin caja -->
+
+              <div class="mt-1"><!-- inicia caja -->
+                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fin caja -->
+
+              <div class="mt-1"><!-- inicia caja -->
+                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fin caja -->
+
+              <div class="mt-1"><!-- inicia caja -->
+                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- fin caja -->
+
+              <div class="mt-1"><!-- inicia caja -->
+                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4; box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento:</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha:</strong></p>
+                    </div>
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary text-center" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Estatus del evento</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-center" style="font-size:2rem; font-family: 'Josefin Sans', sans-serif;"><strong><i class="bi bi-check-circle-fill text-success "></i> <i class="bi bi-x-circle-fill text-danger"></i></strong></p>
+                    </div> 
+                    <div class="col-4">
+                      <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Asistentes</strong></p>
+                      <p class="ms-3 pt-0 pb-1 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong># Confirmaciones</strong></p>
+                    </div>
+                  </div>
                 </div>
               </div><!-- fin caja -->
             
-              <div class="mt-2">
-                <div class="bg-light rounded-2" style="border-top: 3px groove #1C6EA4;  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 18px rgba(0,0,0,0);">
-                  <p class="ms-3 pt-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Nombre del evento</strong></p>
-                  <p class="ms-3 pt-0 pb-2 text-secondary" style="color:#7B8DAB;font-size:1rem; font-family: 'Josefin Sans', sans-serif;"><strong>Fecha</strong></p>
-                </div>
-              </div>
+              
             </div>
         </div>
 
@@ -114,4 +274,70 @@
 </body>
 
 </html>
+
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
+
+    <script>
+      $(function(){
+      $(window).scroll(function(){
+         if ($(this).scrollTop() > 100) {
+          $('.nav-link').addClass("azul");
+          $('.navscroll').addClass("azul");
+          $('.navbar-brand').addClass("azul");
+         } else {
+          $(".nav-link").removeClass("azul");
+          $(".navscroll").removeClass("azul");
+          $(".navbar-brand").removeClass("azul");
+         }
+      });
+  });
+    </script>
+
+      <style>
+
+        .navbar-brand.azul{
+          color: #7B8DAB;
+        }
+        .navbar-brand{
+          color: #7B8DAB;
+        }
+
+        /* .nav-link{
+          color: #ffffff;
+        }
+        .nav-link.azul{
+          color: #000000;
+        } */
+        .navscroll {
+          background-color:rgba(0, 0, 0, 0.9);
+          color:yellow;
+          transition:background-color 500ms, color 500ms;
+          text-decoration: none;
+      }
+
+      .navscroll.azul {
+          background-color:rgb(123,141,171);
+          color:#7B8DAB;
+          box-shadow: 0 2px 4px 0 rgba(123,141,171,.4);
+      }
+
+      .navbar-toggler{
+          width: 47px;
+          height: 34px;
+          box-shadow: 0 2px 4px 0 rgba(123,141,171,.9);
+          border:none;
+      }
+
+      .navbar-toggler .line{
+          width: 100%;
+          float: left;
+          height: 2px;
+          background-color: #fff;
+          margin-bottom: 5px;
+      }
+      </style>
 

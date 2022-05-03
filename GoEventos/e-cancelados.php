@@ -54,7 +54,8 @@
             <a class="navbar-brand text-light" style="font-size:3rem; font-family: 'Josefin Sans', sans-serif;"
                 href="#">
                 <strong>GOLD AXs </strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
@@ -62,32 +63,32 @@
 
     <main class="container-fluid w-100 mt-5 mb-5">
         <div class="container-fluid w-100 mb-3">
-        <nav class="navbar navbar-expand-md">
-            <div class="container-fluid justify-content-center">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark active" aria-current="page" href="index.php"><i class="bi bi-calendar2-check"></i> Eventos Activos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="e-inactivos.php"><i class="bi bi-clock-history"></i> Eventos Inactivos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="e-bloqueados.php"><i class="bi bi-calendar-minus"></i> Eventos Bloqueados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="e-cancelados.php"><i class="bi bi-calendar2-x"></i> Eventos Cancelados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="e-finalizados.php"><i class="bi bi-x-circle-fill"></i> Eventos Finalizados</a>
-                    </li>
-                </ul>
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid justify-content-center">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" aria-current="page" href="index.php"><i class="bi bi-calendar2-check"></i> Eventos Activos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="e-inactivos.php"><i class="bi bi-clock-history"></i> Eventos Inactivos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="e-bloqueados.php"><i class="bi bi-calendar-minus"></i> Eventos Bloqueados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark active" href="e-cancelados.php"><i class="bi bi-calendar2-x"></i> Eventos Cancelados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="e-finalizados.php"><i class="bi bi-x-circle-fill"></i> Eventos Finalizados</a>
+                        </li>
+                    </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
         </div>
 
         <div class="p-4 p-md-5 mb-4 text-dark rounded">

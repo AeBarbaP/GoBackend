@@ -122,14 +122,14 @@
                         <tbody id="myTable">
                             <?php
 
-              include('prcd/query_invitado_secundario.php'); ?>
+            include('prcd/query_invitado_secundario.php'); ?>
 
                             <?php
-              $x = 0;
-              while ($row_sqlQuerySecondary = $resultadosqlQuerySecondary->fetch_assoc()) {
+            $x = 0;
+            while ($row_sqlQuerySecondary = $resultadosqlQuerySecondary->fetch_assoc()) {
                 $x++;
                 echo '
-          <tr class="text-center">
+            <tr class="text-center">
             <td>' . $x . '</td>
             
             <td>' . $row_sqlQuerySecondary['nombre'] . '</td>
@@ -138,10 +138,10 @@
             data-bs-target="#AgregarAcomp' . $row_sqlQuerySecondary['id'] . '"><span class="badge bg-warning text-dark"><i class="bi bi-person-plus"></i> Editar</span></a></td>
             
 
-          </tr>';
-              }
+            </tr>';
+            }
 
-              ?>
+            ?>
 
                         </tbody>
                     </table>
@@ -156,7 +156,7 @@
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
-            <p>Eventos desarrollado por: Gold AX's
+            <p>Eventos desarrollado por: Gold AXs
             </p>
             <p>
                 <a href="#">Ir arriba</a>

@@ -103,7 +103,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                            <p class="card-text">Status: <i class="bi bi-slash-circle text-secondary"> Bloqueado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
                                             <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
                                             <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
                                         </div>
@@ -121,7 +121,7 @@
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                            <p class="card-text">Status: <i class="bi bi-slash-circle text-secondary"> Bloqueado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
                                             <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
                                             <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
                                         </div>
@@ -139,7 +139,7 @@
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                            <p class="card-text">Status: <i class="bi bi-slash-circle text-secondary"> Bloqueado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
                                             <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
                                             <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
                                         </div>
@@ -157,7 +157,7 @@
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                            <p class="card-text">Status: <i class="bi bi-slash-circle text-secondary"> Bloqueado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
                                             <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
                                             <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
                                         </div>

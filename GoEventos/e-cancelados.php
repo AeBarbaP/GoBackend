@@ -83,7 +83,7 @@
                             <a class="nav-link text-dark active" href="e-cancelados.php"><i class="bi bi-calendar2-x"></i> Eventos Cancelados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="e-finalizados.php"><i class="bi bi-x-circle-fill"></i> Eventos Finalizados</a>
+                            <a class="nav-link text-dark" href="e-finalizados.php"><i class="bi bi-check-all"></i> Eventos Finalizados</a>
                         </li>
                     </ul>
                     </div>

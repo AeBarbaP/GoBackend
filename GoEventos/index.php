@@ -48,25 +48,27 @@
 
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-    <nav class="navscroll navbar navbar-expand-md fixed-top" style="background-color:#f3a79c">
+<nav class="navscroll navbar navbar-expand-md fixed-top" style="background-color:#f3a79c">
         <div class="container-fluid justify-content-center">
             <a class="navbar-brand text-light" style="font-size:3rem; font-family: 'Josefin Sans', sans-serif;"
-                href="#">
-                <strong>GOLD AXs </strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
-
-    <main class="container-fluid w-100 mt-5 mb-5">
-        <div class="container-fluid w-100 mb-3">
-        <nav class="navbar navbar-expand-md">
-            <div class="container-fluid justify-content-center">
+                href="#"><strong>GOLD AXs </strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+        </div>
+    </nav>
+
+<body class="d-flex flex-column min-vh-100 mt-3">
+
+    <main class="container-fluid w-100 mt-5 mb-5">
+        <div class="container-fluid w-100 mb-3">
+        <p class="h1" style="font-size:3rem; font-family: 'Josefin Sans', sans-serif;">Gestión de Eventos</p>
+        <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i class="bi bi-calendar2-plus"></i> Agregar Evento</button></p>
+        <nav class="navbar navbar-expand-md">
+            <div class="container w-100 justify-content-center">
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -82,7 +84,7 @@
                         <a class="nav-link text-dark" href="e-cancelados.php"><i class="bi bi-calendar2-x"></i> Eventos Cancelados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="e-finalizados.php"><i class="bi bi-x-circle-fill"></i> Eventos Finalizados</a>
+                        <a class="nav-link text-dark" href="e-finalizados.php"><i class="bi bi-check-all"></i> Eventos Finalizados</a>
                     </li>
                 </ul>
                 </div>

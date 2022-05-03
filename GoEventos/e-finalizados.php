@@ -83,7 +83,7 @@
                             <a class="nav-link text-dark" href="e-cancelados.php"><i class="bi bi-calendar2-x"></i> Eventos Cancelados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark active" href="e-finalizados.php"><i class="bi bi-x-circle-fill"></i> Eventos Finalizados</a>
+                            <a class="nav-link text-dark active" href="e-finalizados.php"><i class="bi bi-check-all"></i> Eventos Finalizados</a>
                         </li>
                     </ul>
                     </div>
@@ -112,7 +112,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-x-circle-fill"> Finalizado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                            <p class="card-text">Status: <i class="bi bi-check-all text-info"> Finalizado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
                                             <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
                                             <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
                                         </div>
@@ -130,7 +130,7 @@
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-x-circle-fill"> Finalizado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                            <p class="card-text">Status: <i class="bi bi-check-all text-info"> Finalizado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
                                             <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
                                             <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
                                         </div>
@@ -148,7 +148,7 @@
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-x-circle-fill"> Finalizado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                            <p class="card-text">Status: <i class="bi bi-check-all text-info"> Finalizado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
                                             <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
                                             <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
                                         </div>
@@ -166,7 +166,7 @@
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-x-circle-fill"> Finalizado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                            <p class="card-text">Status: <i class="bi bi-check-all text-info"> Finalizado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
                                             <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
                                             <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
                                         </div>

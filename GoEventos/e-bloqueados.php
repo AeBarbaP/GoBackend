@@ -89,6 +89,88 @@
             </nav>
         </div>
 
+        <!-- Inicia Modal #agregarevento -->
+        <div class="modal fade" id="agregarevento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="font-family: 'Josefin Sans', sans-serif;"><i class="bi bi-calendar2-plus"></i><strong> Agregar Evento</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre del Evento" name="e-nombre" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3" style="align-items:vertical">
+                                <select class="form-select" id="inputGroupSelect02">
+                                    <option selected>Selecciona...</option>
+                                    <option value="1">Evento Social</option>
+                                    <option value="2">Evento Deportivo</option>
+                                    <option value="3">Evento Masivo</option>
+                                    <option value="4">Congreso/Convención</option>
+                                    <option value="5">Reunión</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" 
+                                    placeholder="Lugar" name="e-lugar" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="date" class="form-control rounded-4" 
+                                    placeholder="Fecha" name="e-fecha" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="number" class="form-control rounded-4" 
+                                    placeholder="# Invitados" name="e-invitados" required>
+                            </div>
+                        </div>
+                        <p style="font-family: 'Josefin Sans', sans-serif;">Datos del Organizador</p>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" placeholder="Apellido Paterno" name="oe-apellido_p" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" placeholder="Apellido Materno" name="oe-apellido_m" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" placeholder="Nombre(s)" name="nombre" required>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form mb-3">
+                                <input type="text" class="form-control rounded-4" placeholder="Correo-e" name="email" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3">
+                                <input type="text" class="form-control rounded-4" placeholder="Teléfono" name="celular" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- Termina Modal #agregarevento -->
+
         <div class="p-4 p-md-5 mb-4 text-dark rounded">
             <div class="col-md-6 px-0">
                 <a style="font-size: 1.8rem; font-family: 'Josefin Sans', sans-serif;"><strong>Listado de

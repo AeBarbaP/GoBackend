@@ -49,28 +49,25 @@
 </head>
 
 <nav class="navscroll navbar navbar-expand-md fixed-top" style="background-color:#f3a79c">
-        <div class="container-fluid justify-content-center">
-            <a class="navbar-brand text-light" style="font-size:3rem; font-family: 'Josefin Sans', sans-serif;"
-                href="#"><strong>GOLD AXs </strong></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        </div>
-    </nav>
+    <div class="container-fluid justify-content-center">
+        <a class="navbar-brand text-light" style="font-size:3rem; font-family: 'Josefin Sans', sans-serif;" href="#"><strong>GOLD AXs </strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    </div>
+</nav>
 
 <body class="d-flex flex-column min-vh-100 mt-3">
 
     <main class="container-fluid w-100 mt-5 mb-5">
         <div class="container-fluid w-100 mb-3">
-        <p class="h1" style="font-size:3rem; font-family: 'Josefin Sans', sans-serif;">Gestión de Eventos</p>
-        <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i class="bi bi-calendar2-plus"></i> Agregar Evento</button></p>
         <nav class="navbar navbar-expand-md">
-            <div class="container w-100 justify-content-center">
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
+            <div class="container-fluid justify-content-center">
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-light" style="background-color: #A8A8A8" aria-current="page" data-bs-toggle="modal" data-bs-target="#agregarevento"><i class="bi bi-calendar2-plus"></i> Agregar Evento</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark active" aria-current="page" href="index.php"><i class="bi bi-calendar2-check"></i> Eventos Activos</a>
                     </li>
@@ -91,6 +88,87 @@
             </div>
         </nav>
         </div>
+        <!-- Inicia Modal #agregarevento -->
+        <div class="modal fade" id="agregarevento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="font-family: 'Josefin Sans', sans-serif;"><i class="bi bi-calendar2-plus"></i><strong> Agregar Evento</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre del Evento" name="e-nombre" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3" style="align-items:vertical">
+                                <select class="form-select" id="inputGroupSelect02">
+                                    <option selected>Selecciona...</option>
+                                    <option value="1">Evento Social</option>
+                                    <option value="2">Evento Deportivo</option>
+                                    <option value="3">Evento Masivo</option>
+                                    <option value="4">Congreso/Convención</option>
+                                    <option value="5">Reunión</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" 
+                                    placeholder="Lugar" name="e-lugar" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="date" class="form-control rounded-4" 
+                                    placeholder="Fecha" name="e-fecha" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="number" class="form-control rounded-4" 
+                                    placeholder="# Invitados" name="e-invitados" required>
+                            </div>
+                        </div>
+                        <p style="font-family: 'Josefin Sans', sans-serif;">Datos del Organizador</p>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" placeholder="Apellido Paterno" name="oe-apellido_p" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" placeholder="Apellido Materno" name="oe-apellido_m" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3 ">
+                                <input type="text" class="form-control rounded-4" placeholder="Nombre(s)" name="nombre" required>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form mb-3">
+                                <input type="text" class="form-control rounded-4" placeholder="Correo-e" name="email" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form mb-3">
+                                <input type="text" class="form-control rounded-4" placeholder="Teléfono" name="celular" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- Termina Modal #agregarevento -->
 
         <div class="p-4 p-md-5 mb-4 text-dark rounded">
             <div class="col-md-6 px-0">

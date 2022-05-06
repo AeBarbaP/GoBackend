@@ -10,7 +10,14 @@
   <title>Smart-Event · by GO Ax's</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
 
   <!-- Bootstrap core CSS -->
@@ -41,6 +48,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+
   <link href="navbar-top-fixed.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,14 +81,15 @@
       <div class="col-md-12">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
           <div class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-4">Configuración de Distribución</h3>
+            <h3 class="mb-4" style="font-family: 'Josefin Sans', sans-serif;">Configuración de Distribución</h3>
             <br>
             <div class="row">
               <div class="col-6">
                 <div class="form mb-3 ">
                   <p class="card-text mb-auto">Sube el plano de distribución de tu evento aquí...</p>
                   <p class="text-end">
-                    <button class="btn btn-outline-secondary mt-3" type="button"><i class="bi bi-map"></i>
+                    <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
+                      data-bs-target="#uploadmap"><i class="bi bi-map"></i>
                       Agregar Plano</button>
                   </p>
                   <label class="mb-3" for="">Indica el número de mesas:</label>
@@ -96,157 +105,70 @@
                     <input type="number" class="form-control rounded-4" id="" placeholder="Número de sillas">
                   </p>
                 </div>
+                <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i
+                      class="bi bi-x-diamond"></i> Guardar</button></p>
               </div>
-              <!--               <div class="col-6">
-                
-              </div> -->
+
               <div class="col-6 text-end">
-                <img class="mb-4" src="../GoEventos/img/como-sentar-a-tus-invitados.jpg"
-                  style="width: 100%; height: auto; object-fit: cover; object-position:center; background-repeat: no-repeat;"
-                  alt="">
+                <a data-bs-toggle="modal" data-bs-target="#plano">
+                  <img class="mb-4" src="../GoEventos/img/como-sentar-a-tus-invitados.jpg"
+                    style="width: 100%; height: auto; object-fit: cover; object-position:center; background-repeat: no-repeat;"
+                    alt=""></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2" style="color: #f3a79c;">Diseño</strong>
-              <h3 class="mb-0">Invitación Digital</h3>
-              <br>
-              <p class="mb-auto">Selecciona la plantilla de diseño para tu invitación digital, o carga el diseño que
-                desees</p>
-              <a href="#" class="stretched-link">Ingresar</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-              <img class="mb-4" src="../GoEventos/img/DiseñoInvitacionesDigitales.jpg" alt="" width="180" height="250">
 
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row align-items-md-stretch">
         <div class="col-md-12">
-          <div class="h-100 p-5 text-dark bg-light border rounded-3">
-            <i class="fas fa-search h2 mb-3"></i>
-            <div class="form-floating mb-3">
-              <input type="Buscar" class="form-control rounded-4" id="floatingInput" placeholder="Buscar">
-              <label for="floatingInput">Buscar</label>
-            </div>
-            <br>
-            <div class="row">
-              <div class="col-4">
-                <div class="form-floating mb-3 ">
-                  <input type="text" class="form-control rounded-4" id="floatingPassword"
-                    placeholder="Apellido Paterno">
-                  <label for="floatingPassword">Apellido Paterno</label>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="form-floating mb-3 ">
-                  <input type="text" class="form-control rounded-4" id="floatingPassword"
-                    placeholder="Apellido Materno">
-                  <label for="floatingPassword">Apellido Materno</label>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="form-floating mb-3 ">
-                  <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre(s)">
-                  <label for="floatingPassword">Nombre (s)</label>
-                </div>
-              </div>
-              <div class="col-8">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Correo-e">
-                  <label for="floatingPassword">Correo-e</label>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono">
-                  <label for="floatingPassword">Teléfono</label>
-                </div>
-              </div>
-            </div>
-            <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
-                data-bs-target="#AgregarInv">Guardar</button></p>
-          </div>
-        </div>
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <div class="row">
+                <div class="col-8">
+                  <div class="form mb-3 ">
+                    <strong class="d-inline-block mb-2"
+                      style="color: #f3a79c; font-family: 'Josefin Sans', sans-serif;">Documentos</strong>
+                    <h3 class=" mb-3" style="font-family: 'Josefin Sans', sans-serif;">Menú Digital</h3>
+                    <br>
+                    <p class="mb-auto">Agrega el archivo del menú digital de tu evento aquí...</p>
+                    <p class="text-end">
+                    <div class="input-group mb-3">
+                      <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
+                        data-bs-target="#uploadmenu"><i class="bi bi-file-earmark-text"></i>
+                        Agregar Menú</button>
+                      <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
+                        data-bs-target="#showqrmenu"><i class="bi bi-qr-code"></i> QR Menú
+                        Digital</button>
+                    </div>
+                    </p>
 
-        <!-- Inicia Modal -->
-        <div class="modal fade" id="AgregarInv" tabindex="-1" aria-labelledby="Agregar Invitado" aria-hidden="true">
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-              <div class="modal-header text-dark">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-geo-alt"></i>
-                  Agregar Invitado</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body text-dark">
+                    <hr class="my-5">
+                    <h3 class=" mb-3" style="font-family: 'Josefin Sans', sans-serif;">Información de Organizador</h3>
+                    <br>
+                    <p class="mb-auto">Agrega el archivo con tu información o tarjeta de presentación...</p>
+                    <p class="text-end">
+                    <div class="input-group mb-3">
+                      <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
+                        data-bs-target="#uploadinfoplanner"><i class="bi bi-person-lines-fill"></i>
+                        Agregar</button>
+                      <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
+                        data-bs-target="#showqrinfoplanner"><i class="bi bi-qr-code"></i> QR Información</button>
+                    </div>
+                    </p>
 
-                <form class="">
-                  <i class="far fa-address-card h2"></i>
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="form-floating mb-3 ">
-                        <input type="text" class="form-control rounded-4" id="floatingPassword"
-                          placeholder="Apellido Paterno">
-                        <label for="floatingPassword">Apellido Paterno</label>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-floating mb-3 ">
-                        <input type="text" class="form-control rounded-4" id="floatingPassword"
-                          placeholder="Apellido Materno">
-                        <label for="floatingPassword">Apellido Materno</label>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-floating mb-3 ">
-                        <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre(s)">
-                        <label for="floatingPassword">Nombre (s)</label>
-                      </div>
-                    </div>
-                    <div class="col-8">
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Correo-e">
-                        <label for="floatingPassword">Correo-e</label>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Teléfono">
-                        <label for="floatingPassword">Teléfono</label>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-floating mb-3">
-                        <input type="number" class="form-control rounded-4" id="floatingPassword"
-                          placeholder="Número de acompañantes">
-                        <label for="floatingPassword">Número de acompañantes</label>
-                      </div>
-                    </div>
-                    <div class="col-8">
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-4" id="floatingPassword"
-                          placeholder="Etiqueta para Invitación">
-                        <label for="floatingPassword">Etiqueta para Invitación</label>
-                      </div>
-                    </div>
                   </div>
-                  <p class="text-end">
-                    <button class="btn btn-outline-secondary mt-3" type="button"><i class="bi bi-person-plus"></i>
-                      Agregar
-                      invitado</button>
-                  </p>
-                </form>
 
+                </div>
+
+                <div class="col-4 text-center">
+                  <img class="mb-3" src="../GoEventos/img/menuejemplo.jpg"
+                    style="width: 80%; height: auto; object-fit: cover; object-position:center; background-repeat: no-repeat;"
+                    alt="">
+                </div>
               </div>
             </div>
           </div>
+
         </div>
-        <!-- Termina modal para Editar AXs programados y frecuentes -->
 
   </main>
 
@@ -292,3 +214,140 @@
       event.returnValue = false;
   }
 </script>
+
+<!-- Inicia modal para subir plano de distribución -->
+<div class="modal fade" id="uploadmap" tabindex="-1" aria-labelledby="uploadmap" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="color: #f3a79c; font: size 12px; font-family: 'Josefin Sans', sans-serif;">
+        <h5 class="modal-title" style="color: #f3a79c; font: size 16px; font-family: 'Josefin Sans', sans-serif;"
+          id="exampleModalLabel"><strong>Cargar Plano de Distribución</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <p>Selecciona el archivo .png o .jpg para cargar el plano de distribución de tu evento en el sistema.</p>
+          <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03"
+            aria-label="Upload">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termina modal para subir plano de distribución -->
+
+<!-- Inicia modal para subir menú digital -->
+<div class="modal fade" id="uploadmenu" tabindex="-1" aria-labelledby="uploadmenu" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="color: #f3a79c; font: size 12px; font-family: 'Josefin Sans', sans-serif;">
+        <h5 class="modal-title" style="color: #f3a79c; font: size 16px; font-family: 'Josefin Sans', sans-serif;"
+          id="exampleModalLabel"><strong>Cargar Menú Digital</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <p>Selecciona el archivo .pdf o .jpg para cargar el menú de tu evento en el sistema.</p>
+          <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03"
+            aria-label="Upload">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termina modal para subir menú digital -->
+
+<!-- Inicia modal para mostrar QR de menú digital -->
+<div class="modal fade" id="showqrmenu" tabindex="-1" aria-labelledby="showqrmenu" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="color: #f3a79c; font: size 12px; font-family: 'Josefin Sans', sans-serif;">
+        <h5 class="modal-title" style="color: #f3a79c; font: size 16px; font-family: 'Josefin Sans', sans-serif;"
+          id="exampleModalLabel"><strong>QR de Menú Digital</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-center"><i class="bi bi-qr-code" style="font-size: 15rem;"></i></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termina modal para mostrar QR de menú digital -->
+
+<!-- Inicia modal para subir infoplanner -->
+<div class="modal fade" id="uploadinfoplanner" tabindex="-1" aria-labelledby="uploadinfoplanner" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="color: #f3a79c; font: size 12px; font-family: 'Josefin Sans', sans-serif;">
+        <h5 class="modal-title" style="color: #f3a79c; font: size 16px; font-family: 'Josefin Sans', sans-serif;"
+          id="exampleModalLabel"><strong>Cargar Información del Organizador</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <p>Selecciona el archivo .pdf para cargar tu información de contacto.</p>
+          <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03"
+            aria-label="Upload">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termina modal para subir menú digital -->
+
+<!-- Inicia modal para mostrar QR de infoplanner -->
+<div class="modal fade" id="showqrinfoplanner" tabindex="-1" aria-labelledby="showqrinfoplanner" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="color: #f3a79c; font: size 12px; font-family: 'Josefin Sans', sans-serif;">
+        <h5 class="modal-title" style="color: #f3a79c; font: size 16px; font-family: 'Josefin Sans', sans-serif;"
+          id="exampleModalLabel"><strong>QR de Información de Organizador</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-center"><i class="bi bi-qr-code" style="font-size: 15rem;"></i></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termina modal para mostrar QR de infoplanner -->
+
+<!-- Modal para mostrar imagen en pantalla completa-->
+<div class="modal fade" id="plano" tabindex="-1" aria-labelledby="plano" aria-hidden="true">
+  <!-- <div class="modal-dialog modal-dialog-centered modal-lg"> -->
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="font-family: 'Josefin Sans', sans-serif;"><strong>Plano de
+            Distribución</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="img/como-sentar-a-tus-invitados.jpg" class="w-75" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Termina Modal para mostrar imagen en pantalla completa -->

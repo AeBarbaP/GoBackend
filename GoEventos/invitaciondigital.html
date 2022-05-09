@@ -72,7 +72,7 @@
   <main class="container mt-5">
     <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
       <div class="col-md-6 px-0">
-        <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Configuración</strong></a>
+        <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Invitación Digital</strong></a>
       </div>
     </div>
 
@@ -80,37 +80,36 @@
       <div class="col-sm-12">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
           <div class="col-sm p-4 d-flex flex-column position-static">
-            <h3 class="mb-4" style="font-family: 'Josefin Sans', sans-serif;">Configuración de Distribución</h3>
+            <h3 class="mb-4" style="font-family: 'Josefin Sans', sans-serif;">Invitación Digital</h3>
             <br>
             <div class="row">
               <div class="col-sm-6">
                 <div class="form mb-3 ">
-                  <p class="card-text mb-auto">Sube el plano de distribución de tu evento aquí...</p>
+                  <p class="card-text mb-auto">Sube el diseño de la invitación para tu evento aquí...</p>
                   <p class="text-end">
                     <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
-                      data-bs-target="#uploadmap"><i class="bi bi-map"></i>
-                      Agregar Plano</button>
+                      data-bs-target="#uploadinvitation"><i class="bi bi-filetype-pdf"></i>
+                      Agregar</button>
                   </p>
-                  <label class="mb-3" for="">Indica el número de mesas:</label>
-                  <input type="number" class="form-control rounded-4" id="cambioCeldasInput"
-                    placeholder="Número de acompañantes" onchange="cambioCeldas(value)" onblur="bloquear()"
-                    pattern="[0-9]" max-lenght="2" onkeypress="ValidaSoloNumeros()">
-                  <p id="listadoInvitados" class="mt-3 mb-2"></p>
+                  <br>
+                  <p>Este es un ejemplo de texto para enviar al correo electrónico de los invitados junto con el diseño
+                    que proporcionaste y el código QR si deseas editarlo da click sobre el área de texto</p>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Texto de para el correo de
+                      invitación:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <p>Nota: el código QR se agregará al final del documento de invitación que cargaste, junto con la
+                    información del invitado y sus acompañantes</p>
                 </div>
-                <label class="mb-3">Indica el número de sillas para cada mesa:</label>
-                <div class="form mb-3 ">
-                  <p class="mb-3">Mesa n:
-                    <!-- Etiqueta e input deben de aparecer cada vez que se agrega una mesa -->
-                    <input type="number" class="form-control rounded-4" id="" placeholder="Número de sillas">
-                  </p>
-                </div>
+
                 <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i
                       class="bi bi-x-diamond"></i> Guardar</button></p>
               </div>
 
               <div class="col-sm-6 text-end">
-                <a data-bs-toggle="modal" data-bs-target="#plano">
-                  <img class="mb-4" src="../GoEventos/img/como-sentar-a-tus-invitados.jpg"
+                <a data-bs-toggle="modal" data-bs-target="#invitacionpdf">
+                  <img class="mb-4" src="/img/invitacion.jpg"
                     style="width: 100%; height: auto; object-fit: cover; object-position:center; background-repeat: no-repeat;"
                     alt=""></a>
               </div>
@@ -118,7 +117,7 @@
           </div>
         </div>
 
-        <div class="col-sm-12">
+        <!-- <div class="col-sm-12">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
             <div class="col-sm p-4 d-flex flex-column position-static">
               <div class="row">
@@ -165,9 +164,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-        </div>
+      </div>
 
   </main>
 

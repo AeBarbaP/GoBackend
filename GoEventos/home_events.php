@@ -168,6 +168,7 @@
                         <thead style="background-color:#f7c6bf; color: #7B8DAB;">
                             <tr class="text-center">
                                 <th scope="col">#</th>
+                                <th scope="col">Sel. <br><input class="form-check-input" type="checkbox" value=""></th>
                                 <th scope="col">Ap. Paterno</th>
                                 <th scope="col">Ap. Materno</th>
                                 <th scope="col">Nombre(s)</th>
@@ -189,6 +190,7 @@
                 echo '
           <tr class="text-center">
             <td>' . $x . '</td>
+            <td><input class="form-check-input" type="checkbox" value="'.$row_sqlQuery['id'].'"></td>
             <td>' . $row_sqlQuery['apellido_p'] . '</td>
             <td>' . $row_sqlQuery['apellido_m'] . '</td>
             <td>' . $row_sqlQuery['nombre'] . '</td>
@@ -196,10 +198,10 @@
             <td>' . $row_sqlQuery['email'] . '</td>
             <td><a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '"><span class="badge bg-warning text-dark">' . $row_sqlQuery['no_invitados'] . '</span></a></td>
             <td><a href="#" data-bs-toggle="modal"
-            data-bs-target="#AgregarAcomp' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i> Agregar</span></a></td>
+            data-bs-target="#AgregarAcomp' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i></span></a></td>
             <td><span class="badge bg-warning text-dark">' . $row_sqlQuery['mesa'] . '</span></td>
             <td><a href="#" data-bs-toggle="modal"
-            data-bs-target="#editarInv' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i> Editar Invitado</span></a></td>
+            data-bs-target="#editarInv' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i></span></a></td>
 
           </tr>';
 
@@ -371,6 +373,9 @@
                         </tbody>
                     </table>
                 </div><!-- table responsive -->
+                <p class="text-end">
+                    <button class="btn btn-outline-secondary mt-3" type="submit"><i class="bi bi-qr-code"></i> Enviar QR</button>
+                  </p>
             </div>
 
             <!-- Inicia modal para subirl lista de invitados desde CSV -->

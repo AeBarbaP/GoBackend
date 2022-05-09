@@ -71,7 +71,7 @@
 
     <main class="container mt-5 mb-5">
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
-            <div class="col-md-6 px-0">
+            <div class="col-sd-6 px-0">
                 <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de
                         Invitados</strong></a>
             </div>
@@ -91,7 +91,7 @@
                 </p>
                 <hr>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-sm">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
                             <input type="text" class="form-control" placeholder="Buscar..." aria-label="Username"
@@ -99,7 +99,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-sm">
                     </div>
 
                 </div>

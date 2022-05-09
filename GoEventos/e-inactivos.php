@@ -101,12 +101,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-sm-8">
                             <div class="form mb-3 ">
                                 <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre del Evento" name="e-nombre" required>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form mb-3" style="align-items:vertical">
                                 <select class="form-select" id="inputGroupSelect02">
                                     <option selected>Selecciona...</option>
@@ -118,46 +118,46 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form mb-3 ">
                                 <input type="text" class="form-control rounded-4" 
                                     placeholder="Lugar" name="e-lugar" required>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form mb-3 ">
                                 <input type="date" class="form-control rounded-4" 
                                     placeholder="Fecha" name="e-fecha" required>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form mb-3 ">
                                 <input type="number" class="form-control rounded-4" 
                                     placeholder="# Invitados" name="e-invitados" required>
                             </div>
                         </div>
                         <p style="font-family: 'Josefin Sans', sans-serif;">Datos del Organizador</p>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form mb-3 ">
                                 <input type="text" class="form-control rounded-4" placeholder="Apellido Paterno" name="oe-apellido_p" required>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form mb-3 ">
                                 <input type="text" class="form-control rounded-4" placeholder="Apellido Materno" name="oe-apellido_m" required>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form mb-3 ">
                                 <input type="text" class="form-control rounded-4" placeholder="Nombre(s)" name="nombre" required>
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-sm-8">
                             <div class="form mb-3">
                                 <input type="text" class="form-control rounded-4" placeholder="Correo-e" name="email" required>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form mb-3">
                                 <input type="text" class="form-control rounded-4" placeholder="Teléfono" name="celular" required>
                             </div>
@@ -187,10 +187,10 @@
                         <div class="col-sm-3">
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
-                                    <div class="col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-sm-8">
                                         <div class="card-body">
                                             <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
@@ -205,10 +205,10 @@
                         <div class="col-sm-3"> 
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
-                                    <div class="col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-sm-8">
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
@@ -223,10 +223,10 @@
                         <div class="col-sm-3"> 
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-2">
-                                    <div class="col-md-4 ">
+                                    <div class="col-sm-4 ">
                                         <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-sm-8">
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>
@@ -241,10 +241,10 @@
                         <div class="col-sm-3"> 
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">
-                                    <div class="col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-sm-8">
                                         <div class="card-body">
                                         <h5 class="card-title">Nombre del Evento</h5>
                                             <p>Organizado por:</p>

@@ -73,7 +73,7 @@
         </div>
 
         <div class="row align-items-md-stretch">
-            <div class="col-md-12">
+            <div class="col-sm-12">
                 <div class="h-100 p-4 text-dark bg-light border rounded-3">
                     <i class="fas fa-search h2 mb-2"></i>
                     <div class="row mb-3">
@@ -81,7 +81,7 @@
                     </div>
                     <hr>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <form action="prcd/query_agregar_invitados.php" method="post">
                                 <div class="form-floating mb-3 ">
                                     <input type="text" class="form-control rounded-4" id="floatingPassword"
@@ -89,35 +89,35 @@
                                     <label for="floatingPassword">Apellido Paterno</label>
                                 </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-floating mb-3 ">
                                 <input type="text" class="form-control rounded-4" id="floatingPassword"
                                     placeholder="Apellido Materno" name="apellido_m" required>
                                 <label for="floatingPassword">Apellido Materno</label>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-floating mb-3 ">
                                 <input type="text" class="form-control rounded-4" id="floatingPassword"
                                     placeholder="Nombre(s)" name="nombre" required>
                                 <label for="floatingPassword">Nombre (s)</label>
                             </div>
                         </div>
-                        <div class="col-8">
+                        <div class="col-sm-8">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control rounded-4" id="floatingPassword"
                                     placeholder="Correo-e" name="email" required>
                                 <label for="floatingPassword">Correo-e</label>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control rounded-4" id="floatingPassword"
                                     placeholder="Teléfono" name="celular" required>
                                 <label for="floatingPassword">Teléfono</label>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-sm-12">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control rounded-4" id="floatingPassword"
                                     placeholder="Etiqueta para Invitación">
@@ -134,7 +134,7 @@
             <div class="container mt-3">
                 <hr>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-sm">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
                             <input type="text" class="form-control" placeholder="Buscar..." aria-label="Username"
@@ -142,7 +142,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-sm">
                     </div>
 
                 </div>
@@ -150,12 +150,12 @@
 
             <div class="container border rounded-3 mt-3 bg-light" style="width: 98%;">
                 <div class="row mt-3 border-bottom">
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de invitados</strong></p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                     </div>
-                    <div class="col-4 btn-group mb-3" role="group" aria-label="Basic outlined example">
+                    <div class="col-sm-4 btn-group mb-3" role="group" aria-label="Basic outlined example">
                         <button type="button" class="btn btn-outline-secondary"><i class="bi bi-cloud-download"></i>
                             Plantilla</button>
                         <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
@@ -219,31 +219,31 @@
               
               <div class="row">
                   
-                  <div class="col-4">
+                  <div class="col-sm-4">
                     <div class="form-floating mb-3 ">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="username" aria label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['apellido_p'] . '" readonly>
                       <label for="floatingPassword">Apellido Paterno</label>
                     </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-sm-4">
                     <div class="form-floating mb-3 ">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['apellido_m'] . '" readonly>
                       <label for="floatingPassword">Apellido Materno</label>
                     </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-sm-4">
                     <div class="form-floating mb-3 ">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['nombre'] . '" readonly>
                       <label for="floatingPassword">Nombre (s)</label>
                     </div>
                   </div>
-                  <div class="col-8">
+                  <div class="col-sm-8">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['email'] . '" readonly>
                       <label for="floatingPassword">Correo-e</label>
                     </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-sm-4">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['celular'] . '" readonly>
                       <label for="floatingPassword">Celular</label>
@@ -251,13 +251,13 @@
                   </div>
                   </fieldset>
                   <div class="row">
-                  <div class="col-4">
+                  <div class="col-sm-4">
                     <div class="form-floating mb-3">
                       <input type="number" class="form-control rounded-4" id="cambioCeldasInput' . $row_sqlQuery['id'] . '" placeholder="Número de acompañantes" onchange="cambioCeldas(' . $row_sqlQuery['id'] . ')" onblur="bloquear(' . $row_sqlQuery['id'] . ')" pattern="[0-9]" max-lenght="2" onkeypress="ValidaSoloNumeros()" >
                       <label for="floatingPassword">Número de acompañantes</label>
                     </div>
                   </div>
-                  <div class="col-8">
+                  <div class="col-sm-8">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Etiqueta para Invitación" value="' . $row_sqlQuery['etiqueta'] . '" readonly>
                                 <label for="floatingPassword">Etiqueta para Invitación</label>
@@ -300,13 +300,13 @@
             <input value="' . $row_sqlQuery['id'] . '" name="id" hidden>
             <div class="modal-body">
               <div class="row">
-                <div class="col-6">
+                <div class="col-sm-6">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">Apellido Paterno</span>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_p" value="' . $row_sqlQuery['apellido_p'] . '">
                 </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">Apellido Materno</span>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_m" value="' . $row_sqlQuery['apellido_m'] . '">
@@ -316,31 +316,31 @@
                   <span class="input-group-text" id="basic-addon1">Nombre (s)</span>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="nombre" value="' . $row_sqlQuery['nombre'] . '">
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">No. Celular</span>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="' . $row_sqlQuery['celular'] . '">
                 </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">Correo-e</span>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="' . $row_sqlQuery['email'] . '">
                 </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">No. Acompañantes</span>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="invitados" value="' . $row_sqlQuery['no_invitados'] . '">
                 </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">Mesa asignada</span>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="mesa" value="' . $row_sqlQuery['mesa'] . '">
                 </div>
                 </div>
-                <div class="col-12">
+                <div class="col-sm-12">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">Etiqueta de Invitación</span>
                   <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="etiqueta" value="' . $row_sqlQuery['etiqueta'] . '">

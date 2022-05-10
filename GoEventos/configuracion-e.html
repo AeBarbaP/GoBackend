@@ -60,12 +60,12 @@
 
   <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
     <div class="container-fluid justify-content-center">
-      <a class="navbar-brand" id="enombre" href="#">
-        <strong>Nombre de Evento</strong></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      <a class="navbar-brand" href="#">
+        <strong><span id="enombre">Nombre de Evento</span></strong></a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
     </div>
   </nav>
 
@@ -101,7 +101,7 @@
                 <div class="form mb-3 ">
                   <p class="mb-3">Mesa n:
                     <!-- Etiqueta e input deben de aparecer cada vez que se agrega una mesa -->
-                    <input type="number" class="form-control rounded-4" id="" placeholder="Número de sillas">
+                    <input type="number" class="form-control rounded-4" id="" placeholder="Número de sillas" onkeypress="ValidaSoloNumeros()">
                   </p>
                 </div>
                 <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i
@@ -352,22 +352,27 @@
 <!-- Termina Modal para mostrar imagen en pantalla completa -->
 
 <style>
+  /* normal web */
   #enombre {
+    font-size: 50px;
     color: #f3a79c;
     font-family: 'Josefin Sans', sans-serif;
   }
 
   /* On screens that are 992px wide or less, go from four columns to two columns */
+  /* tablets, celular horizontal y otros dispositivos */
   @media screen and (max-width: 992px) {
     #enombre {
-      font-size: 12px;
+      font-size: 100%;
     }
   }
 
   /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  /* CELULAR */
   @media screen and (max-width: 600px) {
     #enombre {
-      font-size: 12px;
+      font-size: 120%;
+      text-align: center;
     }
   }
 </style>

@@ -353,3 +353,31 @@ $(function() {
 }
 
 </style>
+
+<style>
+  /* normal web */
+  #enombre {
+    font-size: 50px;
+    color: #f3a79c;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  /* tablets, celular horizontal y otros dispositivos */
+  @media screen and (max-width: 992px) {
+    #enombre {
+      font-size: 100%;
+    }
+  }
+
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  /* CELULAR */
+  @media screen and (max-width: 600px) {
+    #enombre {
+      font-size: 120%;
+      text-align: center;
+      text-decoration: none;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+  }
+</style>

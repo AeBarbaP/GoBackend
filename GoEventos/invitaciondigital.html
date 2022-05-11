@@ -60,22 +60,28 @@
 
   <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
     <div class="container-fluid justify-content-center">
-      <a class="navbar-brand" id="enombre" href="#">
+      <a class="navbar-brand" id="enombre">
         <strong>Nombre de Evento</strong></a>
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button> -->
+      </button>
     </div>
   </nav>
 
   <main class="container mt-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Evento</li>
+        <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+      </ol>
+    </nav>
     <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
       <div class="col-md-6 px-0">
         <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Invitación Digital</strong></a>
       </div>
     </div>
-
     <div class="row mb-2">
       <div class="col-sm-12">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
@@ -116,55 +122,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="col-sm-12">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
-            <div class="col-sm p-4 d-flex flex-column position-static">
-              <div class="row">
-                <div class="col-sm-8">
-                  <div class="form mb-3 ">
-                    <strong class="d-inline-block mb-2"
-                      style="color: #f3a79c; font-family: 'Josefin Sans', sans-serif;">Documentos</strong>
-                    <h3 class=" mb-3" style="font-family: 'Josefin Sans', sans-serif;">Menú Digital</h3>
-                    <br>
-                    <p class="mb-auto">Agrega el archivo del menú digital de tu evento aquí...</p>
-                    <p class="text-end">
-                    <div class="input-group mb-3">
-                      <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
-                        data-bs-target="#uploadmenu"><i class="bi bi-file-earmark-text"></i>
-                        Agregar Menú</button>
-                      <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
-                        data-bs-target="#showqrmenu"><i class="bi bi-qr-code"></i> QR Menú
-                        Digital</button>
-                    </div>
-                    </p>
-
-                    <hr class="my-5">
-                    <h3 class=" mb-3" style="font-family: 'Josefin Sans', sans-serif;">Información de Organizador</h3>
-                    <br>
-                    <p class="mb-auto">Agrega el archivo con tu información o tarjeta de presentación...</p>
-                    <p class="text-end">
-                    <div class="input-group mb-3">
-                      <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
-                        data-bs-target="#uploadinfoplanner"><i class="bi bi-person-lines-fill"></i>
-                        Agregar</button>
-                      <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
-                        data-bs-target="#showqrinfoplanner"><i class="bi bi-qr-code"></i> QR Información</button>
-                    </div>
-                    </p>
-
-                  </div>
-
-                </div>
-
-                <div class="col-sm-4 text-center">
-                  <img class="mb-3" src="../GoEventos/img/menuejemplo.jpg"
-                    style="width: 80%; height: auto; object-fit: cover; object-position:center; background-repeat: no-repeat;"
-                    alt="">
-                </div>
-              </div>
-            </div>
-          </div> -->
 
       </div>
 

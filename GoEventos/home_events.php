@@ -53,8 +53,7 @@
 
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
         <div class="container-fluid justify-content-center">
-            <a class="navbar-brand" style="color: #f3a79c; font-size:3rem; font-family: 'Josefin Sans', sans-serif;"
-                href="#">
+            <a class="navbar-brand" id="enombre">
                 <strong>Nombre de
                     Evento</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -62,6 +61,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
+    </nav>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="home_events.html">Evento</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Invitados</li>
+        <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+      </ol>
     </nav>
 
     <main class="container mt-5 mb-5">
@@ -466,3 +473,31 @@ function ValidaSoloNumeros() {
 
 <input name="nombreinvitados[]" type="text" class="form-control w-50" placeholder="" aria-label="Username"
     aria-describedby="basic-addon1" value="'+y+'" READONLY>
+
+<style>
+  /* normal web */
+  #enombre {
+    font-size: 50px;
+    color: #f3a79c;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  /* tablets, celular horizontal y otros dispositivos */
+  @media screen and (max-width: 992px) {
+    #enombre {
+      font-size: 100%;
+    }
+  }
+
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  /* CELULAR */
+  @media screen and (max-width: 600px) {
+    #enombre {
+      font-size: 120%;
+      text-align: center;
+      text-decoration: none;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+  }
+</style>

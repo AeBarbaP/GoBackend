@@ -54,7 +54,7 @@
 
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 mt-3">
 
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
         <div class="container-fluid justify-content-center">
@@ -70,6 +70,15 @@
     </nav>
 
     <main class="container mt-5 mb-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="home_events.html">Evento</a></li>
+        <li class="breadcrumb-item"><a href="home_events.php">Invitados</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Acompañantes</li>
+        <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+      </ol>
+    </nav>
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
             <div class="col-sd-6 px-0">
                 <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de

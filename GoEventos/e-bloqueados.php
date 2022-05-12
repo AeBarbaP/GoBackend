@@ -58,35 +58,41 @@
     </div>
 </nav>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 mt-3">
     <main class="container-fluid w-100 mt-5 mb-5">
         <div class="container-fluid w-100 mb-3">
         <nav class="navbar navbar-expand-md">
-                <div class="container-fluid justify-content-center">
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link text-light" style="background-color: #A8A8A8" aria-current="page" data-bs-toggle="modal" data-bs-target="#agregarevento"><i class="bi bi-calendar2-plus"></i> Agregar Evento</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" aria-current="page" href="index.php"><i class="bi bi-calendar2-check"></i> Eventos Activos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="e-inactivos.php"><i class="bi bi-clock-history"></i> Eventos Inactivos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark active" href="e-bloqueados.php"><i class="bi bi-calendar-minus"></i> Eventos Bloqueados</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="e-cancelados.php"><i class="bi bi-calendar2-x"></i> Eventos Cancelados</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="e-finalizados.php"><i class="bi bi-check-all"></i> Eventos Finalizados</a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="container-fluid justify-content-center">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="index.php"><i class="bi bi-calendar2-check"></i> Eventos Activos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="e-inactivos.php"><i class="bi bi-clock-history"></i> Eventos Inactivos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark active" aria-current="page" href="e-bloqueados.php"><i class="bi bi-calendar-minus"></i> Eventos Bloqueados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="e-cancelados.php"><i class="bi bi-calendar2-x"></i> Eventos Cancelados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="e-finalizados.php"><i class="bi bi-check-all"></i> Eventos Finalizados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="addnew.php"><i class="bi bi-folder-plus"></i> Agregar E/O</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link text-light" style="background-color: #A8A8A8" aria-current="page" data-bs-toggle="modal" data-bs-target="#agregarevento">Nuevo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-light" style="background-color: #A8A8A8" aria-current="page" data-bs-toggle="modal" data-bs-target="#agregarevento"><i class="bi bi-calendar2-plus"></i> Agregar Evento</a>
+                    </li> -->
+                </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
         </div>
 
         <!-- Inicia Modal #agregarevento -->

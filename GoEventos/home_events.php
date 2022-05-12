@@ -62,6 +62,7 @@
             </button>
         </div>
     </nav>
+    <main class="container mt-5 mb-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
@@ -70,8 +71,6 @@
         <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
       </ol>
     </nav>
-
-    <main class="container mt-5 mb-5">
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
             <div class="col-md-6 px-0">
                 <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de

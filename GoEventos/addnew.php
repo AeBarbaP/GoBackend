@@ -297,7 +297,7 @@
                             </tr>
                         </thead>
                         <tbody id="myTable">
-                            <?php include('prcd/query_invitados.php'); ?>
+                            <?php include('prcd/query_organizadores.php'); ?>
 
                             <?php
               $x = 0;

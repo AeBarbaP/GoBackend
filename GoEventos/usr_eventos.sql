@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 27-04-2022 a las 23:07:44
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.4.28
+-- Host: localhost:3306
+-- Generation Time: May 12, 2022 at 08:05 PM
+-- Server version: 5.7.24
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,28 +18,30 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `usr_eventos`
+-- Database: `usr_eventos`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `evento`
+-- Table structure for table `eventos`
 --
 
-CREATE TABLE `evento` (
+CREATE TABLE `eventos` (
   `id` int(11) NOT NULL,
-  `nombre_evento` varchar(100) NOT NULL,
-  `n_invitados` int(11) NOT NULL,
-  `num_mesas` int(11) NOT NULL,
-  `num_sillas` int(11) NOT NULL,
-  `clave_id` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nombre_e` varchar(50) NOT NULL,
+  `tipo_e` varchar(20) NOT NULL,
+  `no_invitados` int(11) NOT NULL,
+  `no_confirmados` int(11) NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `fecha_e` date NOT NULL,
+  `id_organizador` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `invitados`
+-- Table structure for table `invitados`
 --
 
 CREATE TABLE `invitados` (
@@ -52,37 +54,52 @@ CREATE TABLE `invitados` (
   `no_invitados` int(11) DEFAULT NULL,
   `mesa` int(11) DEFAULT NULL,
   `qr` varchar(90) DEFAULT NULL,
-  `etiqueta` varchar(50) NOT NULL
+  `etiqueta` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `invitados`
+-- Dumping data for table `invitados`
 --
 
 INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`) VALUES
-(1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, ''),
-(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, ''),
-(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, ''),
-(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, ''),
-(5, 'JesusRLV', 'Leaños', 'Villegas', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, '');
+(1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, NULL),
+(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, NULL),
+(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, NULL),
+(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `invitados_secundarios`
+-- Table structure for table `invitados_secundarios`
 --
 
 CREATE TABLE `invitados_secundarios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `apellidos` int(11) DEFAULT NULL,
+  `apellido` varchar(50) DEFAULT NULL,
   `clave_ext` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usr`
+-- Table structure for table `organizadores`
+--
+
+CREATE TABLE `organizadores` (
+  `id` int(11) NOT NULL,
+  `apellido_p` varchar(20) NOT NULL,
+  `apellido_m` varchar(20) NOT NULL,
+  `nombres` varchar(50) NOT NULL,
+  `telefono` varchar(10) NOT NULL,
+  `correo_e` varchar(50) NOT NULL,
+  `rfc` varchar(13) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usr`
 --
 
 CREATE TABLE `usr` (
@@ -93,57 +110,69 @@ CREATE TABLE `usr` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `evento`
+-- Indexes for table `eventos`
 --
-ALTER TABLE `evento`
+ALTER TABLE `eventos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `invitados`
+-- Indexes for table `invitados`
 --
 ALTER TABLE `invitados`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `invitados_secundarios`
+-- Indexes for table `invitados_secundarios`
 --
 ALTER TABLE `invitados_secundarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usr`
+-- Indexes for table `organizadores`
+--
+ALTER TABLE `organizadores`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `usr`
 --
 ALTER TABLE `usr`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `evento`
+-- AUTO_INCREMENT for table `eventos`
 --
-ALTER TABLE `evento`
+ALTER TABLE `eventos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `invitados`
+-- AUTO_INCREMENT for table `invitados`
 --
 ALTER TABLE `invitados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `invitados_secundarios`
+-- AUTO_INCREMENT for table `invitados_secundarios`
 --
 ALTER TABLE `invitados_secundarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `usr`
+-- AUTO_INCREMENT for table `organizadores`
+--
+ALTER TABLE `organizadores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `usr`
 --
 ALTER TABLE `usr`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

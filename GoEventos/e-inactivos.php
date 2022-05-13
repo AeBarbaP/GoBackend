@@ -273,8 +273,8 @@
 
     </main>
 
-    <footer class="footer mt-auto py-3 text-light"
-        style="background-color:#7B8DAB; font-size:1.3rem; font-family: 'Josefin Sans', sans-serif;">
+    <footer class="footer mt-auto py-3 bg-light"
+        style="font-size:1.3rem; font-family: 'Josefin Sans', sans-serif;">
         <div class="container">
             <p>Eventos desarrollado por: <strong>Gold AXs.</strong>
             </p>

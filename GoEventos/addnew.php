@@ -226,9 +226,8 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">Agregar un Evento Nuevo</h5>
                                                 <p>Dá click aquí...</p>
-                                                <p class="card-text">Status: <i class="bi bi-slash-circle text-secondary"> Bloqueado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
-                                                <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
-                                                <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
+                                                <p class="card-text mt-0"><i class="bi bi-clipboard2-heart text-secondary" style="font-size: 3rem"></i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                                <p class="card-text"><small class="text-muted">by Smart-Event</small></p>
                                             </div>
                                         </div>
                                     </div>
@@ -246,9 +245,8 @@
                                             <div class="card-body">
                                             <h5 class="card-title">Agregar un Organizador Nuevo</h5>
                                                 <p>Dá click aquí...</p>
-                                                <p class="card-text">Status: <i class="bi bi-slash-circle text-secondary"> Bloqueado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
-                                                <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
-                                                <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
+                                                <p class="card-text mt-0"><i class="bi bi-person-plus text-secondary" style="font-size: 3rem"></i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                                <p class="card-text"><small class="text-muted">by Smart-Event</small></p>
                                             </div>
                                         </div>
                                     </div>

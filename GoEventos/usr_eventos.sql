@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
--- https://www.phpmyadmin.net/
+-- version 4.5.2
+-- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Generation Time: May 12, 2022 at 08:05 PM
--- Server version: 5.7.24
--- PHP Version: 8.0.1
+-- Servidor: localhost
+-- Tiempo de generación: 18-05-2022 a las 07:51:43
+-- Versión del servidor: 10.1.16-MariaDB
+-- Versión de PHP: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -18,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `usr_eventos`
+-- Base de datos: `usr_eventos`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `eventos`
+-- Estructura de tabla para la tabla `eventos`
 --
 
 CREATE TABLE `eventos` (
@@ -41,7 +40,7 @@ CREATE TABLE `eventos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invitados`
+-- Estructura de tabla para la tabla `invitados`
 --
 
 CREATE TABLE `invitados` (
@@ -58,7 +57,7 @@ CREATE TABLE `invitados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `invitados`
+-- Volcado de datos para la tabla `invitados`
 --
 
 INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`) VALUES
@@ -70,7 +69,7 @@ INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invitados_secundarios`
+-- Estructura de tabla para la tabla `invitados_secundarios`
 --
 
 CREATE TABLE `invitados_secundarios` (
@@ -83,7 +82,7 @@ CREATE TABLE `invitados_secundarios` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `organizadores`
+-- Estructura de tabla para la tabla `organizadores`
 --
 
 CREATE TABLE `organizadores` (
@@ -99,7 +98,7 @@ CREATE TABLE `organizadores` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usr`
+-- Estructura de tabla para la tabla `usr`
 --
 
 CREATE TABLE `usr` (
@@ -110,74 +109,75 @@ CREATE TABLE `usr` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Volcado de datos para la tabla `usr`
+--
+
+INSERT INTO `usr` (`id`, `nombre`, `pwd`, `perfil`) VALUES
+(1, 'admin', '123456789', 1);
+
+--
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `eventos`
+-- Indices de la tabla `eventos`
 --
 ALTER TABLE `eventos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `invitados`
+-- Indices de la tabla `invitados`
 --
 ALTER TABLE `invitados`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `invitados_secundarios`
+-- Indices de la tabla `invitados_secundarios`
 --
 ALTER TABLE `invitados_secundarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `organizadores`
+-- Indices de la tabla `organizadores`
 --
 ALTER TABLE `organizadores`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usr`
+-- Indices de la tabla `usr`
 --
 ALTER TABLE `usr`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `eventos`
+-- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `invitados`
+-- AUTO_INCREMENT de la tabla `invitados`
 --
 ALTER TABLE `invitados`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
--- AUTO_INCREMENT for table `invitados_secundarios`
+-- AUTO_INCREMENT de la tabla `invitados_secundarios`
 --
 ALTER TABLE `invitados_secundarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `organizadores`
+-- AUTO_INCREMENT de la tabla `organizadores`
 --
 ALTER TABLE `organizadores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT for table `usr`
+-- AUTO_INCREMENT de la tabla `usr`
 --
 ALTER TABLE `usr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

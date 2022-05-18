@@ -285,63 +285,7 @@
 
         </div>
         <hr>
-        <!-- Inicia Modal #newplanner -->
-        <div class="modal fade" id="newplanner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" style="font-family: 'Josefin Sans', sans-serif;"><i class="bi bi-person-plus"></i><strong> Agregar Organizador</strong></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <p style="font-family: 'Josefin Sans', sans-serif;">Datos del Organizador</p>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Apellido Paterno" name="oe-apellido_p" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Apellido Materno" name="oe-apellido_m" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Nombre(s)" name="nombre" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="Correo-e" name="email" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="Teléfono" name="celular" required>
-                            </div>
-                        </div>
-                        <p style="font-family: 'Josefin Sans', sans-serif;">Datos Fiscales: </p>
-                        <div class="col-sm-8">
-                            <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="Razón Social" name="rs">
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="RFC" name="rfc" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-                </div>
-            </div>
-        </div>
-        <!-- Termina Modal #newplanner -->
+        
         <div class="table-responsive">
                     <table class="table table-hover table-bordered table-sm align-middle mt-4">
                         <thead style="background-color:#f7c6bf; color: #7B8DAB;">

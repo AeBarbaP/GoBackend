@@ -143,7 +143,7 @@
                         <p style="font-family: 'Josefin Sans', sans-serif;">Datos del Organizador</p>
                         <div class="col-sm-6">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="cambiarHidden1()">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Existente
                                 </label>
@@ -151,7 +151,7 @@
                         </div>
                         <div class="col-sm-6 mb-3">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick="cambiarHidden2()">
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Nuevo
                                 </label>
@@ -169,32 +169,32 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Apellido Paterno" name="oe-apellido_p" required>
+                                <input type="text" class="form-control rounded-4" placeholder="Apellido Paterno" name="oe-apellido_p" id="hiddenApellidoP" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Apellido Materno" name="oe-apellido_m" required>
+                                <input type="text" class="form-control rounded-4" placeholder="Apellido Materno" name="oe-apellido_m" id="hiddenApellidoM" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Nombre(s)" name="nombre" required>
+                                <input type="text" class="form-control rounded-4" placeholder="Nombre(s)" name="nombre" id="hiddenNombre" required>
                             </div>
                         </div>
                         <div class="col-sm-8">
                             <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="Correo-e" name="email" required>
+                                <input type="text" class="form-control rounded-4" placeholder="Correo-e" name="email" id="hiddenEmail" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="Teléfono" name="celular" required>
+                                <input type="text" class="form-control rounded-4" placeholder="Teléfono" name="celular" id="hiddenCelular" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="RFC" name="rfc">
+                                <input type="text" class="form-control rounded-4" placeholder="RFC" id="hiddenRFC" name="rfc">
                             </div>
                         </div>
                     </div>
@@ -547,6 +547,27 @@ $(function() {
         }
     });
 });
+</script>
+
+<script>
+    function cambiarHidden1(){
+        document.getElementById('exampleDataList').disabled = false;
+        document.getElementById('hiddenApellidoP').disabled = true;
+        document.getElementById('hiddenApellidoM').disabled = true;
+        document.getElementById('hiddenNombre').disabled = true;
+        document.getElementById('hiddenEmail').disabled = true;
+        document.getElementById('hiddenCelular').disabled = true;
+        document.getElementById('hiddenRFC').disabled = true;
+    }   
+    function cambiarHidden2(){
+        document.getElementById('exampleDataList').disabled = true;
+        document.getElementById('hiddenApellidoP').disabled = false;
+        document.getElementById('hiddenApellidoM').disabled = false;
+        document.getElementById('hiddenNombre').disabled = false;
+        document.getElementById('hiddenEmail').disabled = false;
+        document.getElementById('hiddenCelular').disabled = false;
+        document.getElementById('hiddenRFC').disabled = false;
+    }   
 </script>
 
 <style>

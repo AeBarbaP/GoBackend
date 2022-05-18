@@ -27,26 +27,18 @@ if ($resultado=mysqli_fetch_array($proceso)){
     $_SESSION['nombre']=$resultado['nombre'];
     $_SESSION['pwd']=$resultado['pwd'];
 
-      if($resultado['perfil']==1){
+      if($resultado['perfil']==1){ //admin
         echo '
         <script>alert("Bienvenido '.$resultado['nombre'].'");</script>';
         echo "<script type=\"text/javascript\">location.href='../index.php';</script>";
         }
     
-    elseif($resultado['perfil']==2){
+    elseif($resultado['perfil']==2){ //organizador
 
         echo "<script type=\"text/javascript\">location.href='../index.php';</script>";
         
-    
-    //echo "Sesión no exitosa";
-    //echo "<script type=\"text/javascript\">location.href='08_inicio.php';</script>";
     }
 
-    elseif($resultado['perfil']==3){
-
-        echo "<script type=\"text/javascript\">location.href='../dashboard.php';</script>";
-    }
-    
 
 }
     

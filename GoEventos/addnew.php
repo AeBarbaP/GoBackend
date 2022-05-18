@@ -333,7 +333,7 @@
                             </tr>
                         </thead>
                         <tbody id="myTable">
-                            <?php include('prcd/query_organizadores.php'); ?>
+                            <?php include('prcd/query_planners.php'); ?>
 
                             <?php
               $x = 0;

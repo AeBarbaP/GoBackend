@@ -126,12 +126,9 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="addnew.php"><i class="bi bi-folder-plus"></i> Agregar E/O</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a href="#" class="nav-link text-light" style="background-color: #A8A8A8" aria-current="page" data-bs-toggle="modal" data-bs-target="#agregarevento">Nuevo</a>
-                            </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link text-light" style="background-color: #A8A8A8" aria-current="page" data-bs-toggle="modal" data-bs-target="#agregarevento"><i class="bi bi-calendar2-plus"></i> Agregar Evento</a>
-                            </li> -->
+                                <a href="qrvalidar.php" class="nav-link text-light" style="background-color: #A8A8A8"><i class="bi bi-qr-code-scan"></i> Validar QR</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

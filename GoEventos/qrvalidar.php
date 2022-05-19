@@ -1,3 +1,42 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['nombre'])) {
+        if($_SESSION['perfil']==1){
+            // header('Location: javascript: history.go(-1)');
+        }
+        elseif($_SESSION['perfil']==2){
+            // header('Location: javascript: history.go(-1)');
+        }
+        elseif($_SESSION['perfil']==3){
+            // header('Location: javascript: history.go(-1)');
+        }
+    else{
+        header('Location:prcd/sort.php');
+    }
+    // Si esta identificado, en otras palabras existe la variable, le saludamos
+    // echo '
+    //     <script>
+    //         alert("Bienvenido '.$_SESSION['nombre'].'");
+    //     </script>';
+} else {
+    // En caso contrario redirigimos el visitante a otra página
+
+    echo '<script>
+    alert("Usuario no valido");
+    </script>';
+    header('Location: index.html');
+    header('Location: prcd/sort.php');
+    die();
+}
+
+    $id = $_SESSION['id'];
+    $perfil = $_SESSION['perfil'];
+    $nombre = $_SESSION['nombre'];
+
+    include('prcd/qconn/qc.php');
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -61,6 +100,8 @@
 <body class="d-flex flex-column min-vh-100 mt-3">
     <main class="container-fluid w-100 mt-5 mb-5">
         <div class="container-fluid w-100 mb-3">
+        <p class="h3">Bienvenido <strong><?php echo $nombre ?></strong></p>
+        <hr>  
         <nav class="navbar navbar-expand-md">
             <div class="container-fluid justify-content-center">
                 <div class="collapse navbar-collapse" id="navbarNav">

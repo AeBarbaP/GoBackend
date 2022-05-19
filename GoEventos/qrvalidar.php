@@ -133,119 +133,6 @@
         </nav>
         </div>
 
-        <!-- Inicia Modal #agregarevento -->
-        <div class="modal fade" id="agregarevento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" style="font-family: 'Josefin Sans', sans-serif;"><i class="bi bi-calendar2-plus"></i><strong> Agregar Evento</strong></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Nombre del Evento" name="e-nombre" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3" style="align-items:vertical">
-                                <select class="form-select" id="inputGroupSelect02">
-                                    <option selected>Selecciona...</option>
-                                    <option value="1">Evento Social</option>
-                                    <option value="2">Evento Deportivo</option>
-                                    <option value="3">Evento Masivo</option>
-                                    <option value="4">Congreso/Convención</option>
-                                    <option value="5">Reunión</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" 
-                                    placeholder="Lugar" name="e-lugar" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="date" class="form-control rounded-4" 
-                                    placeholder="Fecha" name="e-fecha" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="number" class="form-control rounded-4" 
-                                    placeholder="# Invitados" name="e-invitados" required>
-                            </div>
-                        </div>
-                        <p style="font-family: 'Josefin Sans', sans-serif;">Datos del Organizador</p>
-                        <div class="col-sm-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Existente
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Nuevo
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 mb-3">
-                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Escribe para buscar...">
-                            <datalist id="datalistOptions">
-                                <option value="San Francisco">
-                                <option value="New York">
-                                <option value="Seattle">
-                                <option value="Los Angeles">
-                                <option value="Chicago">
-                            </datalist>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Apellido Paterno" name="oe-apellido_p" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Apellido Materno" name="oe-apellido_m" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3 ">
-                                <input type="text" class="form-control rounded-4" placeholder="Nombre(s)" name="nombre" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="Correo-e" name="email" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="Teléfono" name="celular" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form mb-3">
-                                <input type="text" class="form-control rounded-4" placeholder="RFC" name="rfc">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-                </div>
-            </div>
-        </div>
-        <!-- Termina Modal #agregarevento -->
-
         <div class="p-4 p-md-5 mb-4 text-dark rounded">
 
             <div class="container-fluid rounded-3 p-1 mt-2">
@@ -253,7 +140,7 @@
                 <div class="mt-1">
                     <!-- Inicia Card container-->
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                             <a style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#examinarqr">
                                 <div class="card mb-3">
                                     <div class="row g-0">
@@ -295,7 +182,7 @@
                     <!-- Termina Card container -->
                 </div>
                 <!-- Inicia modal para subir invitación -->
-                <div class="modal fade" id="uploadinvitation" tabindex="-1" aria-labelledby="examinarqr" aria-hidden="true">
+                <div class="modal fade" id="examinarqr" tabindex="-1" aria-labelledby="examinarqr" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header" style="color: #f3a79c; font: size 12px; font-family: 'Josefin Sans', sans-serif;">
@@ -303,11 +190,13 @@
                                 id="exampleModalLabel"><strong>QR</strong></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
+                            
                             <div class="modal-body">
                                 <div class="input-group mb-3">
-                                    <p>Selecciona el código QR para validarlo</p>
+                                    <p class="mb-3">Selecciona el código QR para validarlo</p>
+                                    <p>
                                     <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03"
-                                        aria-label="Upload">
+                                        aria-label="Upload"></p>
                                 </div>
                             </div>
                             <div class="modal-footer">

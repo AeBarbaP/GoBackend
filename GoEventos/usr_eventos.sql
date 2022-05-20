@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-05-2022 a las 19:09:27
+-- Tiempo de generación: 20-05-2022 a las 19:40:47
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.28
 
@@ -37,6 +37,15 @@ CREATE TABLE `eventos` (
   `fecha_e` date NOT NULL,
   `id_organizador` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `eventos`
+--
+
+INSERT INTO `eventos` (`id`, `nombre_e`, `tipo_e`, `no_invitados`, `no_confirmados`, `status`, `fecha_e`, `id_organizador`) VALUES
+(1, 'Boda Xxx', '1', 50, 50, '1', '2022-05-20', 1),
+(2, 'Boda Xxx 2', '1', 50, 50, '1', '2022-05-20', 2),
+(3, 'Boda Xxx 3', '2', 50, 50, '1', '2022-05-20', 2);
 
 -- --------------------------------------------------------
 
@@ -100,6 +109,28 @@ CREATE TABLE `organizadores` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tipo_evento`
+--
+
+CREATE TABLE `tipo_evento` (
+  `id` int(11) NOT NULL,
+  `tipo` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tipo_evento`
+--
+
+INSERT INTO `tipo_evento` (`id`, `tipo`) VALUES
+(1, 'Evento social'),
+(2, 'Evento deportivo'),
+(3, 'Evento masivo'),
+(4, 'Congreso/Convención'),
+(5, 'Reunión');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usr`
 --
 
@@ -146,6 +177,12 @@ ALTER TABLE `organizadores`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `tipo_evento`
+--
+ALTER TABLE `tipo_evento`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usr`
 --
 ALTER TABLE `usr`
@@ -159,7 +196,7 @@ ALTER TABLE `usr`
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `invitados`
@@ -178,6 +215,12 @@ ALTER TABLE `invitados_secundarios`
 --
 ALTER TABLE `organizadores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tipo_evento`
+--
+ALTER TABLE `tipo_evento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usr`

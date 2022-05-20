@@ -151,7 +151,7 @@
                         <div class="col-sm-4">
                             <div class="form mb-3" style="align-items:vertical">
                                 <select class="form-select" id="inputGroupSelect02">
-                                    <option selected>Selecciona...</option>
+                                    <option selected>Tipo evento...</option>
                                     <option value="1">Evento Social</option>
                                     <option value="2">Evento Deportivo</option>
                                     <option value="3">Evento Masivo</option>

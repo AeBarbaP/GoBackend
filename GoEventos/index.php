@@ -227,6 +227,37 @@
                 <div class="mt-1">
                     <!-- Inicia Card container-->
                     <div class="row">
+                        <?php 
+                        include('prcd/query/qwery_eventos.php');
+                        while ($rowSqlEvent = $sqlResultEvent->fetch_assoc()){
+
+                            echo'
+                            <div class="col-sm-3">
+                                <a href="home_events.html" class="text-dark" style="text-decoration: none;">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-sm-4">
+                                            <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">'.$rowSqlEvent['nombre_e'].'</h5>
+                                                <p>Organizado por: '.$rowSqlEvent['id_organizador'].'</p>
+                                                <p class="card-text">Status: '.$rowSqlEvent['status'].' <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
+                                                <p class="card-text mt-0"># de Invitados: ## <br># de Confirmados:</p> 
+                                                <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>';
+                            
+
+                            
+                        }
+
+                        ?>
                         <div class="col-sm-3">
                             <a href="home_events.html" class="text-dark" style="text-decoration: none;">
                             <div class="card mb-3" style="max-width: 540px;">
@@ -247,6 +278,7 @@
                             </div>
                             </a>
                         </div>
+
                         <div class="col-sm-3"> 
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-0">

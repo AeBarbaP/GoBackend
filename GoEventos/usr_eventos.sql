@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-05-2022 a las 20:24:59
+-- Tiempo de generación: 20-05-2022 a las 22:59:16
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.28
 
@@ -63,18 +63,19 @@ CREATE TABLE `invitados` (
   `qr` varchar(90) DEFAULT NULL,
   `etiqueta` varchar(50) DEFAULT NULL,
   `tipo_invitado` int(11) NOT NULL,
-  `invitado_eje` int(11) NOT NULL COMMENT 'Para ligar al invitado eje con el secundario'
+  `invitado_eje` int(11) NOT NULL COMMENT 'Para ligar al invitado eje con el secundario',
+  `id_evento` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `invitados`
 --
 
-INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`, `tipo_invitado`, `invitado_eje`) VALUES
-(1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, NULL, 0, 0),
-(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, NULL, 0, 0),
-(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, NULL, 0, 0),
-(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, NULL, 0, 0);
+INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`, `tipo_invitado`, `invitado_eje`, `id_evento`) VALUES
+(1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, NULL, 0, 0, 1),
+(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, NULL, 0, 0, 1),
+(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, NULL, 0, 0, 1),
+(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, NULL, 0, 0, 1);
 
 -- --------------------------------------------------------
 

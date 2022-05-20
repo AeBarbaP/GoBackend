@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-05-2022 a las 19:40:47
+-- Tiempo de generación: 20-05-2022 a las 20:24:59
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.28
 
@@ -31,8 +31,6 @@ CREATE TABLE `eventos` (
   `id` int(11) NOT NULL,
   `nombre_e` varchar(50) NOT NULL,
   `tipo_e` varchar(20) NOT NULL,
-  `no_invitados` int(11) NOT NULL,
-  `no_confirmados` int(11) NOT NULL,
   `status` varchar(10) NOT NULL,
   `fecha_e` date NOT NULL,
   `id_organizador` int(11) NOT NULL
@@ -42,10 +40,10 @@ CREATE TABLE `eventos` (
 -- Volcado de datos para la tabla `eventos`
 --
 
-INSERT INTO `eventos` (`id`, `nombre_e`, `tipo_e`, `no_invitados`, `no_confirmados`, `status`, `fecha_e`, `id_organizador`) VALUES
-(1, 'Boda Xxx', '1', 50, 50, '1', '2022-05-20', 1),
-(2, 'Boda Xxx 2', '1', 50, 50, '1', '2022-05-20', 2),
-(3, 'Boda Xxx 3', '2', 50, 50, '1', '2022-05-20', 2);
+INSERT INTO `eventos` (`id`, `nombre_e`, `tipo_e`, `status`, `fecha_e`, `id_organizador`) VALUES
+(1, 'Boda Xxx', '1', '1', '2022-05-20', 1),
+(2, 'Boda Xxx 2', '1', '1', '2022-05-20', 2),
+(3, 'Boda Xxx 3', '2', '1', '2022-05-20', 2);
 
 -- --------------------------------------------------------
 
@@ -63,18 +61,20 @@ CREATE TABLE `invitados` (
   `no_invitados` int(11) DEFAULT NULL,
   `mesa` int(11) DEFAULT NULL,
   `qr` varchar(90) DEFAULT NULL,
-  `etiqueta` varchar(50) DEFAULT NULL
+  `etiqueta` varchar(50) DEFAULT NULL,
+  `tipo_invitado` int(11) NOT NULL,
+  `invitado_eje` int(11) NOT NULL COMMENT 'Para ligar al invitado eje con el secundario'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `invitados`
 --
 
-INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`) VALUES
-(1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, NULL),
-(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, NULL),
-(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, NULL),
-(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, NULL);
+INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`, `tipo_invitado`, `invitado_eje`) VALUES
+(1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, NULL, 0, 0),
+(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, NULL, 0, 0),
+(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, NULL, 0, 0),
+(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, NULL, 0, 0);
 
 -- --------------------------------------------------------
 

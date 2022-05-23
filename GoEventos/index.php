@@ -242,10 +242,20 @@
                                         <div class="col-sm-8">
                                             <div class="card-body">
                                                 <h5 class="card-title">'.$rowSqlEvent['nombre_e'].'</h5>
-                                                <p>Organizado por: '.$rowSqlEvent['id_organizador'].'</p>
-                                                <p class="card-text">Status: '.$rowSqlEvent['status'].' <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
-                                                <p class="card-text mt-0"># de Invitados: ## <br># de Confirmados:</p> 
-                                                <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
+                                                <p>Organizado por: '.$rowSqlEvent['id_organizador'].'</p>';
+
+                                                if($rowSqlEvent['status'] == 1){
+                                                    echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
+                                                }
+                                                else{
+                                                    echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Inactivo</i></p>';
+                                                }
+                                               
+                                                $sqlEvent = "SELECT COUNT FROM invitados AS contarInv WHERE id_evento='$idEvento'";
+$sqlResultEvent = $conn->query($sqlEvent);
+                                                
+                                                echo '<p class="card-text mt-0"># de Invitados: ## <br># de Confirmados:</p> 
+                                                <p class="card-text"><small class="text-muted">Evento creado: '.$rowSqlEvent['fecha_e'].'</small></p>
                                             </div>
                                         </div>
                                     </div>

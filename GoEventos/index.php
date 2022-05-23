@@ -250,11 +250,15 @@
                                                 else{
                                                     echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Inactivo</i></p>';
                                                 }
-                                               
-                                                $sqlEvent = "SELECT COUNT FROM invitados AS contarInv WHERE id_evento='$idEvento'";
-$sqlResultEvent = $conn->query($sqlEvent);
+                                                $idEvento = $rowSqlEvent['id'];
                                                 
-                                                echo '<p class="card-text mt-0"># de Invitados: ## <br># de Confirmados:</p> 
+                                                $sqlEvent = "SELECT * FROM invitados WHERE id_evento='$idEvento'";
+                                                $sqlResultEvent = $conn->query($sqlEvent);
+                                                $fila = $sqlResultEvent->fetch_assoc();
+                                                $rowInvitado = $fila->num_rows;
+                                                echo $rowInvitado;
+                                                
+                                                echo '<p class="card-text mt-0"># de Invitados: '.$rowInvitado.' <br># de Confirmados:</p> 
                                                 <p class="card-text"><small class="text-muted">Evento creado: '.$rowSqlEvent['fecha_e'].'</small></p>
                                             </div>
                                         </div>

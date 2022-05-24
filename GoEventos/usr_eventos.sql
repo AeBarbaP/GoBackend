@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
--- https://www.phpmyadmin.net/
+-- version 4.5.2
+-- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-05-2022 a las 22:59:16
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.4.28
+-- Tiempo de generación: 24-05-2022 a las 03:32:43
+-- Versión del servidor: 10.1.16-MariaDB
+-- Versión de PHP: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -31,7 +30,7 @@ CREATE TABLE `eventos` (
   `id` int(11) NOT NULL,
   `nombre_e` varchar(50) NOT NULL,
   `tipo_e` varchar(20) NOT NULL,
-  `status` varchar(10) NOT NULL,
+  `status_e` varchar(10) NOT NULL,
   `fecha_e` date NOT NULL,
   `id_organizador` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -40,9 +39,9 @@ CREATE TABLE `eventos` (
 -- Volcado de datos para la tabla `eventos`
 --
 
-INSERT INTO `eventos` (`id`, `nombre_e`, `tipo_e`, `status`, `fecha_e`, `id_organizador`) VALUES
+INSERT INTO `eventos` (`id`, `nombre_e`, `tipo_e`, `status_e`, `fecha_e`, `id_organizador`) VALUES
 (1, 'Boda Xxx', '1', '1', '2022-05-20', 1),
-(2, 'Boda Xxx 2', '1', '1', '2022-05-20', 2),
+(2, 'Boda Xxx 2', '1', '1', '2022-05-20', 1),
 (3, 'Boda Xxx 3', '2', '1', '2022-05-20', 2);
 
 -- --------------------------------------------------------
@@ -64,18 +63,19 @@ CREATE TABLE `invitados` (
   `etiqueta` varchar(50) DEFAULT NULL,
   `tipo_invitado` int(11) NOT NULL,
   `invitado_eje` int(11) NOT NULL COMMENT 'Para ligar al invitado eje con el secundario',
-  `id_evento` int(11) NOT NULL
+  `id_evento` int(11) NOT NULL,
+  `confirmacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `invitados`
 --
 
-INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`, `tipo_invitado`, `invitado_eje`, `id_evento`) VALUES
-(1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, NULL, 0, 0, 1),
-(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, NULL, 0, 0, 1),
-(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, NULL, 0, 0, 1),
-(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, NULL, 0, 0, 1);
+INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`, `tipo_invitado`, `invitado_eje`, `id_evento`, `confirmacion`) VALUES
+(1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, NULL, 0, 0, 1, 1),
+(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, NULL, 0, 0, 1, 0),
+(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, NULL, 0, 0, 1, 0),
+(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, NULL, 0, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -198,38 +198,31 @@ ALTER TABLE `usr`
 --
 ALTER TABLE `eventos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT de la tabla `invitados`
 --
 ALTER TABLE `invitados`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT de la tabla `invitados_secundarios`
 --
 ALTER TABLE `invitados_secundarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT de la tabla `organizadores`
 --
 ALTER TABLE `organizadores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT de la tabla `tipo_evento`
 --
 ALTER TABLE `tipo_evento`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT de la tabla `usr`
 --
 ALTER TABLE `usr`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

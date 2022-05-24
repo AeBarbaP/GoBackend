@@ -15,10 +15,10 @@
         header('Location:prcd/sort.php');
     }
     // Si esta identificado, en otras palabras existe la variable, le saludamos
-    // echo '
-    //     <script>
-    //         alert("Bienvenido '.$_SESSION['nombre'].'");
-    //     </script>';
+        // echo '
+        //     <script>
+        //         alert("Bienvenido '.$_SESSION['nombre'].'");
+        //     </script>';
 } else {
     // En caso contrario redirigimos el visitante a otra página
 
@@ -244,21 +244,24 @@
                                                 <h5 class="card-title">'.$rowSqlEvent['nombre_e'].'</h5>
                                                 <p>Organizado por: '.$rowSqlEvent['id_organizador'].'</p>';
 
-                                                if($rowSqlEvent['status'] == 1){
+                                                if($rowSqlEvent['status_e'] == 1){
                                                     echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
                                                 }
                                                 else{
                                                     echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Inactivo</i></p>';
                                                 }
+                                                
                                                 $idEvento = $rowSqlEvent['id'];
                                                 
-                                                $sqlEvent = "SELECT * FROM invitados WHERE id_evento='$idEvento'";
-                                                $sqlResultEvent = $conn->query($sqlEvent);
-                                                $fila = $sqlResultEvent->fetch_assoc();
-                                                $rowInvitado = $fila->num_rows;
-                                                echo $rowInvitado;
+                                                $sqlContarEvento = "SELECT * FROM invitados WHERE id_evento = '$idEvento'";
+                                                $sqlResultContarE = $conn->query($sqlContarEvento);
+                                                $rowInvitado = $sqlResultContarE->num_rows;
+
+                                                $sqlContarConfirmado = "SELECT * FROM invitados WHERE id_evento = '$idEvento' AND confirmacion = 1";
+                                                $sqlResultContarConfirmado = $conn->query($sqlContarConfirmado);
+                                                $rowConfirmado = $sqlResultContarConfirmado->num_rows;
                                                 
-                                                echo '<p class="card-text mt-0"># de Invitados: '.$rowInvitado.' <br># de Confirmados:</p> 
+                                                echo '<p class="card-text mt-0"># de Invitados: '.$rowInvitado.' <br># de Confirmados: '.$rowConfirmado.'</p> 
                                                 <p class="card-text"><small class="text-muted">Evento creado: '.$rowSqlEvent['fecha_e'].'</small></p>
                                             </div>
                                         </div>

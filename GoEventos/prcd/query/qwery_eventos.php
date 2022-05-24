@@ -1,7 +1,6 @@
 <?php
 
-
-$sqlEvent = "SELECT * FROM eventos WHERE id_organizador='$id' AND status = 1";
+$sqlEvent = "SELECT * FROM eventos WHERE id_organizador='$id' AND status_e = 1";
 $sqlResultEvent = $conn->query($sqlEvent);
 // $rowSqlEvent = "";
 // while ($rowSqlEvent = $sqlResultEvent->fetch_assoc());
@@ -13,3 +12,5 @@ $sqlResultEvent = $conn->query($sqlEvent);
 
 // }
 // $num_invitados = contarEventos();
+
+?>

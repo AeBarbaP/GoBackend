@@ -12,9 +12,11 @@
     $nombre = $_POST['nombre'];
     $celular = $_POST['celular'];
     $email = $_POST['email'];
+    $evento = $_POST['evento'];
+    $tipo_invitado = 1;
 
 
-    $sqlInsert ="INSERT INTO invitados (apellido_p,apellido_m,nombre,celular,email) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email')";
+    $sqlInsert ="INSERT INTO invitados (apellido_p,apellido_m,nombre,celular,email,tipo_invitado,id_evento) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email','$tipo_invitado','$evento')";
     $resultadosqlInsert = $conn->query($sqlInsert);
 
     if($resultadosqlInsert){
@@ -24,7 +26,7 @@
             title: 'Invitado agregado',
             text: 'Se agregó un invitado eje al evento',
             footer: 'Desarrollado por: XXXX XXX XXX</a>'
-        }).then(function(){window.location='../home_events.php';});</script>";
+        }).then(function(){window.location='../home_events.php?id=".$evento."';});</script>";
         }
         else{
         echo 'No se registró la actividad';

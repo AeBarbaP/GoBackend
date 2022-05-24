@@ -136,6 +136,7 @@
                         <div class="col-sm-4">
                             <form action="prcd/query_agregar_invitados.php" method="post">
                                 <div class="form-floating mb-3 ">
+                                    <input type="text" value="<?php echo $rowSqlEvent['id'] ?>" name="evento" hidden>
                                     <input type="text" class="form-control rounded-4" id="floatingPassword"
                                         placeholder="Apellido Paterno" name="apellido_p" required>
                                     <label for="floatingPassword">Apellido Paterno</label>

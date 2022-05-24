@@ -244,10 +244,15 @@
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="card-body">
-                                                <h5 class="card-title">'.$rowSqlEvent['nombre_e'].'</h5>
-                                                <p>Organizado por: '.$rowSqlEvent['id_organizador'].'</p>';
+                                                <h5 class="card-title">'.$rowSqlEvent['nombre_e'].'</h5>';
+                                                
+                                                $idOrganizador = $rowSqlEvent['id_organizador'];
+                                                $sqlOrganizador = "SELECT * FROM organizadores WHERE id = '$idOrganizador'";
+                                                $sqlResultOrganizador = $conn->query($sqlOrganizador);
+                                                $rowSqlOrganizador = $sqlResultOrganizador->fetch_assoc();
+                                                echo '<p>Organizado por: '.$rowSqlOrganizador['nombres'].' '.$rowSqlOrganizador['apellido_p'].' '.$rowSqlOrganizador['apellido_m'].'</p>';
 
-                                                if($rowSqlEvent['status_e'] == 1){
+                                               if($rowSqlEvent['status_e'] == 1){
                                                     echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-success"> Activo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
                                                 }
                                                 else{

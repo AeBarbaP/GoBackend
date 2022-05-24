@@ -1,0 +1,271 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['nombre'])) {
+        if($_SESSION['perfil']==1){
+            // header('Location: javascript: history.go(-1)');
+        }
+        elseif($_SESSION['perfil']==2){
+            // header('Location: javascript: history.go(-1)');
+        }
+        elseif($_SESSION['perfil']==3){
+            // header('Location: javascript: history.go(-1)');
+        }
+    else{
+        header('Location:prcd/sort.php');
+    }
+    // Si esta identificado, en otras palabras existe la variable, le saludamos
+        // echo '
+        //     <script>
+        //         alert("Bienvenido '.$_SESSION['nombre'].'");
+        //     </script>';
+} else {
+    // En caso contrario redirigimos el visitante a otra página
+
+    echo '<script>
+    alert("Usuario no valido");
+    </script>';
+    header('Location: index.html');
+    header('Location: prcd/sort.php');
+    die();
+}
+    include('prcd/qconn/qc.php');
+    $id = $_SESSION['id'];
+    $perfil = $_SESSION['perfil'];
+    $nombre = $_SESSION['nombre'];
+    $idEvent = $_REQUEST['id'];
+
+    $sqlEvent = "SELECT * FROM eventos WHERE id = '$idEvent'";
+    $sqlResultEvent = $conn->query($sqlEvent);
+    $rowSqlEvent = $sqlResultEvent->fetch_assoc();
+
+    date_default_timezone_set('America/Mexico_City');
+                  setlocale(LC_TIME, 'es_MX.UTF-8');
+
+?>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Smart-Event · by GO Ax's</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="blog.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <link href="navbar-top-fixed.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
+    <div class="container-fluid justify-content-center">
+      <a class="navbar-brand" id="enombre">
+        <strong>
+          <?php echo $rowSqlEvent['nombre_e']?>
+        </strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container mt-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="home_events.html">Evento</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Invitación</li>
+        <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+      </ol>
+    </nav>
+    <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
+      <div class="col-md-6 px-0">
+        <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Invitación Digital</strong></a>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-sm-12">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+          <div class="col-sm p-4 d-flex flex-column position-static">
+            <h3 class="mb-4" style="font-family: 'Josefin Sans', sans-serif;">Invitación Digital</h3>
+            <br>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form mb-3 ">
+                  <p class="card-text mb-auto">Sube el diseño de la invitación para tu evento aquí...</p>
+                  <p class="text-end">
+                    <button class="btn btn-outline-secondary mt-3" type="button" data-bs-toggle="modal"
+                      data-bs-target="#uploadinvitation"><i class="bi bi-filetype-pdf"></i>
+                      Agregar</button>
+                  </p>
+                  <br>
+                  <p>Este es un ejemplo de texto para enviar al correo electrónico de los invitados junto con el diseño
+                    que proporcionaste y el código QR si deseas editarlo da click sobre el área de texto</p>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Texto de para el correo de
+                      invitación:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <p>Nota: el código QR se agregará al final del documento de invitación que cargaste, junto con la
+                    información del invitado y sus acompañantes</p>
+                </div>
+
+                <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i
+                      class="bi bi-x-diamond"></i> Guardar</button></p>
+              </div>
+
+              <div class="col-sm-6 text-end">
+                <a data-bs-toggle="modal" data-bs-target="#invitacionpdf">
+                  <img class="mb-4" src="img/invitacion.jpg"
+                    style="width: 100%; height: auto; object-fit: cover; object-position:center; background-repeat: no-repeat;"
+                    alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <p>Eventos desarrollado por: Gold AXs.
+      </p>
+      <p>
+        <a href="#">Ir arriba</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+
+<script>
+  var id = 0;
+
+  function cambioCeldas(valor) {
+
+
+    var id = valor;
+    document.getElementById("listadoInvitados" + id).innerHTML = "";
+    var x = document.getElementById("cambioCeldasInput" + id).value;
+    // alert(x);
+    for (let i = 0; i < x; i++) {
+
+      document.getElementById("listadoInvitados" + id).innerHTML +=
+        '<div class="input-group mb-1 mt-1 w-50"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input name="nombreinvitados[]" type="text" class="form-control w-50" placeholder="Nombre completo" aria-label="Username" aria-describedby="basic-addon1" value=""></input></div>';
+    }
+
+  }
+
+  function bloquear(val) {
+    var id = val;
+    document.getElementById('cambioCeldasInput' + id).readOnly = true;
+  }
+
+  function ValidaSoloNumeros() {
+    if ((event.keyCode < 48) || (event.keyCode > 57))
+      event.returnValue = false;
+  }
+</script>
+
+<!-- Inicia modal para subir invitación -->
+<div class="modal fade" id="uploadinvitation" tabindex="-1" aria-labelledby="uploadinvitation" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="color: #f3a79c; font: size 12px; font-family: 'Josefin Sans', sans-serif;">
+        <h5 class="modal-title" style="color: #f3a79c; font: size 16px; font-family: 'Josefin Sans', sans-serif;"
+          id="exampleModalLabel"><strong>Cargar Diseño de Invitación</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <p>Selecciona el archivo .PDF para cargar el diseño de la invitación para tu evento en el sistema.</p>
+          <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03"
+            aria-label="Upload">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termina modal para subir invitación-->
+
+
+<style>
+  /* normal web */
+  #enombre {
+    font-size: 50px;
+    color: #f3a79c;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  /* tablets, celular horizontal y otros dispositivos */
+  @media screen and (max-width: 992px) {
+    #enombre {
+      font-size: 100%;
+    }
+  }
+
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  /* CELULAR */
+  @media screen and (max-width: 600px) {
+    #enombre {
+      font-size: 120%;
+      text-align: center;
+    }
+  }
+</style>

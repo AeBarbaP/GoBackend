@@ -236,7 +236,7 @@
 
                             echo'
                             <div class="col-sm-3">
-                                <a href="home_events.html" class="text-dark" style="text-decoration: none;">
+                                <a href="home_config.php?id='.$rowSqlEvent['id'].'" class="text-dark" style="text-decoration: none;">
                                 <div class="card mb-3" style="max-width: 540px;">
                                     <div class="row g-0">
                                         <div class="col-sm-4">

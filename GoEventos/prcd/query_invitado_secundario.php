@@ -1,7 +1,7 @@
 <?php
     include('qconn/qc.php');
 
-    $sqlQuerySecondary ="SELECT * FROM invitados_secundarios WHERE clave_ext = '$id'";
+    $sqlQuerySecondary ="SELECT * FROM invitados WHERE invitado_eje = '$idSecondary' AND id_evento = '$idEvent'";
     $resultadosqlQuerySecondary = $conn->query($sqlQuerySecondary);
 
 ?>

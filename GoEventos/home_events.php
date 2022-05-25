@@ -255,7 +255,7 @@
             $sqlResultSecondary = $conn->query($sqlSecondary);
             $filaSecondary = $sqlResultSecondary->num_rows;
             
-            echo '<td><a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '"><span class="badge bg-warning text-dark">' . $filaSecondary. '</span></a></td>
+            echo '<td><a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '&&id2='.$idEvent.'"><span class="badge bg-warning text-dark">' . $filaSecondary. '</span></a></td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#AgregarAcomp' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i></span></a></td>
             <td><span class="badge bg-warning text-dark">' . $row_sqlQuery['mesa'] . '</span></td>
@@ -413,6 +413,8 @@
                 <p class="text-center pt-3">
                   <i class="bi bi-card-checklist"></i> Ver listado de acompañantes <a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '"><i class="bi bi-arrow-right-circle-fill"></i></a>
                 <p>
+                <p>';
+                echo '</p>
               </div>
 
             </div>
@@ -426,6 +428,16 @@
       </div>
       ';
               }
+
+function InvSecondary(){
+        $sqlSecondary ="SELECT * FROM invitados WHERE id_evento = $idEvent AND tipo_invitado = 2";
+        $sqlResultSecondary = $conn->query($sqlSecondary);
+        
+        while($rowSecondary->fetch_assoc()){
+          echo'<p>- '.$rowSecondary['nombre'].'</p>';
+        }
+        echo'</hr>';
+}
 
               ?>
 

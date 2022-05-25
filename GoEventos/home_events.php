@@ -248,8 +248,14 @@
             <td>' . $row_sqlQuery['apellido_m'] . '</td>
             <td>' . $row_sqlQuery['nombre'] . '</td>
             <td>' . $row_sqlQuery['celular'] . '</td>
-            <td>' . $row_sqlQuery['email'] . '</td>
-            <td><a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '"><span class="badge bg-warning text-dark">' . $row_sqlQuery['no_invitados'] . '</span></a></td>
+            <td>' . $row_sqlQuery['email'] . '</td>';
+
+            $idSeconday = $row_sqlQuery['id'];
+            $sqlSecondary ="SELECT * FROM invitados WHERE id_evento = $idEvent AND tipo_invitado = 2";
+            $sqlResultSecondary = $conn->query($sqlSecondary);
+            $filaSecondary = $sqlResultSecondary->num_rows;
+            
+            echo '<td><a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '"><span class="badge bg-warning text-dark">' . $filaSecondary. '</span></a></td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#AgregarAcomp' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i></span></a></td>
             <td><span class="badge bg-warning text-dark">' . $row_sqlQuery['mesa'] . '</span></td>

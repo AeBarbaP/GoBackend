@@ -249,10 +249,10 @@
                                                 echo '<p>Organizado por: '.$rowSqlOrganizador['nombres'].' '.$rowSqlOrganizador['apellido_p'].' '.$rowSqlOrganizador['apellido_m'].'</p>';
 
                                                if($rowSqlEvent_c['status_e'] == 4){
-                                                    echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Cancelados</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
+                                                    echo '<p class="card-text">Status: <i class="bi bi-x-circle-fill"></i> Cancelados</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
                                                 }
                                                 else{
-                                                    echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Inactivo</i></p>';
+                                                    echo '<p class="card-text">Status: <i class="bi bi-x-circle-fill"></i> Inactivo</i></p>';
                                                 }
                                                 
                                                 $idEvento = $rowSqlEvent_c['id'];

@@ -228,7 +228,6 @@
                                 <th scope="col">Celular</th>
                                 <th scope="col">Correo Electrónico</th>
                                 <th scope="col"># Invitados</th>
-                                <th scope="col">Acompañante</th>
                                 <th scope="col">Mesa</th>
                                 <th scope="col">Editar</th>
                             </tr>

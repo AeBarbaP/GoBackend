@@ -202,7 +202,7 @@
                 </div><!-- table responsive -->
             </div>
 
-            <p class="mt-3"><a href="home_events.php" class="btn btn-primary"><i
+            <p class="mt-3"><a href="home_events.php?id=<?php echo $idEvent ?>" class="btn btn-primary"><i
                         class="bi bi-arrow-left-circle-fill"></i> Regresar</a></p>
 
     </main>

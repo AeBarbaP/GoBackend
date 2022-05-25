@@ -226,78 +226,59 @@
                 <div class="mt-1">
                     <!-- Inicia Card container-->
                     <div class="row">
-                        <div class="col-sm-3">
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-sm-4">
-                                        <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Nombre del Evento</h5>
-                                            <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-calendar2-x text-danger"> Cancelado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
-                                            <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
-                                            <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
+                    <?php 
+                        include('prcd/query/qwery_eventos.php');
+                        while ($rowSqlEvent_c = $sqlResultEvent_c->fetch_assoc()){
+
+                            echo'
+                            <div class="col-sm-3">
+                                <a href="home_config.php?id='.$rowSqlEvent_c['id'].'" class="text-dark" style="text-decoration: none;">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-sm-4">
+                                            <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">'.$rowSqlEvent_c['nombre_e'].'</h5>';
+                                                
+                                                $idOrganizador = $rowSqlEvent_c['id_organizador'];
+                                                $sqlOrganizador = "SELECT * FROM organizadores WHERE id = '$idOrganizador'";
+                                                $sqlResultOrganizador = $conn->query($sqlOrganizador);
+                                                $rowSqlOrganizador = $sqlResultOrganizador->fetch_assoc();
+                                                echo '<p>Organizado por: '.$rowSqlOrganizador['nombres'].' '.$rowSqlOrganizador['apellido_p'].' '.$rowSqlOrganizador['apellido_m'].'</p>';
+
+                                               if($rowSqlEvent_c['status_e'] == 4){
+                                                    echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Cancelados</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
+                                                }
+                                                else{
+                                                    echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Inactivo</i></p>';
+                                                }
+                                                
+                                                $idEvento = $rowSqlEvent_c['id'];
+                                                
+                                                $sqlContarEvento = "SELECT * FROM invitados WHERE id_evento = '$idEvento'";
+                                                $sqlResultContarE = $conn->query($sqlContarEvento);
+                                                $rowInvitado = $sqlResultContarE->num_rows;
+
+                                                $sqlContarConfirmado = "SELECT * FROM invitados WHERE id_evento = '$idEvento' AND confirmacion = 1";
+                                                $sqlResultContarConfirmado = $conn->query($sqlContarConfirmado);
+                                                $rowConfirmado = $sqlResultContarConfirmado->num_rows;
+                                                
+                                                echo '<p class="card-text mt-0"># de Invitados: '.$rowInvitado.' <br># de Confirmados: '.$rowConfirmado.'</p> 
+                                                <p class="card-text"><small class="text-muted">Evento creado: '.$rowSqlEvent_c['fecha_e'].'</small></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3"> 
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-sm-4">
-                                        <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="card-body">
-                                        <h5 class="card-title">Nombre del Evento</h5>
-                                            <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-calendar2-x text-danger"> Cancelado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
-                                            <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
-                                            <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3"> 
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-2">
-                                    <div class="col-sm-4 ">
-                                        <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="card-body">
-                                        <h5 class="card-title">Nombre del Evento</h5>
-                                            <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-calendar2-x text-danger"> Cancelado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
-                                            <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
-                                            <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3"> 
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-sm-4">
-                                        <img src="img/evento.png" style="width: 100%; height: 233px; object-fit: cover; object-position:center; background-repeat: no-repeat;" alt="...">
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="card-body">
-                                        <h5 class="card-title">Nombre del Evento</h5>
-                                            <p>Organizado por:</p>
-                                            <p class="card-text">Status: <i class="bi bi-calendar2-x text-danger"> Cancelado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->
-                                            <p class="card-text mt-0"># de Invitados: <br># de Confirmados:</p> 
-                                            <p class="card-text"><small class="text-muted">Evento creado: DD/MM/AA</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                </a>
+                            </div>';
+                            
+
+                            
+                        }
+
+                        ?>
                     </div>
                     <!-- Termina Card container -->
                 </div>

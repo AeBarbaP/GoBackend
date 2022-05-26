@@ -251,7 +251,7 @@
                                                 echo '<p>Organizado por: '.$rowSqlOrganizador['nombres'].' '.$rowSqlOrganizador['apellido_p'].' '.$rowSqlOrganizador['apellido_m'].'</p>';
 
                                                if($rowSqlEvent_i['status_e'] == 2){
-                                                    echo '<p class="card-text">Status: <i class="bi bi-toggle2-off"></i> Inactivo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
+                                                    echo '<p class="card-text">Status: <i class="bi bi-toggle2-off text-warning"> Inactivo</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
                                                 }
                                                 else{
                                                     echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Inactivo</i></p>';

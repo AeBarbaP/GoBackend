@@ -252,7 +252,7 @@
                                                     echo '<p class="card-text">Status: <i class="bi bi-lightbulb-off-fill text-danger"> Bloqueado</i></p><!-- OJO Status disponibles: Activo, Cancelado, Bloqueado y Finalizado con 4 flags-->';
                                                 }
                                                 else{
-                                                    echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Inactivo</i></p>';
+                                                    echo '<p class="card-text">Status: <i class="bi bi-check-circle-fill text-danger"> Otro</i></p>';
                                                 }
                                                 
                                                 $idEvento = $rowSqlEvent_b['id'];

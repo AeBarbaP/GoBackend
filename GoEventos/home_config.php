@@ -82,6 +82,10 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="blog.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -89,7 +93,7 @@
     <header class="blog-header py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-sm-12 text-center">
-          <a id="enombre"><?php echo $rowSqlEvent['nombre_e']?></a>
+          <a style="font-family: 'Josefin Sans', sans-serif;" id="enombre"><strong><?php echo $rowSqlEvent['nombre_e']?></strong></a>
         </div>
       </div>
     </header>

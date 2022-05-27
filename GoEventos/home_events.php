@@ -111,8 +111,8 @@
     <main class="container mt-5 mb-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-        <li class="breadcrumb-item"><a href="home_events.html">Evento</a></li>
+        <li class="breadcrumb-item"><a href="index.php?id=<?php echo $idEvent ?>">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="home_config.php?id=<?php echo $idEvent ?>">Evento</a></li>
         <li class="breadcrumb-item active" aria-current="page">Invitados</li>
         <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
       </ol>

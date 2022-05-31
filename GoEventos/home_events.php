@@ -269,7 +269,7 @@
             $sqlResultConfirmados = $conn->query($sqlConfirmados);
             $filaConfirmados = $sqlResultConfirmados->num_rows;
 
-            echo '<td>'.$TotalInvitados.' / ''</td>
+            echo '<td>'.$TotalInvitados.' / '.$filaConfirmados.'</td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#editarInv' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i></span></a></td>
 

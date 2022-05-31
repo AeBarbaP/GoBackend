@@ -251,11 +251,11 @@
             <td>' . $row_sqlQuery['email'] . '</td>';
 
             $idSeconday = $row_sqlQuery['id'];
-            $sqlSecondary ="SELECT * FROM invitados WHERE id_evento = $idEvent AND tipo_invitado = 2";
+            $sqlSecondary ="SELECT * FROM invitados WHERE id_evento = $idEvent AND invitado_eje = $idSeconday AND tipo_invitado = 2";
             $sqlResultSecondary = $conn->query($sqlSecondary);
             $filaSecondary = $sqlResultSecondary->num_rows;
             
-            echo '<td><a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '&&id2='.$idEvent.'"><span class="badge bg-warning text-dark">' . $filaSecondary. '</span></a></td>
+            echo '<td><a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '&id2='.$idEvent.'"><span class="badge bg-warning text-dark">' . $filaSecondary. '</span></a></td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#AgregarAcomp' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i></span></a></td>
             <td><span class="badge bg-warning text-dark">' . $row_sqlQuery['mesa'] . '</span></td>

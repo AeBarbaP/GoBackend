@@ -125,8 +125,7 @@
             <h3 class="mb-0">Lista de Invitados</h3>
             <!-- <div class="mb-1 text-muted">Nov 12</div> -->
             <p class="card-text lead my-3">Gestiona aquí la lista de invitados para la generación de los QR de Acceso
-              para
-              el evento.</p>
+              para el evento.</p>
             <a href="home_events.php?id=<?php echo $idEvent ?>">Ingresar</a>
           </div>
           <div class="col-auto d-none d-lg-block">

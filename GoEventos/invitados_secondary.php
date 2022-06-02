@@ -125,8 +125,7 @@
     </nav>
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
             <div class="col-sd-6 px-0">
-                <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de
-                        Invitados</strong></a>
+                <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de +Invitados</strong></a>
             </div>
         </div>
 

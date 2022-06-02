@@ -93,7 +93,7 @@
     <header class="blog-header py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-sm-12 text-center">
-          <a style="font-family: 'Josefin Sans', sans-serif;" id="enombre"><strong><?php echo $rowSqlEvent['nombre_e']?></strong></a>
+          <a style="font-family: 'Josefin Sans', sans-serif;" id="enombre"><strong><?php echo $rowSqlEvent['nombre_e']?></strong></a> <!-- Nombre del Evento -->
         </div>
       </div>
     </header>

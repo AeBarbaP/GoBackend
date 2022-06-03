@@ -119,8 +119,7 @@
     </nav>
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
             <div class="col-md-6 px-0">
-                <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de
-                        Invitados</strong></a>
+                <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de Invitados</strong></a>
             </div>
         </div>
 
@@ -269,7 +268,7 @@
             $sqlResultConfirmados = $conn->query($sqlConfirmados);
             $filaConfirmados = $sqlResultConfirmados->num_rows;
 
-            echo '<td>'.$TotalInvitados.' / ''</td>
+            echo '<td>'.$TotalInvitados.' / '.$filaConfirmados.'</td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#editarInv' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i></span></a></td>
 

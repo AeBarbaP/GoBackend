@@ -199,7 +199,8 @@
                         </div>
 
                         <form action="prcd/query_editar_acomp.php" method="post">
-                        <input value="' . $row_sqlQuerySecondary['invitado_eje'] . '" name="id" hidden>
+                        <input value="' . $row_sqlQuerySecondary['id'] . '" name="id" hidden>
+                        <input value="' . $row_sqlQuerySecondary['invitado_eje'] . '" name="id_eje" hidden>
                         <input value="' . $row_sqlQuerySecondary['id_evento'] . '" name="id_evento" hidden>
                         <div class="modal-body">
                         <div class="row">

@@ -6,9 +6,8 @@
 
 <?php
     include('qconn/qc.php');
-    // $idEje = $_POST['invitado_eje'];
+    $idEje = $_POST['ideje'];
     $id = $_POST['id'];
-    $id_eje = $_POST['id_eje'];
     $idEvent = $_POST['id_evento'];
     $apellido_p = $_POST['apellido_p'];
     $apellido_m = $_POST['apellido_m'];
@@ -29,7 +28,7 @@
             title: 'Invitado actualizado',
             text: 'Los datos del invitado se han actualizado satisfactoriamente',
             footer: 'Desarrollado por: XXXX XXX XXX</a>'
-        }).then(function(){window.location='../invitados_secondary.php?id=".$id_eje."&id2=".$idEvent."';});</script>";
+        }).then(function(){window.location='../invitados_secondary.php?id=".$id."&id2=".$idEvent."';});</script>";
         }
         else{
         echo 'No se registró la actividad';

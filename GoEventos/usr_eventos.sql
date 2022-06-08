@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 25, 2022 at 08:03 PM
+-- Generation Time: Jun 07, 2022 at 05:00 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -66,10 +66,10 @@ CREATE TABLE `eventos` (
 
 INSERT INTO `eventos` (`id`, `nombre_e`, `tipo_e`, `no_invitados`, `no_confirmados`, `status_e`, `fecha_e`, `id_organizador`) VALUES
 (1, 'Boda Xxx', 1, 50, 50, 3, '2022-05-20', 1),
-(2, 'Boda Xxx 2', 1, 50, 50, 2, '2022-05-20', 2),
-(3, 'Boda Xxx 3', 2, 50, 50, 4, '2022-05-20', 2),
+(2, 'Boda Xxx 2', 1, 50, 50, 2, '2022-05-20', 1),
+(3, 'Boda Xxx 3', 2, 50, 50, 4, '2022-05-20', 1),
 (4, 'Boda Brenda & Juan Pablo', 1, 250, 235, 1, '2022-05-28', 1),
-(5, 'Bautizo María José', 1, 100, 100, 1, '2022-05-31', 1),
+(5, 'Bautizo María José', 1, 100, 100, 5, '2022-05-31', 1),
 (6, 'Quince Alondra', 1, 250, 240, 1, '2022-06-18', 1),
 (7, 'Congreso Nacional Charro', 2, 2000, 2000, 1, '2022-07-22', 1);
 
@@ -102,23 +102,24 @@ CREATE TABLE `invitados` (
 
 INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, `email`, `no_invitados`, `mesa`, `qr`, `etiqueta`, `tipo_invitado`, `invitado_eje`, `id_evento`, `confirmacion`) VALUES
 (1, 'Jesús Rodolfo', 'Leaños', 'Villegas', '4927951930', 'jesusrlvrojo@gmail.com', 2, 9, NULL, NULL, 1, 0, 1, 1),
-(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, NULL, NULL, NULL, 2, 1, 1, 1),
-(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, NULL, NULL, NULL, 2, 18, 7, 1),
-(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, NULL, NULL, NULL, 1, 0, 1, 1),
-(5, 'Héctor Mario', 'Mendoza', 'Bañuelos', '4920001111', 'hec_mb@gmail.com', NULL, NULL, NULL, NULL, 1, 0, 7, 1),
-(6, 'Francisco Rosendo', 'Barba', 'Vizcaíno', '3314083502', 'franbavi@yahoo.com', NULL, NULL, NULL, NULL, 1, NULL, 6, 1),
-(7, 'José Ignacio', 'López de Lara', 'Hernández', '4925879641', 'nacho_lodela@gmail.com', NULL, NULL, NULL, NULL, 1, NULL, 4, 1),
-(8, 'José Luis', 'Pinedo', 'Vega', '4925687951', 'jlpinedo@gmail.com', NULL, NULL, NULL, NULL, 1, NULL, 6, 1),
+(2, 'Rodolfo', 'Villegas', 'Leaños', '4915000', 'jesusrlv_rojo@hotmail.com', NULL, 9, NULL, NULL, 2, 1, 1, 1),
+(3, 'Ana Elisa', 'Barba', 'Pinedo', '4915000', 'aepbarbanosequemas@gmail.com', NULL, 3, NULL, NULL, 2, 18, 7, 1),
+(4, 'Elisa', 'Pinedo', 'Barba', '4915000', 'aepbarbanosequemas@outlook.com', NULL, 3, NULL, NULL, 1, 0, 1, 1),
+(5, 'Héctor Mario', 'Mendoza', 'Bañuelos', '4920001111', 'hec_mb@gmail.com', NULL, 3, NULL, NULL, 1, 0, 7, 1),
+(6, 'Francisco Rosendo', 'Barba', 'Vizcaíno', '3314083502', 'franbavi@yahoo.com', NULL, 3, NULL, NULL, 1, NULL, 6, 1),
+(7, 'Ma de la Luz', 'Pinedo', 'Vega', '4925689127', 'luzmapinedovega@yahoo.com', NULL, 2, NULL, NULL, 2, 12, 4, 1),
+(8, 'José Luis', 'Pinedo', 'Vega', '4925687951', 'jlpinedo@gmail.com', NULL, NULL, NULL, NULL, 2, 12, 4, 1),
 (9, 'Anali', 'Infante', 'Morales', '4927895641', 'analiim@gmail.com', NULL, NULL, NULL, NULL, 1, NULL, 5, 1),
 (10, 'Nidia', 'Torres', 'Torres', '4927895646', 'ninitt@gmail.com', NULL, NULL, NULL, NULL, 1, NULL, 5, 1),
-(11, 'Haydee', 'Barrón', 'Herrera', '4921564879', 'haydeebarron@gmail.com', NULL, NULL, NULL, NULL, 2, 15, 4, 1),
-(12, 'Ma. Concepción', 'Pinedo', 'Vega', '4921022794', 'conpin_v@yahoo.com', NULL, NULL, NULL, NULL, 2, 6, 6, 1),
-(13, 'Ma. de la Luz', 'Pinedo', 'Vega', '4925689123', 'luzmapinedo@gmail.com', NULL, NULL, NULL, NULL, 2, 7, 4, 1),
+(11, 'Haydee', 'Barrón', 'Herrera', '4921564879', 'haydeebarron@gmail.com', NULL, 5, NULL, NULL, 2, 15, 4, 1),
+(12, 'Ma de la Luz', 'Pinedo', 'Vega', '4925689127', 'luzmapinedov@yahoo.com', NULL, 3, NULL, NULL, 1, NULL, 4, 1),
+(13, 'Ma. de la Luz', 'Pinedo', 'Vega', '4925689127', 'luzmapinedovega@yahoo.com', NULL, 2, NULL, NULL, 2, 7, 4, 1),
 (14, 'Armilde', 'Rivera', 'Huizar', '4926548795', 'armilderh@gmail.com', NULL, NULL, NULL, NULL, 2, 8, 6, 1),
-(15, 'Filipe', 'Pais', '.', '3545586475', 'filipepais@gmail.com', NULL, NULL, NULL, NULL, 1, NULL, 4, 1),
+(15, 'Haydee Alejandra', 'Barrón', 'Herrera', '4921564879', 'haydeebarron@gmail.com', NULL, 5, NULL, NULL, 1, NULL, 4, 1),
 (16, 'Alexandra Graciela', 'Barr', 'Herrera', '4921359842', 'gracebh@gmail.com', NULL, NULL, NULL, NULL, 2, 17, 6, 1),
 (17, 'Cristian', 'Guillén', '.', '4925897977', 'cristianguillen@gmail.com', NULL, NULL, NULL, NULL, 1, NULL, 6, 1),
-(18, 'Luis Fernando', 'González', 'Álvarez', '4925833614', 'ferdi10@hotmail.com', NULL, NULL, NULL, NULL, 1, NULL, 7, 1);
+(18, 'Luis Fernando', 'González', 'Álvarez', '4925833614', 'ferdi10@hotmail.com', NULL, 3, NULL, NULL, 1, NULL, 7, 1),
+(19, 'Luciana', 'Mendoza', 'Barba', '', '', NULL, 5, NULL, NULL, 2, 6, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -131,6 +132,20 @@ CREATE TABLE `invitados_secundarios` (
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) DEFAULT NULL,
   `clave_ext` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mesas`
+--
+
+CREATE TABLE `mesas` (
+  `id_mesa` int(11) NOT NULL,
+  `no_mesa_e` int(11) NOT NULL,
+  `no_sillas` int(11) NOT NULL,
+  `id_evento` int(11) NOT NULL,
+  `mapa_e` varchar(70) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -229,6 +244,12 @@ ALTER TABLE `invitados_secundarios`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `mesas`
+--
+ALTER TABLE `mesas`
+  ADD PRIMARY KEY (`id_mesa`);
+
+--
 -- Indexes for table `organizadores`
 --
 ALTER TABLE `organizadores`
@@ -266,13 +287,19 @@ ALTER TABLE `eventos`
 -- AUTO_INCREMENT for table `invitados`
 --
 ALTER TABLE `invitados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `invitados_secundarios`
 --
 ALTER TABLE `invitados_secundarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `mesas`
+--
+ALTER TABLE `mesas`
+  MODIFY `id_mesa` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `organizadores`

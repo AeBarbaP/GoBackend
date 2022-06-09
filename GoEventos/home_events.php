@@ -200,9 +200,7 @@
             <th scope="col">Apellido Materno</th>
             <th scope="col">Nombre(s)</th>
             <th scope="col">No. Celular</th>
-            <th scope="col">Correo Electrónico</th>
             <th scope="col">No. Invitados</th>
-            <th scope="col">Agregar</th>
             <th scope="col">Mesa</th>
             <th scope="col">Editar</th>
           </tr>
@@ -221,8 +219,7 @@
             <td>'.$row_sqlQuery['apellido_m'].'</td>
             <td>'.$row_sqlQuery['nombre'].'</td>
             <td>'.$row_sqlQuery['celular'].'</td>
-            <td>'.$row_sqlQuery['email'].'</td>
-            <td>'.$row_sqlQuery['no_invitados'].'</td>
+            <td><span class="badge text-bg-primary">'.$row_sqlQuery['no_invitados'].'</span></td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#AgregarAcomp'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i> Agregar Acompañante</span></a></td>
             <td>'.$row_sqlQuery['mesa'].'</td>

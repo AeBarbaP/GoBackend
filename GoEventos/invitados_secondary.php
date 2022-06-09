@@ -186,7 +186,6 @@
             <td>' . $row_sqlQuerySecondary['nombre'] . ' ' . $row_sqlQuerySecondary['apellido_p'] . ' ' . $row_sqlQuerySecondary['apellido_m'] . '</td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#editarInv' . $row_sqlQuerySecondary['id'] . '"><span class="badge bg-warning text-dark"><i class="bi bi-person-plus"></i> Editar</span></a></td>
-
             <!-- Inicia Modal -->
             
                 <!-- Modal edición invitado eje -->
@@ -197,9 +196,9 @@
                         <h5 class="modal-title" id="exampleModalLabel">Editar invitado eje</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-
                         <form action="prcd/query_editar_acomp.php" method="post">
-                        <input value="' . $row_sqlQuerySecondary['invitado_eje'] . '" name="id" hidden>
+                        <input value="' . $row_sqlQuerySecondary['id'] . '" name="id" hidden>
+                        <input value="' . $row_sqlQuerySecondary['invitado_eje'] . '" name="id_eje" hidden>
                         <input value="' . $row_sqlQuerySecondary['id_evento'] . '" name="id_evento" hidden>
                         <div class="modal-body">
                         <div class="row">
@@ -231,7 +230,6 @@
                             <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="' . $row_sqlQuerySecondary['email'] . '">
                             </div>
                             </div>
-
                                                         
                         </div>
                         
@@ -242,7 +240,6 @@
                             <p>';
                             echo '</p>
                         </div>
-
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>

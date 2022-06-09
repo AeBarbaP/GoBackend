@@ -229,9 +229,7 @@
             <td>'.$row_sqlQuery['mesa'].'</td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#editarInv'.$row_sqlQuery['id'].'"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i> Editar Invitado</span></a></td>
-
           </tr>';
-
           echo '
           <!-- Inicia Modal -->
       <div class="modal fade" id="AgregarAcomp'.$row_sqlQuery['id'].'" tabindex="-1" aria-labelledby="Agregar Acompañante" aria-hidden="true">

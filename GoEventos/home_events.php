@@ -1,3 +1,48 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['nombre'])) {
+        if($_SESSION['perfil']==1){
+            // header('Location: javascript: history.go(-1)');
+        }
+        elseif($_SESSION['perfil']==2){
+            // header('Location: javascript: history.go(-1)');
+        }
+        elseif($_SESSION['perfil']==3){
+            // header('Location: javascript: history.go(-1)');
+        }
+    else{
+        header('Location:prcd/sort.php');
+    }
+    // Si esta identificado, en otras palabras existe la variable, le saludamos
+        // echo '
+        //     <script>
+        //         alert("Bienvenido '.$_SESSION['nombre'].'");
+        //     </script>';
+} else {
+    // En caso contrario redirigimos el visitante a otra página
+
+    echo '<script>
+    alert("Usuario no valido");
+    </script>';
+    header('Location: index.html');
+    header('Location: prcd/sort.php');
+    die();
+}
+    include('prcd/qconn/qc.php');
+    $id = $_SESSION['id'];
+    $perfil = $_SESSION['perfil'];
+    $nombre = $_SESSION['nombre'];
+    $idEvent = $_REQUEST['id'];
+
+    $sqlEvent = "SELECT * FROM eventos WHERE id = '$idEvent'";
+    $sqlResultEvent = $conn->query($sqlEvent);
+    $rowSqlEvent = $sqlResultEvent->fetch_assoc();
+
+    date_default_timezone_set('America/Mexico_City');
+                  setlocale(LC_TIME, 'es_MX.UTF-8');
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -54,8 +99,7 @@
   <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
     <div class="container-fluid justify-content-center">
       <a class="navbar-brand" style="color: #f3a79c; font-size:3rem; font-family: 'Josefin Sans', sans-serif;" href="#">
-        <strong>Nombre de
-          Evento</strong></a>
+        <strong><?php echo $rowSqlEvent['nombre_e'] ?></strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

@@ -235,7 +235,7 @@
                                 <th scope="col">Correo Electrónico</th>
                                 <th scope="col"># Invitados</th>
                                 <th scope="col">Mesa</th>
-                                <th scope="col"># Total <br># Confirmados</th>
+                                <th scope="col"># Confirmados <br># Total</th>
                                 <th scope="col">Editar</th>
                             </tr>
                         </thead>
@@ -275,7 +275,7 @@
             $sqlResultConfirmados = $conn->query($sqlConfirmados);
             $filaConfirmados = $sqlResultConfirmados->num_rows;
 
-            echo '<td>'.$TotalInvitados.' / '.$filaConfirmados.'</td>
+            echo '<td>'.$filaConfirmados.' / '.$TotalInvitados.'</td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#editarInv' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i></span></a></td>
           </tr>';
@@ -403,7 +403,7 @@
                 <div class="col-sm-6">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">No. Acompañantes</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="invitados" value="' . $row_sqlQuery['no_invitados'] . '">
+                  <input type="number" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="invitados" value="' . $row_sqlQuery['no_invitados'] . '">
                 </div>
                 </div>
                 <div class="col-sm-6">
@@ -418,15 +418,7 @@
                   <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="etiqueta" value="' . $row_sqlQuery['etiqueta'] . '">
                 </div>
                 </div>
-              </div>
-              
-              <div class="alert alert-secondary" role="alert">
-                <p class="text-center pt-3">
-                  <i class="bi bi-card-checklist"></i> Ver listado de acompañantes <a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '"><i class="bi bi-arrow-right-circle-fill"></i></a>
-                <p>
-                <p>';
-                echo '</p>
-              </div>
+              </div> 
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>

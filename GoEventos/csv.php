@@ -116,13 +116,13 @@
         <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
         <li class="breadcrumb-item"><a href="home_events.html">Evento</a></li>
         <li class="breadcrumb-item"><a href="home_events.php">Invitados</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Acompañantes</li>
+        <li class="breadcrumb-item active" aria-current="page">CSV</li>
         <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
       </ol>
     </nav>
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
             <div class="col-sd-6 px-0">
-                <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de +Invitados</strong></a>
+                <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Carga de Plantilla .csv</strong></a>
             </div>
         </div>
 
@@ -131,10 +131,10 @@
 
             <div class="container mt-3">
                 <?php
-        $sql_invitado = "SELECT * FROM invitados WHERE id = '$idSecondary'";
-        $resultado_sql_invitado = $conn->query($sql_invitado);
-        $row_sql_invitado = $resultado_sql_invitado->fetch_assoc()
-        ?>
+                    $sql_invitado = "SELECT * FROM invitados WHERE id = '$idSecondary'";
+                    $resultado_sql_invitado = $conn->query($sql_invitado);
+                    $row_sql_invitado = $resultado_sql_invitado->fetch_assoc()
+                ?>
                 <p class="h3">
                     <?php echo $row_sql_invitado['nombre'] . ' ' . $row_sql_invitado['apellido_p'] . ' ' . $row_sql_invitado['apellido_m']; ?>
                 </p>
@@ -146,7 +146,7 @@
                             <input type="text" class="form-control" placeholder="Buscar..." aria-label="Username"
                                 aria-describedby="basic-addon1" id="myInput">
                         </div>
-                        
+
                     </div>
 
                     <div class="col-sm">
@@ -157,7 +157,7 @@
 
             <div class="container border rounded-3 mt-3 bg-light" style="width: 98%;">
                 <div class="row mt-3 border-bottom">
-                    <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de Acompañantes</strong></p>
+                    <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de invitados agregados</strong></p>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover table-bordered table-sm align-middle mt-4">
@@ -165,6 +165,7 @@
                             <tr class="text-center">
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre completo</th>
+                                <th scope="col">Invitado Principal</th>
                                 <th scope="col">Editar</th>
                             </tr>
                         </thead>
@@ -182,6 +183,7 @@
             <td>' . $x . '</td>
             
             <td>' . $row_sqlQuerySecondary['nombre'] . ' ' . $row_sqlQuerySecondary['apellido_p'] . ' ' . $row_sqlQuerySecondary['apellido_m'] . '</td>
+            <td>  </td> /* Falta combo box para invitados eje */
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#editarInv' . $row_sqlQuerySecondary['id'] . '"><span class="badge bg-warning text-dark"><i class="bi bi-person-plus"></i> Editar</span></a></td>
             <!-- Inicia Modal -->

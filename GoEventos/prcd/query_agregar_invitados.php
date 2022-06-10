@@ -13,10 +13,12 @@
     $celular = $_POST['celular'];
     $email = $_POST['email'];
     $evento = $_POST['evento'];
+    $mesa = $_POST['mesa'];
+    $etiqueta = $_POST['etiqueta'];
     $tipo_invitado = 1;
 
 
-    $sqlInsert ="INSERT INTO invitados (apellido_p,apellido_m,nombre,celular,email,tipo_invitado,id_evento) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email','$tipo_invitado','$evento')";
+    $sqlInsert ="INSERT INTO invitados (apellido_p,apellido_m,nombre,celular,email,tipo_invitado,id_evento,mesa,etiqueta) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email','$tipo_invitado','$evento','$mesa','$etiqueta')";
     $resultadosqlInsert = $conn->query($sqlInsert);
 
     if($resultadosqlInsert){

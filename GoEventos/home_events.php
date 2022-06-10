@@ -169,11 +169,18 @@
                                 <label for="floatingPassword">Teléfono</label>
                             </div>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-8">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control rounded-4" id="floatingPassword"
-                                    placeholder="Etiqueta para Invitación">
+                                    placeholder="Etiqueta para Invitación" name="etiqueta">
                                 <label for="floatingPassword">Etiqueta para Invitación</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control rounded-4" id="floatingPassword"
+                                    placeholder="Etiqueta para Invitación" name="mesa" required>
+                                <label for="floatingPassword">No. Mesa</label>
                             </div>
                         </div>
                     </div>

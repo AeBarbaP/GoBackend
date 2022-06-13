@@ -471,7 +471,7 @@ function InvSecondary(){
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Guardar</button>
+                            <a href="csv.php?id2=<?php echo $idEvent ?>" type="button" class="btn btn-primary">Guardar</a> <!-- Agregar código para insertar los datos del csv a la db -->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>

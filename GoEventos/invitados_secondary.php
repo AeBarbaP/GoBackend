@@ -101,8 +101,7 @@
 
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
         <div class="container-fluid justify-content-center">
-            <a class="navbar-brand" style="color: #f3a79c; font-size:3rem; font-family: 'Josefin Sans', sans-serif;"
-                href="#"><strong><?php echo $rowSqlEvent['nombre_e'] ?></strong></a>
+            <a class="navbar-brand" style="color: #f3a79c; font-size:3rem; font-family: 'Josefin Sans', sans-serif;" href="#"><strong><?php echo $rowSqlEvent['nombre_e'] ?></strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -101,8 +101,7 @@
 
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
         <div class="container-fluid justify-content-center">
-            <a class="navbar-brand" style="color: #f3a79c; font-size:3rem; font-family: 'Josefin Sans', sans-serif;"
-                href="#"><strong><?php echo $rowSqlEvent['nombre_e'] ?></strong></a>
+            <a class="navbar-brand" style="color: #f3a79c; font-size:3rem; font-family: 'Josefin Sans', sans-serif;" href="#"><strong><?php echo $rowSqlEvent['nombre_e'] ?></strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -113,9 +112,9 @@
     <main class="container mt-5 mb-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-        <li class="breadcrumb-item"><a href="home_events.html">Evento</a></li>
-        <li class="breadcrumb-item"><a href="home_events.php">Invitados</a></li>
+        <li class="breadcrumb-item"><a href="index.php?id=<?php echo $idEvent ?>">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="home_config.php?id=<?php echo $idEvent ?>">Evento</a></li>
+        <li class="breadcrumb-item"><a href="home_events.php?id=<?php echo $idEvent ?>">Invitados</a></li>
         <li class="breadcrumb-item active" aria-current="page">CSV</li>
         <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
       </ol>
@@ -157,7 +156,7 @@
 
             <div class="container border rounded-3 mt-3 bg-light" style="width: 98%;">
                 <div class="row mt-3 border-bottom">
-                    <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de invitados agregados</strong></p>
+                    <p class="h5"><strong><i class="bi bi-card-list"></i> Asigna Invitado Principal a los acompañantes agregados</strong></p>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover table-bordered table-sm align-middle mt-4">
@@ -183,7 +182,8 @@
             <td>' . $x . '</td>
             
             <td>' . $row_sqlQuerySecondary['nombre'] . ' ' . $row_sqlQuerySecondary['apellido_p'] . ' ' . $row_sqlQuerySecondary['apellido_m'] . '</td>
-            <td>  </td> /* Falta combo box para invitados eje */
+            <td>' . $row_sqlQuerySecondary['invitado_eje'] . ' 
+            </td> /* Falta combo box para invitados eje */
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#editarInv' . $row_sqlQuerySecondary['id'] . '"><span class="badge bg-warning text-dark"><i class="bi bi-person-plus"></i> Editar</span></a></td>
             <!-- Inicia Modal -->

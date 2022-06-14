@@ -466,7 +466,7 @@ function InvSecondary(){
                         <div class="modal-body">
                             <div class="input-group mb-3">
                                 <p>Selecciona el archivo .csv para cargar la lista de invitados en el sistema.</p>
-                                <form action="">
+                                <form action="prcd/intermedia.php" method="POST" >
                                   <input type="file" class="form-control" id="inputGroupFile03"
                                     aria-describedby="inputGroupFileAddon03" aria-label="Upload">
                                 </form>

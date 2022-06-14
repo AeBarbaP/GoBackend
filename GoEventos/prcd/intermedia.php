@@ -5,7 +5,7 @@
     date_default_timezone_set('America/Mexico_City');
                   setlocale(LC_TIME, 'es_MX.UTF-8');
     
-    $id=$_SESSION['id'];
+    $id=$_POST['id'];
     $tipo_doc = 1;
     $fecha_sistema = strftime("%Y-%m-%d,%H:%M:%S");
     $link= 'archivo1';
@@ -40,3 +40,42 @@ $extension = pathinfo($archivo_ext, PATHINFO_EXTENSION);
 }
     
 ?>
+
+if (isset($_POST['submit'])) {
+            $i=0;
+            require "connection.php";
+            if (is_uploaded_file($_FILES['csv']['tmp_name'])) {
+                echo "<h3>" . "File ". $_FILES['csv']['name'] ." uploaded successfully." . "</h3>";
+            }
+            //Import uploaded file to Database
+            $handle = fopen($_FILES['csv']['tmp_name'], "r");
+            try {
+      $import= $db->prepare("INSERT INTO adherence(
+                              dateandtime,
+                              lastname,
+                              paidtime,
+                              approvedtime,
+                              notadhering) VALUES(
+                              ?,?,?,?,?)");
+
+    $i = 0;        
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+
+        if($i > 0) {
+            $data = str_replace('"', '', $data); 
+
+            $import->bindParam(1, $data[0], PDO::PARAM_STR);                
+            $import->bindParam(2, $data[1], PDO::PARAM_STR);                
+            $import->bindParam(3, $data[2], PDO::PARAM_STR);                
+            $import->bindParam(4, $data[3], PDO::PARAM_STR);                
+            $import->bindParam(5, $data[4], PDO::PARAM_STR);                
+            $import->execute();
+        }
+        $i++;
+
+    }
+}
+
+catch(PDOException $e) {  
+    echo $e->getMessage()."\n";
+}}

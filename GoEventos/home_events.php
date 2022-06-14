@@ -466,14 +466,15 @@ function InvSecondary(){
                         <div class="modal-body">
                             <div class="input-group mb-3">
                                 <p>Selecciona el archivo .csv para cargar la lista de invitados en el sistema.</p>
-                                <form action="prcd/intermedia.php" method="POST" >
-                                  <input type="file" class="form-control" id="inputGroupFile03"
-                                    aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+                                <form action="prcd/intermedia.php" method="POST" enctype="multipart/form-data">
+                                  <input type="text" value="<?php echo $idEvent ?>" name="id" hidden>
+                                  <input type="file" class="form-control" id="inputGroupFile03" name="csv" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+                                  <button type="submit" class="btn btn-secondary">Guardar</button>
                                 </form>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="csv.php?id2=<?php echo $idEvent ?>" type="button" class="btn btn-primary">Guardar</a> <!-- Agregar código para insertar los datos del csv a la db -->
+                            <!-- <a href="csv.php?id2=<?php echo $idEvent ?>" type="button" class="btn btn-primary">Guardar</a> --> <!-- Agregar código para insertar los datos del csv a la db -->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>

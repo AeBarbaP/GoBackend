@@ -1,4 +1,11 @@
+<html>
+    <header>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <header>
+<body>
+    
 <?php    
+
     session_start();
     include('qconn/qc.php');
 
@@ -49,28 +56,35 @@ $id = $_POST['id'];
                 // If user already exists in the database with the same email
                 // $query = "SELECT id FROM invitados WHERE id_evento = '" . $getData[5] . "'";
  
-                $check = mysqli_query($conn, $query);
+                // $check = mysqli_query($conn, $query);
  
-                // if ($check->num_rows > 0)
-                // {
-                //     mysqli_query($conn, "UPDATE users SET name = '" . $name . "', phone = '" . $phone . "', status = '" . $status . "', created_at = NOW() WHERE email = '" . $email . "'");
-                // }
-                // else
-                // {
                      mysqli_query($conn, "INSERT INTO invitados (nombre, apellido_p, apellido_m, celular, tipo_invitado, id_evento) VALUES ('" . $nombre . "', '" . $apellido_p . "', '" . $apellido_m . "', '" . $celular . "', '" . $tipo_invitado . "', '" . $id_evento . "')");
- 
-                // }
             }
  
             // Close opened CSV file
             fclose($csvFile);
  
-            header("Location: ../home_events.php?id=$id");
+            // header("Location: ../home_events.php?id=$id");
+            
+                echo "<script type=\"text/javascript\">
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Lista agregada',
+                    text: 'Tu listado en el formato csv ha sido cargado correctamente',
+                    footer: 'Gold Axs</a>'
+                }).then(function(){window.location='../home_events.php?id=".$id."';});</script>";
+
+                
+
+            
          
     }
     else
     {
-        echo "Please select valid file";
+        echo "Selecciona un archivo válido";
     }
 // }
 ?>
+</body>
+
+</html>

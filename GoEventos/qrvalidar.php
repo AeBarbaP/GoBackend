@@ -182,7 +182,7 @@
                     <!-- Termina Card container -->
                 </div>
                 <!-- Inicia modal para subir invitación -->
-                <div class="modal fade" id="examinarqr" tabindex="-1" aria-labelledby="examinarqr" aria-hidden="true">
+                <!-- <div class="modal fade" id="examinarqr" tabindex="-1" aria-labelledby="examinarqr" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header" style="color: #f3a79c; font: size 12px; font-family: 'Josefin Sans', sans-serif;">
@@ -205,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Termina modal para subir invitación-->
 
             </div>
@@ -232,6 +232,183 @@
 
 </html>
 
+<!-- Modal canjear-->
+<div class="modal fade" id="examinarqr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-person-plus"></i> Validar QR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="#" id="form1"><!--form-->
+                <video id="previewCanje" class="w-100"></video>
+                <p><input type="text" name="text" id="textQRCanje" class="form-control" oninput="changeInput()" READONLY REQUIRED></p>
+                <div class="row">
+                    <div class="col-6 mt-1">
+                        <p><button class="btn btn-primary" type="button" onclick="abrirCamaraCanje()"><i class="bi bi-qr-code-scan"></i> Escanear</button></p>
+                        <select name="cameraCanje" class="form-select">
+                            <option value="1"><i class="bi bi-camera-video-fill"></i> Frontal Cam</option>
+                            <option value="2"><i class="bi bi-camera-video"></i> Back Cam</option>
+                        </select>
+                    </div>
+                    <div class="col-6 mt-1 text-end">
+                        <button class="btn btn-primary" type="submit"><i class="bi bi-search"> Buscar</i></button></p>
+                    </div>
+                </div>
+            </form><!--form-->
+            <hr>
+
+            <br> 
+            <p id="queryDatos"></p>
+
+            <!-- <br>
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-success" onclick="entrega()"><i class="bi bi-box-arrow-up-right"></i> Entregar</button>  
+            </div> -->
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cerrar</button>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-person-plus"></i> Guardar</button>
+        </div>
+        
+    </div>
+</div>
+<!-- código camara -->
+<script type="text/javascript">
+    function abrirCamaraCanje(){
+        let scanner = new Instascan.Scanner({video:document.getElementById('previewCanje') });
+        scanner.addListener('scan', function (content) {
+            console.log(content);
+        });
+        Instascan.Camera.getCameras().then(function(cameras) {
+            if (cameras.length > 0) {
+                scanner.start(cameras[0]);
+                // code front-back camera https://www.youtube.com/watch?v=7gyDSun7pCw&ab_channel=LearnCodeWeb
+                $('[name="cameraCanje"]').on('change',function(){
+                    if($(this).val()==1){
+                        if(cameras[0]!=""){
+                            scanner.start(cameras[0]);
+                        }
+                        else{
+                            alert('No hay camaras');
+                        }
+                    }
+                    else if($(this).val()==2){
+                        if(cameras[1]!=""){
+                            scanner.start(cameras[1]);
+                        }
+                        else{
+                            alert('No hay camaras');
+                        }
+                    }
+                    
+                });
+
+                // code front-back camera
+
+            } else {
+                // console.error('No cameras found.');
+                alert("No se encontró cámara");
+            }
+        }).catch(function (e){
+            console.error(e);
+        }); 
+
+        scanner.addListener('scan',function(c){
+            document.getElementById('textQRCanje').value=c;
+            document.getElementById("myAudio").play();
+            scanner.stop();
+        });
+
+        $('#canjear').on('hide.bs.modal', function () { 
+            scanner.stop();
+        });
+
+    }
+
+</script>
+
+<!-- Una vez cargado el QR se muestra el estatus -->
+<!-- código camara -->
+
+</div> <!-- Termina Modal canjear -->
+
+<!-- Modal validar-->
+<div class="modal fade" id="validate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-person-plus"></i> Validar QR</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="#" id="form2"><!--form-->
+          
+          <div class="row">
+            <div class="col-8 mt-1">
+              <p><button class="btn btn-primary" type="button" onclick="abrirCamara()"><i class="bi bi-qr-code-scan"></i> Escanear</button></p>
+            </div>
+            <div class="col-4 mt-1 text-end">
+              <p><button class="btn btn-primary" type="submit"><i class="bi bi-search"> Buscar</i></button></p>
+            </div>
+
+        
+          </div>
+          <p><input type="text" name="text" id="textQR" readonly="" class="form-control"></p>
+        </form><!--form-->
+
+
+          <p id="queryDatos2"></p>
+          
+         
+            <script type="text/javascript">
+              
+              function abrirCamara(){
+
+              let scanner = new Instascan.Scanner({video:document.getElementById('preview') });
+              scanner.addListener('scan', function (content) {
+                console.log(content);
+              });
+              Instascan.Camera.getCameras().then(function(cameras) {
+                if (cameras.length > 0) {
+                  scanner.start(cameras[0]);
+                } else {
+                  // console.error('No cameras found.');
+                  alert("No se encontró cámara");
+                }
+              }).catch(function (e){
+                console.error(e);
+              }); 
+
+              scanner.addListener('scan',function(c){
+                document.getElementById('textQR').value=c;
+                document.getElementById("myAudio").play();
+                scanner.stop();
+                });
+
+                $('#validate').on('hide.bs.modal', function () { 
+                  scanner.stop();
+                });
+
+            }
+            </script>
+
+          <!-- Una vez cargado el QR se muestra el estatus -->
+          <hr>
+          <video id="preview" class="w-100"></video>
+      </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cerrar</button>
+          </div>
+        
+    </div>
+  </div>
+</div> <!-- Termina Modal validar -->
+
+
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
@@ -251,6 +428,7 @@ $(function() {
     });
 });
 </script>
+
 
 <style>
 .navbar-brand.azul {

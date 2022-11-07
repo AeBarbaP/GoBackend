@@ -87,6 +87,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
 
+    <script src="js/instascan.min.js"></script>
+    <script src="js/print.js" type="text/javascript"></script>
+    <!-- <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script> -->
+    
+    <audio id="myAudio">
+      <source src="beep.mp3" type="audio/mpeg">
+    </audio>
+
+
 </head>
 
 <nav class="navscroll navbar navbar-expand-md fixed-top" style="background-color:#f3a79c">
@@ -325,7 +334,7 @@
             scanner.stop();
         });
 
-        $('#canjear').on('hide.bs.modal', function () { 
+        $('#examinarqr').on('hide.bs.modal', function () { 
             scanner.stop();
         });
 
@@ -392,7 +401,7 @@
                 scanner.stop();
                 });
 
-                $('#validate').on('hide.bs.modal', function () { 
+                $('#examinarqr').on('hide.bs.modal', function () { 
                   scanner.stop();
                 });
 

@@ -14,6 +14,7 @@
     $email = $_POST['email'];
     $no_invitados = $_POST['invitados'];
     $mesa = $_POST['mesa'];
+    $event = $_POST['event'];
 
     $sqlUpdate ="UPDATE invitados SET apellido_p='$apellido_p',apellido_m='$apellido_m',nombre='$nombre',celular='$celular',email='$email',no_invitados='$no_invitados',mesa='$mesa' WHERE id='$id'";
 
@@ -26,7 +27,7 @@
             title: 'Invitado actualizado',
             text: 'Los datos del invitado se han actualizado satisfactoriamente',
             footer: 'Desarrollado por: XXXX XXX XXX</a>'
-        }).then(function(){window.location='../home_events.php';});</script>";
+        }).then(function(){window.location='../home_events.php?id=".$event."';});</script>";
         }
         else{
         echo 'No se registró la actividad';

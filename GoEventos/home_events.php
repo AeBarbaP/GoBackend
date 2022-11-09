@@ -370,6 +370,7 @@
             </div>
             <form action="prcd/query_editar_invitado_eje.php" method="post">
             <input value="' . $row_sqlQuery['id'] . '" name="id" hidden>
+            <input value="' . $idEvent . '" name="event" hidden>
             <div class="modal-body">
               <div class="row">
                 <div class="col-sm-6">
@@ -431,8 +432,8 @@
       ';
               }
 
-function InvSecondary(){
-        $sqlSecondary ="SELECT * FROM invitados WHERE id_evento = $idEvent AND tipo_invitado = 2";
+/* function InvSecondary(){
+        $sqlSecondary ="SELECT * FROM invitados WHERE id_evento = '$idEvent' AND tipo_invitado = 2";
         $sqlResultSecondary = $conn->query($sqlSecondary);
         
         while($rowSecondary->fetch_assoc()){
@@ -440,7 +441,7 @@ function InvSecondary(){
         }
         echo'</hr>';
 }
-
+ */
               ?>
 
                         </tbody>

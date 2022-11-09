@@ -374,8 +374,8 @@
                             <?php include('prcd/query_planners.php'); ?>
 
                             <?php
-              $x = 0;
-              while ($row_sqlQuery = $resultadosqlQuery->fetch_assoc()) {
+            $x = 0;
+            while ($row_sqlQuery = $resultadosqlQuery->fetch_assoc()) {
                 $x++;
                 echo '
                     <tr class="text-center">
@@ -391,7 +391,7 @@
 
                     </tr>';
 
-                echo '
+/*                 echo '
                 <!-- Inicia Modal -->
                     <div class="modal fade" id="AgregarAcomp' . $row_sqlQuery['id'] . '" tabindex="-1" aria-labelledby="Agregar Acompañante" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
@@ -457,53 +457,53 @@
                                         </div>
                                     </div>
                                 </form>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <!-- Termina modal para Editar AXs programados y frecuentes -->
-          ';
-
-                echo '
-      <!-- Modal edición invitado eje -->
-      <div class="modal fade" id="editarInv' . $row_sqlQuery['id'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    </div>
+    <!-- Termina modal para Editar AXs programados y frecuentes -->
+    ';
+ */
+ /*                echo '
+        <!-- Modal edición invitado eje -->
+        <div class="modal fade" id="editarInv' . $row_sqlQuery['id'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
-          <div class="modal-content">
+            <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Editar invitado eje</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Editar invitado eje</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <form action="prcd/query_editar_invitado_eje.php" method="post">
             <input value="' . $row_sqlQuery['id'] . '" name="id" hidden>
             <div class="modal-body">
-              <div class="row">
+                <div class="row">
                 <div class="col-sm-6">
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Apellido Paterno</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_p" value="' . $row_sqlQuery['apellido_p'] . '">
-                </div>
-                </div>
-                <div class="col-sm-6">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Apellido Materno</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_m" value="' . $row_sqlQuery['apellido_m'] . '">
-                </div>
-                </div>
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Nombre (s)</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="nombre" value="' . $row_sqlQuery['nombre'] . '">
-                </div>
-                <div class="col-sm-6">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">No. Celular</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="' . $row_sqlQuery['celular'] . '">
+                    <span class="input-group-text" id="basic-addon1">Apellido Paterno</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_p" value="' . $row_sqlQuery['apellido_p'] . '">
                 </div>
                 </div>
                 <div class="col-sm-6">
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Correo-e</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="' . $row_sqlQuery['email'] . '">
+                    <span class="input-group-text" id="basic-addon1">Apellido Materno</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_m" value="' . $row_sqlQuery['apellido_m'] . '">
+                </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Nombre (s)</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="nombre" value="' . $row_sqlQuery['nombre'] . '">
+                </div>
+                <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">No. Celular</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="' . $row_sqlQuery['celular'] . '">
+                </div>
+                </div>
+                <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Correo-e</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="' . $row_sqlQuery['email'] . '">
                 </div>
                 </div>
                 <div class="col-sm-6">
@@ -541,7 +541,7 @@
           </div>
         </div>
       </div>
-      ';
+      '; */
               }
 
               ?>

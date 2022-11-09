@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 07, 2022 at 05:00 PM
--- Server version: 5.7.24
--- PHP Version: 8.0.1
+-- Host: 127.0.0.1
+-- Generation Time: Nov 09, 2022 at 10:06 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -119,7 +119,53 @@ INSERT INTO `invitados` (`id`, `nombre`, `apellido_p`, `apellido_m`, `celular`, 
 (16, 'Alexandra Graciela', 'Barr', 'Herrera', '4921359842', 'gracebh@gmail.com', NULL, NULL, NULL, NULL, 2, 17, 6, 1),
 (17, 'Cristian', 'Guillén', '.', '4925897977', 'cristianguillen@gmail.com', NULL, NULL, NULL, NULL, 1, NULL, 6, 1),
 (18, 'Luis Fernando', 'González', 'Álvarez', '4925833614', 'ferdi10@hotmail.com', NULL, 3, NULL, NULL, 1, NULL, 7, 1),
-(19, 'Luciana', 'Mendoza', 'Barba', '', '', NULL, 5, NULL, NULL, 2, 6, 6, 1);
+(19, 'Luciana', 'Mendoza', 'Barba', '', '', NULL, 5, NULL, NULL, 2, 6, 6, 1),
+(20, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(21, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(22, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(23, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(24, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(25, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(26, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(27, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(28, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(29, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(30, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(31, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(32, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(33, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(34, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(35, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(36, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(37, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(38, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(39, 'jesus', 'lea?os', 'villegas', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(40, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(41, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(42, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(43, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(44, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(45, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(46, 'Ana Elisa', 'barba', 'pinedo', '4927951930', 'aebarbap@gmail.com', 3, 4, NULL, NULL, 1, NULL, 5, NULL),
+(47, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(48, 'ana ', 'barba', 'pinedo', '492795193', '', 0, 0, NULL, NULL, 1, NULL, 5, NULL),
+(49, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(50, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(51, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(52, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(53, 'ana ', 'barba', 'pinedo', '4927951930', 'gold.axs.systems@gmail.com', 0, 0, NULL, NULL, 1, NULL, 5, NULL),
+(54, 'ana ', 'barba', 'pinedo', '4927951930', 'anny_anny_82@hotmail.com', 0, 0, NULL, NULL, 1, NULL, 5, NULL),
+(55, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(56, 'ana ', 'barba', 'pinedo', '4927951930', 'aebarbap@gmail.com', 3, 5, NULL, NULL, 1, NULL, 5, NULL),
+(57, 'ana ', 'barba', 'pinedo', '4927951930', '', NULL, NULL, NULL, NULL, 1, NULL, 5, NULL),
+(58, 'Mariana', 'González', 'Barba', '4921001418', 'mariana.glezbarba@gmail.com', NULL, 4, NULL, '', 1, NULL, 5, NULL),
+(59, 'Barba', 'Andrea', 'González', '4921001418', 'andrea.glzbarba@gmail.com', NULL, 4, 'QR/codes//4_ds57i0row_4.png', '', 1, NULL, 4, NULL),
+(60, 'Barba', 'Andrea', 'González', '4921001418', 'andrea.glzbarba@gmail.com', NULL, 4, 'QR/codes//4_92bxujtm5_4.png', '', 1, NULL, 4, NULL),
+(61, 'Barba', 'Fernando', 'González', '4925686893', 'fernando10@gmail.com', NULL, 6, 'QR/codes//4_iv89aneb5_6.png', '', 1, NULL, 4, NULL),
+(62, 'Barba', 'Fernando', 'González', '4925686893', 'fernando10@gmail.com', NULL, 6, 'QR/codes//4_r0ipim4id_6.png', '', 1, NULL, 4, NULL),
+(63, 'Barba', 'Fernando', 'González', '4925686893', 'fernando10@gmail.com', NULL, 6, 'QR/codes//4_95j6piquo_6.png', '', 1, NULL, 4, NULL),
+(64, 'Barba', 'Fernando', 'González', '4925686893', 'fernando10@gmail.com', NULL, 6, 'QR/codes//4_lpidbahiv_6.png', '', 1, NULL, 4, NULL),
+(65, 'Barba', 'Fernando', 'González', '4925686893', 'fernando10@gmail.com', NULL, 6, 'QR/codes//4_ophcol4t2_6.png', '', 1, NULL, 4, NULL);
 
 -- --------------------------------------------------------
 
@@ -205,15 +251,16 @@ CREATE TABLE `usr` (
   `id` int(11) NOT NULL,
   `nombre` varchar(72) NOT NULL,
   `pwd` varchar(72) NOT NULL,
-  `perfil` int(11) NOT NULL
+  `perfil` int(11) NOT NULL,
+  `estatus` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `usr`
 --
 
-INSERT INTO `usr` (`id`, `nombre`, `pwd`, `perfil`) VALUES
-(1, 'admin', '123456789', 1);
+INSERT INTO `usr` (`id`, `nombre`, `pwd`, `perfil`, `estatus`) VALUES
+(1, 'admin', '123456789', 1, NULL);
 
 --
 -- Indexes for dumped tables
@@ -287,7 +334,7 @@ ALTER TABLE `eventos`
 -- AUTO_INCREMENT for table `invitados`
 --
 ALTER TABLE `invitados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `invitados_secundarios`

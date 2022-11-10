@@ -464,7 +464,7 @@
     <!-- Termina modal para Editar AXs programados y frecuentes -->
     ';
  */
- /*                echo '
+/*                echo '
         <!-- Modal edición invitado eje -->
         <div class="modal fade" id="editarInv' . $row_sqlQuery['id'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -508,43 +508,43 @@
                 </div>
                 <div class="col-sm-6">
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">No. Acompañantes</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="invitados" value="' . $row_sqlQuery['no_invitados'] . '">
+                    <span class="input-group-text" id="basic-addon1">No. Acompañantes</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="invitados" value="' . $row_sqlQuery['no_invitados'] . '">
                 </div>
                 </div>
                 <div class="col-sm-6">
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Mesa asignada</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="mesa" value="' . $row_sqlQuery['mesa'] . '">
+                    <span class="input-group-text" id="basic-addon1">Mesa asignada</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="mesa" value="' . $row_sqlQuery['mesa'] . '">
                 </div>
                 </div>
                 <div class="col-sm-12">
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">Etiqueta de Invitación</span>
-                  <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="etiqueta" value="' . $row_sqlQuery['etiqueta'] . '">
+                    <span class="input-group-text" id="basic-addon1">Etiqueta de Invitación</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="etiqueta" value="' . $row_sqlQuery['etiqueta'] . '">
                 </div>
                 </div>
-              </div>
-              
-              <div class="alert alert-secondary" role="alert">
+            </div>
+            
+            <div class="alert alert-secondary" role="alert">
                 <p class="text-center pt-3">
-                  <i class="bi bi-card-checklist"></i> Ver listado de acompañantes <a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '"><i class="bi bi-arrow-right-circle-fill"></i></a>
+                <i class="bi bi-card-checklist"></i> Ver listado de acompañantes <a href="invitados_secondary.php?id=' . $row_sqlQuery['id'] . '"><i class="bi bi-arrow-right-circle-fill"></i></a>
                 <p>
-              </div>
+            </div>
 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-              <button type="submit" class="btn btn-primary">Actualizar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
             </div>
             </form>
-          </div>
         </div>
-      </div>
+        </div>
+    </div>
       '; */
-              }
+    }
 
-              ?>
+        ?>
 
                         </tbody>
                     </table>

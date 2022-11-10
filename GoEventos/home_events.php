@@ -444,9 +444,9 @@
             <div class="modal-body">
               <img src="'.$row_sqlQuery['qr'].'" width="100%">
             </div>
-            <div class="modal-footer bg-secondary">
-              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-clipboard"></i> Copiar QR</button>
-              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill text-danger"></i> Cerrar</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="bi bi-clipboard"></i> Copiar QR</button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill text-danger"></i> Cerrar</button>
             </div>
           </div>
         </div>

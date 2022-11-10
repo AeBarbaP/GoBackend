@@ -19,22 +19,22 @@
         //     <script>
         //         alert("Bienvenido '.$_SESSION['nombre'].'");
         //     </script>';
-} else {
+    } else {
     // En caso contrario redirigimos el visitante a otra página
 
-    echo '<script>
-    alert("Usuario no valido");
-    </script>';
-    header('Location: index.html');
-    header('Location: prcd/sort.php');
-    die();
-}
+        echo '<script>
+        alert("Usuario no valido");
+        </script>';
+        header('Location: index.html');
+        header('Location: prcd/sort.php');
+        die();
+    }
+    
     include('prcd/qconn/qc.php');
     $id = $_SESSION['id'];
     $perfil = $_SESSION['perfil'];
     $nombre = $_SESSION['nombre'];
     $idEvent = $_REQUEST['id2'];
-
     $idSecondary = $_REQUEST['id'];
 
 
@@ -43,7 +43,7 @@
     $rowSqlEvent = $sqlResultEvent->fetch_assoc();
 
     date_default_timezone_set('America/Mexico_City');
-                  setlocale(LC_TIME, 'es_MX.UTF-8');
+    setlocale(LC_TIME, 'es_MX.UTF-8');
 
 ?>
 <!doctype html>
@@ -102,23 +102,22 @@
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgba(248, 249, 250, 0.7);">
         <div class="container-fluid justify-content-center">
             <a class="navbar-brand" style="color: #f3a79c; font-size:3rem; font-family: 'Josefin Sans', sans-serif;" href="#"><strong><?php echo $rowSqlEvent['nombre_e'] ?></strong></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
     </nav>
 
     <main class="container mt-5 mb-5">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-        <li class="breadcrumb-item"><a href="home_events.html">Evento</a></li>
-        <li class="breadcrumb-item"><a href="home_events.php">Invitados</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Acompañantes</li>
-        <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
-      </ol>
-    </nav>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="home_events.html">Evento</a></li>
+                <li class="breadcrumb-item"><a href="home_events.php">Invitados</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Acompañantes</li>
+                <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+            </ol>
+        </nav>
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
             <div class="col-sd-6 px-0">
                 <a style="font-size: 2rem; font-family: 'Josefin Sans', sans-serif;"><strong>Lista de Invitados</strong></a>
@@ -126,14 +125,12 @@
         </div>
 
         <div class="row align-items-md-stretch">
-
-
             <div class="container mt-3">
                 <?php
-        $sql_invitado = "SELECT * FROM invitados WHERE id = '$idSecondary'";
-        $resultado_sql_invitado = $conn->query($sql_invitado);
-        $row_sql_invitado = $resultado_sql_invitado->fetch_assoc()
-        ?>
+                $sql_invitado = "SELECT * FROM invitados WHERE id = '$idSecondary'";
+                $resultado_sql_invitado = $conn->query($sql_invitado);
+                $row_sql_invitado = $resultado_sql_invitado->fetch_assoc()
+                ?>
                 <p class="h3">
                     <?php echo $row_sql_invitado['nombre'] . ' ' . $row_sql_invitado['apellido_p'] . ' ' . $row_sql_invitado['apellido_m']; ?>
                 </p>
@@ -145,26 +142,136 @@
                             <input type="text" class="form-control" placeholder="Buscar..." aria-label="Username"
                                 aria-describedby="basic-addon1" id="myInput">
                         </div>
-
                     </div>
-
                     <div class="col-sm">
                     </div>
-
                 </div>
             </div>
 
-            <div class="container border rounded-3 mt-3 bg-light" style="width: 98%;">
+            <div class="container-fluid border rounded-3 mt-3 bg-light" style="width: 98%;">
                 <div class="row mt-3 border-bottom">
                     <p class="h5"><strong><i class="bi bi-card-list"></i> Lista de Acompañantes</strong></p>
                 </div>
-                <div class="table-responsive">
+                <div class="row mt-3 mb-3 text-center">
+                    <div class="col-6">
+                        <div class="card mb-4 rounded-3 shadow-sm" style="height: 450px; ">
+                            <div class="card-header py-3">
+                                <label for="exampleDataList" class="form-label">Selecciona acompañante(s):</label>
+                                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered table-sm align-middle mt-4">
+                                        <thead style="background-color:#f7c6bf; color: #7B8DAB;">
+                                            <tr class="text-center">
+                                                <th scope="col">#</th>
+                                                <th scope="col">Nombre completo</th>
+                                                <th scope="col">Editar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="myTable">
+                                            <?php
+                                                include('prcd/query_invitado_secundario.php'); 
+                                            ?>
+                                            <?php
+                                                $x = 0;
+                                                while ($row_sqlQuerySecondary = $resultadosqlQuerySecondary->fetch_assoc()) {
+                                                    $x++;
+                                                    echo '
+                                                        <tr class="text-center">
+                                                            <td>' . $x . '</td>
+                                                            
+                                                            <td>' . $row_sqlQuerySecondary['nombre'] . ' ' . $row_sqlQuerySecondary['apellido_p'] . ' ' . $row_sqlQuerySecondary['apellido_m'] . '</td>
+                                                            <td><a href="#" data-bs-toggle="modal" data-bs-target="#editarInv' . $row_sqlQuerySecondary['id'] . '"><span class="badge bg-warning text-dark"><i class="bi bi-person-plus"></i> Editar</span></a></td>
+                                                            
+                                                            <!-- Inicia Modal -->
+                                                            <!-- Modal edición invitado eje -->
+                                                            <div class="modal fade" id="editarInv' . $row_sqlQuerySecondary['id'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-xl">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="exampleModalLabel">Editar invitado eje</h5>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <form action="prcd/query_editar_acomp.php" method="post">
+                                                                            <input value="' . $row_sqlQuerySecondary['id'] . '" name="id" hidden>
+                                                                            <input value="' . $row_sqlQuerySecondary['invitado_eje'] . '" name="id_eje" hidden>
+                                                                            <input value="' . $row_sqlQuerySecondary['id_evento'] . '" name="id_evento" hidden>
+                                                                            <div class="modal-body">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="input-group mb-3">
+                                                                                            <span class="input-group-text" id="basic-addon1">Apellido Paterno</span>
+                                                                                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_p" value="' . $row_sqlQuerySecondary['apellido_p'] . '">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="input-group mb-3">
+                                                                                            <span class="input-group-text" id="basic-addon1">Apellido Materno</span>
+                                                                                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_m" value="' . $row_sqlQuerySecondary['apellido_m'] . '">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="input-group mb-3">
+                                                                                        <span class="input-group-text" id="basic-addon1">Nombre (s)</span>
+                                                                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="nombre" value="' . $row_sqlQuerySecondary['nombre'] . '">
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="input-group mb-3">
+                                                                                            <span class="input-group-text" id="basic-addon1">No. Celular</span>
+                                                                                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="' . $row_sqlQuerySecondary['celular'] . '">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="input-group mb-3">
+                                                                                            <span class="input-group-text" id="basic-addon1">Correo-e</span>
+                                                                                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="' . $row_sqlQuerySecondary['email'] . '">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="alert alert-secondary" role="alert">
+                                                                                    <p class="text-center pt-3">
+                                                                                    <i class="bi bi-card-checklist"></i> Ver listado de acompañantes <a href="invitados_secondary.php?id=' . $row_sqlQuerySecondary['id'] . '"><i class="bi bi-arrow-right-circle-fill"></i></a>
+                                                                                    <p>
+                                                                                    <p>';
+                                                                                    echo '</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                                                                <button type="submit" class="btn btn-primary">Actualizar</button>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </tr>';
+                                                }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div><!-- table responsive -->
+                            </div>
+                        </div>
+                    </div>
+      <div class="col-6">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+          <div class="table-responsive">
                     <table class="table table-hover table-bordered table-sm align-middle mt-4">
                         <thead style="background-color:#f7c6bf; color: #7B8DAB;">
                             <tr class="text-center">
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre completo</th>
-                                <th scope="col">Editar</th>
                             </tr>
                         </thead>
                         <tbody id="myTable">
@@ -181,71 +288,6 @@
             <td>' . $x . '</td>
             
             <td>' . $row_sqlQuerySecondary['nombre'] . ' ' . $row_sqlQuerySecondary['apellido_p'] . ' ' . $row_sqlQuerySecondary['apellido_m'] . '</td>
-            <td><a href="#" data-bs-toggle="modal"
-            data-bs-target="#editarInv' . $row_sqlQuerySecondary['id'] . '"><span class="badge bg-warning text-dark"><i class="bi bi-person-plus"></i> Editar</span></a></td>
-            <!-- Inicia Modal -->
-            
-                <!-- Modal edición invitado eje -->
-                <div class="modal fade" id="editarInv' . $row_sqlQuerySecondary['id'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Editar invitado eje</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form action="prcd/query_editar_acomp.php" method="post">
-                        <input value="' . $row_sqlQuerySecondary['id'] . '" name="id" hidden>
-                        <input value="' . $row_sqlQuerySecondary['invitado_eje'] . '" name="id_eje" hidden>
-                        <input value="' . $row_sqlQuerySecondary['id_evento'] . '" name="id_evento" hidden>
-                        <div class="modal-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                            <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Apellido Paterno</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_p" value="' . $row_sqlQuerySecondary['apellido_p'] . '">
-                            </div>
-                            </div>
-                            <div class="col-sm-6">
-                            <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Apellido Materno</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="apellido_m" value="' . $row_sqlQuerySecondary['apellido_m'] . '">
-                            </div>
-                            </div>
-                            <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Nombre (s)</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="nombre" value="' . $row_sqlQuerySecondary['nombre'] . '">
-                            </div>
-                            <div class="col-sm-6">
-                            <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">No. Celular</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="celular" value="' . $row_sqlQuerySecondary['celular'] . '">
-                            </div>
-                            </div>
-                            <div class="col-sm-6">
-                            <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Correo-e</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="' . $row_sqlQuerySecondary['email'] . '">
-                            </div>
-                            </div>
-                                                        
-                        </div>
-                        
-                        <div class="alert alert-secondary" role="alert">
-                            <p class="text-center pt-3">
-                            <i class="bi bi-card-checklist"></i> Ver listado de acompañantes <a href="invitados_secondary.php?id=' . $row_sqlQuerySecondary['id'] . '"><i class="bi bi-arrow-right-circle-fill"></i></a>
-                            <p>
-                            <p>';
-                            echo '</p>
-                        </div>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                        </div>
-                        </form>
-                    </div>
-                    </div>
-                </div>
                 
             </tr>';
             }
@@ -256,6 +298,29 @@
                     </table>
 
                 </div><!-- table responsive -->
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+                
             </div>
 
             <p class="mt-3"><a href="home_events.php?id=<?php echo $idEvent ?>" class="btn btn-primary"><i

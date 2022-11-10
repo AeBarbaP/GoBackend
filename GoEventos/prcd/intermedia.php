@@ -1,6 +1,7 @@
 <html>
     <header>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../QR/ajax_generate_code.js"></script>
     <header>
 <body>
     
@@ -8,13 +9,12 @@
 
     session_start();
     include('qconn/qc.php');
+    include('../QR/phpqrcode/qrlib.php'); 
 
     date_default_timezone_set('America/Mexico_City');
                   setlocale(LC_TIME, 'es_MX.UTF-8');
-$id = $_POST['id'];
-
-//                   if (isset($_POST['submit']))
-// {
+    $fecha_qr = strftime("%Y-%m-%d,%H:%M:%S");
+    $id = $_POST['id'];
  
     // Allowed mime types
     $fileMimes = array(
@@ -45,6 +45,39 @@ $id = $_POST['id'];
              // Parse data from CSV file line by line
             while (($getData = fgetcsv($csvFile, 10000, ",")) !== FALSE)
             {
+
+                //falta definir la mesa, evento, tipo de invitado, la consulta para definir el $rowEvent
+
+                // código temporal para crear las variables de QR
+                // archivo query_agregar_invitados.php para acomodar las variables
+                function generarCodigo($longitud) {
+                    $key = '';
+                    $pattern = '1234567890abcdefghijklmnopqrstuvwxyz';
+                    $max = strlen($pattern)-1;
+                    for($i=0;$i < $longitud;$i++) $key .= $pattern{mt_rand(0,$max)};
+                    return $key;
+                    }
+                    //genera un código de 9 caracteres de longitud.
+                    $codigo = generarCodigo(9);
+                    $contatena = $evento.'_'.$codigo.'_'.$mesa.'_'.$fecha_qr;
+            
+                    $codesDir = "QR/codes/";   
+                    $codesDir2 = "../QR/codes/";   
+                    // $codeFile = date('d-m-Y-h-i-s').'.png';
+                    $codeFile = $evento.'_'.$codigo.'_'.$mesa.'.png';
+                    $qrDirectorio = $codesDir.'/'.$codeFile;
+                    // QRcode::png($_POST['formData'], $codesDir.$codeFile, 'H', 10); 
+                    QRcode::png($contatena, $codesDir2.$codeFile, 'H', 10); 
+                    echo '
+                    <div id="div_print">
+                        <p><strong>Código Eventos<br>2022</strong></p>
+                        <p class="text-center"><img class="img-thumbnail" src="../'.$codesDir.$codeFile.'" /></p>
+                    </div>'
+                    ;
+                // código temporal para crear las variables de QR
+
+
+
                 // Get row data
                 $nombre = $getData[0];
                 $apellido_p = $getData[1];
@@ -69,8 +102,12 @@ $id = $_POST['id'];
                 echo "<script type=\"text/javascript\">
                 Swal.fire({
                     icon: 'success',
-                    title: 'Lista agregada',
-                    text: 'Tu listado en el formato csv ha sido cargado correctamente',
+                    title: 'Lista de invitados agregada',
+                    imageUrl: '../".$codesDir.$codeFile."',
+                    imageHeight: 200,
+                    imageAlt: '',
+                    text: 'Se agregó la lista masiva del evento',
+                    confirmButtonColor: '#3085d6',
                     footer: 'Gold Axs</a>'
                 }).then(function(){window.location='../home_events.php?id=".$id."';});</script>";
 

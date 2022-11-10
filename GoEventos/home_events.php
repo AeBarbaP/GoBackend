@@ -225,9 +225,10 @@
                 <div class="table-responsive">
                     <table class="table table-hover table-bordered table-sm align-middle mt-4">
                         <thead style="background-color:#f7c6bf; color: #7B8DAB;">
-                            <tr class="text-center">
+                            <tr class="text-center align-middle">
                                 <th scope="col">#</th>
                                 <th scope="col">Sel. <br><input class="form-check-input" type="checkbox" value=""></th>
+                                <th scope="col">QR</th>
                                 <th scope="col">Ap. Paterno</th>
                                 <th scope="col">Ap. Materno</th>
                                 <th scope="col">Nombre(s)</th>
@@ -250,6 +251,7 @@
           <tr class="text-center">
             <td>' . $x . '</td>
             <td><input class="form-check-input" type="checkbox" value="'.$row_sqlQuery['id'].'"></td>
+            <td><a data-bs-toggle="modal" data-bs-target="#QR'.$row_sqlQuery['id'].'"><i class="bi bi-qr-code"></i><a></td>
             <td>' . $row_sqlQuery['apellido_p'] . '</td>
             <td>' . $row_sqlQuery['apellido_m'] . '</td>
             <td>' . $row_sqlQuery['nombre'] . '</td>
@@ -430,18 +432,30 @@
         </div>
       </div>
       ';
+      echo'
+      <!-- Modal -->
+      <div class="modal fade" id="QR'.$row_sqlQuery['id'].'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color:#f7c6bf;">
+              <h1 class="modal-title fs-5 text-secondary" id="exampleModalLabel"><i class="bi bi-qr-code"></i> QR '.$row_sqlQuery['apellido_p'].' '.$row_sqlQuery['apellido_m'].' '.$row_sqlQuery['nombre'].'</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="'.$row_sqlQuery['qr'].'" width="100%">
+            </div>
+            <div class="modal-footer bg-secondary">
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-clipboard"></i> Copiar QR</button>
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill text-danger"></i> Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      ';
+
               }
 
-/* function InvSecondary(){
-        $sqlSecondary ="SELECT * FROM invitados WHERE id_evento = '$idEvent' AND tipo_invitado = 2";
-        $sqlResultSecondary = $conn->query($sqlSecondary);
-        
-        while($rowSecondary->fetch_assoc()){
-          echo'<p>- '.$rowSecondary['nombre'].'</p>';
-        }
-        echo'</hr>';
-}
- */
               ?>
 
                         </tbody>
@@ -465,18 +479,19 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                          <form action="prcd/intermedia.php" method="POST" enctype="multipart/form-data">
+                              
+                            <input type="text" value="<?php echo $idEvent ?>" name="id" hidden>
                             <div class="input-group mb-3">
                                 <p>Selecciona el archivo .csv para cargar la lista de invitados en el sistema.</p>
-                                <form action="prcd/intermedia.php" method="POST" enctype="multipart/form-data">
-                                  <input type="text" value="<?php echo $idEvent ?>" name="id" hidden>
                                   <input type="file" class="form-control" id="inputGroupFile03" name="csv" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
-                                  <button type="submit" class="btn btn-secondary">Guardar</button>
+                                  <button type="submit" class="btn btn-primary"><i class="bi bi-cloud-arrow-down-fill"></i> Guardar</button>
                                 </form>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <!-- <a href="csv.php?id2=<?php echo $idEvent ?>" type="button" class="btn btn-primary">Guardar</a> --> <!-- Agregar código para insertar los datos del csv a la db -->
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill text-danger"></i> Cerrar</button>
                         </div>
                     </div>
                 </div>
@@ -539,6 +554,34 @@ function ValidaSoloNumeros() {
     if ((event.keyCode < 48) || (event.keyCode > 57))
         event.returnValue = false;
 }
+
+// copypaste
+function copy(){
+  
+  var copyImgBtn = document.querySelector('.copy-image');  
+  copyImgBtn.addEventListener('click', function(event) {  
+    // Select the email link anchor text  
+    var imageElem = document.querySelector('.image-class');  
+    var range = document.createRange();  
+    range.selectNode(imageElem);  
+    window.getSelection().addRange(range);  
+
+    try {  
+      // Now that we've selected the anchor text, execute the copy command  
+      var successful = document.execCommand('copy');  
+      var msg = successful ? 'successful' : 'unsuccessful';  
+      console.log('Copy image command was ' + msg);  
+    } catch(err) {  
+      console.log('Oops, unable to copy');  
+    }  
+
+    // Remove the selections - NOTE: Should use
+    // removeRange(range) when it is supported  
+    window.getSelection().removeAllRanges();  
+  });
+
+}
+
 </script>
 
 <input name="nombreinvitados[]" type="text" class="form-control w-50" placeholder="" aria-label="Username"

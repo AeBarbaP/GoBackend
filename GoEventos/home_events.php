@@ -246,6 +246,8 @@
                             <?php
               $x = 0;
               while ($row_sqlQuery = $resultadosqlQuery->fetch_assoc()) {
+                $x1 = $row_sqlQuery['qr'];
+                $y = $row_sqlQuery['id'];
                 $x++;
                 echo '
           <tr class="text-center">
@@ -440,12 +442,17 @@
             <div class="modal-header" style="background-color:#f7c6bf;">
               <h1 class="modal-title fs-5 text-secondary" id="exampleModalLabel"><i class="bi bi-qr-code"></i> QR '.$row_sqlQuery['apellido_p'].' '.$row_sqlQuery['apellido_m'].' '.$row_sqlQuery['nombre'].'</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+            </div>  
             <div class="modal-body">
               <img src="'.$row_sqlQuery['qr'].'" width="100%">
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="bi bi-clipboard"></i> Copiar QR</button>
+            <div class="modal-footer">';
+            ?>
+
+              <button type="button" class="btn btn-outline-secondary" onclick="copyQR('<?php echo $x1 ?>', <?php echo $y ?>)"><i class="bi bi-clipboard"></i> Copiar QR</button>
+
+              <?php
+              echo'
               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill text-danger"></i> Cerrar</button>
             </div>
           </div>
@@ -556,32 +563,82 @@ function ValidaSoloNumeros() {
 }
 
 // copypaste
-function copy(){
+// function copy(){
   
-  var copyImgBtn = document.querySelector('.copy-image');  
-  copyImgBtn.addEventListener('click', function(event) {  
-    // Select the email link anchor text  
-    var imageElem = document.querySelector('.image-class');  
-    var range = document.createRange();  
-    range.selectNode(imageElem);  
-    window.getSelection().addRange(range);  
+//   var copyImgBtn = document.querySelector('.copy-image');  
+//   copyImgBtn.addEventListener('click', function(event) {  
+//     // Select the email link anchor text  
+//     var imageElem = document.querySelector('.image-class');  
+//     var range = document.createRange();  
+//     range.selectNode(imageElem);  
+//     window.getSelection().addRange(range);  
 
-    try {  
-      // Now that we've selected the anchor text, execute the copy command  
-      var successful = document.execCommand('copy');  
-      var msg = successful ? 'successful' : 'unsuccessful';  
-      console.log('Copy image command was ' + msg);  
-    } catch(err) {  
-      console.log('Oops, unable to copy');  
-    }  
+//     try {  
+//       // Now that we've selected the anchor text, execute the copy command  
+//       var successful = document.execCommand('copy');  
+//       var msg = successful ? 'successful' : 'unsuccessful';  
+//       console.log('Copy image command was ' + msg);  
+//     } catch(err) {  
+//       console.log('Oops, unable to copy');  
+//     }  
 
-    // Remove the selections - NOTE: Should use
-    // removeRange(range) when it is supported  
-    window.getSelection().removeAllRanges();  
-  });
+//     // Remove the selections - NOTE: Should use
+//     // removeRange(range) when it is supported  
+//     window.getSelection().removeAllRanges();  
+//   });
 
-}
+// }
 
+</script>
+<script>
+  
+
+// navigator.permissions.query({ name: "read-text-on-clipboard" }).then((result) => {
+//   if (result.state == "granted" || result.state == "prompt") {
+//     alert("Read access granted!");
+//   }
+// });
+
+// async function copyQR(x,y) {
+//   let img = x;
+//   let id = y;
+//   alert('QR copiado');
+//   const fetchedImageData = await fetch(img);
+//   const blob = await fetchedImageData.blob();
+//   await navigator.clipboard.write([
+//       new ClipboardItem({
+//         [blob.type]: blob
+//       })
+//     ]);
+//     console.log('Image copied.');
+//   } catch (err) {
+//     console.error(err.name, err.message);
+//   }
+//   return blob;
+// }
+
+  async function copyQR(x,y){
+    
+  let img = x;
+  let id = y;
+  
+  
+  console.log(img);
+  console.log(id);
+  try {
+    const response = await fetch(img);
+    const blob = await response.blob();
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        [blob.type]: blob
+      })
+    ]);
+    console.log('Image copied.');
+    alert('QR copiado');
+  } catch (err) {
+    console.error(err.name, err.message);
+  }
+};
 </script>
 
 <input name="nombreinvitados[]" type="text" class="form-control w-50" placeholder="" aria-label="Username"

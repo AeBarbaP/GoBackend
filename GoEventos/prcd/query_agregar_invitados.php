@@ -42,7 +42,7 @@
         $codigo = generarCodigo(9);
         $contatena = $evento.'_'.$codigo.'_'.$mesa.'_'.$fecha_qr;
 
-        $codesDir = "QR/codes/";   
+        $codesDir = "QR/codes";   
         $codesDir2 = "../QR/codes/";   
         // $codeFile = date('d-m-Y-h-i-s').'.png';
         $codeFile = $evento.'_'.$codigo.'_'.$mesa.'.png';

@@ -449,7 +449,7 @@
             <div class="modal-footer">';
             ?>
 
-              <button type="button" class="btn btn-outline-secondary" onclick="copyQR('<?php echo $x1 ?>', <?php echo $y ?>)"><i class="bi bi-clipboard"></i> Copiar QR</button>
+              <button type="button" class="btn btn-outline-secondary" onclick="copyQR('<?php echo $x1 ?>')"><i class="bi bi-clipboard"></i> Copiar QR</button>
 
               <?php
               echo'
@@ -617,32 +617,48 @@ function ValidaSoloNumeros() {
 //   return blob;
 // }
 
-  async function copyQR(x,y){
+// function copyQR(x){
+//   let img1 = x;  
+//   console.log(img1);
+//   async function copy(){
     
-  let img = x;
-  let id = y;
-  
-  
-  console.log(img);
-  console.log(id);
+//     try {
+//       const response = await fetch(img1);
+//       const blob = await response.blob();
+//       await navigator.clipboard.write([
+//         new ClipboardItem({
+//           img1: blob
+//         })
+//       ]);
+//       console.log('Image copied.');
+//       alert('QR copiado');
+//     } catch (err) {
+//       console.error(err.name, err.message);
+//     }
+//   }
+// }
+async function copyQR(x) {
   try {
-    const response = await fetch(img);
-    const blob = await response.blob();
+    const imgURL = x;
+    const data = await fetch(imgURL);
+    const blob = await data.blob();
+
     await navigator.clipboard.write([
       new ClipboardItem({
-        [blob.type]: blob
-      })
+        [blob.type]: blob,
+      }),
     ]);
-    console.log('Image copied.');
     alert('QR copiado');
+    console.log("Fetched image copied.");
   } catch (err) {
     console.error(err.name, err.message);
   }
-};
+}
+
 </script>
 
 <input name="nombreinvitados[]" type="text" class="form-control w-50" placeholder="" aria-label="Username"
-    aria-describedby="basic-addon1" value="'+y+'" READONLY>
+    aria-describedby="basic-addon1" value="'+y+'" READONLY hidden>
 
 <style>
   /* normal web */

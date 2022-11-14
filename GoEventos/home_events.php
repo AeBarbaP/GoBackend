@@ -114,7 +114,6 @@
         <li class="breadcrumb-item"><a href="index.php?id=<?php echo $idEvent ?>">Inicio</a></li>
         <li class="breadcrumb-item"><a href="home_config.php?id=<?php echo $idEvent ?>">Evento</a></li>
         <li class="breadcrumb-item active" aria-current="page">Invitados</li>
-        <!--         <li class="breadcrumb-item active" aria-current="page">Data</li> -->
       </ol>
     </nav>
         <div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: #f7c6bf; ">
@@ -403,12 +402,6 @@
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1">Correo-e</span>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" value="' . $row_sqlQuery['email'] . '">
-                </div>
-                </div>
-                <div class="col-sm-6">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">No. Acompañantes</span>
-                  <input type="number" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="invitados" value="' . $row_sqlQuery['no_invitados'] . '">
                 </div>
                 </div>
                 <div class="col-sm-6">

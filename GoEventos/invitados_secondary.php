@@ -155,18 +155,12 @@
                 <div class="row mt-3 mb-3 text-center">
                     <div class="col-6">
                         <div class="card mb-4 rounded-3 shadow-sm" style="height: 450px; ">
-                            <div class="card-header py-3">
-                                <label for="exampleDataList" class="form-label">Selecciona acompañante(s):</label>
-                                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                                <datalist id="datalistOptions">
-                                    <option value="San Francisco">
-                                    <option value="New York">
-                                    <option value="Seattle">
-                                    <option value="Los Angeles">
-                                    <option value="Chicago">
-                                </datalist>
+                            <div class="card-header py-3 d-flex align-items-center" style="height: 100px; ">
+                            <span class="mx-auto" style="font-size: 1.7rem; font-family: 'Josefin Sans', sans-serif;">Acompañantes asignados</span>
                             </div>
                             <div class="card-body">
+
+                            <div data-bs-spy="scroll" data-bs-target="" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
                                 <div class="table-responsive">
                                     <table class="table table-hover table-bordered table-sm align-middle mt-4">
                                         <thead style="background-color:#f7c6bf; color: #7B8DAB;">
@@ -235,13 +229,6 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="alert alert-secondary" role="alert">
-                                                                                    <p class="text-center pt-3">
-                                                                                    <i class="bi bi-card-checklist"></i> Ver listado de acompañantes <a href="invitados_secondary.php?id=' . $row_sqlQuerySecondary['id'] . '"><i class="bi bi-arrow-right-circle-fill"></i></a>
-                                                                                    <p>
-                                                                                    <p>';
-                                                                                    echo '</p>
-                                                                                </div>
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
@@ -257,50 +244,51 @@
                                         </tbody>
                                     </table>
                                 </div><!-- table responsive -->
+                                </div>
                             </div>
                         </div>
                     </div>
-      <div class="col-6">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Pro</h4>
-          </div>
-          <div class="card-body">
-          <div class="table-responsive">
-                    <table class="table table-hover table-bordered table-sm align-middle mt-4">
-                        <thead style="background-color:#f7c6bf; color: #7B8DAB;">
-                            <tr class="text-center">
-                                <th scope="col">#</th>
-                                <th scope="col">Nombre completo</th>
-                            </tr>
-                        </thead>
-                        <tbody id="myTable">
-                            <?php
-
-            include('prcd/query_invitado_secundario.php'); ?>
-
-                            <?php
-            $x = 0;
-            while ($row_sqlQuerySecondary = $resultadosqlQuerySecondary->fetch_assoc()) {
-                $x++;
-                echo '
-            <tr class="text-center">
-            <td>' . $x . '</td>
-            
-            <td>' . $row_sqlQuerySecondary['nombre'] . ' ' . $row_sqlQuerySecondary['apellido_p'] . ' ' . $row_sqlQuerySecondary['apellido_m'] . '</td>
-                
-            </tr>';
-            }
-
-            ?>
-
-                        </tbody>
-                    </table>
-
-                </div><!-- table responsive -->
-          </div>
-        </div>
-      </div>
+                    <div class="col-6">
+                        <div class="card mb-4 rounded-3 shadow-sm" style="height: 450px; ">
+                            <div class="card-header py-3" style="height: 100px; ">
+                                <label for="exampleDataList" class="form-label" style="font-size: 1.2rem; font-family: 'Josefin Sans', sans-serif;">Selecciona acompañante(s):</label>
+                                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered table-sm align-middle mt-4">
+                                        <thead style="background-color:#f7c6bf; color: #7B8DAB;">
+                                            <tr class="text-center">
+                                                <th scope="col">#</th>
+                                                <th scope="col">Nombre completo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="myTable">
+                                            <?php
+                                                include('prcd/query_invitado_secundario.php');
+                                                $x = 0;
+                                                while ($row_sqlQuerySecondary = $resultadosqlQuerySecondary->fetch_assoc()) {
+                                                    $x++;
+                                                    echo '
+                                                    <tr class="text-center">
+                                                        <td>' . $x . '</td>
+                                                        <td>' . $row_sqlQuerySecondary['nombre'] . ' ' . $row_sqlQuerySecondary['apellido_p'] . ' ' . $row_sqlQuerySecondary['apellido_m'] . '</td>
+                                                    </tr>';
+                                                }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div><!-- table responsive -->
+                            </div>
+                        </div>
+                    </div>
       <!-- <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
           <div class="card-header py-3 text-bg-primary border-primary">

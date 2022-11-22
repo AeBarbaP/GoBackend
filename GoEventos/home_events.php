@@ -237,6 +237,7 @@
                                 <th scope="col">Mesa</th>
                                 <th scope="col"># Confirmados <br># Total</th>
                                 <th scope="col">Editar</th>
+                                <th scope="col">Acompañantes</th>
                             </tr>
                         </thead>
                         <tbody id="myTable">
@@ -257,7 +258,8 @@
             <td>' . $row_sqlQuery['apellido_m'] . '</td>
             <td>' . $row_sqlQuery['nombre'] . '</td>
             <td>' . $row_sqlQuery['celular'] . '</td>
-            <td>' . $row_sqlQuery['email'] . '</td>';
+            <td>' . $row_sqlQuery['email'] . '</td>'
+            ;
 
             $idSeconday = $row_sqlQuery['id'];
             $sqlSecondary ="SELECT * FROM invitados WHERE id_evento = $idEvent AND tipo_invitado = 2 AND invitado_eje = $idSeconday";
@@ -281,6 +283,8 @@
             echo '<td>'.$filaConfirmados.' / '.$TotalInvitados.'</td>
             <td><a href="#" data-bs-toggle="modal"
             data-bs-target="#editarInv' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-pencil-square"></i></span></a></td>
+            <td><a href="#" data-bs-toggle="modal"
+            data-bs-target="#AgregarAcomp' . $row_sqlQuery['id'] . '"><span class="badge bg-light text-dark"><i class="bi bi-person-plus"></i></span></a></td>
           </tr>';
 
                 echo '

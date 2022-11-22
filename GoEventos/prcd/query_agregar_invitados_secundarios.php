@@ -22,13 +22,13 @@ echo $id;
         // $sql = "INSERT INTO venta_individual(producto,fecha_venta,venta_gral) VALUES('$arreglo','$fecha_sistema','$codigo')";
         // $resultado= $conn->query($sql);
 
-        // $sql = "INSERT INTO invitados_secundarios(nombre,clave_ext) VALUES('$invitado','$id')";
-        // $resultadosql = $conn->query($sql);
+        $sql = "INSERT INTO invitados(nombre,invitado_eje) VALUES('$invitado','$id')";
+        $resultadosql = $conn->query($sql);
     
     } 
 
-    // $sqlInsert ="INSERT INTO invitados_secundarios (apellido_p,apellido_m,nombre,celular,email) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email')";
-    // $resultadosqlInsert = $conn->query($sqlInsert);
+    $sqlInsert ="INSERT INTO invitados_secundarios (apellido_p,apellido_m,nombre,celular,email) VALUES('$apellido_p','$apellido_m','$nombre','$celular','$email')";
+    $resultadosqlInsert = $conn->query($sqlInsert);
 
     if($resultadosql){
         echo "<script type=\"text/javascript\">

@@ -266,8 +266,9 @@
                                     <table class="table table-hover table-bordered table-sm align-middle mt-4">
                                         <thead style="background-color:#f7c6bf; color: #7B8DAB;">
                                             <tr class="text-center">
-                                                <th scope="col">#</th>
+                                                <th scope="col">Sel</th>
                                                 <th scope="col">Nombre completo</th>
+                                                <th scope="col">Agregar</th>
                                             </tr>
                                         </thead>
                                         <tbody id="myTable">
@@ -280,6 +281,7 @@
                                                     <tr class="text-center">
                                                         <td>' . $x . '</td>
                                                         <td>' . $row_sqlQuerySecondary['nombre'] . ' ' . $row_sqlQuerySecondary['apellido_p'] . ' ' . $row_sqlQuerySecondary['apellido_m'] . '</td>
+                                                        <td><a href="#" data-bs-toggle="modal" data-bs-target="' . $row_sqlQuerySecondary['id'] . '"><span class="badge bg-secondary text-light"><i class="bi bi-person-plus"></i> Agregar</span></a></td> /* Agregar swal para confirmar cambios */
                                                     </tr>';
                                                 }
                                             ?>
@@ -364,4 +366,14 @@ function bloquear(val) {
 }
 
 // document.getElementById("listadoInvitados"+id).innerHTML = ;
+
+
+Swal.fire({
+/*   position: 'top-end', */
+  icon: 'success',
+  title: 'Acompañante asignado',
+  showConfirmButton: false,
+  timer: 1500
+})
+
 </script>

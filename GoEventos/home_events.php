@@ -289,81 +289,76 @@
 
                 echo '
           <!-- Inicia Modal -->
-      <div class="modal fade" id="AgregarAcomp' . $row_sqlQuery['id'] . '" tabindex="-1" aria-labelledby="Agregar Acompañante" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header text-dark">
-              <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-person-plus-fill"></i>
-                Agregar invitado secundario</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <div class="modal-body text-dark">
-            
-              
-              
-              <div class="row">
-                  
-                  <div class="col-sm-4">
-                    <div class="form-floating mb-3 ">
-                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="username" aria label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['apellido_p'] . '" readonly>
-                      <label for="floatingPassword">Apellido Paterno</label>
+          <div class="modal fade" id="AgregarAcomp' . $row_sqlQuery['id'] . '" tabindex="-1" aria-labelledby="Agregar Acompañante" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header text-dark">
+                  <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-person-plus-fill"></i>
+                    Agregar invitado secundario</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-dark">
+                  <div class="row">             
+                    <div class="col-sm-4">
+                      <div class="form-floating mb-3 ">
+                        <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="username" aria label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['apellido_p'] . '" readonly>
+                        <label for="floatingPassword">Apellido Paterno</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-floating mb-3 ">
-                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['apellido_m'] . '" readonly>
-                      <label for="floatingPassword">Apellido Materno</label>
+                    <div class="col-sm-4">
+                      <div class="form-floating mb-3 ">
+                        <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['apellido_m'] . '" readonly>
+                        <label for="floatingPassword">Apellido Materno</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-floating mb-3 ">
-                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['nombre'] . '" readonly>
-                      <label for="floatingPassword">Nombre (s)</label>
+                    <div class="col-sm-4">
+                      <div class="form-floating mb-3 ">
+                        <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['nombre'] . '" readonly>
+                        <label for="floatingPassword">Nombre (s)</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['email'] . '" readonly>
-                      <label for="floatingPassword">Correo-e</label>
+                    <div class="col-sm-8">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['email'] . '" readonly>
+                        <label for="floatingPassword">Correo-e</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['celular'] . '" readonly>
-                      <label for="floatingPassword">Celular</label>
+                    <div class="col-sm-4">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="' . $row_sqlQuery['celular'] . '" readonly>
+                        <label for="floatingPassword">Celular</label>
+                      </div>
                     </div>
-                  </div>
-                  </fieldset>
-                  <div class="row">
-                  <div class="col-sm-4">
-                    <div class="form-floating mb-3">
-                      <input type="number" class="form-control rounded-4" id="cambioCeldasInput' . $row_sqlQuery['id'] . '" placeholder="Número de acompañantes" onchange="cambioCeldas(' . $row_sqlQuery['id'] . ')" onblur="bloquear(' . $row_sqlQuery['id'] . ')" pattern="[0-9]" max-lenght="2" onkeypress="ValidaSoloNumeros()" >
-                      <label for="floatingPassword">Número de acompañantes</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-8">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Etiqueta para Invitación" value="' . $row_sqlQuery['etiqueta'] . '" readonly>
-                                <label for="floatingPassword">Etiqueta para Invitación</label>
-                            </div>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control rounded-4" id="cambioCeldasInput' . $row_sqlQuery['id'] . '" placeholder="Número de acompañantes" onchange="cambioCeldas(' . $row_sqlQuery['id'] . ',' . $idEvent . ')" onblur="bloquear(' . $row_sqlQuery['id'] . ')" pattern="[0-9]" max-lenght="2" onkeypress="ValidaSoloNumeros()" >
+                          <label for="floatingPassword">Número de acompañantes</label>
                         </div>
-                  <hr>
-                  <p class="mt-3 mb-2"><span class="h5">Listado de Acompañantes</span></p>
-                  
-                  <form action="prcd/query_agregar_invitados_secundarios.php" name="invSecundario" id="invSecundario" method="POST">
-                    <input value="' . $row_sqlQuery['id'] . '" name="id" hidden>
-                    <p id="listadoInvitados' . $row_sqlQuery['id'] . '" class="mt-3 mb-2"></p>
-                  <p class="text-end">
-                    <button class="btn btn-primary mt-3" type="submit"><i class="bi bi-person-plus"></i> Agregar</button>
-                  </p>
-                  </div>
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Etiqueta para Invitación" value="' . $row_sqlQuery['etiqueta'] . '" readonly>
+                          <label for="floatingPassword">Etiqueta para Invitación</label>
+                        </div>
+                      </div>
+                      <hr>
+                      <p class="mt-3 mb-2"><span class="h5">Listado de Acompañantes</span></p>
+                      <form action="prcd/query_agregar_invitados_secundarios.php" name="invSecundario" id="invSecundario" method="POST">
+                      <input value="' . $row_sqlQuery['id'] . '" name="id" hidden>
+                      <input value="' . $idEvent . '" name="id_event" hidden>
+                      <p id="listadoInvitados' . $row_sqlQuery['id'] . '" class="mt-3 mb-2"></p>
+                      <p class="text-end">
+                        <button class="btn btn-primary mt-3" type="submit"><i class="bi bi-person-plus"></i> Agregar</button>
+                      </p>
+                    </div>
                   </div>
                   </form>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- Termina modal para Editar AXs programados y frecuentes -->
+          <!-- Termina modal para agregar acompañante -->
           ';
 
                 echo '
@@ -534,17 +529,18 @@ $(document).ready(function() {
 <script>
 var id = 0;
 
-function cambioCeldas(valor) {
+function cambioCeldas(valor,evento) {
 
 
     var id = valor;
+    var id_event = evento;
     document.getElementById("listadoInvitados" + id).innerHTML = "";
     var x = document.getElementById("cambioCeldasInput" + id).value;
     // alert(x);
     for (let i = 0; i < x; i++) {
 
         document.getElementById("listadoInvitados" + id).innerHTML +=
-            '<div class="input-group mb-1 mt-1 w-50"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input name="nombreinvitados[]" type="text" class="form-control w-50" placeholder="Nombre completo" aria-label="Username" aria-describedby="basic-addon1" value=""></input></div>';
+            '<div class="input-group mb-1 mt-1 w-50"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input name="nombre[]" type="text" class="form-control " placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1" value=""><input name="apellido_p[]" type="text" class="form-control " placeholder="Apellido Paterno" aria-label="Username" aria-describedby="basic-addon1" value=""><input name="apellido_m[]" type="text" class="form-control " placeholder="Apellido Materno" aria-label="Username" aria-describedby="basic-addon1" value=""></div>';
     }
 
 }

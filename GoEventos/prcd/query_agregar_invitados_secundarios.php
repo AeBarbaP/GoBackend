@@ -17,7 +17,7 @@ ini_set('display_errors', '1');
     $apellido_m = $_POST['apellido_m'];
     $tipo_inv = 2;
     
-echo $id_event;
+// echo $id_event;
 // echo $nombre;
 
 foreach($nombre as $key => $arreglo)
@@ -32,18 +32,18 @@ foreach($nombre as $key => $arreglo)
     
 }
 
-    if($resultadosql){
+    // if($resultadosql){
         echo "<script type=\"text/javascript\">
         Swal.fire({
             icon: 'success',
             title: 'Acompañante Agregado',
             text: 'Se agregó acompañante con éxito',
             footer: 'Desarrollado por: Click&Go</a>'
-        }).then(function(){window.location='../home_events.php';});</script>";
-        }
-        else{
-        echo 'No se registró la actividad';
-        }
+        }).then(function(){window.location='../home_events.php?id=".$id_event."';});</script>";
+        // }
+        // else{
+        // echo 'No se registró la actividad';
+        // }
 
 
 ?>

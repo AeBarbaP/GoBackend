@@ -344,16 +344,17 @@
                       </div>
                       <hr>
                       <p class="mt-3 mb-2"><span class="h5">Listado de Acompañantes</span></p>
-                      <form action="prcd/query_agregar_invitados_secundarios.php" name="invSecundario" id="invSecundario" method="POST">
+                      <form action="prcd/query_agregar_invitados_secundarios.php" method="POST">
                       <input value="' . $row_sqlQuery['id'] . '" name="id" hidden>
                       <input value="' . $idEvent . '" name="id_event" hidden>
                       <p id="listadoInvitados' . $row_sqlQuery['id'] . '" class="mt-3 mb-2"></p>
                       <p class="text-end">
                         <button class="btn btn-primary mt-3" type="submit"><i class="bi bi-person-plus"></i> Agregar</button>
+                      </form>
                       </p>
                     </div>
                   </div>
-                  </form>
+                  
                 </div>
               </div>
             </div>
@@ -540,7 +541,7 @@ function cambioCeldas(valor,evento) {
     for (let i = 0; i < x; i++) {
 
         document.getElementById("listadoInvitados" + id).innerHTML +=
-            '<div class="input-group mb-1 mt-1 w-50"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input name="nombre[]" type="text" class="form-control " placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1" value=""><input name="apellido_p[]" type="text" class="form-control " placeholder="Apellido Paterno" aria-label="Username" aria-describedby="basic-addon1" value=""><input name="apellido_m[]" type="text" class="form-control " placeholder="Apellido Materno" aria-label="Username" aria-describedby="basic-addon1" value=""></div>';
+            '<div class="input-group mb-1 mt-1 w-100"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input name="nombre[]" type="text" class="form-control " placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1"><input name="apellido_p[]" type="text" class="form-control" placeholder="Apellido Paterno" aria-label="Username" aria-describedby="basic-addon1"><input name="apellido_m[]" type="text" class="form-control " placeholder="Apellido Materno" aria-label="Username" aria-describedby="basic-addon1"></div>';
     }
 
 }

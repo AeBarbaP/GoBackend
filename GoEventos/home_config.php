@@ -157,7 +157,7 @@
         <h1 class="display-4 fst-italic">Configura tu evento</h1>
         <p class="lead my-3">Aquí puedes definir el número de mesas y sillas de tu evento para asignar lugares a tus
           invitados.</p>
-        <a href="configuracion-e.html">Ingresar</a>
+        <a href="configuracion-e.php?id=<?php echo $idEvent ?>">Ingresar</a>
       </div>
       <!-- <p class="text-end"><button class="btn btn-outline" style="color: #eba094;" type="button">Guardar</button></p> -->
     </div>

@@ -143,14 +143,16 @@
                   <input type="number" class="form-control rounded-4" id="cambioCeldasInput"
                     placeholder="Número de acompañantes" onchange="cambioCeldas(value)" onblur="bloquear()"
                     pattern="[0-9]" max-lenght="2" onkeypress="ValidaSoloNumeros()">
-                  <p id="listadoInvitados" class="mt-3 mb-2"></p>
+                    <label class="mt-3">Indica el número de sillas para cada mesa:</label>
+                    <p id="listadoInvitados" class="mt-3 mb-2"></p>
                 </div>
-                <label class="mb-3">Indica el número de sillas para cada mesa:</label>
-                <div class="form mb-3 ">
-                  <p class="mb-3">Mesa n:
-                    <!-- Etiqueta e input deben de aparecer cada vez que se agrega una mesa -->
-                    <!-- <input type="number" class="form-control rounded-4" id="" placeholder="Número de sillas"
-                      onkeypress="ValidaSoloNumeros()"> -->
+                
+                <!-- <div class="form mb-3 ">
+                  
+                <p class="mb-3">Mesa n:
+                    Etiqueta e input deben de aparecer cada vez que se agrega una mesa
+                    <input type="number" class="form-control rounded-4" id="" placeholder="Número de sillas"
+                      onkeypress="ValidaSoloNumeros()">
                       <select class="form-select mt-2" aria-label="Default select example">
                         <option selected>Selecciona el número de sillas por mesa</option>
                         <option value="4">4</option>
@@ -166,7 +168,7 @@
                         <option value="15">15</option>
                       </select>
                   </p>
-                </div>
+                </div> -->
                 <p class="text-end"><button class="btn btn-outline-secondary mt-3" type="submit"><i
                       class="bi bi-x-diamond"></i> Guardar</button></p>
               </div>
@@ -258,13 +260,14 @@
 
 
     var id = valor;
-    document.getElementById("listadoInvitados" + id).innerHTML = "";
-    var x = document.getElementById("cambioCeldasInput" + id).value;
+    document.getElementById("listadoInvitados").innerHTML = "";
+    var x = document.getElementById("cambioCeldasInput").value;
+    var j = 0;
     // alert(x);
     for (let i = 0; i < x; i++) {
-
-      document.getElementById("listadoInvitados" + id).innerHTML +=
-        '<div class="input-group mb-1 mt-1 w-50"><span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span><input name="nombreinvitados[]" type="text" class="form-control w-50" placeholder="Nombre completo" aria-label="Username" aria-describedby="basic-addon1" value=""></input></div>';
+      j++;
+      document.getElementById("listadoInvitados").innerHTML +=
+        '<div class="input-group mb-1 mt-1 w-50"><span class="input-group-text" id="basic-addon1">Mesa '+j+'</i></span><input name="nomesa[]" type="number" class="form-control w-50" placeholder="# sillas" aria-label="Username" aria-describedby="basic-addon1" value=""></input></div>';
     }
 
   }
